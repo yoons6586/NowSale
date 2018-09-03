@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_coupon_wallet"
+            android:title="쿠폰지갑" />
+        <item
+            android:id="@+id/nav_heart_sale"
+            android:title="찜한 할인소식" />
+        <item
+            android:id="@+id/nav_like_market"
+            android:title="단골가게" />
+        <item
+            android:id="@+id/nav_change_info"
+            android:title="개인정보수정" />
+        <item
+            android:id="@+id/nav_help"
+            android:title="고객센터" />
+
+        <item android:title="점주용 메뉴"
+            android:id="@+id/nav_owner_menu"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/nav_owner_registerd"
+            android:title=" - 내가 등록한 쿠폰 및 행사"
+            android:visible="false"
+            />
+        <item
+            android:id="@+id/nav_owner_register_coupon"
+            android:title=" - 쿠폰등록"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_owner_register_discount"
+            android:title=" - 할인행사 등록"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_owner_frequenter"
+            android:title=" - 단골손님 관리"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_owner_change_info"
+            android:title=" - 매장정보 수정"
+            android:visible="false"/>
+
+
+    </group>
+
+
+</menu>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="#fedd35"
+    android:gravity="bottom"
+    android:orientation="vertical"
+
+
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+
+    >
+
+    <TextView
+        android:id="@+id/nav_header_loginPlease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="로그인해주세요"
+        android:textColor="@color/baseColor"
+        android:textSize="32dp"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        />
+
+
+
+    <TextView
+        android:id="@+id/nav_header_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="윤쓰쓰"
+        android:textColor="@color/baseColor"
+        android:textSize="32dp"
+        android:visibility="visible"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#000000"
+        />
+    <LinearLayout
+        android:id="@+id/nav_header_loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:background="#ffffff"
+            android:textColor="@color/baseColor"
+            android:gravity="center"
+            android:textSize="32dp"
+            android:visibility="visible"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="#000000"
+            />
+    </LinearLayout>
+
+</LinearLayout>
