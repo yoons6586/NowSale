@@ -19,5 +19,9 @@ public class TestController {
         testDao = new TestDao();
         return testDao.selectAll();
     }
+    @RequestMapping(value="/test",method = RequestMethod.GET)
+    public String test(){
 
+        return "hello";
+    }
 }
