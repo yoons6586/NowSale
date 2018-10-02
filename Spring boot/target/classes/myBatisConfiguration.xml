@@ -3,9 +3,6 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <typeAliases>
-        <typeAlias type="com.example.demo.client.model.DeptVO" alias="deptVO" />
-    </typeAliases>
 
     <environments default="development">
         <environment id="development">
@@ -22,9 +19,9 @@
     </environments>
 
     <mappers>
-        <mapper resource="dao/deptMapper.xml" />
-
+        <mapper resource="dao/mybatisMapper.xml"/>
     </mappers>
+
 </configuration>
 
 

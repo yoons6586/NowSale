@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.mybatisMapper">
+    <select id="selectAll" resultType="com.example.demo.client.model.DeptVO" >
+        SELECT * FROM client_list;
+    </select>
+
+    <update id="clientCouponUpdate" parameterType="com.example.demo.client.model.ClientCouponVO">
+        UPDATE client_list
+        set coupon1=#{coupon1},coupon2=#{coupon2},coupon3=#{coupon3},coupon4=#{coupon4},coupon5=#{coupon5}
+    </update>
+
+    <select id="selectClientHaveCouponOwnerInfo" parameterType="int" resultType="com.example.demo.client.model.ClientHaveCouponOwnerInfoVO">
+        SELECT coupon_key,market_name,coupon_content,on_off
+        FROM client_list,coupon_view
+        WHERE client_list.user_key=#{user_key} and (coupon1=coupon_key or coupon2=coupon_key or coupon3 =coupon_key or coupon4=coupon_key or coupon5=coupon_key)
+    </select>
+
+    <update id="updateClientInfo" parameterType="com.example.demo.client.model.ClientVO">
+        UPDATE client_list
+        SET nickName=#{nickName},pw=#{pw},alarm_push=#{alarm_push},alarm_mail=#{alarm_mail},alarm_SMS=#{alarm_SMS}
+        WHERE user_key=#{user_key}
+    </update>
+
+    <delete id="deleteClientInfo" parameterType="int">
+        DELETE FROM client_list
+        WHERE user_key=#{user_key}
+    </delete>
+
+</mapper>
+

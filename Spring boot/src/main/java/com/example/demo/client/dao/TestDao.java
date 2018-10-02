@@ -16,6 +16,7 @@ public class TestDao {
     public TestDao(){
         InputStream is = null;
         try {
+
             is = Resources.getResourceAsStream(
                     "MybatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
@@ -46,7 +47,7 @@ public class TestDao {
     public List<DeptVO> selectAll(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
-            return sqlSession.selectList("dao.deptMapper.selectAll");
+            return sqlSession.selectList("dao.mybatisMapper.selectAll");
         }
         finally {
             sqlSession.close();

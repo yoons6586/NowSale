@@ -91,7 +91,7 @@ public class ClientCouponDataAdapter extends BaseAdapter{
                 datas.remove(position);
                 notifyDataSetChanged();
                 //user_key랑 쿠폰키 받으면 삭제가능.
-                new HaveClientCouponJSONforDelete().execute(url+"/clientKey?user_key="+Config.clientInfoData.getUser_key());
+                new HaveClientCouponJSONforDelete().execute(url+"/client/coupon/get/"+Config.clientInfoData.getUser_key());
 
             }
         });
@@ -180,7 +180,7 @@ public class ClientCouponDataAdapter extends BaseAdapter{
                 time_attack=-1;
             }
 
-            new CouponDataAdapter.SendClientCouponJSON(coupon1,coupon2,time_attack).execute(url+"/getClientCoupon");
+            new CouponDataAdapter.SendClientCouponJSON(coupon1,coupon2,time_attack).execute(url+"/client/coupon/update/"+Config.clientInfoData.getUser_key());
 
 //            Log.e("윤성",""+result); // 여기서 json데이터를 뽑는 수밖에 없을듯
 

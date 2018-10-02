@@ -115,7 +115,7 @@ public class CouponDataAdapter extends BaseAdapter{
                     //취소일때랑 취소 아닐때랑 구분해야됨 -> 존나 복잡함 죽고싶음
                     //coupon_key를 가져와야 됨.
                     //디비에서 내가 가지고 있는 쿠폰 목록 가져오자
-                    new HaveClientCouponJSON().execute(url+"/clientKey?user_key="+Config.clientInfoData.getUser_key());
+                    new HaveClientCouponJSON().execute(url+"/client/coupon/get/"+Config.clientInfoData.getUser_key());
                     /*
                     이 부분 HaveClientCouponJSON이 먼저 실행되야 되는데 그전에 coupon1이 실행되어버림 그래서 오류
                     */
@@ -219,7 +219,7 @@ public class CouponDataAdapter extends BaseAdapter{
                     //꽉찼으니 지우고 해라~
                 }
             }
-            new SendClientCouponJSON(coupon1,coupon2,time_attack).execute(url+"/getClientCoupon");
+            new SendClientCouponJSON(coupon1,coupon2,time_attack).execute(url+"/client/coupon/update/"+Config.clientInfoData.getUser_key());
 
 //            Log.e("윤성",""+result); // 여기서 json데이터를 뽑는 수밖에 없을듯
 
@@ -245,7 +245,7 @@ public class CouponDataAdapter extends BaseAdapter{
                 jsonObject.accumulate("coupon1", coupon1);
                 jsonObject.accumulate("coupon2", coupon2);
                 jsonObject.accumulate("time_attack", time_attack);
-                jsonObject.accumulate("user_key",Config.clientInfoData.getUser_key());
+//                jsonObject.accumulate("user_key",Config.clientInfoData.getUser_key());
                 HttpURLConnection con = null;
                 BufferedReader reader = null;
 
