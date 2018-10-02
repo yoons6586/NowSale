@@ -1,9 +1,6 @@
 package com.example.demo.client.controller;
 
-import com.example.demo.client.dao.ClientCouponUpdateDao;
-import com.example.demo.client.dao.ClientHaveCouponOwnerInfoDao;
-import com.example.demo.client.dao.ClientInfoDeleteDao;
-import com.example.demo.client.dao.ClientInfoUpdateDao;
+import com.example.demo.client.dao.*;
 import com.example.demo.client.mapper.ClientMapper;
 import com.example.demo.client.model.ClientCouponVO;
 import com.example.demo.client.model.ClientVO;
@@ -22,6 +19,7 @@ public class ClientController {
     private ClientHaveCouponOwnerInfoDao clientHaveCouponOwnerInfoDao;
     private ClientInfoUpdateDao clientInfoUpdateDao;
     private ClientInfoDeleteDao clientInfoDeleteDao;
+    private ClientSignupDao clientSignupDao;
 
     public ClientController(ClientMapper clientMapper){
         this.clientMapper=clientMapper;
@@ -59,7 +57,7 @@ public class ClientController {
     @RequestMapping(value="/info/update/{user_key}",method = RequestMethod.PUT)
     @ApiOperation(value="클라이언트의 정보 변경")
     public ResponseEntity<String> clientInfoUpdate(@PathVariable(value="user_key")int user_key, @RequestBody ClientVO clientVO){
-//        clientVO.setUserKey(user_key);
+
         /*
         클래스를 추가로 만들지 않기 위해 ClientVO를 사용하였고
         실제로는 ClientVO의
@@ -79,7 +77,15 @@ public class ClientController {
         return clientInfoDeleteDao.clientInfoDelete();
     }
 
+    @RequestMapping(value = "/signup",method = RequestMethod.POST)
+    @ApiOperation(value = "client 회원가입")
+    public ResponseEntity<String> clientSignup(@RequestBody ClientVO clientVO){
+        int user_key = clientMapper.getUserKey()+1;
+        System.out.println("user_key : "+user_key);
 
-
+        clientVO.setUser_key(user_key);
+        clientSignupDao = new ClientSignupDao(clientVO);
+        return clientSignupDao.clientSignup();
+    }
 }
 

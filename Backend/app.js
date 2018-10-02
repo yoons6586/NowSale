@@ -36,7 +36,7 @@ app.get('/allGift',(req,res)=>{ // 디비 안에 있는 쿠폰목록 중 오너�
     var category = req.query.coupon_category || req.body.coupon_category;
 
     console.log('category : '+category);
-    connection.query('select market_name,coupon_content,coupon_key,on_off from owner_list,all_couponlist where (coupon1=coupon_key or coupon2=coupon_key or time_attack=coupon_key) and on_off=\'T\' and category =\"'+category+'\"'
+    connection.query('select market_name,coupon_content,coupon_key,on_off FROM owner_list,all_couponlist ``\"'+category+'\"'
         ,(err,rows)=>{
             console.log(rows);
             res.json(rows);

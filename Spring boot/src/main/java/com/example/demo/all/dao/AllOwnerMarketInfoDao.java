@@ -1,6 +1,7 @@
-package com.example.demo.client.dao;
+package com.example.demo.all.dao;
 
-import com.example.demo.client.model.DeptVO;
+import com.example.demo.all.model.OwnerCouponShowVO;
+import com.example.demo.all.model.OwnerInfoMarketGetVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -10,17 +11,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class TestDao {
+public class AllOwnerMarketInfoDao {
     private SqlSessionFactory sqlSessionFactory;
 
-    public TestDao(){
+    private int coupon_key;
+    public AllOwnerMarketInfoDao(int coupon_key){
         InputStream is = null;
         try {
-
             is = Resources.getResourceAsStream(
                     "MybatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
-
+//            this.clientHaveCouponOwnerInfoVO = clientHaveCouponOwnerInfoVO;
+            this.coupon_key=coupon_key;
 //            sqlSessionFactoryBuilder은 만듦과 동시에 builder함수만 쓰고 갖다버림
 
 
@@ -44,10 +46,11 @@ public class TestDao {
             }
         }
     }
-    public List<DeptVO> selectAll(){
+    public List<OwnerInfoMarketGetVO> selectMarketInfo(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
-            return sqlSession.selectList("dao.mybatisMapper.selectAll");
+            return sqlSession.selectList("dao.mybatisMapper.selectMarketInfo",coupon_key);
+
         }
         finally {
             sqlSession.close();

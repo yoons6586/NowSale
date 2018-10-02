@@ -1,4 +1,4 @@
-package com.example.demo.client.model;
+package com.example.demo.all.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,6 +8,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class OwnerCouponShowVO {
-    private String market_name,coupon_content,on_off;
     private int coupon_key;
+    private String market_name,coupon_content,on_off;
 }

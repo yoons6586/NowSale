@@ -28,5 +28,21 @@
         WHERE user_key=#{user_key}
     </delete>
 
+    <select id="selectCategoryShow" parameterType="String" resultType="com.example.demo.all.model.OwnerCouponShowVO">
+        SELECT market_name,coupon_content,coupon_key,on_off
+        FROM owner_list,all_couponlist
+        WHERE (coupon1=coupon_key or coupon2=coupon_key or time_attack=coupon_key) and on_off="T" and category =#{category}
+    </select>
+
+    <select id="selectMarketInfo" parameterType="int" resultType="com.example.demo.all.model.OwnerInfoMarketGetVO">
+        SELECT market_name,user_key,address,introduce,phone
+        FROM coupon_view
+        WHERE coupon_key=#{coupon_key}
+    </select>
+
+    <insert id="clientSignup" parameterType="com.example.demo.client.model.ClientVO">
+        INSERT INTO client_list(user_key,who_key,ID,PW,nickName,PHONE,coupon1,coupon2,coupon3,coupon4,coupon5,alarm_push,alarm_mail,alarm_SMS,birth,sex)
+        VALUES (#{user_key},"C",#{id},#{pw},#{nickName},#{phone},-1,-1,-1,-1,-1,#{alarm_push},#{alarm_mail},#{alarm_SMS},#{birth},#{sex})
+    </insert>
 </mapper>
 

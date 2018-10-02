@@ -19,5 +19,10 @@ public interface ClientMapper {
     List<ClientCouponVO> clientCouponGet(int user_key);
 
 //    @Delete("DELETE FROM client_list WHERE user_key=#{user_key}")
+    @Select("SELECT id FROM show_id_pw WHERE id=#{id}")
+    List<Integer> overlapID(int id);
+
+    @Select("SELECT * FROM client_list ORDER BY user_key DESC limit 1")
+    int getUserKey();
 }
 
