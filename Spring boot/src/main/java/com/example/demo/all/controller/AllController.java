@@ -45,12 +45,6 @@ public class AllController {
         return new ResponseEntity<List<OwnerInfoMarketGetVO>>(list,HttpStatus.OK);
     }
 
-    @RequestMapping(value="/signup/overlap/{id}", method=RequestMethod.GET)
-    @ApiOperation(value = "회원가입 시 아이디의 중복 검사")
-    public ResponseEntity<List<String>> checkOvelapID(@PathVariable(value = "id")String id){
-
-        return new ResponseEntity<List<String>>(allMapper.overlapID(id),HttpStatus.OK);
-    }
 
 
 }

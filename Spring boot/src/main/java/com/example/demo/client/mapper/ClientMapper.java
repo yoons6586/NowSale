@@ -1,6 +1,7 @@
 package com.example.demo.client.mapper;
 
 import com.example.demo.client.model.ClientCouponVO;
+import com.example.demo.client.model.ClientLoginVO;
 import com.example.demo.client.model.ClientVO;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
@@ -15,14 +16,17 @@ public interface ClientMapper {
     @Select("select * from client_list")
     List<ClientVO> findAllClient();
 
-    @Select("select coupon1,coupon2,coupon3,coupon4,coupon5 from client_list WHERE user_key = #{user_key}")
-    List<ClientCouponVO> clientCouponGet(int user_key);
-
 //    @Delete("DELETE FROM client_list WHERE user_key=#{user_key}")
     @Select("SELECT id FROM show_id_pw WHERE id=#{id}")
     List<Integer> overlapID(int id);
 
-    @Select("SELECT * FROM client_list ORDER BY user_key DESC limit 1")
+    @Select("SELECT * FROM client_list ORDER BY client_key DESC limit 1")
     int getUserKey();
+
+    @Select("SELECT id,pw FROM client_list WHERE id=#{id} and pw=#{pw}")
+    List<ClientLoginVO> loginClient(ClientLoginVO clientLoginVO);
+
+    @Select("SELECT id FROM client_list WHERE id=#{id}")
+    String overlapIdClient(String id);
 }
 

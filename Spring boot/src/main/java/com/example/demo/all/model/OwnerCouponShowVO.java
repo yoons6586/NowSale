@@ -8,6 +8,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class OwnerCouponShowVO {
-    private int coupon_key;
-    private String market_name,coupon_content,on_off;
+    private int owner_key,coupon_key;
+    private String category,address,phone,logo_img,market_name,market_introduce,location;
 }

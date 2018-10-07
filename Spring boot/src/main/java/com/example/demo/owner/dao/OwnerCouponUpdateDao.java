@@ -1,6 +1,7 @@
-package com.example.demo.client.dao;
+package com.example.demo.owner.dao;
 
-import com.example.demo.client.model.ClientCouponVO;
+import com.example.demo.client.model.ClientVO;
+import com.example.demo.owner.model.OwnerRegisterCouponVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -11,25 +12,16 @@ import org.springframework.http.ResponseEntity;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class ClientInfoDeleteDao {
+public class OwnerCouponUpdateDao {
     private SqlSessionFactory sqlSessionFactory;
-
-    private int client_key;
-    public ClientInfoDeleteDao(int client_key){
+    private OwnerRegisterCouponVO ownerRegisterCouponVO;
+    public OwnerCouponUpdateDao(OwnerRegisterCouponVO ownerRegisterCouponVO){
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
                     "MybatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
-
-            this.client_key = client_key;
-//            sqlSessionFactoryBuilder은 만듦과 동시에 builder함수만 쓰고 갖다버림
-
-
-//            .build(is)하자마자 바로 뒤짐
-
-
-//            언제든지 세션을 open하기 위해서는 sqlSessionFactory는 계속 있어야됨
+            this.ownerRegisterCouponVO=ownerRegisterCouponVO;
 
         } catch (IOException e) {
             // TODO Auto-generated catch block
@@ -46,13 +38,14 @@ public class ClientInfoDeleteDao {
             }
         }
     }
-    public ResponseEntity<String> clientInfoDelete(){
+    public ResponseEntity<String> ownerCouponUpdate(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
-            sqlSession.delete("dao.mybatisMapper.deleteClientInfo",client_key);
+            sqlSession.update("dao.mybatisMapper.insertCouponList",ownerRegisterCouponVO);
+            sqlSession.update("dao.mybatisMapper.insertOwnerRegisterCoupon",ownerRegisterCouponVO);
             sqlSession.commit();
-            return new ResponseEntity<>("delete successfully", HttpStatus.OK);
-
+            return new ResponseEntity<>("update successfully", HttpStatus.OK);
+//            return sqlSession.selectList("dao.mybatisClientMapper.selectAll");
         }
         finally {
             sqlSession.close();

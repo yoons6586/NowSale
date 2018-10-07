@@ -1,30 +1,29 @@
 package com.example.demo.client.dao;
 
 import com.example.demo.client.model.ClientCouponVO;
-import com.example.demo.client.model.ClientHaveCouponOwnerInfoVO;
+import com.example.demo.client.model.ClientLoginVO;
+import com.example.demo.client.model.ClientVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class ClientHaveCouponOwnerInfoDao {
+public class ClientLoginDao {
     private SqlSessionFactory sqlSessionFactory;
-//    private ClientHaveCouponOwnerInfoVO clientHaveCouponOwnerInfoVO;
-    private int user_key;
-    public ClientHaveCouponOwnerInfoDao(int user_key){
+
+    private ClientLoginVO clientLoginVO;
+    public ClientLoginDao(ClientLoginVO clientLoginVO){
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
                     "MybatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
-//            this.clientHaveCouponOwnerInfoVO = clientHaveCouponOwnerInfoVO;
-            this.user_key = user_key;
+
+            this.clientLoginVO = clientLoginVO;
 //            sqlSessionFactoryBuilder은 만듦과 동시에 builder함수만 쓰고 갖다버림
 
 
@@ -48,13 +47,13 @@ public class ClientHaveCouponOwnerInfoDao {
             }
         }
     }
-    public List<ClientHaveCouponOwnerInfoDao> selectClientHaveCouponOwnerInfo(){
+    public List<ClientVO> clientLoginSelect(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
-            return sqlSession.selectList("dao.mybatisMapper.selectClientHaveCouponOwnerInfo",user_key);
-//            sqlSession.commit();
-//            return new ResponseEntity<List<ClientHaveCouponOwnerInfoDao>>("update successfully", HttpStatus.OK);
-//            return sqlSession.selectList("dao.mybatisClientMapper.selectAll");
+            List<ClientVO> list = sqlSession.selectList("dao.mybatisMapper.selectClientLogin",clientLoginVO);
+            sqlSession.commit();
+            return list;
+
         }
         finally {
             sqlSession.close();

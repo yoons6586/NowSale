@@ -1,28 +1,30 @@
-package com.example.demo.client.dao;
+package com.example.demo.owner.dao;
 
-import com.example.demo.client.model.ClientCouponVO;
+import com.example.demo.client.model.ClientLoginVO;
+import com.example.demo.client.model.ClientVO;
+import com.example.demo.owner.model.OwnerLoginVO;
+import com.example.demo.owner.model.OwnerVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
-public class ClientInfoDeleteDao {
+public class OwnerLoginDao {
     private SqlSessionFactory sqlSessionFactory;
 
-    private int client_key;
-    public ClientInfoDeleteDao(int client_key){
+    private OwnerLoginVO ownerLoginVO;
+    public OwnerLoginDao(OwnerLoginVO ownerLoginVO){
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
                     "MybatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 
-            this.client_key = client_key;
+            this.ownerLoginVO = ownerLoginVO;
 //            sqlSessionFactoryBuilder은 만듦과 동시에 builder함수만 쓰고 갖다버림
 
 
@@ -46,12 +48,12 @@ public class ClientInfoDeleteDao {
             }
         }
     }
-    public ResponseEntity<String> clientInfoDelete(){
+    public List<OwnerVO> ownerLoginSelect(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
-            sqlSession.delete("dao.mybatisMapper.deleteClientInfo",client_key);
+            List<OwnerVO> list = sqlSession.selectList("dao.mybatisMapper.selectOwnerLogin",ownerLoginVO);
             sqlSession.commit();
-            return new ResponseEntity<>("delete successfully", HttpStatus.OK);
+            return list;
 
         }
         finally {

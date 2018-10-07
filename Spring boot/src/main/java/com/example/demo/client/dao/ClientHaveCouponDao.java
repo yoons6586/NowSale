@@ -1,7 +1,6 @@
 package com.example.demo.client.dao;
 
 import com.example.demo.client.model.ClientCouponVO;
-import com.example.demo.client.model.DeptVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -13,18 +12,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class ClientCouponUpdateDao {
+public class ClientHaveCouponDao {
     private SqlSessionFactory sqlSessionFactory;
-    private ClientCouponVO clientCouponVO;
-    private int user_key;
-    public ClientCouponUpdateDao(ClientCouponVO clientCouponVO, int user_key){
+
+    private int client_key;
+    public ClientHaveCouponDao(int client_key){
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
                     "MybatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
-            this.clientCouponVO = clientCouponVO;
-            this.user_key = user_key;
+
+            this.client_key = client_key;
 //            sqlSessionFactoryBuilder은 만듦과 동시에 builder함수만 쓰고 갖다버림
 
 
@@ -48,14 +47,13 @@ public class ClientCouponUpdateDao {
             }
         }
     }
-    public ResponseEntity<String> clientCouponUpdate(){
+    public List<ClientCouponVO> clientHaveCouponSelect(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
-            sqlSession.update("dao.mybatisMapper.clientCouponUpdate",clientCouponVO);
+            List<ClientCouponVO> list = sqlSession.selectList("dao.mybatisMapper.selectClientHaveCoupon",client_key);
             sqlSession.commit();
-            //commit이 있기에 트랜잭션 관리할 수 있다.
-            return new ResponseEntity<>("update successfully", HttpStatus.OK);
-//            return sqlSession.selectList("dao.mybatisClientMapper.selectAll");
+            return list;
+
         }
         finally {
             sqlSession.close();

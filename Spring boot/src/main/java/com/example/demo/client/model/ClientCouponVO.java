@@ -8,7 +8,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class ClientCouponVO {
-    private int coupon1,coupon2,coupon3,coupon4,coupon5;
+    private int owner_key,coupon_key,start_count,remain_count;
+    private String start_date,expire_date,qualification,content,address,phone,logo_img,market_name,market_introduce,category,location;
 
 
 }
