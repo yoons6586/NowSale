@@ -2,6 +2,7 @@ package com.example.demo.owner.controller;
 
 
 import com.example.demo.all.model.OwnerCouponShowVO;
+import com.example.demo.client.model.ClientVO;
 import com.example.demo.owner.dao.OwnerCouponUpdateDao;
 import com.example.demo.owner.dao.OwnerLoginDao;
 import com.example.demo.owner.mapper.OwnerMapper;
@@ -31,8 +32,10 @@ public class OwnerController {
         ownerLoginDao = new OwnerLoginDao(ownerLoginVO);
         List<OwnerVO> list = ownerLoginDao.ownerLoginSelect();
         System.out.println("size : "+list.size());
-
-        return new ResponseEntity<List<OwnerVO>>(list,HttpStatus.OK);
+        if(list.size()>0)
+            return new ResponseEntity<List<OwnerVO>>(list,HttpStatus.OK);
+        else
+            return new ResponseEntity<List<OwnerVO>>(list,HttpStatus.NOT_FOUND);
     }
 
     @RequestMapping(value="/coupon/get/{owner_key}",method = RequestMethod.GET)

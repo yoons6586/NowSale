@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class SliderOwnerImageAdapter extends PagerAdapter { // 관리자와 사용자 로그인이 둘이 서로 달라야 함
-    private int[] images = {R.drawable.beauty,R.drawable.fashion,R.drawable.alcohol};
+    private int[] images = {R.drawable.beauty,R.drawable.fashion,R.drawable.alcohol1};
     private LayoutInflater inflater;
     private Context context;
 

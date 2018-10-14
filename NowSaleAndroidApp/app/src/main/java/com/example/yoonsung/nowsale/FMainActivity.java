@@ -1,55 +1,89 @@
 package com.example.yoonsung.nowsale;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-public class FMainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.tsengvn.typekit.Typekit;
+import com.tsengvn.typekit.TypekitContextWrapper;
+
+public class FMainActivity extends AppCompatActivity{
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private int position;
     private Intent FMainActivityIntent;
+    private ImageView backBtn;
+    private TextView toolbar_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_main);
-
+        Typekit.getInstance()
+                .addNormal(Typekit.createFromAsset(this, "fonts/NanumBarunpenRegular.otf"))
+                .addBold(Typekit.createFromAsset(this, "fonts/NanumBarunpenBold.otf"));
         FMainActivityIntent=getIntent();
         position = FMainActivityIntent.getIntExtra("position",0);
 
         Toolbar toolbar = findViewById(R.id.f_toolbar);
+
+        toolbar_title = findViewById(R.id.tab_toolbar_title);
         setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.f_drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.f_nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        backBtn=findViewById(R.id.frame_back);
 
         // Initializing the TabLayout
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        tabLayout.addTab(tabLayout.newTab().setText("음식"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab Two"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab Three"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab Four"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab Five"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab Six"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab Seven"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab Eight"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab Nine"));
+        tabLayout.setSelectedTabIndicatorColor(Color.BLACK);
+
+        switch (position){
+            case 0:
+                toolbar_title.setText("술집");
+                break;
+            case 1:
+                toolbar_title.setText("맛집");
+                break;
+            case 2:
+                toolbar_title.setText("헬스");
+                break;
+            case 3:
+                toolbar_title.setText("여가문화");
+                break;
+            case 4:
+                toolbar_title.setText("패션잡화");
+                break;
+            case 5:
+                toolbar_title.setText("뷰티");
+                break;
+            case 6:
+                toolbar_title.setText("학습");
+                break;
+            case 7:
+                toolbar_title.setText("카페");
+                break;
+            case 8:
+                toolbar_title.setText("기타");
+                break;
+        }
+
+        tabLayout.addTab(tabLayout.newTab().setText("술집"));
+        tabLayout.addTab(tabLayout.newTab().setText("맛집"));
+
+        tabLayout.addTab(tabLayout.newTab().setText("헬스"));
+        tabLayout.addTab(tabLayout.newTab().setText("여가문화"));
+        tabLayout.addTab(tabLayout.newTab().setText("패션잡화"));
+        tabLayout.addTab(tabLayout.newTab().setText("뷰티"));
+        tabLayout.addTab(tabLayout.newTab().setText("학습"));
+        tabLayout.addTab(tabLayout.newTab().setText("카페"));
+        tabLayout.addTab(tabLayout.newTab().setText("기타"));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
@@ -67,6 +101,7 @@ public class FMainActivity extends AppCompatActivity implements NavigationView.O
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
+                toolbar_title.setText(tab.getText());
             }
 
             @Override
@@ -80,63 +115,24 @@ public class FMainActivity extends AppCompatActivity implements NavigationView.O
             }
         });
 
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.f_drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
 
+        super.onBackPressed();
+
+    }
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_coupon_wallet) {
-            startActivity(new Intent(FMainActivity.this,ClientCouponListActivity.class));
-        } else if (id == R.id.nav_change_info) {
-            startActivity(new Intent(FMainActivity.this,ClientMyInfoActivity.class));
-        } else if (id == R.id.nav_heart_sale) {
-
-        } else if (id == R.id.nav_like_market) {
-
-        } else if(id==R.id.nav_help){
-
-        }
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.f_drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
 }

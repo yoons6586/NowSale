@@ -6,13 +6,14 @@
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="지금은 할인중"
+
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ClientCouponCategoryActivity"
-            android:label="@string/app_name"
+        <activity android:name=".CouponCategoryActivity"
+            android:label=""
+
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,18 +24,25 @@
         <activity android:name=".OwnerCouponActivity"/>
         <activity android:name=".PopUpActivity"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity android:name=".LoginCancelPopupActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
         <activity android:name=".RegisterCompleteDialog"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
         <activity android:name=".Dialog"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
         <activity android:name=".OkCancelPopUpActivity"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity android:name=".ClientCouponListPopupActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
 
 
 
-
+        <activity android:name=".ClientMenuActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar"
+            />
         <activity android:name=".FMainActivity"
-            android:label="@string/app_name"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar"
             />
         <activity android:name=".RegisterCouponActivity"
@@ -42,13 +50,12 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".OwnerInfoActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar"
+            />
         <activity android:name=".LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".ClientCouponListActivity"
-            android:label="쿠폰지갑"
-            />
+
         <activity android:name=".SignUpActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"/>

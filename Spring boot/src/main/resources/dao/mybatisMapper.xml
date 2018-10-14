@@ -23,12 +23,6 @@
         WHERE category=#{category}
     </select>
 
-    <select id="selectMarketInfo" parameterType="int" resultType="com.example.demo.all.model.OwnerInfoMarketGetVO">
-        SELECT market_name,user_key,address,introduce,phone
-        FROM coupon_view
-        WHERE coupon_key=#{coupon_key}
-    </select>
-
     <insert id="clientSignup" parameterType="com.example.demo.client.model.ClientVO">
         INSERT INTO client_list(client_key,who_key,ID,PW,nickName,PHONE,alarm_push,alarm_mail,alarm_SMS,gender,birth)
         VALUES (#{client_key},"C",#{id},#{pw},#{nickName},#{phone},#{alarm_push},#{alarm_mail},#{alarm_SMS},#{gender},#{birth})
@@ -45,6 +39,26 @@
         FROM client_list
         WHERE id=#{id} and pw=#{pw}
     </select>
+
+    <delete id="deleteClientCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO">
+        DELETE FROM client_coupon
+        WHERE (client_key=#{client_key} AND coupon_key = #{coupon_key})
+    </delete>
+
+    <insert id="insertClientCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO">
+        INSERT INTO client_coupon(client_key,coupon_key)
+        VALUES (#{client_key},#{coupon_key})
+    </insert>
+
+    <delete id="deleteClientSale" parameterType="com.example.demo.client.model.ClientHaveSaleVO">
+        DELETE FROM client_sale
+        WHERE (client_key=#{client_key} AND sale_key = #{sale_key})
+    </delete>
+
+    <insert id="insertClientSale" parameterType="com.example.demo.client.model.ClientHaveSaleVO">
+        INSERT INTO client_sale(client_key,sale_key)
+        VALUES (#{client_key},#{sale_key})
+    </insert>
 
     <select id="selectOwnerLogin" parameterType="com.example.demo.owner.model.OwnerLoginVO" resultType="com.example.demo.owner.model.OwnerVO">
         SELECT *

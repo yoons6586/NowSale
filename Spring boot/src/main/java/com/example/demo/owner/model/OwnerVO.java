@@ -9,6 +9,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class OwnerVO {
     private int owner_key;
-    private String who_key,id,pw,address,nickname,phone,logo_img,market_name,market_introduce,category,owner_img,location;
+    private String who_key,id,pw,address,nickName,phone,logo_img,market_name,market_introduce,category,owner_img,location;
 
 }

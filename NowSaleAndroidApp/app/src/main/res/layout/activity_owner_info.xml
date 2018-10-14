@@ -4,49 +4,168 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
+    android:background="#ffffffff"
     >
-    <!--
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/dduk">
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/blackheart"
-            android:id="@+id/heart"
+            android:layout_marginLeft="15dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/back"
+            android:id="@+id/back"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/baseColor"
+            android:id="@+id/title_txt"
+
+
+
+            android:text="술집"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
             />
-    </RelativeLayout>
-    -->
+    </LinearLayout>
     <view
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
         class="android.support.v4.view.ViewPager"
         android:id="@+id/view"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:text="매장 이름"
-                android:id="@+id/marketName"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/baseColor"
+                    android:textSize="30dp"
+                    android:text="매장 이름"
+                    android:gravity="left|center_vertical"
+                    android:id="@+id/marketName"/>
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignRight="@+id/marketName"
+                    android:src="@drawable/heart"
+                    android:id="@+id/dangol"/>
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:id="@+id/favorite_count"
+                    android:textColor="@color/baseColor"
+                    android:layout_alignRight="@id/marketName"
+                    android:layout_alignBottom="@id/dangol"
+                    android:layout_alignParentBottom="true"/>
 
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/baseColor"
+                android:text="매장소개\n매장소개"
+                
+                android:id="@+id/marketIntroduce"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                android:background="@color/notChooseColor"
+                android:layout_marginTop="10dp"
+
+                />
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22dp"
+                android:gravity="left|center_vertical"
+                android:text="주요상품"
+                android:textColor="@color/baseColor"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginRight="5dp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/mackzoo"
+                        android:layout_marginBottom="5dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="18dp"
+                        android:textColor="@color/baseColor"
+                        android:text="수제맥주 4000원 부터"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/gamja"
+                        android:layout_marginBottom="5dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="18dp"
+                        android:textColor="@color/baseColor"
+                        android:text="모둠감자튀김 5000원"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/baseColor"
                 android:textSize="18dp"
                 android:text="주소"
                 android:id="@+id/marketAddress"/>
@@ -58,13 +177,7 @@
                 android:text="폰 번호"
                 android:id="@+id/marketPhone"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
 
-                android:text="매장소개"
-                android:id="@+id/marketIntroduce"/>
         </LinearLayout>
     </ScrollView>
 

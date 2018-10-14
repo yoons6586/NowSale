@@ -2,24 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95bb5cfa-e20d-4fbd-9f23-7faaece68ab7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/taskJars.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/taskJars.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/fileSnapshots.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_animated_vector_drawable_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_appcompat_v7_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_design_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_recyclerview_v7_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_support_media_compat_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_support_v4_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_support_vector_drawable_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_transition_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientCouponCategoryActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientCouponData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientCouponDataAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientCouponListActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientInfoData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientInfoData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/CouponData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/CouponDataAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/F1Activity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/F2Activity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/F3Activity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FMainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FMainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/SliderOwnerImageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/SliderOwnerImageAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/alcohol.png" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/alcohol.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/round_button_black.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/round_button_black.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_client_coupon_category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_client_coupon_category.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_fragment_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_fragment_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/content_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/f_test_f1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/f_test_f1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/f_test_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/f_test_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/fragment_app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/fragment_app_bar_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/list_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/list_row.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/menu/main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllOwnerMarketInfoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerCouponShowVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerCouponShowVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponUpdateDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientHaveCouponOwnerInfoDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientInfoDeleteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientInfoDeleteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/ClientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/ClientMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/myBatisConfiguration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/myBatisConfiguration.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/controller/ClientController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/AllController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/AllController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllOwnerMarketInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/mapper/AllMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/mapper/AllMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/model/OwnerCouponShowVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/model/OwnerCouponShowVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/controller/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/model/OwnerVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/model/OwnerVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/mybatisMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/mybatisMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,7 +87,7 @@
     <session id="249063524">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.18" value="1" />
@@ -42,49 +96,61 @@
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.30" value="2" />
+          <entry key="project.open.time.30" value="3" />
+          <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.37" value="2" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.56" value="1" />
+          <entry key="project.open.time.67" value="1" />
+          <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.77" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="8" />
           <entry key="config" value="1" />
-          <entry key="java" value="126" />
-          <entry key="properties" value="7" />
-          <entry key="xml" value="24" />
+          <entry key="java" value="154" />
+          <entry key="jpg" value="1" />
+          <entry key="png" value="2" />
+          <entry key="properties" value="8" />
+          <entry key="xml" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="8" />
-          <entry key="JAVA" value="126" />
+          <entry key="Image" value="3" />
+          <entry key="JAVA" value="154" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Properties" value="7" />
-          <entry key="XML" value="24" />
+          <entry key="Properties" value="8" />
+          <entry key="XML" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="config" value="1" />
-          <entry key="dummy" value="50" />
-          <entry key="java" value="10867" />
+          <entry key="dummy" value="62" />
+          <entry key="java" value="13575" />
           <entry key="properties" value="75" />
-          <entry key="xml" value="2381" />
+          <entry key="xml" value="2640" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10867" />
-          <entry key="PLAIN_TEXT" value="51" />
+          <entry key="JAVA" value="13575" />
+          <entry key="PLAIN_TEXT" value="63" />
           <entry key="Properties" value="75" />
-          <entry key="SQL" value="32" />
-          <entry key="XML" value="2349" />
+          <entry key="SQL" value="35" />
+          <entry key="XML" value="2605" />
         </counts>
       </usages-collector>
     </session>
@@ -92,37 +158,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="61" column="42" lean-forward="true" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerLoginDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerRegisterCouponVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="889">
-              <caret line="94" column="56" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
+            <state relative-caret-position="321">
+              <caret line="110" column="41" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,51 +170,78 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#706#707#0" expanded="true" />
-                <element signature="e#752#753#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/b.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientSaleInsertDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="53" selection-start-column="53" selection-end-column="53" />
+            <state relative-caret-position="68">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerCouponUpdateDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveCouponVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
+            <state relative-caret-position="119">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/myBatisConfiguration.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientLoginDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="79" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="79" />
+            <state relative-caret-position="136">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponDeleteDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="614">
+              <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveSaleVO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="901">
+              <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientHaveCouponDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="18" column="45" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -197,6 +263,8 @@
       <find>client</find>
       <find>all_couponlist</find>
       <find>clientsig</find>
+      <find>selectclient</find>
+      <find>deleteClientSale</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -210,15 +278,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/dao/TestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/model/Dept.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/dao/TestDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/dao/TestController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/dao/clientMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/dao/deptMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveCouponVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientInfoUpdateVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/OwnerCouponShowVO.java" />
@@ -235,7 +296,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllCategoryCouponShowDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllOwnerMarketInfoDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerInfoMarketGetVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientSignupDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponVO.java" />
@@ -243,24 +303,32 @@
         <option value="$PROJECT_DIR$/src/main/resources/myBatisConfiguration.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientInfoDeleteDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerCouponShowVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientLoginVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/OwnerMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerLoginVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientLoginDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerLoginDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientSignupVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/ClientMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/CouponVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerRegisterCouponVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerCouponUpdateDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerCouponShowVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveCouponVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponGetDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveSaleVO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientSaleInsertDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientSaleDeleteDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponDeleteDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java" />
       </list>
     </option>
   </component>
@@ -276,10 +344,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -289,22 +356,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="demo" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Spring boot" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="demo" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Spring boot" type="616d4139:PackageViewModuleNode" />
-              <item name="com.example.demo" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -366,7 +417,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -406,6 +477,16 @@
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -471,6 +552,39 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+              <item name="owner" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="demo" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Spring boot" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="demo" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Spring boot" type="616d4139:PackageViewModuleNode" />
+              <item name="com.example.demo" type="1f31426a:PackageElementNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -485,7 +599,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538925885380" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539445074297" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -496,25 +610,32 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.demo.all.model" />
-      <recent name="com.example.demo.board.controller" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/drawable/owner" />
+      <recent name="$PROJECT_DIR$/src/main/resources/drawable" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.demo.all.controller" />
       <recent name="com.example.demo.all" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.demo.owner.dao" />
-      <recent name="com.example.demo.owner.model" />
-      <recent name="com.example.demo.client.model" />
-      <recent name="com.example.demo.client.dao" />
-      <recent name="com.example.demo.owner.mapper" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/dao" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/demo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo.client.dao" />
+      <recent name="com.example.demo.client.model" />
+      <recent name="com.example.demo.owner.dao" />
+      <recent name="com.example.demo.owner.model" />
+      <recent name="com.example.demo.owner.mapper" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.demo.all.model" />
+      <recent name="com.example.demo.board.controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -563,17 +684,28 @@
       <workItem from="1538484827216" duration="5408000" />
       <workItem from="1538732976336" duration="2295000" />
       <workItem from="1538794997988" duration="348000" />
-      <workItem from="1538902260120" duration="13187000" />
+      <workItem from="1538902260120" duration="13315000" />
+      <workItem from="1538990009869" duration="8758000" />
+      <workItem from="1539071355555" duration="805000" />
+      <workItem from="1539162536763" duration="332000" />
+      <workItem from="1539228765866" duration="4002000" />
+      <workItem from="1539263040390" duration="546000" />
+      <workItem from="1539315924950" duration="265000" />
+      <workItem from="1539429776852" duration="5359000" />
+      <workItem from="1539494140620" duration="2576000" />
+      <workItem from="1539501083592" duration="101000" />
+      <workItem from="1539501379442" duration="207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71467000" />
+    <option name="totallyTimeSpent" value="94546000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="1" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2932761" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33619457" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -584,7 +716,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -615,26 +747,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TestDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TestController.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.9.RELEASE/spring-beans-5.0.9.RELEASE.jar!/org/springframework/beans/factory/support/ConstructorResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="467" selection-start-line="467" selection-end-line="467" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/board/mapper/ClientMapper.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dao/deptMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/TestController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientInfoUpdateVO.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/1.3.1/mybatis-spring-boot-autoconfigure-1.3.1.jar!/org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -661,80 +773,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/AllController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/TestDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllOwnerMarketInfoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerInfoMarketGetVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponUpdateDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientHaveCouponOwnerInfoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveCouponOwnerInfoVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientHaveCouponDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientInfoDeleteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllOwnerMarketInfoDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponUpdateDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientHaveCouponOwnerInfoDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientInfoUpdateDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllCategoryCouponShowDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -745,62 +790,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientLoginVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/OwnerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientLoginDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/OwnerMapper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerLoginVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerCouponShowVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="88" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientSignupVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="85" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
         </state>
       </provider>
     </entry>
@@ -811,25 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/CouponVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -837,37 +812,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/ClientMapper.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.34/tomcat-embed-core-8.5.34.jar!/org/apache/tomcat/util/net/SocketProcessorBase.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="23" column="21" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="23" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="280">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerLoginDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="889">
-          <caret line="94" column="56" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="53" selection-start-column="53" selection-end-column="53" />
+        <state relative-caret-position="714">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -885,43 +840,208 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerLoginDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+        <state relative-caret-position="136">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.34/tomcat-embed-core-8.5.34.jar!/org/apache/tomcat/util/net/SocketProcessorBase.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllCategoryCouponShowDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="663">
+          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerCouponShowVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerInfoMarketGetVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="61" column="42" lean-forward="true" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
+        <state relative-caret-position="731">
+          <caret line="56" column="64" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="53" selection-start-column="53" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/ClientMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerCouponUpdateDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
+        <state relative-caret-position="442">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientSignupVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="85" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientLoginVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveCouponOwnerInfoVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientInfoDeleteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientSaleDeleteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/normal_img.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/b.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientSaleInsertDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientLoginDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveSaleVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientHaveCouponDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="110" column="41" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponDeleteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveCouponVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>

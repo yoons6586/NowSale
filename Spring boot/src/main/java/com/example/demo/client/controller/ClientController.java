@@ -1,10 +1,9 @@
 package com.example.demo.client.controller;
 
+import ch.qos.logback.core.net.server.Client;
 import com.example.demo.client.dao.*;
 import com.example.demo.client.mapper.ClientMapper;
-import com.example.demo.client.model.ClientCouponVO;
-import com.example.demo.client.model.ClientLoginVO;
-import com.example.demo.client.model.ClientVO;
+import com.example.demo.client.model.*;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +20,10 @@ public class ClientController {
     private ClientSignupDao clientSignupDao;
     private ClientHaveCouponDao clientHaveCouponDao;
     private ClientLoginDao clientLoginDao;
+    private ClientCouponDeleteDao clientCouponDeleteDao;
+    private ClientCouponInsertDao clientCouponInsertDao;
+    private ClientSaleDeleteDao clientSaleDeleteDao;
+    private ClientSaleInsertDao clientSaleInsertDao;
 
     public ClientController(ClientMapper clientMapper){
         this.clientMapper=clientMapper;
@@ -29,6 +32,7 @@ public class ClientController {
     @RequestMapping(value = "/all",method = RequestMethod.GET)
     public List<ClientVO> findAllClient(){
 //        clientMapper = new ClientMapper();
+        System.out.println("/client/all 호출");
         return clientMapper.findAllClient();
     }
 
@@ -39,7 +43,10 @@ public class ClientController {
         List<ClientVO> list = clientLoginDao.clientLoginSelect();
         System.out.println("size : "+list.size());
 
-        return new ResponseEntity<List<ClientVO>>(list,HttpStatus.OK);
+        if(list.size()>0)
+            return new ResponseEntity<List<ClientVO>>(list,HttpStatus.OK);
+        else
+            return new ResponseEntity<List<ClientVO>>(list,HttpStatus.NOT_FOUND);
     }
 
     @RequestMapping(value="/coupon/have/{client_key}",method = RequestMethod.GET)
@@ -94,5 +101,43 @@ public class ClientController {
             return new ResponseEntity<String>("you can use ID",HttpStatus.OK);
         return new ResponseEntity<String>("user other id",HttpStatus.BAD_REQUEST);
     }
+
+    @RequestMapping(value="/coupon/delete",method = RequestMethod.DELETE)
+    @ApiOperation(value="client가 쿠폰을 사용하거나 삭제")
+    public ResponseEntity<ClientHaveCouponVO> clientUseCoupon(@RequestBody ClientHaveCouponVO clientHaveCouponVO){
+        System.out.println("/client/coupon/delete 호출");
+
+        clientCouponDeleteDao = new ClientCouponDeleteDao(clientHaveCouponVO);
+        return clientCouponDeleteDao.clientCouponDelete();
+
+    }
+
+    @RequestMapping(value="/coupon/insert",method = RequestMethod.POST)
+    @ApiOperation(value="client가 쿠폰 발급")
+    public ResponseEntity<ClientHaveCouponVO> clientInsertCoupon(@RequestBody ClientHaveCouponVO clientHaveCouponVO){
+        clientCouponInsertDao = new ClientCouponInsertDao(clientHaveCouponVO);
+
+        return clientCouponInsertDao.clientCouponInsert();
+    }
+
+    @RequestMapping(value="/sale/delete",method = RequestMethod.DELETE)
+    @ApiOperation(value="client가 할인 정보를 삭제")
+    public ResponseEntity<String> clientUseSale(@RequestBody ClientHaveSaleVO clientHaveSaleVO){
+
+        clientSaleDeleteDao = new ClientSaleDeleteDao(clientHaveSaleVO);
+        clientSaleDeleteDao.clientSaleDelete();
+        return new ResponseEntity<String>("delete sale successfully",HttpStatus.OK);
+    }
+
+    @RequestMapping(value="/sale/insert",method = RequestMethod.POST)
+    @ApiOperation(value="client가 할인 정보 등록")
+    public ResponseEntity<String> clientInsertSale(@RequestBody ClientHaveSaleVO clientHaveSaleVO){
+        clientSaleInsertDao = new ClientSaleInsertDao(clientHaveSaleVO);
+
+        return clientSaleInsertDao.clientSaleInsert();
+    }
+
+
+
 }
 

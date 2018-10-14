@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:background="@drawable/round_button_black"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    >
+
+    <!-- //end 타이틀바 -->
+
+    <!-- Notice -->
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textTitle"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:gravity="left|center"
+            android:text="쿠폰 사용 처리를 하시겠습니까?"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textContent"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:gravity="left|center"
+            android:text="사용 처리 후에는 쿠폰을 더 이상 쓸 수 없고\n쿠폰에 따라 재발급이 불가능 할 수 있습니다."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- Notice -->
+
+    <!-- 닫기 버튼 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <TextView
+            android:text="확인"
+            android:textSize="13sp"
+            android:textColor="@color/baseColor"
+            android:padding="16dp"
+            android:gravity="right|bottom"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:id="@+id/OKBtn"/>
+        <TextView
+            android:text="취소"
+            android:textSize="13sp"
+            android:textColor="@color/baseColor"
+            android:padding="16dp"
+            android:gravity="right|bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:id="@+id/cancelBtn"/>
+    </LinearLayout>
+    <!--// 닫기 버튼 -->
+
+
+
+
+
+
+
+</LinearLayout>

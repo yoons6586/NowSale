@@ -1,71 +1,137 @@
 package com.example.yoonsung.nowsale;
 
+import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.yoonsung.nowsale.VO.ClientVO;
+import com.example.yoonsung.nowsale.VO.LoginVO;
+import com.example.yoonsung.nowsale.VO.OwnerVO;
+import com.example.yoonsung.nowsale.http.ClientService;
+import com.example.yoonsung.nowsale.http.OwnerService;
+import com.tsengvn.typekit.Typekit;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.util.List;
 
-import static com.example.yoonsung.nowsale.Config.url;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity { // 관리자와 사용자 로그인이 둘이 서로 달라야 함
-    private Intent owner_intent,result_intent;
+    private Intent owner_intent, result_intent;
     private EditText id_edit;
     private EditText pw_edit;
-    private String user_id,user_pw;
+    private String user_id, user_pw;
     private Button loginBtn;
     private TextView signupBtn;
-
+    private ClientService clientService;
+    private OwnerService ownerService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        id_edit = (EditText)findViewById(R.id.id_text);
-        pw_edit = (EditText)findViewById(R.id.pw_text);
+        Typekit.getInstance()
+                .addNormal(Typekit.createFromAsset(this, "fonts/NanumBarunpenRegular.otf"))
+                .addBold(Typekit.createFromAsset(this, "fonts/NanumBarunpenBold.otf"));
+        id_edit = (EditText) findViewById(R.id.id_text);
+        pw_edit = (EditText) findViewById(R.id.pw_text);
 
 
         loginBtn = findViewById(R.id.loginBtn);
-        signupBtn=findViewById(R.id.signUpBtn);
+        signupBtn = findViewById(R.id.signUpBtn);
 //        client_intent = new Intent(this,)
+
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 user_id = id_edit.getText().toString();
                 user_pw = pw_edit.getText().toString();
 
-                new LoginActivity.JSONTask().execute(url+"/show_id_pw");
+                clientService = Config.retrofit.create(ClientService.class);
+                Call<List<ClientVO>> request = clientService.isLogin(new LoginVO(user_id, user_pw));
+                request.enqueue(new Callback<List<ClientVO>>() {
+                    @Override
+                    public void onResponse(Call<List<ClientVO>> call, Response<List<ClientVO>> response) {
+//                        int count = response.body();
+                        List<ClientVO> list = response.body();
+                        if (response.code()==200) {
+                            Config.clientVO = list.get(0);
+                            Config.who_key = "C";
+                            result_intent = new Intent();
+                            setResult(2, result_intent);
+                            finish();
+                        } else {
+                            ownerService = Config.retrofit.create(OwnerService.class);
+                            Call<List<OwnerVO>> request = ownerService.isLogin(new LoginVO(user_id, user_pw));
+                            request.enqueue(new Callback<List<OwnerVO>>() {
+                                @Override
+                                public void onResponse(Call<List<OwnerVO>> call, Response<List<OwnerVO>> response) {
+                                    List<OwnerVO> list = response.body();
+                                    if (response.code()==200) {
+                                        Config.ownerVO = list.get(0);
+                                        result_intent = new Intent();
+                                        setResult(3, result_intent);
+                                        Config.who_key = "O";
+                                        finish();
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), "없는 id 또는 pw입니다.", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
 
+                                @Override
+                                public void onFailure(Call<List<OwnerVO>> call, Throwable t) {
 
+                                }
+                            });
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<ClientVO>> call, Throwable t) {
+
+                    }
+                });
 
             }
         });
-        Config.clientInfoData.setAlarm_mail(false);
+
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,SignUpActivity1.class));
+                startActivity(new Intent(LoginActivity.this, SignUpActivity1.class));
             }
         });
     }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
     public class JSONTask extends AsyncTask<String, String, String> {
         //AsyncTask이용하는 이유는 UI변경을 위해서이다. 안드로이드는 UI를 담당하는 메인 스레드가 존재하는데 우리가 만든 스레드에서는 화면을 바꾸는 일이 불가능하기 때
         //이러한 이유로 안드로이드는 Background 작업을 할 수 있도록 AsyncTask를 지원한다.
@@ -232,9 +298,7 @@ public class LoginActivity extends AppCompatActivity { // 관리자와 사용자
 
 //                    Log.e("Config",Config.nickName);
                 }
-                result_intent = new Intent();
-                setResult(RESULT_OK,result_intent);
-                finish();
+
             }catch(JSONException e){
                 e.printStackTrace();
             }
@@ -242,6 +306,6 @@ public class LoginActivity extends AppCompatActivity { // 관리자와 사용자
     }
 }
 
-
+*/
 //        intent.putExtra("ID",id_edit.getText().toString());
 //        intent.putExtra("PW",pw_edit.getText().toString());

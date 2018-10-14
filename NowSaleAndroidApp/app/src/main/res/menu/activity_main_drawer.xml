@@ -8,7 +8,7 @@
             android:id="@+id/nav_coupon_wallet"
             android:title="쿠폰지갑" />
         <item
-            android:id="@+id/nav_heart_sale"
+            android:id="@+id/nav_sale_wallet"
             android:title="찜한 할인소식" />
         <item
             android:id="@+id/nav_like_market"

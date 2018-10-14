@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.github.katoro:typekit-1.0.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/typekit-1.0.1.aar/0c2524f84f74add4fc8ebdd62058e190/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/typekit-1.0.1.aar/0c2524f84f74add4fc8ebdd62058e190/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.katoro/typekit/1.0.1/b8bb52b1e5c17c486a72db4abf1dbe91b8c1f81/typekit-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

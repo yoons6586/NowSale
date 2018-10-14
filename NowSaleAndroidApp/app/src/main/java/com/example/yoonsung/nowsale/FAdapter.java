@@ -1,5 +1,6 @@
 package com.example.yoonsung.nowsale;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -9,7 +10,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
  */
 
 public class FAdapter extends FragmentStatePagerAdapter {
-
+    private FActivity tabFragment;
+    private Bundle bundle;
     // Count number of tabs
     private int tabCount;
 
@@ -23,16 +25,71 @@ public class FAdapter extends FragmentStatePagerAdapter {
 
         // Returning the current tabs
         switch (position) {
-            case 0:
-                F1Activity tabFragment1 = new F1Activity();
-                return tabFragment1;
-            case 1:
-                F2Activity tabFragment2 = new F2Activity();
-                return tabFragment2;
-            case 2:
-                F3Activity tabFragment3 = new F3Activity();
-                return tabFragment3;
 
+            case 0:
+                tabFragment = new FActivity();
+                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+                bundle.putString("category", "food"); // key , value
+
+                tabFragment.setArguments(bundle);
+
+                return tabFragment;
+            case 1:
+                tabFragment = new FActivity();
+                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+                bundle.putString("category", "food"); // key , value
+                tabFragment.setArguments(bundle);
+
+                return tabFragment;
+            case 2:
+                tabFragment = new FActivity();
+                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+                bundle.putString("category", "food"); // key , value
+                tabFragment.setArguments(bundle);
+
+                return tabFragment;
+            case 3:
+                tabFragment = new FActivity();
+                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+                bundle.putString("category", "food"); // key , value
+                tabFragment.setArguments(bundle);
+
+                return tabFragment;
+            case 4:
+                tabFragment = new FActivity();
+                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+                bundle.putString("category", "food"); // key , value
+                tabFragment.setArguments(bundle);
+
+                return tabFragment;
+            case 5:
+                tabFragment = new FActivity();
+                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+                bundle.putString("category", "food"); // key , value
+                tabFragment.setArguments(bundle);
+
+                return tabFragment;
+            case 6:
+                tabFragment = new FActivity();
+                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+                bundle.putString("category", "food"); // key , value
+                tabFragment.setArguments(bundle);
+
+                return tabFragment;
+            case 7:
+                tabFragment = new FActivity();
+                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+                bundle.putString("category", "food"); // key , value
+                tabFragment.setArguments(bundle);
+
+                return tabFragment;
+            case 8:
+                tabFragment = new FActivity();
+                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+                bundle.putString("category", "food"); // key , value
+                tabFragment.setArguments(bundle);
+
+                return tabFragment;
 
 
             default:
