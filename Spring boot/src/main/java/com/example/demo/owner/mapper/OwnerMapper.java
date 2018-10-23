@@ -1,6 +1,7 @@
 package com.example.demo.owner.mapper;
 
 import com.example.demo.all.model.OwnerCouponShowVO;
+import com.example.demo.all.model.OwnerSaleShowVO;
 import com.example.demo.owner.model.OwnerLoginVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -15,9 +16,15 @@ public interface OwnerMapper {
     List<OwnerLoginVO> loginOwner(OwnerLoginVO ownerLoginVO);
 
     @Select("SELECT * FROM owner_have_coupon_view WHERE owner_key=#{owner_key}")
-    List<OwnerCouponShowVO>  getCouponOwner(int owner_key);
+    List<OwnerCouponShowVO> getCouponOwner(int owner_key);
+
+    @Select("SELECT * FROM owner_have_sale_view WHERE owner_key=#{owner_key}")
+    List<OwnerSaleShowVO> getSaleOwner(int owner_key);
 
     @Select("SELECT coupon_key FROM coupon_list ORDER BY coupon_key DESC limit 1")
     int getCouponKey();
+
+    @Select("SELECT sale_key FROM sale_list ORDER BY sale_key DESC limit 1")
+    int getSaleKey();
 }
 

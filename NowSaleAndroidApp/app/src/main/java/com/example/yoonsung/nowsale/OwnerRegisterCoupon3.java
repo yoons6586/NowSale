@@ -16,6 +16,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.example.yoonsung.nowsale.VO.CouponVO;
+
 public class OwnerRegisterCoupon3 extends AppCompatActivity { // 관리자와 사용자 로그인이 둘이 서로 달라야 함
     private Intent get_intent,next_intent;
     private EditText edit1;
@@ -23,15 +25,16 @@ public class OwnerRegisterCoupon3 extends AppCompatActivity { // 관리자와 �
     private ImageView back;
     private CheckBox check;
     private InputMethodManager imm;
-    private OwnerCouponData ownerCouponData;
+    private CouponVO couponVO;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_register_coupon3);
-        ownerCouponData = new OwnerCouponData();
+//        couponVO = new CouponVO();
         imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
         get_intent = getIntent();
-        ownerCouponData = (OwnerCouponData) get_intent.getSerializableExtra("OwnerCouponData");
+        couponVO = (CouponVO) get_intent.getSerializableExtra("CouponVO");
+
         next_intent = new Intent(this,OwnerRegisterCoupon4.class);
 
         edit1 = findViewById(R.id.edit1);
@@ -53,8 +56,12 @@ public class OwnerRegisterCoupon3 extends AppCompatActivity { // 관리자와 �
             @Override
             public void onClick(View view) {
                 if((check.isChecked() && (!edit1.getText().toString().equals(""))) || (!check.isChecked())){
-                    ownerCouponData.setCouponCnt(edit1.getText().toString());
-                    next_intent.putExtra("OwnerCouponData",ownerCouponData);
+//                    ownerCouponData.setCouponCnt(edit1.getText().toString());
+                    couponVO.setStart_count(Integer.parseInt(edit1.getText().toString()));
+                    couponVO.setRemain_count(Integer.parseInt(edit1.getText().toString()));
+//                    next_intent.putExtra("OwnerCouponData",ownerCouponData);
+                    next_intent.putExtra("CouponVO",couponVO);
+                    next_intent.putExtra("choose",1);
                     startActivity(next_intent);
                 }
             }

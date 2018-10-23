@@ -9,77 +9,215 @@
     android:layout_marginRight="@dimen/activity_horizontal_margin"
     android:layout_marginTop="@dimen/activity_vertical_margin"
     android:layout_marginBottom="@dimen/activity_vertical_margin"
-    android:weightSum="30"
     >
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_height="50dp"
         android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+
             android:gravity="left"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:textColor="@color/baseColor"
             android:text="회원정보"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            />
         <TextView
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_gravity="right"
             android:gravity="right"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:textColor="@color/baseColor"
             android:text="2/3"
-            android:layout_weight="1"/>
+            />
 
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/edit1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-
-        android:hint="이메일"
-        android:inputType="textEmailAddress"
-        android:singleLine="true"
-        android:theme="@style/EditTheme"
-
-        />
-    <EditText
-        android:id="@+id/edit2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        android:singleLine="true"
-        android:theme="@style/EditTheme"
-        android:inputType="textPassword"
-        android:hint="비밀번호 영어+숫자 8자 이상"/>
-    <EditText
-        android:id="@+id/edit3"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        android:theme="@style/EditTheme"
-        android:singleLine="true"
-        android:inputType="textPassword"
-        android:hint="비밀번호 확인"/>
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_gravity="bottom"
-        android:text="다음"
-        android:textSize="18dp"
-        android:textColor="@color/cursorColor"
-        android:background="@drawable/round_button_gray"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/edit1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:hint="이메일"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:theme="@style/EditTheme"
+
+                />
+            <EditText
+                android:id="@+id/edit2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:theme="@style/EditTheme"
+                android:inputType="textPassword"
+                android:hint="비밀번호 영어+숫자 8자 이상"/>
+            <EditText
+                android:id="@+id/edit3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:theme="@style/EditTheme"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:hint="비밀번호 확인"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="할인혜택 추천을 위해서 필요해요!"
+                    android:textColor="@color/baseColor"
+                    android:gravity="bottom"
+                    android:textSize="18dp"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/small_harin"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="성별"
+                    android:gravity="center_vertical|left"
+                    android:textColor="@color/baseColor"
+                    android:textSize="18dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="남자"
+                    android:textSize="18dp"
+                    android:layout_weight="0.4"
+                    android:textColor="@color/baseColor"
+                    android:gravity="center_vertical|right"/>
+                <CheckBox
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/checkbox_yellow_circle"
+                    android:id="@+id/check_male"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:text="여자"
+                    android:gravity="center_vertical|right"
+                    android:textSize="18dp"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/baseColor"
+                    />
+                <CheckBox
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/checkbox_yellow_circle"
+                    android:id="@+id/check_female"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="태어난 년도"
+                    android:gravity="center_vertical|left"
+                    android:textColor="@color/baseColor"
+                    android:textSize="18dp"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="연도를 설정해주세요"
+                    android:textSize="18dp"
+                    android:id="@+id/year_txt"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_vertical|right"
+                    android:layout_weight="2"
+                    android:textColor="@color/baseColor"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    >
+                    <ImageView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/downtriangle"
+                        android:layout_gravity="center"
+                        android:id="@+id/select_year"
+                        />
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:text="다음"
+                android:textSize="18dp"
+                android:textColor="@color/cursorColor"
+                android:background="@drawable/round_button_gray"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

@@ -76,6 +76,18 @@
         android:layout_marginRight="10dp"
         android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4"
+            android:gravity="bottom|center_horizontal"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="5dp"
+            android:text="할인조건"
+            android:textColor="@color/baseColor"
+            android:textSize="20dp"
+            android:id="@+id/txt1"/>
+
         <EditText
             android:inputType="textEmailAddress"
             android:singleLine="true"
@@ -85,22 +97,12 @@
             android:layout_height="match_parent"
             android:gravity="bottom"
             android:layout_weight="4"
-            android:hint="이만원 이상 주문"
+            android:hint="이만원 이상 주문했을 때"
             android:textColor="@color/baseColor"
             android:textSize="20dp"
             android:id="@id/edit1"/>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.4"
-            android:gravity="bottom"
-            android:layout_marginBottom="7dp"
-            android:layout_marginRight="13dp"
-            android:text="했을 때"
-            android:textColor="@color/baseColor"
-            android:textSize="20dp"
-            android:id="@+id/txt1"/>
+
 
     </LinearLayout>
     <LinearLayout
@@ -111,6 +113,19 @@
         android:layout_marginRight="10dp"
         android:orientation="horizontal">
 
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4"
+            android:gravity="bottom|center_horizontal"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="5dp"
+            android:text="혜택"
+            android:textColor="@color/baseColor"
+            android:textSize="20dp"
+            android:id="@+id/txt2"/>
+
         <EditText
             android:inputType="textEmailAddress"
             android:singleLine="true"
@@ -120,22 +135,12 @@
             android:layout_height="match_parent"
             android:gravity="bottom"
             android:layout_weight="4"
-            android:hint="10% or 500원"
+            android:hint="2000원 할인"
             android:textColor="@color/baseColor"
             android:textSize="20dp"
             android:id="@id/edit2"/>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.4"
-            android:gravity="bottom"
-            android:layout_marginBottom="7dp"
-            android:layout_marginRight="13dp"
-            android:text="할인"
-            android:textColor="@color/baseColor"
-            android:textSize="20dp"
-            android:id="@+id/txt2"/>
+
 
     </LinearLayout>
     <View

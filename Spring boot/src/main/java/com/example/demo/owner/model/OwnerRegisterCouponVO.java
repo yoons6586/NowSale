@@ -9,5 +9,5 @@ import lombok.Setter;
 @NoArgsConstructor
 public class OwnerRegisterCouponVO {
     private int owner_key,start_count,coupon_key,remain_count;
-    private String expire_date,start_date,qualification,content;
+    private String expire_date,start_date,qualification,content,on_off;
 }

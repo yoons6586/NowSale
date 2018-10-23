@@ -15,6 +15,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.yoonsung.nowsale.VO.CouponVO;
+import com.example.yoonsung.nowsale.VO.SaleVO;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,15 +27,16 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
     private TextView txt1,txt2,txtTitle,txtContent;
     private Button next;
     private ImageView back;
-    private OwnerCouponData ownerCouponData;
+    private CouponVO couponVO;
+    private SaleVO saleVO;
+    private int choose=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_register_coupon2);
-        ownerCouponData = new OwnerCouponData();
-        get_intent = getIntent();
 
-        ownerCouponData = (OwnerCouponData) get_intent.getSerializableExtra("OwnerCouponData");
+        couponVO = new CouponVO();
+        saleVO = new SaleVO();
 
         txtTitle = findViewById(R.id.txt_title);
         txtContent = findViewById(R.id.txt_content);
@@ -43,16 +47,16 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
         next = findViewById(R.id.next);
         back = findViewById(R.id.back);
 
-        if(ownerCouponData.getChoose().equals("sale")){
+        get_intent=getIntent();
+
+        choose = get_intent.getIntExtra("choose",0);
+        if(choose==2){
             txtTitle.setText("할인행사 등록");
             txtContent.setText("어떤 내용의 할인행사를 등록하시겠어요?");
         }
 
 
-        if(get_intent.getStringExtra("what").equals("service")){
-            edit2.setHint("무엇이");
-            txt2.setText("제공");
-        }
+
         edit1.addTextChangedListener(textWatcherInput1);
         edit2.addTextChangedListener(textWatcherInput2);
         back.setOnClickListener(new View.OnClickListener() {
@@ -65,18 +69,19 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
             @Override
             public void onClick(View view) {
                 if(!edit1.getText().toString().equals("") && !edit2.getText().toString().equals("")){
-                    if(ownerCouponData.getChoose().equals("coupon")) {
+                    if(choose==1) {
                         next_intent = new Intent(OwnerRegisterCoupon2.this,OwnerRegisterCoupon3.class);
-                        ownerCouponData.setRange(edit1.getText().toString());
-                        ownerCouponData.setGift(edit2.getText().toString());
-                        next_intent.putExtra("OwnerCouponData", ownerCouponData);
+                        couponVO.setQualification(edit1.getText().toString());
+                        couponVO.setContent(edit2.getText().toString());
+                        next_intent.putExtra("CouponVO", couponVO);
                         startActivity(next_intent);
                     }
                     else{
                         next_intent = new Intent(OwnerRegisterCoupon2.this,OwnerRegisterCoupon4.class);
-                        ownerCouponData.setRange(edit1.getText().toString());
-                        ownerCouponData.setGift(edit2.getText().toString());
-                        next_intent.putExtra("OwnerCouponData", ownerCouponData);
+                        saleVO.setQualification(edit1.getText().toString());
+                        saleVO.setContent(edit2.getText().toString());
+                        next_intent.putExtra("SaleVO", saleVO);
+                        next_intent.putExtra("choose",2);
                         startActivity(next_intent);
                     }
                 }

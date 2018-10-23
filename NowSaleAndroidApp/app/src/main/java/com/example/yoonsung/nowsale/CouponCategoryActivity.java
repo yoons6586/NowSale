@@ -16,8 +16,15 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.yoonsung.nowsale.VO.ClientVO;
+import com.example.yoonsung.nowsale.http.ClientService;
 import com.tsengvn.typekit.Typekit;
 import com.tsengvn.typekit.TypekitContextWrapper;
+
+import cz.msebera.android.httpclient.HttpStatus;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CouponCategoryActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{ // 관리자와 사용자 로그인이 둘이 서로 달라야 함
@@ -29,10 +36,10 @@ public class CouponCategoryActivity extends AppCompatActivity
     private TextView nav_header_nickname;
     private TextView nav_header_loginPlease;
     private LinearLayout nav_header_loginBtn;
-    private OwnerCouponData ownerCouponData;
     private Intent loginPopupIntent;
     final private int loginPopup = 1000;
     final private int loginActivity = 2000;
+    private int loginResult=3000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,14 +52,14 @@ public class CouponCategoryActivity extends AppCompatActivity
 
 
         Log.e("화면","clientcouponcategoryactivity실행");
-        ownerCouponData = new OwnerCouponData();
+//        ownerCouponData = new OwnerCouponData();
         Intent intent = new Intent(this, Loading1Activity.class);
         startActivity(intent);
         context = getApplicationContext();
         nowSaleIntent = new Intent(this,FMainActivity.class);
         walletIntent = new Intent(this,ClientMenuActivity.class);
         loginIntent = new Intent(this,LoginActivity.class);
-        ownerRegisterIntent = new Intent(CouponCategoryActivity.this,OwnerRegisterCoupon1.class);
+        ownerRegisterIntent = new Intent(CouponCategoryActivity.this,OwnerRegisterCoupon2.class);
 
         alcohol=findViewById(R.id.category_alcohol);
         food=findViewById(R.id.category_food);
@@ -215,16 +222,16 @@ public class CouponCategoryActivity extends AppCompatActivity
             return false; // false면 네비게이션 뷰 계속 열려있고 true면 닫혀있는다.
         }
         else if(id==R.id.nav_owner_registerd){
-
+            walletIntent.putExtra("wallet",5); // 점주가 등록한 쿠폰 및 행사
+            startActivity(walletIntent);
         }
         else if(id==R.id.nav_owner_register_coupon){
-            ownerCouponData.setChoose("coupon");
-            ownerRegisterIntent.putExtra("OwnerCouponData",ownerCouponData);
+            ownerRegisterIntent.putExtra("choose",1); // 쿠폰등록
             startActivity(ownerRegisterIntent);
         }
         else if(id==R.id.nav_owner_register_discount){
-            ownerCouponData.setChoose("sale");
-            ownerRegisterIntent.putExtra("OwnerCouponData",ownerCouponData);
+//            ownerCouponData.setChoose("sale");
+            ownerRegisterIntent.putExtra("choose",2); // 할인등록
             startActivity(ownerRegisterIntent);
         }
         else if(id==R.id.nav_owner_frequenter){
@@ -247,12 +254,13 @@ public class CouponCategoryActivity extends AppCompatActivity
             startActivity(walletIntent);
 
         } else if (id == R.id.nav_change_info) {
-            startActivity(new Intent(CouponCategoryActivity.this,ClientMyInfoActivity.class));
+            startActivityForResult(new Intent(CouponCategoryActivity.this,ClientMyInfoActivity.class),loginResult);
         } else if (id == R.id.nav_sale_wallet) {
             walletIntent.putExtra("wallet",1); // sale 지갑
             startActivity(walletIntent);
-        } else if (id == R.id.nav_like_market) {
-
+        } else if (id == R.id.nav_like_market) { // 단골가게
+            walletIntent.putExtra("wallet",2); // 단골 가게 목록
+            startActivity(walletIntent);
         }
 
 
@@ -295,11 +303,60 @@ public class CouponCategoryActivity extends AppCompatActivity
             }
         }
 
+        if(requestCode==loginResult){
+            if(resultCode==RESULT_OK){
+                Intent intentDialog = new Intent(this,Dialog.class);
+                int cld = data.getIntExtra("change_logout_deleteClient",-1);
+                switch (cld){
+                    case 1: // change
+                        intentDialog.putExtra("message", "변경되었습니다");
+                        startActivity(intentDialog);
+                        nav_header_nickname.setText(Config.clientVO.getNickName());
+                        break;
+                    case 2: // logout
+                        intentDialog.putExtra("message", "로그아웃되었습니다.");
+                        startActivity(intentDialog);
+                        nav_header_nickname.setVisibility(View.GONE);
+                        nav_header_loginPlease.setVisibility(View.VISIBLE);
+                        nav_header_loginBtn.setVisibility(View.VISIBLE);
+                        break;
+                    case 3: // 회원탈퇴
+                        Log.e("CouponCategoryActivity","회원탈퇴");
+                        ClientService service = Config.retrofit.create(ClientService.class);
+                        Call<ClientVO> request = service.deleteClient(Config.clientVO.getClient_key());
+                        request.enqueue(new Callback<ClientVO>() {
+                            @Override
+                            public void onResponse(Call<ClientVO> call, Response<ClientVO> response) {
+                                if(response.code()== HttpStatus.SC_OK){
+                                    Log.e("delete","고객 정보 삭제");
+                                }
+                            }
+                            @Override
+                            public void onFailure(Call<ClientVO> call, Throwable t) {
+
+                            }
+                        });
+                        intentDialog.putExtra("message", "탈퇴되었습니다.");
+                        startActivity(intentDialog);
+                        nav_header_nickname.setVisibility(View.GONE);
+                        nav_header_loginPlease.setVisibility(View.VISIBLE);
+                        nav_header_loginBtn.setVisibility(View.VISIBLE);
+                        break;
+                }
+
+            }
+        }
+
 
     }
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
+    @Override
+    public void onDestroy() {
+        Config.clientVO = new ClientVO();
+        super.onDestroy();
     }
 }
 

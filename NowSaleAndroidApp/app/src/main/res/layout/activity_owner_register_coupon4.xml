@@ -76,7 +76,7 @@
         android:layout_weight="1"
         android:textSize="20dp"
         android:layout_gravity="center"
-        android:text="쿠폰 개수 제한"
+        android:text="행사기간 지정"
         android:id="@+id/check"
         android:visibility="gone"/>
     <LinearLayout

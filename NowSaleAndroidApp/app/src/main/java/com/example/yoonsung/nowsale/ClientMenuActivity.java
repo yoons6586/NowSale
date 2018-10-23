@@ -37,13 +37,53 @@ public class ClientMenuActivity extends AppCompatActivity {
         whatWallet=get_intent.getIntExtra("wallet",-1);
         if(whatWallet==0) {
             toolbarTitle.setText("쿠폰지갑");
-            ClientCouponListFragment homeFragment = new ClientCouponListFragment();
+
+            FActivity homeFragment = new FActivity();
+
+            Bundle bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+            bundle.putInt("what", 2); // key , value
+
+            homeFragment.setArguments(bundle);
 
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.fragment_container, homeFragment).commit();
         }
         else if(whatWallet==1) {
             toolbarTitle.setText("찜한 할인소식");
+            FActivity homeFragment = new FActivity();
+
+            Bundle bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+            bundle.putInt("what", 3); // key , value
+
+            homeFragment.setArguments(bundle);
+
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container, homeFragment).commit();
+        }
+        else if(whatWallet==2){
+            toolbarTitle.setText("단골 가게");
+            FActivity homeFragment = new FActivity();
+
+            Bundle bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+            bundle.putInt("what", 4); // key , value
+
+            homeFragment.setArguments(bundle);
+
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container, homeFragment).commit();
+
+        }
+        else if(whatWallet==5){
+            toolbarTitle.setText("내가 등록한 쿠폰 및 행사");
+            FActivity homeFragment = new FActivity();
+
+            Bundle bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+            bundle.putInt("what", 5); // key , value
+
+            homeFragment.setArguments(bundle);
+
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container, homeFragment).commit();
         }
         else{
             toolbarTitle.setText("오류");

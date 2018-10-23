@@ -22,13 +22,14 @@ public class FAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-
+        bundle = new Bundle(2); // 파라미터는 전달할 데이터 개수
         // Returning the current tabs
+        bundle.putInt("what",1);
         switch (position) {
 
             case 0:
                 tabFragment = new FActivity();
-                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
+
                 bundle.putString("category", "food"); // key , value
 
                 tabFragment.setArguments(bundle);
@@ -36,56 +37,48 @@ public class FAdapter extends FragmentStatePagerAdapter {
                 return tabFragment;
             case 1:
                 tabFragment = new FActivity();
-                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
                 bundle.putString("category", "food"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 2:
                 tabFragment = new FActivity();
-                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
                 bundle.putString("category", "food"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 3:
                 tabFragment = new FActivity();
-                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
                 bundle.putString("category", "food"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 4:
                 tabFragment = new FActivity();
-                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
                 bundle.putString("category", "food"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 5:
                 tabFragment = new FActivity();
-                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
                 bundle.putString("category", "food"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 6:
                 tabFragment = new FActivity();
-                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
                 bundle.putString("category", "food"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 7:
                 tabFragment = new FActivity();
-                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
                 bundle.putString("category", "food"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 8:
                 tabFragment = new FActivity();
-                bundle = new Bundle(1); // 파라미터는 전달할 데이터 개수
                 bundle.putString("category", "food"); // key , value
                 tabFragment.setArguments(bundle);
 

@@ -10,14 +10,22 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 public class SliderOwnerImageAdapter extends PagerAdapter { // 관리자와 사용자 로그인이 둘이 서로 달라야 함
     private int[] images = {R.drawable.beauty,R.drawable.fashion,R.drawable.alcohol1};
     private LayoutInflater inflater;
     private Context context;
+    private int owner_key;
 
-    public SliderOwnerImageAdapter(Context context){
+
+//    Glide.with(getActivity()).load(Config.url+"/drawable/owner/"+list.get(position).getLogo_img()).into(itemHolder.imgLogo);
+
+    public SliderOwnerImageAdapter(Context context,int owner_key){
         this.context = context;
+        this.owner_key=owner_key;
     }
+
 
     @Override
     public int getCount() {
@@ -36,7 +44,8 @@ public class SliderOwnerImageAdapter extends PagerAdapter { // 관리자와 사�
         ImageView imageView = (ImageView)v.findViewById(R.id.imageView);
         TextView textView = (TextView)v.findViewById(R.id.textView);
 
-        imageView.setImageResource(images[position]);
+        Glide.with(context).load(Config.url+"/drawable/owner/market/"+owner_key+"/"+position+".png").into(imageView);
+//        imageView.setImageResource(images[position]);
 
         String text = (position+1)+"번째 이미지";
         textView.setText(text);

@@ -18,9 +18,14 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.yoonsung.nowsale.VO.ClientCouponVO;
+import com.example.yoonsung.nowsale.VO.ClientSaleVO;
 import com.example.yoonsung.nowsale.VO.CouponVO;
+import com.example.yoonsung.nowsale.VO.IsFavoriteGetCountVO;
+import com.example.yoonsung.nowsale.VO.OwnerCouponVO;
+import com.example.yoonsung.nowsale.VO.OwnerSaleVO;
 import com.example.yoonsung.nowsale.http.AllService;
 import com.example.yoonsung.nowsale.http.ClientService;
+import com.example.yoonsung.nowsale.http.OwnerService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,48 +38,219 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.app.Activity.RESULT_OK;
+
 public class FActivity extends Fragment {
-    List<CouponVO>datas = new ArrayList<CouponVO>();
+    List<CouponVO> couponDatas = new ArrayList<CouponVO>();
+    List<CouponVO> saleDatas = new ArrayList<CouponVO>();
+    List<CouponVO> marketDatas = new ArrayList<CouponVO>();
     private SectionedRecyclerViewAdapter sectionAdapter;
     private String category;
     private Intent marketInfo_intent;
     private Context context;
+    private int what;
+    private ClientService clientService;
+    private OwnerService ownerService;
+    private AllService allService;
+    private View view;
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        final View view = inflater.inflate(R.layout.fragment_ex4, container, false);
-        category=getArguments().getString("category");
+        view = inflater.inflate(R.layout.fragment_ex4, container, false);
+
+        what = getArguments().getInt("what");
         sectionAdapter = new SectionedRecyclerViewAdapter();
         marketInfo_intent = new Intent(getActivity(),OwnerInfoActivity.class);
 
         context = container.getContext();
+        Log.e("what","FActivity = "+what);
+        allService = Config.retrofit.create(AllService.class);
+        clientService = Config.retrofit.create(ClientService.class);
+        ownerService = Config.retrofit.create(OwnerService.class);
+        switch(what){
+            case 1 : // category coupon에서 들어오는 것
+                category=getArguments().getString("category");
 
-        AllService service = Config.retrofit.create(AllService.class);
-        Call<List<CouponVO>> request = service.getCategoryCoupon(category);
-        request.enqueue(new Callback<List<CouponVO>>() {
-            @Override
-            public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
-                List<CouponVO> couponVOList = response.body();
-                datas = couponVOList;
+                Call<List<CouponVO>> couponRequest = allService.getCategoryCoupon(category);
+                couponRequest.enqueue(new Callback<List<CouponVO>>() {
+                    @Override
+                    public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                        List<CouponVO> couponVOList = response.body();
+                        couponDatas = couponVOList;
 
-                sectionAdapter.addSection(new ExpandableContactsSection("다운가능한 쿠폰", datas,marketInfo_intent));
-                sectionAdapter.addSection(new ExpandableContactsSection("진행중인 할인행사", datas,marketInfo_intent));
+                        sectionAdapter.addSection(new ExpandableContactsSection("다운가능한 쿠폰", couponDatas,marketInfo_intent,1));
 
-                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
-                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-                recyclerView.setAdapter(sectionAdapter);
+                        Call<List<CouponVO>> saleRequset = allService.getCategorySale(category);
+                        saleRequset.enqueue(new Callback<List<CouponVO>>() {
+                            @Override
+                            public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                                List<CouponVO> couponVOList = response.body();
+                                saleDatas = couponVOList;
 
-            }
+                                sectionAdapter.addSection(new ExpandableContactsSection("진행중인 할인행사", saleDatas,marketInfo_intent,2));
 
-            @Override
-            public void onFailure(Call<List<CouponVO>> call, Throwable t) {
+                                Call<List<CouponVO>> marketRequest = allService.getCategoryMarket(category);
+                                marketRequest.enqueue(new Callback<List<CouponVO>>() {
+                                    @Override
+                                    public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                                        List<CouponVO> marketVOList = response.body();
+                                        marketDatas = marketVOList;
 
-            }
+                                        sectionAdapter.addSection(new ExpandableContactsSection("등록된 가게", marketDatas,marketInfo_intent,3));
+                                        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                                        recyclerView.setAdapter(sectionAdapter);
+                                    }
 
-        });
+                                    @Override
+                                    public void onFailure(Call<List<CouponVO>> call, Throwable t) {
+
+                                    }
+                                });
+
+
+                            }
+
+                            @Override
+                            public void onFailure(Call<List<CouponVO>> call, Throwable t) {
+
+                            }
+
+                        });
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<CouponVO>> call, Throwable t) {
+
+                    }
+
+                });
+
+                break;
+            case 2 : // client coupon list
+
+                Call<List<CouponVO>> clientCouponRequest = clientService.getClientCouponList(Config.clientVO.getClient_key());
+                clientCouponRequest.enqueue(new Callback<List<CouponVO>>() {
+                    @Override
+                    public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                        List<CouponVO> couponVOList = response.body();
+                        couponDatas = couponVOList;
+
+                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("쿠폰 목록", couponDatas,marketInfo_intent,1));
+
+
+                        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                        recyclerView.setAdapter(sectionAdapter);
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<CouponVO>> call, Throwable t) {
+
+                    }
+
+                });
+                break;
+            case 3 : // client sale list
+                Call<List<CouponVO>> clientSaleRequest = clientService.getClientSaleList(Config.clientVO.getClient_key());
+                clientSaleRequest.enqueue(new Callback<List<CouponVO>>() {
+                    @Override
+                    public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                        List<CouponVO> saleVOList = response.body();
+                        saleDatas = saleVOList;
+
+                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("할인 정보", saleDatas,marketInfo_intent,2));
+
+
+                        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                        recyclerView.setAdapter(sectionAdapter);
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<CouponVO>> call, Throwable t) {
+
+                    }
+
+                });
+                break;
+            case 4 : // 단골 가게 목록
+                Call<List<CouponVO>> clientFavoriteMarketRequest = clientService.getClientFavoriteMarket(Config.clientVO.getClient_key());
+                clientFavoriteMarketRequest.enqueue(new Callback<List<CouponVO>>() {
+                    @Override
+                    public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                        List<CouponVO> couponVOList = response.body();
+                        couponDatas = couponVOList;
+
+                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("단골 매장", couponDatas,marketInfo_intent,3));
+
+                        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                        recyclerView.setAdapter(sectionAdapter);
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<CouponVO>> call, Throwable t) {
+
+                    }
+
+                });
+                break;
+            case 5: // 점주가 등록한 쿠폰 및 행사
+                Call<List<CouponVO>> ownerCouponRequest = ownerService.getRegisteredCoupon(Config.ownerVO.getOwner_key());
+                ownerCouponRequest.enqueue(new Callback<List<CouponVO>>() {
+                    @Override
+                    public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                        Log.e("response","coupon : "+response.code());
+                        List<CouponVO> couponVOList = response.body();
+                        couponDatas = couponVOList;
+//                        for(int i=0;i<couponDatas.size();i++){
+//                            Log.e("coupon",couponDatas.get(i).getQualification());
+//                        }
+                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("다운가능한 쿠폰",couponDatas,marketInfo_intent,1));
+
+                        Call<List<CouponVO>> ownerSaleRequest = ownerService.getRegisteredSale(Config.ownerVO.getOwner_key());
+                        ownerSaleRequest.enqueue(new Callback<List<CouponVO>>() {
+                            @Override
+                            public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                                Log.e("response","sale : "+response.code());
+                                List<CouponVO> saleVOList = response.body();
+                                saleDatas = saleVOList;
+
+                                sectionAdapter.addSection(new FActivity.ExpandableContactsSection("진행중인 할인행사",saleDatas,marketInfo_intent,2));
+
+                            }
+
+                            @Override
+                            public void onFailure(Call<List<CouponVO>> call, Throwable t) {
+
+                            }
+                        });
+
+
+                        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                        recyclerView.setAdapter(sectionAdapter);
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<CouponVO>> call, Throwable t) {
+                        Log.e("response","failure");
+
+                    }
+
+                });
+                break;
+        }
+
+
+
 
         return view;
     }
@@ -85,15 +261,17 @@ public class FActivity extends Fragment {
         List<CouponVO> list;
         boolean expanded = true;
         Intent intent;
+        int coupon_sale_normal;
 
-        ExpandableContactsSection(String title, List<CouponVO> list,Intent intent) {
+        ExpandableContactsSection(String title, List<CouponVO> list,Intent intent,int coupon_sale_normal) {
             super(SectionParameters.builder()
-                    .itemResourceId(R.layout.list_row)
+                    .itemResourceId(R.layout.list_row_coupon_wallet)
                     .headerResourceId(R.layout.section_ex4_header)
                     .build());
             this.title = title;
             this.list = list;
             this.intent = intent;
+            this.coupon_sale_normal=coupon_sale_normal;
         }
 
         @Override
@@ -107,77 +285,264 @@ public class FActivity extends Fragment {
         }
 
         @Override
-        public void onBindItemViewHolder(RecyclerView.ViewHolder holder, int position) {
+        public void onBindItemViewHolder(RecyclerView.ViewHolder holder, final int position) {
             final ItemViewHolder itemHolder = (ItemViewHolder) holder;
 
-            String name = list.get(position).getContent();
+            String content = list.get(position).getContent();
+            String marketName = list.get(position).getMarket_name();
             final int coupon_key = list.get(position).getCoupon_key();
+            final int sale_key = list.get(position).getSale_key();
+            String startDate = list.get(position).getStart_date();
+            String expireDate = list.get(position).getExpire_date();
+            String qualfication = list.get(position).getQualification();
+            final int remainCount = list.get(position).getRemain_count();
+            final int startCount = list.get(position).getStart_count();
 
-            itemHolder.tvItem.setText(name);
+            if(coupon_sale_normal==3) {
+                itemHolder.contentItem.setText(marketName);
+                itemHolder.dateItem.setVisibility(View.GONE);
+                itemHolder.remainCountItem.setVisibility(View.GONE);
+                itemHolder.qualificationItem.setVisibility(View.GONE);
+            }
+            else if(coupon_sale_normal==2){
+                itemHolder.contentItem.setText(content);
+                itemHolder.dateItem.setText(startDate+" ~ "+expireDate);
+                itemHolder.qualificationItem.setText(qualfication);
+                itemHolder.remainCountItem.setVisibility(View.GONE);
+            }
+            else if(coupon_sale_normal==1) {
+                itemHolder.contentItem.setText(content);
+                itemHolder.dateItem.setText(startDate+" ~ "+expireDate+" / ");
+                itemHolder.remainCountItem.setText(remainCount+"개 남음");
+                itemHolder.qualificationItem.setText(qualfication);
+            }
+            if(what==1){
+                switch (coupon_sale_normal){
+                    case 1:
+                        itemHolder.imgDownload.setVisibility(View.VISIBLE);
+                        break;
+                    case 2:
+                        itemHolder.imgHeart.setVisibility(View.VISIBLE);
+                        break;
+                    case 3:
+                        itemHolder.imgGo.setVisibility(View.VISIBLE);
+                        break;
+                }
+            }
+            else if(what==5){ // 점주가 등록한 쿠폰 및 행사
+                switch (coupon_sale_normal){
+                    case 1:
+                        itemHolder.deleteOwnerCouponLayout.setVisibility(View.VISIBLE);
+                        itemHolder.remainOwnerRegisteredCouponCount.setText(""+remainCount);
+                        itemHolder.startOwnerRegisteredCouponCount.setText(""+startCount);
+                        break;
+                    case 2:
+                        itemHolder.deleteLayout.setVisibility(View.VISIBLE);
+                        break;
+                }
+
+            }
 //            itemHolder.imgLogo.setImageResource(name.hashCode() % 2 == 0 ? R.drawable.logo1 : R.drawable.logo2);
             Glide.with(getActivity()).load(Config.url+"/drawable/owner/"+list.get(position).getLogo_img()).into(itemHolder.imgLogo);
-            intent.putExtra("CouponVO",list.get(position));
-            intent.putExtra("category",category);
+
             itemHolder.rootView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-
-                    startActivity(intent);
-                }
-            });
-            itemHolder.imgDownload.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(),LoginCancelPopupActivity.class);
-                    if(Config.clientVO.getClient_key() == 0){
-                        if(Config.ownerVO.getOwner_key()!=0){
-                            intent.putExtra("down",1);
+                    /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                        itemHolder.rootView.setBackground(getResources().getDrawable(R.color.cursorColor));
+                    }*/
+                    category = list.get(position).getCategory();
+                    intent.putExtra("category",category);
+                    intent.putExtra("CouponVO",list.get(position));
+                    Log.e("owner_key",""+list.get(position).getOwner_key());
+                    Log.e("client_key",""+Config.clientVO.getClient_key());
+                    AllService service = Config.retrofit.create(AllService.class);
+                    Call<IsFavoriteGetCountVO> request = service.isFavoriteGetCount(list.get(position).getOwner_key(),Config.clientVO.getClient_key());
+                    request.enqueue(new Callback<IsFavoriteGetCountVO>() {
+                        @Override
+                        public void onResponse(Call<IsFavoriteGetCountVO> call, Response<IsFavoriteGetCountVO> response) {
+//                            response.body();
+                            Log.e("response","count : "+response);
+//                            List<IsFavoriteGetCountVO> list = response.body();
+                            IsFavoriteGetCountVO isFavoriteGetCountVO = response.body();
+                            Log.e("count","count : "+isFavoriteGetCountVO.getDangol_count());
+                            intent.putExtra("dangol",isFavoriteGetCountVO);
+                            startActivity(intent);
                         }
-                        else{
-                            intent.putExtra("down",0);
+
+                        @Override
+                        public void onFailure(Call<IsFavoriteGetCountVO> call, Throwable t) {
 
                         }
-                        startActivity(intent);
-                    }
-                    else {
-                        ClientService service = Config.retrofit.create(ClientService.class);
-                        Call<List<ClientCouponVO>> request = service.insertClientCouponList(new ClientCouponVO(Config.clientVO.getClient_key(), coupon_key));
-                        request.enqueue(new Callback<List<ClientCouponVO>>() {
-                            @Override
-                            public void onResponse(Call<List<ClientCouponVO>> call, Response<List<ClientCouponVO>> response) {
-                                Log.e("responseCode",""+response.code());
-                                if (response.code() == HttpStatus.SC_OK) {
-                                    Log.e("클라이언트 쿠폰 중복", "중복 아니다");
-                                    Toast.makeText(getContext(),
-                                            String.format("발급되었습니다.",
-                                                    sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
-                                                    title),
-                                            Toast.LENGTH_SHORT).show();
-                                } else if (response.code() == HttpStatus.SC_INTERNAL_SERVER_ERROR) {
-                                    Toast.makeText(getContext(),
-                                            String.format("중복된 쿠폰입니다.",
-                                                    sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
-                                                    title),
-                                            Toast.LENGTH_SHORT).show();
-
-                                    Log.e("클라이언트 쿠폰 중복", "중복이다");
-
-
-                                }
-                            }
-
-                            @Override
-                            public void onFailure(Call<List<ClientCouponVO>> call, Throwable t) {
-                                Log.e("responseCode","failure");
-                            }
-
-                        });
-                    }
+                    });
 
 
                 }
             });
+            switch(what){ // 카테고리에 따른 리스트를 보여주는 것 / 쿠폰 지갑을 보여주는 것 / 찜한 할인목록을 보여주는 것
+                case 1 :
+                    itemHolder.imgDownload.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(),LoginCancelPopupActivity.class);
+                            if(Config.clientVO.getClient_key() == 0){
+                                if(Config.ownerVO.getOwner_key()!=0)
+                                    intent.putExtra("down",1);
+                                else
+                                    intent.putExtra("down",0);
+                                startActivity(intent);
+                            }
+                            else {
+                                ClientService service = Config.retrofit.create(ClientService.class);
+                                Call<ClientCouponVO> request = service.insertClientCouponList(new ClientCouponVO(Config.clientVO.getClient_key(), coupon_key));
+                                request.enqueue(new Callback<ClientCouponVO>() {
+                                    @Override
+                                    public void onResponse(Call<ClientCouponVO> call, Response<ClientCouponVO> response) {
+                                        Log.e("responseCode",""+response.code());
+                                        if (response.code() == HttpStatus.SC_OK) {
+                                            Log.e("클라이언트 쿠폰 중복", "중복 아니다");
+                                            Toast.makeText(getContext(),
+                                                    String.format("발급되었습니다.",
+                                                            sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
+                                                            title),
+                                                    Toast.LENGTH_SHORT).show();
+                                            itemHolder.remainCountItem.setText(remainCount-1+"개 남음");
+                                        } else if (response.code() == HttpStatus.SC_INTERNAL_SERVER_ERROR) {
+                                            Toast.makeText(getContext(),
+                                                    String.format("중복된 쿠폰입니다.",
+                                                            sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
+                                                            title),
+                                                    Toast.LENGTH_SHORT).show();
+
+                                            Log.e("클라이언트 쿠폰 중복", "중복이다");
+
+
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onFailure(Call<ClientCouponVO> call, Throwable t) {
+                                        Log.e("responseCode","failure");
+                                    }
+
+                                });
+                            }
+
+
+                        }
+                    });
+                    itemHolder.imgHeart.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(),LoginCancelPopupActivity.class);
+                            if(Config.clientVO.getClient_key() == 0){
+                                if(Config.ownerVO.getOwner_key()!=0)
+                                    intent.putExtra("down",1);
+                                else
+                                    intent.putExtra("down",0);
+                                startActivity(intent);
+                            }
+                            else {
+                                ClientService service = Config.retrofit.create(ClientService.class);
+                                Call<String> request = service.insertClientSaleList(new ClientSaleVO(Config.clientVO.getClient_key(), sale_key));
+                                request.enqueue(new Callback<String>() {
+                                    @Override
+                                    public void onResponse(Call<String> call, Response<String> response) {
+                                        Log.e("responseCode",""+response.code());
+                                        if (response.code() == HttpStatus.SC_OK) {
+                                            Log.e("클라이언트 할인제품 중복", "중복 아니다");
+                                            Toast.makeText(getContext(),
+                                                    String.format("발급되었습니다.",
+                                                            sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
+                                                            title),
+                                                    Toast.LENGTH_SHORT).show();
+                                        } else if (response.code() == HttpStatus.SC_INTERNAL_SERVER_ERROR) {
+                                            Toast.makeText(getContext(),
+                                                    String.format("중복된 쿠폰입니다.",
+                                                            sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
+                                                            title),
+                                                    Toast.LENGTH_SHORT).show();
+
+                                            Log.e("클라이언트 쿠폰 중복", "중복이다");
+
+
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onFailure(Call<String> call, Throwable t) {
+                                        Log.e("responseCode","failure");
+                                    }
+
+                                });
+                            }
+                        }
+                    });
+                    break;
+
+                case 2 :
+                    itemHolder.useItem.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(),ClientCouponListPopupActivity.class);
+                            intent.putExtra("position",position);
+                            intent.putExtra("what",11); // 쿠폰 사용
+//                    startActivityForResult(new Intent(getActivity(),ClientCouponListPopupActivity.class),1);
+                            startActivityForResult(intent,1);
+                        }
+                    });
+                    itemHolder.deleteItem.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(),ClientCouponListPopupActivity.class);
+                            intent.putExtra("position",position);
+                            intent.putExtra("what",12); // 쿠폰 삭제
+                            startActivityForResult(intent,1);
+                   /* Toast.makeText(getContext(),
+                            String.format("쿠폰이 삭제되었습니다.",
+                                    sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
+                                    title),
+                            Toast.LENGTH_SHORT).show();*/
+                        }
+                    });
+                    break;
+
+                case 3 : // client 할인 삭제
+                    itemHolder.deleteSale.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(),ClientCouponListPopupActivity.class);
+                            intent.putExtra("position",position);
+                            intent.putExtra("what",13);
+                            startActivityForResult(intent,13);
+                        }
+                    });
+                    break;
+                case 4:
+                   break;
+                case 5: // 점주가 등록한 할인 및 쿠폰 목록
+                    itemHolder.deleteOwnerCoupon.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(),ClientCouponListPopupActivity.class);
+                            intent.putExtra("position",position);
+                            intent.putExtra("what",51); // 삭제
+                            startActivityForResult(intent,51);
+                        }
+                    });
+                    itemHolder.deleteSale.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(),ClientCouponListPopupActivity.class);
+                            intent.putExtra("position",position);
+                            intent.putExtra("what",52); // 삭제
+                            startActivityForResult(intent,52);
+                        }
+                    });
+                    break;
+
+            }
+
 
         }
 
@@ -224,16 +589,157 @@ public class FActivity extends Fragment {
 
         private final View rootView;
         private final ImageView imgLogo;
-        private final TextView tvItem;
-        private final LinearLayout imgDownload;
+        private final TextView contentItem,useItem,deleteItem,dateItem,remainCountItem,qualificationItem,remainOwnerRegisteredCouponCount,deleteOwnerCoupon,startOwnerRegisteredCouponCount,deleteSale;
+        private final LinearLayout imgDownload,useCancelLayout,imgGo,imgHeart,deleteLayout,deleteOwnerCouponLayout;
 
         ItemViewHolder(View view) {
             super(view);
 
+            useItem = view.findViewById(R.id.useItem);
+            deleteItem = view.findViewById(R.id.deleteItem);
             rootView = view;
             imgLogo = (ImageView) view.findViewById(R.id.logo_img);
-            tvItem = (TextView) view.findViewById(R.id.content_text);
+            imgGo = view.findViewById(R.id.goBtn);
+            contentItem = (TextView) view.findViewById(R.id.content_text);
+            imgHeart=view.findViewById(R.id.heartBtn);
+            dateItem = view.findViewById(R.id.date_text);
             imgDownload= view.findViewById(R.id.haveBtn);
+            useCancelLayout = view.findViewById(R.id.useCancelLayout);
+            deleteLayout = view.findViewById(R.id.deleteLayout);
+            deleteOwnerCouponLayout = view.findViewById(R.id.deleteOwnerCouponLayout);
+            remainCountItem = view.findViewById(R.id.count_text);
+            qualificationItem =view.findViewById(R.id.qualification_text);
+            remainOwnerRegisteredCouponCount=view.findViewById(R.id.remainOwnerRegisteredCouponCount);
+            startOwnerRegisteredCouponCount=view.findViewById(R.id.startOwnerRegisteredCouponCount);
+            deleteOwnerCoupon = view.findViewById(R.id.deleteOwnerCoupon);
+            deleteSale = view.findViewById(R.id.deleteSale);
+
+            switch (what){
+                case 1:
+
+                    break;
+                case 2:
+                    useCancelLayout.setVisibility(View.VISIBLE);
+                    break;
+                case 3:
+                    deleteLayout.setVisibility(View.VISIBLE);
+                    break;
+                case 4:
+                    imgGo.setVisibility(View.VISIBLE);
+                    break;
+                case 5:
+                    break;
+            }
+
+        }
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode==RESULT_OK){
+
+            int p = data.getIntExtra("position",-1);
+
+            if(requestCode==1){
+                int coupon_key = couponDatas.get(p).getCoupon_key();
+                int client_key = Config.clientVO.getClient_key();
+                Log.e("position","position = "+client_key);
+                couponDatas.remove(p);
+
+                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                recyclerView.setAdapter(sectionAdapter);
+
+                ClientService service = Config.retrofit.create(ClientService.class);
+                Call<ClientCouponVO> request = service.deleteClientCouponList(new ClientCouponVO(client_key,coupon_key));
+                request.enqueue(new Callback<ClientCouponVO>() {
+                    @Override
+                    public void onResponse(Call<ClientCouponVO> call, Response<ClientCouponVO> response) {
+                        if(response.code()== HttpStatus.SC_OK){
+                            /*Toast.makeText(getContext(),
+                                    String.format("쿠폰 사용 완료"),
+                                    Toast.LENGTH_SHORT).show();*/
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ClientCouponVO> call, Throwable t) {
+
+                    }
+
+                });
+            }
+            else if(requestCode==13){ // 고객이 할인 소식 삭제
+                int sale_key = saleDatas.get(p).getSale_key();
+                saleDatas.remove(p);
+
+                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                recyclerView.setAdapter(sectionAdapter);
+
+                ClientService service = Config.retrofit.create(ClientService.class);
+                Call<ClientSaleVO> request = service.deleteClientSaleList(new ClientSaleVO(Config.clientVO.getClient_key(),sale_key));
+                request.enqueue(new Callback<ClientSaleVO>() {
+                    @Override
+                    public void onResponse(Call<ClientSaleVO> call, Response<ClientSaleVO> response) {
+                        if(response.code()== HttpStatus.SC_OK){
+                            Log.e("delete","고객 할인정보 삭제");
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ClientSaleVO> call, Throwable t) {
+
+                    }
+                });
+
+
+            }
+            else if(requestCode==51){ // 점주가 쿠폰 삭제 명령을 내린 것
+                int coupon_key = couponDatas.get(p).getCoupon_key();
+                couponDatas.remove(p);
+                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                recyclerView.setAdapter(sectionAdapter);
+
+                OwnerService ownerService = Config.retrofit.create(OwnerService.class);
+                Call<OwnerCouponVO> request = ownerService.deleteOwnerCouponList(new OwnerCouponVO(Config.ownerVO.getOwner_key(),coupon_key));
+                request.enqueue(new Callback<OwnerCouponVO>() {
+                    @Override
+                    public void onResponse(Call<OwnerCouponVO> call, Response<OwnerCouponVO> response) {
+                        if(response.code()== HttpStatus.SC_OK){
+                            Log.e("delete","쿠폰삭제");
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<OwnerCouponVO> call, Throwable t) {
+
+                    }
+                });
+            }
+            else if(requestCode==52){ // 점주가 할인 정보 취소 명령을 내린 것
+                int sale_key = saleDatas.get(p).getSale_key();
+                saleDatas.remove(p);
+                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                recyclerView.setAdapter(sectionAdapter);
+
+                OwnerService ownerService = Config.retrofit.create(OwnerService.class);
+                Call<OwnerSaleVO> requset = ownerService.deleteOwnerSaleList(new OwnerSaleVO(Config.ownerVO.getOwner_key(),sale_key));
+                requset.enqueue(new Callback<OwnerSaleVO>() {
+                    @Override
+                    public void onResponse(Call<OwnerSaleVO> call, Response<OwnerSaleVO> response) {
+                        if(response.code()== HttpStatus.SC_OK){
+                            Log.e("delete","쿠폰삭제");
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<OwnerSaleVO> call, Throwable t) {
+
+                    }
+                });
+            }
         }
     }
 }

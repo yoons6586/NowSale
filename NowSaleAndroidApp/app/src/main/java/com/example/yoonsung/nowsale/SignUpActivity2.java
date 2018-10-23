@@ -1,8 +1,9 @@
 package com.example.yoonsung.nowsale;
 
+import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -14,45 +15,83 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.yoonsung.nowsale.VO.ClientVO;
+import com.example.yoonsung.nowsale.http.AllService;
+import com.tsengvn.typekit.Typekit;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import cz.msebera.android.httpclient.HttpStatus;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEditorActionListener{ // 관리자와 사용자 로그인이 둘이 서로 달라야 함
     private Intent get_intent,next_intent;
-    private ClientInfoData clientInfoData;
+    private ClientVO clientVO;
     private EditText edit1,edit2,edit3;
+    private TextView year_txt;
+    private ImageView yearSelect;
     private Button btn;
     private int edit_num=1;
     private Boolean overlapBool;
     private String id;
+    private DatePickerDialog.OnDateSetListener d;
+    private CheckBox check_male,check_female;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_sign_up2);
 
+        Typekit.getInstance()
+                .addNormal(Typekit.createFromAsset(this, "fonts/NanumBarunpenRegular.otf"))
+                .addBold(Typekit.createFromAsset(this, "fonts/NanumBarunpenBold.otf"));
+
+        year_txt = findViewById(R.id.year_txt);
         edit1 = findViewById(R.id.edit1);
         edit2 = findViewById(R.id.edit2);
         edit3 = findViewById(R.id.edit3);
         btn = findViewById(R.id.btn);
+        yearSelect = findViewById(R.id.select_year);
+        check_male = findViewById(R.id.check_male);
+        check_female = findViewById(R.id.check_female);
+
+        d = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth){
+                Log.d("YearMonthPickerTest", "year = " + year + ", month = " + monthOfYear + ", day = " + dayOfMonth);
+                year_txt.setText(""+year);
+                if(isValidEmail(edit1.getText().toString())){
+                    if(edit2.getText().toString().equals("")==false){
+                        if(edit2.getText().toString().equals(edit3.getText().toString())){
+                            if((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
+                                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                                    btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_yellow));
+                                } else {
+                                    btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                                }
+                                btn.setTextColor(Color.BLACK);
+                            }
+                        }
+
+                    }
+                }
+            }
+        };
 
         next_intent = new Intent(this,SignUpActivity3.class);
         get_intent=getIntent();
-        clientInfoData = (ClientInfoData)get_intent.getSerializableExtra("ClientInfoData");
+        clientVO = (ClientVO) get_intent.getSerializableExtra("ClientVO");
 
 //        edit1.setImeOptions(EditorInfo.IME_ACTION_NEXT);
         edit1.addTextChangedListener(textWatcherInput1);
@@ -95,7 +134,29 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                     중복확인
                      */
                     id = edit1.getText().toString();
-                    new SignUpActivity2.JSONTask().execute(Config.url+"/overlapID?id="+id);
+                    AllService allService = Config.retrofit.create(AllService.class);
+                    Call<String> allOverlapRequest = allService.checkAllOverlap(id);
+                    allOverlapRequest.enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+                            if(response.code()== HttpStatus.SC_OK){
+
+                            }
+                            else if(response.code()== HttpStatus.SC_NO_CONTENT){
+                                edit1.setText("");
+                                edit1.setHint("중복되는 아이디입니다.");
+                                edit1.setHintTextColor(Color.RED);
+                            }
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+
+                        }
+
+                    });
+//                    new SignUpActivity2.JSONTask().execute(Config.url+"/overlapID?id="+id);
                 }
                 if (edit2.getText().toString().equals(edit3.getText().toString())==false && edit3.getText().toString().equals("") == false) {
                     edit3.setText("");
@@ -126,7 +187,28 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                     중복확인
                      */
                     id = edit1.getText().toString();
-                    new SignUpActivity2.JSONTask().execute(Config.url+"/overlapID?id="+id);
+                    AllService allService = Config.retrofit.create(AllService.class);
+                    Call<String> allOverlapRequest = allService.checkAllOverlap(id);
+                    allOverlapRequest.enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+                            if(response.code()== HttpStatus.SC_OK){
+
+                            }
+                            else if(response.code()== HttpStatus.SC_NO_CONTENT){
+                                edit1.setText("");
+                                edit1.setHint("중복되는 아이디입니다.");
+                                edit1.setHintTextColor(Color.RED);
+                            }
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+
+                        }
+
+                    });
                 }
                 if (isValidPassword(edit2.getText().toString())==false && edit2.getText().toString().equals("") == false) {
                     edit2.setText("");
@@ -144,19 +226,87 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
             }
         });
 
+        yearSelect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyYearMonthPickerDialog pd = new MyYearMonthPickerDialog();
+                pd.setListener(d);
+                pd.show(getSupportFragmentManager(), "YearMonthPickerTest");
+            }
+        });
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(isValidEmail(edit1.getText().toString())){
                     if(edit2.getText().toString().equals("")==false){
                         if(edit2.getText().toString().equals(edit3.getText().toString())){
-                            clientInfoData.setId(edit1.getText().toString());
-                            clientInfoData.setPassword(edit2.getText().toString());
-                            next_intent.putExtra("ClientInfoData",clientInfoData);
-                            startActivity(next_intent);
+                            if((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
+                                clientVO.setId(edit1.getText().toString());
+                                clientVO.setPw(edit2.getText().toString());
+                                next_intent.putExtra("ClientVO", clientVO);
+                                startActivity(next_intent);
+                            }
                         }
 
                     }
+                }
+            }
+        });
+        check_male.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(check_male.isChecked()){
+                    check_female.setChecked(false);
+                }
+                else
+                    check_female.setChecked(true);
+                try {
+                    if (isValidEmail(edit1.getText().toString())) {
+                        if (edit2.getText().toString().equals("") == false) {
+                            if (edit2.getText().toString().equals(edit3.getText().toString())) {
+                                if ((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                                        btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                                    } else {
+                                        btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                                    }
+                                    btn.setTextColor(Color.BLACK);
+                                }
+                            }
+
+                        }
+                    }
+                } catch (NumberFormatException e){
+                    Log.e("fail","연도땜에 안돼");
+                }
+            }
+        });
+        check_female.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(check_female.isChecked())
+                    check_male.setChecked(false);
+                else
+                    check_male.setChecked(true);
+                try {
+                    if (isValidEmail(edit1.getText().toString())) {
+                        if (edit2.getText().toString().equals("") == false) {
+                            if (edit2.getText().toString().equals(edit3.getText().toString())) {
+                                if ((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                                        btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                                    } else {
+                                        btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                                    }
+                                    btn.setTextColor(Color.BLACK);
+                                }
+                            }
+
+                        }
+                    }
+                } catch (NumberFormatException e){
+                    Log.e("fail","연도땜에 안돼");
                 }
             }
         });
@@ -212,14 +362,24 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             // TODO Auto-generated method stub
-            if(edit2.getText().toString().equals("")==false && edit3.getText().toString().equals("")==false){
-                if(isValidEmail(s.toString())){
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                        btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_yellow));
-                    } else {
-                        btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+            try{
+                if(edit2.getText().toString().equals("")==false && edit3.getText().toString().equals("")==false){
+                    if(isValidEmail(s.toString()) && (check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)){
+                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_yellow));
+                        } else {
+                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                        }
+                        btn.setTextColor(Color.BLACK);
                     }
-                    btn.setTextColor(Color.BLACK);
+                    else{
+                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_gray));
+                        } else {
+                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_gray));
+                        }
+                        btn.setTextColor(Color.GRAY);
+                    }
                 }
                 else{
                     if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -230,7 +390,7 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                     btn.setTextColor(Color.GRAY);
                 }
             }
-            else{
+            catch(NumberFormatException e){
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                     btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_gray));
                 } else {
@@ -238,6 +398,8 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                 }
                 btn.setTextColor(Color.GRAY);
             }
+
+
         }
 
         @Override
@@ -258,14 +420,24 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             // TODO Auto-generated method stub
-            if(edit1.getText().toString().equals("")==false && edit3.getText().toString().equals("")==false){
-                if(edit3.getText().toString().equals(s.toString())){
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                        btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_yellow));
-                    } else {
-                        btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+            try{
+                if(edit1.getText().toString().equals("")==false && edit3.getText().toString().equals("")==false){
+                    if(edit3.getText().toString().equals(s.toString())  && (check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)){
+                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_yellow));
+                        } else {
+                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                        }
+                        btn.setTextColor(Color.BLACK);
                     }
-                    btn.setTextColor(Color.BLACK);
+                    else{
+                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_gray));
+                        } else {
+                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_gray));
+                        }
+                        btn.setTextColor(Color.GRAY);
+                    }
                 }
                 else{
                     if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -276,7 +448,7 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                     btn.setTextColor(Color.GRAY);
                 }
             }
-            else{
+            catch(NumberFormatException e){
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                     btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_gray));
                 } else {
@@ -284,6 +456,7 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                 }
                 btn.setTextColor(Color.GRAY);
             }
+
         }
 
         @Override
@@ -304,25 +477,32 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             // TODO Auto-generated method stub
-            if(edit1.getText().toString().equals("")==false && edit2.getText().toString().equals("")==false){
-                if(edit2.getText().toString().equals(s.toString())){
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                        btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_yellow));
+            try {
+                if (edit1.getText().toString().equals("") == false && edit2.getText().toString().equals("") == false) {
+                    if (edit2.getText().toString().equals(s.toString()) && (check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                        } else {
+                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                        }
+                        btn.setTextColor(Color.BLACK);
                     } else {
-                        btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_gray));
+                        } else {
+                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_gray));
+                        }
+                        btn.setTextColor(Color.GRAY);
                     }
-                    btn.setTextColor(Color.BLACK);
-                }
-                else{
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                        btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_gray));
+                } else {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                        btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_gray));
                     } else {
                         btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_gray));
                     }
                     btn.setTextColor(Color.GRAY);
                 }
-            }
-            else{
+            } catch(NumberFormatException e){
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                     btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_gray));
                 } else {
@@ -345,82 +525,9 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
             Log.i("afterTextChanged", s.toString());
         }
     };
-    public class JSONTask extends AsyncTask<String, String, String> {
-        //AsyncTask이용하는 이유는 UI변경을 위해서이다. 안드로이드는 UI를 담당하는 메인 스레드가 존재하는데 우리가 만든 스레드에서는 화면을 바꾸는 일이 불가능하기 때
-        //이러한 이유로 안드로이드는 Background 작업을 할 수 있도록 AsyncTask를 지원한다.
-
-        @Override
-        protected String doInBackground(String... urls) {
-            try{
-                JSONObject jsonObject = new JSONObject();
-
-//                jsonObject.accumulate("user_key",1);
-
-                HttpURLConnection con=null;
-                BufferedReader reader=null;
-                try{
-//                    Log.e("윤성",""+urls[0]);
-                    URL url = new URL(urls[0]);
-
-                    con = (HttpURLConnection)url.openConnection();
-                    con.connect();
-
-                    InputStream stream = con.getInputStream();
-
-                    reader = new BufferedReader(new InputStreamReader(stream));
-                    StringBuffer buffer = new StringBuffer();
-                    String line="";
-                    while((line=reader.readLine())!=null){
-//                        Log.e("윤성",""+line); // json을 스트링으로 뽑는 수밖에 없을 듯
-                        buffer.append(line);
-                    }
-                    return buffer.toString();
-                }catch(MalformedURLException e){
-                    e.printStackTrace();
-                }catch(IOException e){
-                    e.printStackTrace();
-                }finally {
-                    if(con!=null)
-                        con.disconnect();
-                    try{
-                        if(reader!=null)
-                            reader.close();
-                    }catch(IOException e){
-                        e.printStackTrace();
-                    }
-                }
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-            return null;
-        }
-        @Override
-        protected void onPostExecute(String result){
-            super.onPostExecute(result);
-            try{
-                JSONArray jarray = new JSONArray(result);
-                Log.e("윤성","result : "+jarray);
-                overlapBool=true;
-                for(int i=0;i<jarray.length();i++){ // json데이터를 뽑기 위함
-                    JSONObject jObject = jarray.getJSONObject(i);
-                    String id = jObject.getString("id");
-
-                    Log.e("signup","id("+i+") : "+id);
-                    if(id.equals(SignUpActivity2.this.id)){
-                        overlapBool=false;
-                    }
-
-                }
-                Log.e("signup","id : "+SignUpActivity2.this.id);
-                if(overlapBool==false) {
-                    edit1.setText("");
-                    edit1.setHint("중복되는 아이디입니다.");
-                    edit1.setHintTextColor(Color.RED);
-                }
-
-            }catch(JSONException e){
-                e.printStackTrace();
-            }
-        }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
+
 }

@@ -2,23 +2,25 @@ package com.example.demo.all.controller;
 
 
 
-import com.example.demo.all.dao.AllCategoryCouponShowDao;
+import com.example.demo.all.dao.*;
 import com.example.demo.all.mapper.AllMapper;
-import com.example.demo.all.model.OwnerCouponShowVO;
+import com.example.demo.all.model.*;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/all")
 public class AllController {
     private AllCategoryCouponShowDao allCategoryCouponShowDao;
+    private AllFavoriteInsertDao allFavoriteInsertDao;
+    private AllFavoriteDeleteDao allFavoriteDeleteDao;
+    private AllCategorySaleShowDao allCategorySaleShowDao;
+    private AllCategoryMarketShowDao allCategoryMarketShowDao;
     private AllMapper allMapper;
 
     public AllController(AllMapper allMapper){
@@ -35,37 +37,76 @@ public class AllController {
         return new ResponseEntity<List<OwnerCouponShowVO>>(list, HttpStatus.OK);
     }
 
-    @RequestMapping(value="/favorite/update/{owner_key}/{client_key}",method = RequestMethod.POST)
-    @ApiOperation(value = "단골등록")
-    public ResponseEntity<String> updateFavorite(@PathVariable(value = "owner_key")int owner_key,@PathVariable(value="client_key")int client_key){
-        System.out.println("/favorite/update/{owner_key}/{client_key} 호출");
-        System.out.println(owner_key);
-        System.out.println(client_key);
-        allMapper.favoriteMarket(owner_key, client_key);
+    @RequestMapping(value="/category/sale/get/{category}",method = RequestMethod.GET)
+    @ApiOperation(value = "오너가 등록한 할인정보를 카테고리에 따라 보여줌")
+    public ResponseEntity<List<OwnerSaleShowVO>> categorySaleShow(@PathVariable(value="category")String category){
+        System.out.println("/category/coupon/get/{category} 호출");
+        allCategorySaleShowDao = new AllCategorySaleShowDao(category);
+        List<OwnerSaleShowVO> list = allCategorySaleShowDao.selectCategoryShow();
 
-        return new ResponseEntity<String>("update successfully",HttpStatus.OK);
+        return new ResponseEntity<List<OwnerSaleShowVO>>(list, HttpStatus.OK);
     }
 
-    @RequestMapping(value="/favorite/get/count/{owner_key}",method = RequestMethod.GET)
-    @ApiOperation(value = "단골 숫자 세는 것")
-    public ResponseEntity<Integer> getFavoriteCount(@PathVariable(value = "owner_key")int owner_key){
+    @RequestMapping(value="/market/list/get/{category}",method = RequestMethod.GET)
+    @ApiOperation(value="일반 매장을 카테고리에 따라 보여줌")
+    public ResponseEntity<List<MarketVO>> categoryMarketShow(@PathVariable(value="category")String category){
+        allCategoryMarketShowDao = new AllCategoryMarketShowDao(category);
+        List<MarketVO> list = allCategoryMarketShowDao.selectCategoryMarketShow();
+
+        return new ResponseEntity<List<MarketVO>>(list,HttpStatus.OK);
+    }
+
+    @RequestMapping(value="/favorite/insert",method = RequestMethod.POST)
+    @ApiOperation(value = "단골 등록")
+    public ResponseEntity<String> insertFavorite(@RequestBody AllOwnerClientKeyVO allOwnerClientKeyVO){
+        System.out.println("/favorite/insert 호출");
+        allFavoriteInsertDao = new AllFavoriteInsertDao(allOwnerClientKeyVO);
+
+        return allFavoriteInsertDao.allFavoriteInsert();
+//        allMapper.favoriteMarket(owner_key, client_key);
+    }
+
+    @RequestMapping(value = "/favorite/delete",method = RequestMethod.DELETE)
+    @ApiOperation(value = "단골 삭제")
+    public ResponseEntity<String> deleteFavorite(@RequestBody AllOwnerClientKeyVO allOwnerClientKeyVO){
+        allFavoriteDeleteDao = new AllFavoriteDeleteDao(allOwnerClientKeyVO);
+        return allFavoriteDeleteDao.allFavoriteDelete();
+    }
+
+    @RequestMapping(value="/favorite/is/get/count/{owner_key}/{client_key}",method = RequestMethod.GET)
+    @ApiOperation(value = "단골인지 아닌지랑 단골 숫자 같이 주는 것")
+    public ResponseEntity<IsFavoriteGetCountVO> isFavoriteGetCount(@PathVariable(value = "owner_key")int owner_key,@PathVariable(value="client_key")int client_key){
+        IsFavoriteGetCountVO isFavoriteGetCountVO;
+        List<Integer> isFavorite = allMapper.IsFavorite(owner_key,client_key);
         int count = allMapper.getFavoriteCount(owner_key);
 
-        return new ResponseEntity<Integer>(count,HttpStatus.OK);
+        if(isFavorite.size()==1){ // 단골이다/
+            isFavoriteGetCountVO = new IsFavoriteGetCountVO(count,true);
+//            list.add(isFavoriteGetCountVO);
+//            isFavoriteGetCountVO.isDangol()
+            return new ResponseEntity<IsFavoriteGetCountVO>(isFavoriteGetCountVO,HttpStatus.OK);
+        }
+        else{ // 단골이 아니다.
+            isFavoriteGetCountVO = new IsFavoriteGetCountVO(count,false);
+//            list.add(isFavoriteGetCountVO);
+            return new ResponseEntity<IsFavoriteGetCountVO>(isFavoriteGetCountVO,HttpStatus.OK);
+        }
     }
 
-    @RequestMapping(value="/favorite/is/{owner_key}/{client_key}",method = RequestMethod.GET)
-    @ApiOperation(value = "단골인지 아닌지 체크")
-    public ResponseEntity<String> isFavorite(@PathVariable(value = "owner_key")int owner_key,@PathVariable(value="client_key")int client_key){
-        List<Integer> isFavorite = allMapper.IsFavorite(owner_key,client_key);
+    @RequestMapping(value="/overlap/{id}",method = RequestMethod.GET)
+    @ApiOperation(value="id 중복체크")
+    public ResponseEntity<String> clientOverlapId(@PathVariable("id")String id){
+        String clientCheckId = allMapper.clientOverlapId(id);
+        String ownerCheckId=allMapper.ownerOverlapId(id);
 
-        if(isFavorite.size()==1){
-            return new ResponseEntity<String>("isFavorite",HttpStatus.OK);
+        if(clientCheckId == null && ownerCheckId==null){
+            return new ResponseEntity<String>("can use ID",HttpStatus.OK);
         }
         else{
-            return new ResponseEntity<String>("isNotFavorite",HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("overlap ID",HttpStatus.NO_CONTENT);
         }
     }
+
 
 
 }

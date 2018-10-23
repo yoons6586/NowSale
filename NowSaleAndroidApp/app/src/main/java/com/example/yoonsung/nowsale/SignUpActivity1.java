@@ -12,11 +12,13 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.example.yoonsung.nowsale.VO.ClientVO;
+
 public class SignUpActivity1 extends AppCompatActivity { // 관리자와 사용자 로그인이 둘이 서로 달라야 함
     private CheckBox box1,box2,box3,box4,box5;
     private Intent next_intent;
     private Button btn;
-    private ClientInfoData clientInfoData;
+    private ClientVO clientVO;
     private TextView txt1,txt2,txt3,txt4,txt5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +26,7 @@ public class SignUpActivity1 extends AppCompatActivity { // 관리자와 사용�
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_sign_up1);
 
-        clientInfoData = new ClientInfoData();
+        clientVO = new ClientVO();
         next_intent = new Intent(this,SignUpActivity2.class);
 
         box1 = findViewById(R.id.checkBox1);
@@ -156,17 +158,17 @@ public class SignUpActivity1 extends AppCompatActivity { // 관리자와 사용�
             @Override
             public void onClick(View view) {
                 if(box5.isChecked()){
-                    clientInfoData.setAlarm_SMS(true);
-                    clientInfoData.setAlarm_push(true);
-                    clientInfoData.setAlarm_mail(true);
+                    clientVO.setAlarm_SMS("T");
+                    clientVO.setAlarm_push("T");
+                    clientVO.setAlarm_mail("T");
                 }
                 else{
-                    clientInfoData.setAlarm_SMS(false);
-                    clientInfoData.setAlarm_push(false);
-                    clientInfoData.setAlarm_mail(false);
+                    clientVO.setAlarm_SMS("F");
+                    clientVO.setAlarm_push("F");
+                    clientVO.setAlarm_mail("F");
                 }
                 if(box2.isChecked() && box3.isChecked() && box4.isChecked()) {
-                    next_intent.putExtra("ClientInfoData", clientInfoData);
+                    next_intent.putExtra("ClientVO", clientVO);
                     startActivity(next_intent);
                 }
 

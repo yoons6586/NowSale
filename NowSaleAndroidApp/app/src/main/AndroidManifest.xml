@@ -56,14 +56,7 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"/>
 
-        <activity android:name=".SignUpActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ClientMyInfoActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name=".ClientSetUpActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"/>
 
@@ -72,9 +65,6 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <activity android:name=".SignUpActivity1"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".OwnerRegisterCoupon1"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".OwnerRegisterCoupon2"

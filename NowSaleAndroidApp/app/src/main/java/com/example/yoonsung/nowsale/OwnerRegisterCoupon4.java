@@ -18,26 +18,40 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.yoonsung.nowsale.VO.CouponVO;
+import com.example.yoonsung.nowsale.VO.SaleVO;
+import com.example.yoonsung.nowsale.http.OwnerService;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import cz.msebera.android.httpclient.HttpStatus;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class OwnerRegisterCoupon4 extends AppCompatActivity { // 관리자와 사용자 로그인이 둘이 서로 달라야 함
-    private Intent get_intent,next_intent;
+    private Intent get_intent,popUpIntent;
     private EditText edit1,edit2;
     private TextView txt1,txt2,txtTitle,txtStep,txtContent;
     private Button next;
     private ImageView back;
-    private int mYear, mMonth, mDay, mHour, mMinute;
-    private OwnerCouponData ownerCouponData;
+    private int mYear, mMonth, mDay, mHour, mMinute,choose;
+    private CouponVO couponVO;
+    private SaleVO saleVO;
     private CheckBox check;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_register_coupon4);
-        ownerCouponData = new OwnerCouponData();
+
+         popUpIntent= new Intent(this,ClientCouponListPopupActivity.class);
         get_intent = getIntent();
-        ownerCouponData = (OwnerCouponData) get_intent.getSerializableExtra("OwnerCouponData");
+
+        couponVO = (CouponVO) get_intent.getSerializableExtra("CouponVO");
+        saleVO = (SaleVO) get_intent.getSerializableExtra("SaleVO");
+        choose = get_intent.getIntExtra("choose",0);
 
         check  = findViewById(R.id.check);
         edit1 = findViewById(R.id.edit1);
@@ -50,9 +64,9 @@ public class OwnerRegisterCoupon4 extends AppCompatActivity { // 관리자와 �
         txtTitle = findViewById(R.id.txt_title);
         txtContent = findViewById(R.id.txt_content);
 
-        if(ownerCouponData.getChoose().equals("sale")){
+        if(choose==2){
             txtTitle.setText("할인행사 등록");
-            txtStep.setText("STEP 3");
+            txtStep.setText("STEP 2");
             txtContent.setText("행사기간을 지정하시겠어요?");
             check.setVisibility(View.VISIBLE);
             if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -107,20 +121,39 @@ public class OwnerRegisterCoupon4 extends AppCompatActivity { // 관리자와 �
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!edit1.getText().toString().equals("")) {
-                    ownerCouponData.setStart(edit1.getText().toString());
-                    ownerCouponData.setExpire(edit2.getText().toString());
+                switch (choose){
+                    case 1: // 쿠폰 등록
+                        couponVO.setStart_date(edit1.getText().toString());
+                        couponVO.setExpire_date(edit2.getText().toString());
+                        Log.e("ownerCouponData",""+couponVO.getRemain_count());
+                        Log.e("ownerCouponData",couponVO.getStart_date());
+                        Log.e("ownerCouponData",couponVO.getExpire_date());
+                        Log.e("ownerCouponData",couponVO.getQualification());
+//                        Log.e("ownerCouponData",ownerCouponData.getRange());
+                        if(!edit1.getText().toString().equals("") && !edit2.getText().toString().equals("")){
+                            /*
+                            서버로 쿠폰 발급 보내기~
+                             */
+                            popUpIntent.putExtra("what",2);
+                            startActivityForResult(popUpIntent,2);
+                        }
+                        break;
+                    case 2: // 할인 등록
+                        saleVO.setStart_date(edit1.getText().toString());
+                        saleVO.setExpire_date(edit2.getText().toString());
+                        if(!edit1.getText().toString().equals("") && !edit2.getText().toString().equals("")){
+                            /*
+                            서버로 쿠폰 발급 보내기~
+                             */
+                            popUpIntent.putExtra("what",3);
+                            startActivityForResult(popUpIntent,3);
+                        }
+                        break;
                 }
-                Log.e("ownerCouponData",ownerCouponData.getCouponCnt());
-                Log.e("ownerCouponData",ownerCouponData.getStart());
-                Log.e("ownerCouponData",ownerCouponData.getExpire());
-                Log.e("ownerCouponData",ownerCouponData.getGift());
-                Log.e("ownerCouponData",ownerCouponData.getRange());
-                if(!edit1.getText().toString().equals("") && !edit2.getText().toString().equals("")){
-                    /*
-                    서버로 쿠폰 발급 보내기~
-                     */
-                }
+
+
+
+
             }
         });
         check.setOnClickListener(new View.OnClickListener() {
@@ -214,4 +247,58 @@ public class OwnerRegisterCoupon4 extends AppCompatActivity { // 관리자와 �
             edit2.setText(String.format(String.format("%d-%d-%d", mYear,mMonth + 1, mDay)));
         }
     };
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if(requestCode==2){ // 쿠폰 사용 팝업
+            if(resultCode==RESULT_OK){ // client
+                //데이터 받기
+
+                OwnerService service = Config.retrofit.create(OwnerService.class);
+                Call<String> request = service.registerCoupon(couponVO, Config.ownerVO.getOwner_key());
+                request.enqueue(new Callback<String>() {
+                    @Override
+                    public void onResponse(Call<String> call, Response<String> response) {
+                        Log.e("responseCode",""+response.code());
+                        if (response.code() == HttpStatus.SC_OK) {
+                            Log.e("registerCoupon", "쿠폰이 발급되었습니다");
+
+                        } else if (response.code() == HttpStatus.SC_INTERNAL_SERVER_ERROR) {
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<String> call, Throwable t) {
+                        Log.e("responseCode","failure");
+                    }
+
+                });
+
+            }
+        }
+        else if(requestCode==3){
+            if(resultCode==RESULT_OK){
+                OwnerService service = Config.retrofit.create(OwnerService.class);
+                Call<String> request = service.registerSale(saleVO, Config.ownerVO.getOwner_key());
+                request.enqueue(new Callback<String>() {
+                    @Override
+                    public void onResponse(Call<String> call, Response<String> response) {
+                        Log.e("responseCode",""+response.code());
+                        if (response.code() == HttpStatus.SC_OK) {
+                            Log.e("registerCoupon", "할인정보가 등록되었습니다");
+
+                        } else if (response.code() == HttpStatus.SC_INTERNAL_SERVER_ERROR) {
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<String> call, Throwable t) {
+                        Log.e("responseCode","failure");
+                    }
+
+                });
+            }
+        }
+    }
 }

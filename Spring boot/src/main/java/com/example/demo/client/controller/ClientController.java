@@ -19,6 +19,7 @@ public class ClientController {
     private ClientInfoDeleteDao clientInfoDeleteDao;
     private ClientSignupDao clientSignupDao;
     private ClientHaveCouponDao clientHaveCouponDao;
+    private ClientHaveSaleDao clientHaveSaleDao;
     private ClientLoginDao clientLoginDao;
     private ClientCouponDeleteDao clientCouponDeleteDao;
     private ClientCouponInsertDao clientCouponInsertDao;
@@ -58,6 +59,23 @@ public class ClientController {
         return new ResponseEntity<List<ClientCouponVO>>(list,HttpStatus.OK);
     }
 
+    @RequestMapping(value="/sale/have/{client_key}",method = RequestMethod.GET)
+    @ApiOperation(value="client 등록한 할인 정보 가지고 오기")
+    public ResponseEntity<List<ClientSaleVO>> clientSaleGet(@PathVariable(value="client_key")int client_key){
+        clientHaveSaleDao = new ClientHaveSaleDao(client_key);
+        List<ClientSaleVO> list = clientHaveSaleDao.clientHaveSaleSelect();
+
+        return new ResponseEntity<List<ClientSaleVO>>(list,HttpStatus.OK);
+    }
+
+    @RequestMapping(value="/favorite/market/{client_key}",method = RequestMethod.GET)
+    @ApiOperation(value ="client가 등록한 단골매장")
+    public ResponseEntity<List<ClientFavoriteMarketVO>> clientFavoriteMarket(@PathVariable("client_key")int client_key){
+
+        List<ClientFavoriteMarketVO> list = clientMapper.getFavoriteMarket(client_key);
+        return new ResponseEntity<List<ClientFavoriteMarketVO>>(list,HttpStatus.OK);
+    }
+
     @RequestMapping(value="/info/update/{client_key}",method = RequestMethod.PUT)
     @ApiOperation(value="클라이언트의 정보 변경")
     public ResponseEntity<String> clientInfoUpdate(@PathVariable(value="client_key")int client_key, @RequestBody ClientVO clientVO){
@@ -91,15 +109,6 @@ public class ClientController {
         clientVO.setClient_key(client_key);
         clientSignupDao = new ClientSignupDao(clientVO);
         return clientSignupDao.clientSignup();
-    }
-
-    @RequestMapping(value="/signup/overlap/{id}",method = RequestMethod.GET)
-    @ApiOperation(value = "client id 중복확인")
-    public ResponseEntity<String> clientIdOverlap(@PathVariable("id")String id){
-        String check_id = clientMapper.overlapIdClient(id);
-        if(check_id == null)
-            return new ResponseEntity<String>("you can use ID",HttpStatus.OK);
-        return new ResponseEntity<String>("user other id",HttpStatus.BAD_REQUEST);
     }
 
     @RequestMapping(value="/coupon/delete",method = RequestMethod.DELETE)
@@ -136,6 +145,7 @@ public class ClientController {
 
         return clientSaleInsertDao.clientSaleInsert();
     }
+
 
 
 

@@ -1,5 +1,6 @@
 package com.example.demo.client.dao;
 
+import com.example.demo.client.model.ClientCouponCountVO;
 import com.example.demo.client.model.ClientHaveCouponVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -10,10 +11,11 @@ import org.springframework.http.ResponseEntity;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 public class ClientCouponInsertDao {
     private SqlSessionFactory sqlSessionFactory;
-
+    private List<Integer> remainCountList;
 
     private ClientHaveCouponVO clientHaveCouponVO;
     public ClientCouponInsertDao(ClientHaveCouponVO clientHaveCouponVO){
@@ -52,7 +54,8 @@ public class ClientCouponInsertDao {
         try {
 
             sqlSession.insert("dao.mybatisMapper.insertClientCoupon",clientHaveCouponVO);
-
+            remainCountList = sqlSession.selectList("dao.mybatisMapper.selectRemainCountCoupon",clientHaveCouponVO);
+            sqlSession.update("dao.mybatisMapper.updateCouponRemainCount", new ClientCouponCountVO(clientHaveCouponVO.getCoupon_key(),remainCountList.get(0)-1));
             sqlSession.commit();
             return new ResponseEntity<ClientHaveCouponVO>(clientHaveCouponVO, HttpStatus.OK);
 

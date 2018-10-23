@@ -36,6 +36,10 @@ public class LoginCancelPopupActivity extends Activity {
         if(down == 0){
             loginBtn.setVisibility(View.INVISIBLE);
         }
+        else if(down==2){ //회원 탈퇴
+            loginBtn.setText("탈퇴");
+            contentText.setText("정말 탈퇴하실 껀가요??");
+        }
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -7,7 +7,7 @@
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
                 tools:context="com.example.yoonsung.nowsale.ClientMenuActivity"
                 tools:showIn="@layout/app_bar_client_menu"
-                android:background="@color/app_background_color">
+                android:background="@color/appMainColor">
 
     <FrameLayout
         android:id="@+id/fragment_container"

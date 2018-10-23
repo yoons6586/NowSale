@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="로그인"
-            android:background="#ffffff"
+            android:background="@drawable/list_selector"
             android:textColor="@color/baseColor"
             android:gravity="center"
             android:textSize="18dp"

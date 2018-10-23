@@ -1,5 +1,7 @@
 package com.example.yoonsung.nowsale.VO;
 
+import java.io.Serializable;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,7 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ClientVO {
+public class ClientVO implements Serializable{
     private String nickName,who_key,id,pw,phone,alarm_push,alarm_mail,alarm_SMS,gender,birth,client_img;
     private int client_key;
 

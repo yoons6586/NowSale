@@ -41,10 +41,9 @@ public class OwnerCouponUpdateDao {
     public ResponseEntity<String> ownerCouponUpdate(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
-            sqlSession.update("dao.mybatisMapper.insertCouponList",ownerRegisterCouponVO);
-            sqlSession.update("dao.mybatisMapper.insertOwnerRegisterCoupon",ownerRegisterCouponVO);
+            sqlSession.insert("dao.mybatisMapper.insertCouponList",ownerRegisterCouponVO);
             sqlSession.commit();
-            return new ResponseEntity<>("update successfully", HttpStatus.OK);
+            return new ResponseEntity<String>("update successfully", HttpStatus.OK);
 //            return sqlSession.selectList("dao.mybatisClientMapper.selectAll");
         }
         finally {
