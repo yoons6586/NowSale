@@ -2,5 +2,5 @@
     <item android:state_pressed="true" android:drawable="@color/item_selected_background_color"/>
     <item android:state_focused="true" android:drawable="@color/item_selected_background_color"/>
     <item android:state_selected="true" android:drawable="@color/item_selected_background_color"/>
-    <item android:drawable="@color/app_background_color"/>
+    <item android:drawable="@color/whiteColor"/>
 </selector>

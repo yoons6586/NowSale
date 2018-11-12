@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yoonsung.nowsale.activity.LoginActivity"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+
+    android:layout_marginBottom="@dimen/activity_vertical_margin">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="left"
+                android:id="@+id/back">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/back"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:text="매장정보수정"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/baseColor"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="변경"
+                android:textColor="@color/appMainColor"
+                android:id="@+id/change"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_gravity="right"/>
+        </FrameLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="@color/cursorColor"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:id="@+id/relative1"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/baseColor"
+            android:gravity="center"
+            android:text="@string/change_market_info"
+            android:id="@+id/text1"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:background="@drawable/yellow_list_selector"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/kakaoLinkBtn"
+            android:layout_below="@+id/text1"
+            >
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="카카오톡에서 지금은 할인중 친구추가 해주세요"
+                android:textSize="13dp"
+                android:textColor="@color/baseColor"
+                android:layout_gravity="left"
+                />
+            <ImageView
+                android:layout_gravity="right"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/kakao_account_logo"
+
+                android:layout_marginRight="15dp"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="로그아웃"
+            android:textSize="13sp"
+            android:textColor="@color/cursorColor"
+            android:layout_marginRight="10dp"
+            android:id="@+id/logoutBtn"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

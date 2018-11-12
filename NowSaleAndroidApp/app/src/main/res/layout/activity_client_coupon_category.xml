@@ -1,295 +1,319 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.yoonsung.nowsale.CouponCategoryActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="@layout/app_bar_main"
-    android:background="#ffffff"
-
     android:orientation="vertical"
-    android:weightSum="9">
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:src="@drawable/dahyun"/>
-    <LinearLayout
+    android:layout_marginTop="60dp"
+    android:background="@color/app_background_color"
+    >
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:weightSum="3"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
         >
+
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:id="@+id/category_alcohol"
-            android:background="@drawable/list_selector">
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_weight="5.4"
-                android:src="@drawable/alcohol"/>
-            <TextView
+            >
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="술집"
-                android:textColor="@color/baseColor"
-                android:textSize="15dp"
-                android:gravity="center|top"/>
+                android:layout_height="wrap_content"
+                >
+                <com.example.yoonsung.nowsale.pageAdapter.MeasuredViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/view"
+                    android:layout_gravity="top"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    />
+                <android.support.design.widget.TabLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabBackground="@drawable/indicator_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    android:layout_gravity="bottom"
+                    android:id="@+id/tab_layout" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/category_alcohol"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.3dp"
+                    android:layout_marginRight="5.3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:id="@+id/alcohol_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/alcohol"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/category_food"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/food_img"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/food" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_centerInParent="true"
+                    android:id="@+id/category_health"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/health_img"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/health" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.3dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/category_play"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.3dp"
+                    android:layout_marginRight="5.3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/play_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/play" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/category_fashion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/fashion"
+                        android:id="@+id/fashion_img"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/category_beauty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/beauty"
+                        android:id="@+id/beauty_img"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.3dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/category_study"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.3dp"
+                    android:layout_marginRight="5.3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/study"
+                        android:id="@+id/study_img"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/category_cafe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/cafe"
+                        android:id="@+id/cafe_img"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/category_others"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/others"
+                        android:id="@+id/others_img"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.3dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.3dp"
+                    android:layout_marginRight="5.3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/alcohol" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.3dp"
+
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/alcohol" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.3dp"
+
+                    android:layout_weight="1"
+                    android:background="@drawable/list_selector"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/alcohol" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="8"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:id="@+id/category_food"
-            android:background="@drawable/list_selector">
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_weight="5.4"
-                android:src="@drawable/food"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="맛집"
-                android:textSize="15dp"
-                android:textColor="@color/baseColor"
-                android:gravity="center|top"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="8"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:id="@+id/category_health"
-            android:background="@drawable/list_selector">
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="0dp"
-
-                android:layout_gravity="center"
-                android:layout_weight="5.4"
-                android:src="@drawable/health"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:textColor="@color/baseColor"
-                android:text="헬스"
-                android:textSize="15dp"
-                android:gravity="center|top"/>
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:weightSum="3"
-        android:orientation="horizontal"
-        >
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="8"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:id="@+id/category_play"
-            android:background="@drawable/list_selector">
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_weight="5.4"
-                android:src="@drawable/play"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:textColor="@color/baseColor"
-                android:layout_weight="2"
-                android:text="여가문화"
-                android:textSize="15dp"
-                android:gravity="center|top"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="8"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:id="@+id/category_fashion"
-            android:background="@drawable/list_selector">
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="0dp"
-                android:layout_weight="5.4"
-                android:layout_gravity="center"
-                android:src="@drawable/fashion"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="패션잡화"
-                android:textSize="15dp"
-                android:textColor="@color/baseColor"
-                android:gravity="center|top"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="8"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:id="@+id/category_beauty"
-            android:background="@drawable/list_selector">
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="0dp"
-                android:layout_weight="5.4"
-                android:layout_gravity="center"
-                android:src="@drawable/beauty"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:textColor="@color/baseColor"
-                android:text="뷰티"
-                android:textSize="15dp"
-                android:gravity="center|top"/>
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:weightSum="3"
-        android:orientation="horizontal"
-        android:layout_marginBottom="15dp"
-        >
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="8"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:id="@+id/category_study"
-            android:background="@drawable/list_selector">
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_weight="5.4"
-                android:src="@drawable/study"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:textColor="@color/baseColor"
-                android:text="학습"
-                android:textSize="15dp"
-                android:gravity="center|top"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="8"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-
-            android:id="@+id/category_cafe"
-            android:background="@drawable/list_selector">
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_gravity="center"
-                android:layout_height="0dp"
-                android:layout_weight="5.4"
-                android:src="@drawable/cafe"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="카페"
-                android:textSize="15dp"
-                android:textColor="@color/baseColor"
-                android:gravity="center|top"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="8"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:id="@+id/category_others"
-            android:background="@drawable/list_selector">
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="0dp"
-                android:layout_weight="5.4"
-                android:layout_gravity="center"
-                android:src="@drawable/others"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:textColor="@color/baseColor"
-                android:text="기타"
-                android:textSize="15dp"
-                android:gravity="center|top"/>
-        </LinearLayout>
-    </LinearLayout>
-
+    </ScrollView>
 
 
 

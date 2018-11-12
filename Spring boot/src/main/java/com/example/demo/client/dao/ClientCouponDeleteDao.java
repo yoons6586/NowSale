@@ -50,8 +50,8 @@ public class ClientCouponDeleteDao {
     public ResponseEntity<ClientHaveCouponVO> clientCouponDelete(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
-
             sqlSession.delete("dao.mybatisMapper.deleteClientCoupon",clientHaveCouponVO);
+            sqlSession.update("dao.mybatisMapper.updateClientCouponCount",clientHaveCouponVO.getCoupon_key());
 
             sqlSession.commit();
             return new ResponseEntity<ClientHaveCouponVO>(clientHaveCouponVO, HttpStatus.OK);

@@ -33,6 +33,9 @@ public interface ClientService {
     @GET("/client/sale/have/{client_key}")
     Call<List<CouponVO>> getClientSaleList(@Path("client_key")int client_key);
 
+    @HTTP(method = "DELETE",path="/client/coupon/use",hasBody=true)
+    Call<ClientCouponVO> useClientCouponList(@Body ClientCouponVO clientCouponVO);
+
     @HTTP(method = "DELETE",path="/client/coupon/delete",hasBody=true)
     Call<ClientCouponVO> deleteClientCouponList(@Body ClientCouponVO clientCouponVO);
 

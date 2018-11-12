@@ -10,7 +10,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -25,6 +24,11 @@ public class AllController {
 
     public AllController(AllMapper allMapper){
         this.allMapper=allMapper;
+    }
+    @RequestMapping(value="/adv/img/cnt",method = RequestMethod.GET)
+    @ApiOperation(value="광고판 이미지 갯수 리턴")
+    public ResponseEntity<Integer> advImgCount(){
+        return new ResponseEntity<>(allMapper.getAdvImgCnt(),HttpStatus.OK);
     }
 
     @RequestMapping(value="/category/coupon/get/{category}",method = RequestMethod.GET)
@@ -77,17 +81,19 @@ public class AllController {
     @ApiOperation(value = "단골인지 아닌지랑 단골 숫자 같이 주는 것")
     public ResponseEntity<IsFavoriteGetCountVO> isFavoriteGetCount(@PathVariable(value = "owner_key")int owner_key,@PathVariable(value="client_key")int client_key){
         IsFavoriteGetCountVO isFavoriteGetCountVO;
-        List<Integer> isFavorite = allMapper.IsFavorite(owner_key,client_key);
+        List<Integer> isFavorite = allMapper.isFavorite(owner_key,client_key);
         int count = allMapper.getFavoriteCount(owner_key);
+        int market_img_cnt = allMapper.getMarketImgCount(owner_key);
+        int menu_img_cnt = allMapper.getMenuImgCount(owner_key);
 
         if(isFavorite.size()==1){ // 단골이다/
-            isFavoriteGetCountVO = new IsFavoriteGetCountVO(count,true);
+            isFavoriteGetCountVO = new IsFavoriteGetCountVO(count,true,market_img_cnt,menu_img_cnt);
 //            list.add(isFavoriteGetCountVO);
 //            isFavoriteGetCountVO.isDangol()
             return new ResponseEntity<IsFavoriteGetCountVO>(isFavoriteGetCountVO,HttpStatus.OK);
         }
         else{ // 단골이 아니다.
-            isFavoriteGetCountVO = new IsFavoriteGetCountVO(count,false);
+            isFavoriteGetCountVO = new IsFavoriteGetCountVO(count,false,market_img_cnt,menu_img_cnt);
 //            list.add(isFavoriteGetCountVO);
             return new ResponseEntity<IsFavoriteGetCountVO>(isFavoriteGetCountVO,HttpStatus.OK);
         }
@@ -107,7 +113,13 @@ public class AllController {
         }
     }
 
+    @RequestMapping(value="/{owner_key}/menu",method = RequestMethod.GET)
+    @ApiOperation(value="메뉴 이미지 리스트 중 설명 보여주는 것")
+    public ResponseEntity<List<MenuVO>> ownerMenuList(@PathVariable("owner_key")int owner_key){
+        List<MenuVO> list = allMapper.getMenuItem(owner_key);
 
+        return new ResponseEntity<List<MenuVO>>(list,HttpStatus.OK);
+    }
 
 }
 

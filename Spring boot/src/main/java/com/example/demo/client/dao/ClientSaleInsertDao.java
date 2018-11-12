@@ -51,8 +51,8 @@ public class ClientSaleInsertDao {
     public ResponseEntity<String> clientSaleInsert(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
-
             sqlSession.insert("dao.mybatisMapper.insertClientSale",clientHaveSaleVO);
+            sqlSession.insert("dao.mybatisMapper.insertUsedClientSale",clientHaveSaleVO);
 
             sqlSession.commit();
             return new ResponseEntity<>("client sale update successfully", HttpStatus.OK);

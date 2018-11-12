@@ -1,12 +1,14 @@
 package com.example.demo.client.controller;
 
-import ch.qos.logback.core.net.server.Client;
 import com.example.demo.client.dao.*;
 import com.example.demo.client.mapper.ClientMapper;
 import com.example.demo.client.model.*;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +16,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/client")
 public class ClientController {
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     private ClientMapper clientMapper;
     private ClientInfoUpdateDao clientInfoUpdateDao;
     private ClientInfoDeleteDao clientInfoDeleteDao;
@@ -21,6 +27,7 @@ public class ClientController {
     private ClientHaveCouponDao clientHaveCouponDao;
     private ClientHaveSaleDao clientHaveSaleDao;
     private ClientLoginDao clientLoginDao;
+    private ClientCouponUseDao clientCouponUseDao;
     private ClientCouponDeleteDao clientCouponDeleteDao;
     private ClientCouponInsertDao clientCouponInsertDao;
     private ClientSaleDeleteDao clientSaleDeleteDao;
@@ -43,11 +50,23 @@ public class ClientController {
         clientLoginDao = new ClientLoginDao(clientLoginVO);
         List<ClientVO> list = clientLoginDao.clientLoginSelect();
         System.out.println("size : "+list.size());
+        System.out.println("clientPW : " + passwordEncoder.encode(clientLoginVO.getPw()));
 
-        if(list.size()>0)
-            return new ResponseEntity<List<ClientVO>>(list,HttpStatus.OK);
-        else
-            return new ResponseEntity<List<ClientVO>>(list,HttpStatus.NOT_FOUND);
+        if(passwordEncoder.matches("string","{bcrypt}$2a$10$DZECoZ88BafqkhVYQNvku.pakK3SUP0MeIwboqeWv31UvoD1ThBbe"))
+            System.out.println("우와 신기");
+
+//        UsernamePasswordAuthenticationToken
+
+
+
+        if(list.size()>0) {
+            System.out.println("clientPW : " + list.get(0).getPw());
+            if(passwordEncoder.matches(clientLoginVO.getPw(),list.get(0).getPw()))
+                return new ResponseEntity<List<ClientVO>>(list, HttpStatus.OK);
+        }
+
+        list.clear();
+        return new ResponseEntity<List<ClientVO>>(list,HttpStatus.NOT_FOUND);
     }
 
     @RequestMapping(value="/coupon/have/{client_key}",method = RequestMethod.GET)
@@ -107,13 +126,24 @@ public class ClientController {
         System.out.println("client_key : "+client_key);
 
         clientVO.setClient_key(client_key);
+        clientVO.setPw(passwordEncoder.encode(clientVO.getPw()));
         clientSignupDao = new ClientSignupDao(clientVO);
         return clientSignupDao.clientSignup();
     }
 
-    @RequestMapping(value="/coupon/delete",method = RequestMethod.DELETE)
+    @RequestMapping(value="/coupon/use",method = RequestMethod.DELETE)
     @ApiOperation(value="client가 쿠폰을 사용하거나 삭제")
     public ResponseEntity<ClientHaveCouponVO> clientUseCoupon(@RequestBody ClientHaveCouponVO clientHaveCouponVO){
+        System.out.println("/client/coupon/use 호출");
+
+        clientCouponUseDao = new ClientCouponUseDao(clientHaveCouponVO);
+        return clientCouponUseDao.clientCouponUse();
+
+    }
+
+    @RequestMapping(value="/coupon/delete",method = RequestMethod.DELETE)
+    @ApiOperation(value="client가 쿠폰을 사용하거나 삭제")
+    public ResponseEntity<ClientHaveCouponVO> clientDeleteCoupon(@RequestBody ClientHaveCouponVO clientHaveCouponVO){
         System.out.println("/client/coupon/delete 호출");
 
         clientCouponDeleteDao = new ClientCouponDeleteDao(clientHaveCouponVO);

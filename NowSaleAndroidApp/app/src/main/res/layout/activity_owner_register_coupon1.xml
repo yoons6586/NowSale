@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.yoonsung.nowsale.LoginActivity"
+    tools:context="com.example.yoonsung.nowsale.activity.LoginActivity"
     android:orientation="vertical"
     android:weightSum="22"
     android:layout_marginLeft="@dimen/activity_horizontal_margin"

@@ -11,4 +11,5 @@ import lombok.Setter;
 public class IsFavoriteGetCountVO {
     private int dangol_count;
     private boolean dangol;
+    private int market_img_cnt,menu_img_cnt;
 }

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +32,7 @@ import com.example.yoonsung.nowsale.http.OwnerService;
 import java.util.ArrayList;
 import java.util.List;
 
+import activity.OwnerInfoActivity;
 import cz.msebera.android.httpclient.HttpStatus;
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters;
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter;
@@ -40,7 +43,7 @@ import retrofit2.Response;
 
 import static android.app.Activity.RESULT_OK;
 
-public class FActivity extends Fragment {
+public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshListener{
     List<CouponVO> couponDatas = new ArrayList<CouponVO>();
     List<CouponVO> saleDatas = new ArrayList<CouponVO>();
     List<CouponVO> marketDatas = new ArrayList<CouponVO>();
@@ -53,25 +56,37 @@ public class FActivity extends Fragment {
     private OwnerService ownerService;
     private AllService allService;
     private View view;
-
+    private int ownerInfoOwnerKey;
+    private SwipeRefreshLayout swipeLayout;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         view = inflater.inflate(R.layout.fragment_ex4, container, false);
 
         what = getArguments().getInt("what");
+
         sectionAdapter = new SectionedRecyclerViewAdapter();
-        marketInfo_intent = new Intent(getActivity(),OwnerInfoActivity.class);
+        marketInfo_intent = new Intent(getActivity(), OwnerInfoActivity.class);
 
         context = container.getContext();
         Log.e("what","FActivity = "+what);
         allService = Config.retrofit.create(AllService.class);
         clientService = Config.retrofit.create(ClientService.class);
         ownerService = Config.retrofit.create(OwnerService.class);
+
+
+        swipeLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipe_layout);
+        swipeLayout.setOnRefreshListener((SwipeRefreshLayout.OnRefreshListener) this);
+
+
+        LoadingAnimationApplication.getInstance().progressON(getActivity(), Config.loadingContext);
         switch(what){
             case 1 : // category coupon에서 들어오는 것
+                //안드로이드 로딩 애니메이션
+
+
+
                 category=getArguments().getString("category");
 
                 Call<List<CouponVO>> couponRequest = allService.getCategoryCoupon(category);
@@ -96,6 +111,9 @@ public class FActivity extends Fragment {
                                 marketRequest.enqueue(new Callback<List<CouponVO>>() {
                                     @Override
                                     public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                                        //로딩 애니메이션 종료
+                                        LoadingAnimationApplication.getInstance().progressOFF();
+
                                         List<CouponVO> marketVOList = response.body();
                                         marketDatas = marketVOList;
 
@@ -103,6 +121,7 @@ public class FActivity extends Fragment {
                                         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
                                         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                                         recyclerView.setAdapter(sectionAdapter);
+
                                     }
 
                                     @Override
@@ -120,6 +139,7 @@ public class FActivity extends Fragment {
                             }
 
                         });
+
                     }
 
                     @Override
@@ -136,6 +156,7 @@ public class FActivity extends Fragment {
                 clientCouponRequest.enqueue(new Callback<List<CouponVO>>() {
                     @Override
                     public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                        LoadingAnimationApplication.getInstance().progressOFF();
                         List<CouponVO> couponVOList = response.body();
                         couponDatas = couponVOList;
 
@@ -145,6 +166,7 @@ public class FActivity extends Fragment {
                         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
                         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                         recyclerView.setAdapter(sectionAdapter);
+//                        LoadingAnimationApplication.getInstance().progressOFF();
 
                     }
 
@@ -154,12 +176,14 @@ public class FActivity extends Fragment {
                     }
 
                 });
+
                 break;
             case 3 : // client sale list
                 Call<List<CouponVO>> clientSaleRequest = clientService.getClientSaleList(Config.clientVO.getClient_key());
                 clientSaleRequest.enqueue(new Callback<List<CouponVO>>() {
                     @Override
                     public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                        LoadingAnimationApplication.getInstance().progressOFF();
                         List<CouponVO> saleVOList = response.body();
                         saleDatas = saleVOList;
 
@@ -169,6 +193,7 @@ public class FActivity extends Fragment {
                         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
                         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                         recyclerView.setAdapter(sectionAdapter);
+//                        LoadingAnimationApplication.getInstance().progressOFF();
 
                     }
 
@@ -178,20 +203,23 @@ public class FActivity extends Fragment {
                     }
 
                 });
+
                 break;
             case 4 : // 단골 가게 목록
                 Call<List<CouponVO>> clientFavoriteMarketRequest = clientService.getClientFavoriteMarket(Config.clientVO.getClient_key());
                 clientFavoriteMarketRequest.enqueue(new Callback<List<CouponVO>>() {
                     @Override
                     public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
-                        List<CouponVO> couponVOList = response.body();
-                        couponDatas = couponVOList;
+                        LoadingAnimationApplication.getInstance().progressOFF();
+                        List<CouponVO> marketVOList = response.body();
+                        marketDatas = marketVOList;
 
-                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("단골 매장", couponDatas,marketInfo_intent,3));
+                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("단골 매장", marketDatas,marketInfo_intent,3));
 
                         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
                         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                         recyclerView.setAdapter(sectionAdapter);
+//                        LoadingAnimationApplication.getInstance().progressOFF();
 
                     }
 
@@ -219,11 +247,16 @@ public class FActivity extends Fragment {
                         ownerSaleRequest.enqueue(new Callback<List<CouponVO>>() {
                             @Override
                             public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                                LoadingAnimationApplication.getInstance().progressOFF();
                                 Log.e("response","sale : "+response.code());
                                 List<CouponVO> saleVOList = response.body();
                                 saleDatas = saleVOList;
 
                                 sectionAdapter.addSection(new FActivity.ExpandableContactsSection("진행중인 할인행사",saleDatas,marketInfo_intent,2));
+                                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                                recyclerView.setAdapter(sectionAdapter);
+//                                LoadingAnimationApplication.getInstance().progressOFF();
 
                             }
 
@@ -234,9 +267,55 @@ public class FActivity extends Fragment {
                         });
 
 
-                        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
-                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-                        recyclerView.setAdapter(sectionAdapter);
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<CouponVO>> call, Throwable t) {
+                        Log.e("response","failure");
+
+                    }
+
+                });
+                break;
+            case 6: // 매장 정보로 들어가서 한 매장의 쿠폰 및 할인소식을 보는 것
+                ownerInfoOwnerKey = getArguments().getInt("ownerInfoOwnerKey");
+                Call<List<CouponVO>> ownerInfoCouponRequest = ownerService.getRegisteredCoupon(ownerInfoOwnerKey);
+                ownerInfoCouponRequest.enqueue(new Callback<List<CouponVO>>() {
+                    @Override
+                    public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                        Log.e("response","coupon : "+response.code());
+                        List<CouponVO> couponVOList = response.body();
+                        couponDatas = couponVOList;
+//                        for(int i=0;i<couponDatas.size();i++){
+//                            Log.e("coupon",couponDatas.get(i).getQualification());
+//                        }
+                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("다운가능한 쿠폰",couponDatas,marketInfo_intent,1));
+
+                        Call<List<CouponVO>> ownerInfoSaleRequest = ownerService.getRegisteredSale(ownerInfoOwnerKey);
+                        ownerInfoSaleRequest.enqueue(new Callback<List<CouponVO>>() {
+                            @Override
+                            public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
+                                LoadingAnimationApplication.getInstance().progressOFF();
+                                Log.e("response","sale : "+response.code());
+                                List<CouponVO> saleVOList = response.body();
+                                saleDatas = saleVOList;
+
+                                sectionAdapter.addSection(new FActivity.ExpandableContactsSection("진행중인 할인행사",saleDatas,marketInfo_intent,2));
+                                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                                recyclerView.setAdapter(sectionAdapter);
+
+                            }
+
+                            @Override
+                            public void onFailure(Call<List<CouponVO>> call, Throwable t) {
+
+                            }
+                        });
+
+
+
                     }
 
                     @Override
@@ -251,8 +330,19 @@ public class FActivity extends Fragment {
 
 
 
-
         return view;
+    }
+
+    @Override
+    public void onRefresh() {
+        Log.e("FACtivity","onRefresh()");
+        swipeLayout.setRefreshing(true);
+        android.support.v4.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.detach(this).attach(this).commit();
+//        ((FMainActivity)getActivity()).refresh();
+
+
+        swipeLayout.setRefreshing(false);
     }
 
     private class ExpandableContactsSection extends StatelessSection {
@@ -316,7 +406,7 @@ public class FActivity extends Fragment {
                 itemHolder.remainCountItem.setText(remainCount+"개 남음");
                 itemHolder.qualificationItem.setText(qualfication);
             }
-            if(what==1){
+            if(what==1 || what==6){
                 switch (coupon_sale_normal){
                     case 1:
                         itemHolder.imgDownload.setVisibility(View.VISIBLE);
@@ -345,41 +435,53 @@ public class FActivity extends Fragment {
 //            itemHolder.imgLogo.setImageResource(name.hashCode() % 2 == 0 ? R.drawable.logo1 : R.drawable.logo2);
             Glide.with(getActivity()).load(Config.url+"/drawable/owner/"+list.get(position).getLogo_img()).into(itemHolder.imgLogo);
 
-            itemHolder.rootView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+            if(what!=6) {
+                itemHolder.rootView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
                     /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                         itemHolder.rootView.setBackground(getResources().getDrawable(R.color.cursorColor));
                     }*/
-                    category = list.get(position).getCategory();
-                    intent.putExtra("category",category);
-                    intent.putExtra("CouponVO",list.get(position));
-                    Log.e("owner_key",""+list.get(position).getOwner_key());
-                    Log.e("client_key",""+Config.clientVO.getClient_key());
-                    AllService service = Config.retrofit.create(AllService.class);
-                    Call<IsFavoriteGetCountVO> request = service.isFavoriteGetCount(list.get(position).getOwner_key(),Config.clientVO.getClient_key());
-                    request.enqueue(new Callback<IsFavoriteGetCountVO>() {
-                        @Override
-                        public void onResponse(Call<IsFavoriteGetCountVO> call, Response<IsFavoriteGetCountVO> response) {
+                        category = list.get(position).getCategory();
+                        intent.putExtra("category", category);
+                        intent.putExtra("CouponVO", list.get(position));
+                        intent.putExtra("position",position);
+                        Log.e("owner_key", "" + list.get(position).getOwner_key());
+                        Log.e("client_key", "" + Config.clientVO.getClient_key());
+                        AllService service = Config.retrofit.create(AllService.class);
+                        Call<IsFavoriteGetCountVO> request = service.isFavoriteGetCount(list.get(position).getOwner_key(), Config.clientVO.getClient_key());
+                        request.enqueue(new Callback<IsFavoriteGetCountVO>() {
+                            @Override
+                            public void onResponse(Call<IsFavoriteGetCountVO> call, Response<IsFavoriteGetCountVO> response) {
 //                            response.body();
-                            Log.e("response","count : "+response);
+                                Log.e("response", "count : " + response);
 //                            List<IsFavoriteGetCountVO> list = response.body();
-                            IsFavoriteGetCountVO isFavoriteGetCountVO = response.body();
-                            Log.e("count","count : "+isFavoriteGetCountVO.getDangol_count());
-                            intent.putExtra("dangol",isFavoriteGetCountVO);
-                            startActivity(intent);
-                        }
+                                IsFavoriteGetCountVO isFavoriteGetCountVO = response.body();
+                                Log.e("count", "count : " + isFavoriteGetCountVO.getDangol_count());
+                                intent.putExtra("dangol", isFavoriteGetCountVO);
+                                if(what!=4) {
+                                    Log.e("Factivity","startactivity 실행");
+                                    startActivity(intent);
+                                }
+                                else {
+                                    Log.e("Factivity","startactivityForResult 실행");
+                                    intent.putExtra("what", 4);
+                                    startActivityForResult(intent, 4);
+                                }
+                            }
 
-                        @Override
-                        public void onFailure(Call<IsFavoriteGetCountVO> call, Throwable t) {
+                            @Override
+                            public void onFailure(Call<IsFavoriteGetCountVO> call, Throwable t) {
 
-                        }
-                    });
+                            }
+                        });
 
 
-                }
-            });
+                    }
+                });
+            }
             switch(what){ // 카테고리에 따른 리스트를 보여주는 것 / 쿠폰 지갑을 보여주는 것 / 찜한 할인목록을 보여주는 것
+                case 6 :
                 case 1 :
                     itemHolder.imgDownload.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -488,7 +590,7 @@ public class FActivity extends Fragment {
                             intent.putExtra("position",position);
                             intent.putExtra("what",11); // 쿠폰 사용
 //                    startActivityForResult(new Intent(getActivity(),ClientCouponListPopupActivity.class),1);
-                            startActivityForResult(intent,1);
+                            startActivityForResult(intent,11);
                         }
                     });
                     itemHolder.deleteItem.setOnClickListener(new View.OnClickListener() {
@@ -497,7 +599,7 @@ public class FActivity extends Fragment {
                             Intent intent = new Intent(getActivity(),ClientCouponListPopupActivity.class);
                             intent.putExtra("position",position);
                             intent.putExtra("what",12); // 쿠폰 삭제
-                            startActivityForResult(intent,1);
+                            startActivityForResult(intent,12);
                    /* Toast.makeText(getContext(),
                             String.format("쿠폰이 삭제되었습니다.",
                                     sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
@@ -518,7 +620,7 @@ public class FActivity extends Fragment {
                         }
                     });
                     break;
-                case 4:
+                case 4: // 단골 가게 목
                    break;
                 case 5: // 점주가 등록한 할인 및 쿠폰 목록
                     itemHolder.deleteOwnerCoupon.setOnClickListener(new View.OnClickListener() {
@@ -540,7 +642,6 @@ public class FActivity extends Fragment {
                         }
                     });
                     break;
-
             }
 
 
@@ -556,7 +657,17 @@ public class FActivity extends Fragment {
             final HeaderViewHolder headerHolder = (HeaderViewHolder) holder;
 
             headerHolder.tvTitle.setText(title);
-
+            switch(coupon_sale_normal){
+                case 1:
+                    headerHolder.tvImage.setImageDrawable(getResources().getDrawable(R.drawable.coupon));
+                    break;
+                case 2:
+                    headerHolder.tvImage.setImageDrawable(getResources().getDrawable(R.drawable.sale));
+                    break;
+                case 3:
+                    headerHolder.tvImage.setImageDrawable(getResources().getDrawable(R.drawable.market));
+                    break;
+            }
             headerHolder.rootView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -575,6 +686,7 @@ public class FActivity extends Fragment {
         private final View rootView;
         private final TextView tvTitle;
         private final ImageView imgArrow;
+        private final ImageView tvImage;
 
         HeaderViewHolder(View view) {
             super(view);
@@ -582,6 +694,7 @@ public class FActivity extends Fragment {
             rootView = view;
             tvTitle = (TextView) view.findViewById(R.id.tvTitle);
             imgArrow = (ImageView) view.findViewById(R.id.imgArrow);
+            tvImage = (ImageView) view.findViewById(R.id.tvImage);
         }
     }
 
@@ -590,7 +703,8 @@ public class FActivity extends Fragment {
         private final View rootView;
         private final ImageView imgLogo;
         private final TextView contentItem,useItem,deleteItem,dateItem,remainCountItem,qualificationItem,remainOwnerRegisteredCouponCount,deleteOwnerCoupon,startOwnerRegisteredCouponCount,deleteSale;
-        private final LinearLayout imgDownload,useCancelLayout,imgGo,imgHeart,deleteLayout,deleteOwnerCouponLayout;
+        private final LinearLayout useCancelLayout,deleteLayout,deleteOwnerCouponLayout;
+        private final RelativeLayout imgDownload,imgHeart,imgGo;
 
         ItemViewHolder(View view) {
             super(view);
@@ -629,6 +743,8 @@ public class FActivity extends Fragment {
                     break;
                 case 5:
                     break;
+                case 6:
+                    break;
             }
 
         }
@@ -636,10 +752,38 @@ public class FActivity extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(resultCode==RESULT_OK){
+            if(requestCode==11){ // 고객이 쿠폰 사용
+                int p = data.getIntExtra("position",-1);
+                int coupon_key = couponDatas.get(p).getCoupon_key();
+                int client_key = Config.clientVO.getClient_key();
+                Log.e("position","position = "+client_key);
+                couponDatas.remove(p);
 
-            int p = data.getIntExtra("position",-1);
+                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                recyclerView.setAdapter(sectionAdapter);
 
-            if(requestCode==1){
+                ClientService service = Config.retrofit.create(ClientService.class);
+                Call<ClientCouponVO> request = service.useClientCouponList(new ClientCouponVO(client_key,coupon_key));
+                request.enqueue(new Callback<ClientCouponVO>() {
+                    @Override
+                    public void onResponse(Call<ClientCouponVO> call, Response<ClientCouponVO> response) {
+                        if(response.code()== HttpStatus.SC_OK){
+                            /*Toast.makeText(getContext(),
+                                    String.format("쿠폰 사용 완료"),
+                                    Toast.LENGTH_SHORT).show();*/
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ClientCouponVO> call, Throwable t) {
+
+                    }
+
+                });
+            }
+            else if(requestCode==12){  // 고객이 쿠폰을 사용하지 않고 삭제함
+                int p = data.getIntExtra("position",-1);
                 int coupon_key = couponDatas.get(p).getCoupon_key();
                 int client_key = Config.clientVO.getClient_key();
                 Log.e("position","position = "+client_key);
@@ -669,6 +813,7 @@ public class FActivity extends Fragment {
                 });
             }
             else if(requestCode==13){ // 고객이 할인 소식 삭제
+                int p = data.getIntExtra("position",-1);
                 int sale_key = saleDatas.get(p).getSale_key();
                 saleDatas.remove(p);
 
@@ -695,6 +840,7 @@ public class FActivity extends Fragment {
 
             }
             else if(requestCode==51){ // 점주가 쿠폰 삭제 명령을 내린 것
+                int p = data.getIntExtra("position",-1);
                 int coupon_key = couponDatas.get(p).getCoupon_key();
                 couponDatas.remove(p);
                 RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
@@ -718,6 +864,7 @@ public class FActivity extends Fragment {
                 });
             }
             else if(requestCode==52){ // 점주가 할인 정보 취소 명령을 내린 것
+                int p = data.getIntExtra("position",-1);
                 int sale_key = saleDatas.get(p).getSale_key();
                 saleDatas.remove(p);
                 RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
@@ -740,6 +887,41 @@ public class FActivity extends Fragment {
                     }
                 });
             }
+            else if(requestCode==4){ // 고객이 단골가게에 들어갔다가 갱신하는 것!!
+                Log.e("FACtivity","단골가게 새로 갱신");
+//                LoadingAnimationApplication.getInstance().progressON(getActivity(), Config.loadingContext);
+                int p = data.getIntExtra("position",-1);
+                boolean fav = data.getBooleanExtra("mFav",false);
+                Log.e("FActivity","position : "+p);
+
+                if(fav) {
+                    Log.e("FActivity", "mFav : true");
+                    marketDatas.remove(p);
+                    RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                    recyclerView.setAdapter(sectionAdapter);
+                }
+                else
+                    Log.e("FActivity","mFav : false");
+//                android.support.v4.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
+//                ft.detach(FActivity.this).attach(FActivity.this).commit();
+
+//                onRefresh();
+
+            }
         }
+    }
+    @Override
+    public void onDestroyView(){
+        super.onDestroyView();
+        LoadingAnimationApplication.getInstance().progressOFF();
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+
+//        android.support.v4.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
+//        ft.detach(this).attach(this).commit();
+
     }
 }

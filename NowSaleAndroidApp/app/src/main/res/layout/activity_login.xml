@@ -4,102 +4,146 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.yoonsung.nowsale.LoginActivity"
+    tools:context="com.example.yoonsung.nowsale.activity.LoginActivity"
     android:orientation="vertical"
-    android:layout_marginRight="15dp"
-    android:layout_marginTop="15dp"
-    android:layout_marginLeft="15dp"
-    android:layout_marginBottom="15dp"
-    android:background="@drawable/list_selector">
+
+    android:background="@color/app_background_color">
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/back"
-        android:layout_gravity="left"/>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/nowsale"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        >
-        <EditText
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textEmailAddress"
-            android:hint="이메일"
-            android:theme="@style/EditTheme"
-            android:id="@+id/id_text"
-            android:singleLine="true"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/black_back"
+        android:id="@+id/back"
+        android:layout_gravity="left"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo"
+            android:id="@+id/logo"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"
         >
-        <EditText
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="비밀번호"
-            android:inputType="textPassword"
-            android:theme="@style/EditTheme"
-            android:id="@+id/pw_text"
-            android:singleLine="true"/>
-    </LinearLayout>
-    <TextView
-        android:layout_marginTop="40dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:layout_gravity="right"
-        android:gravity="center_vertical"
-        android:layout_marginRight="40dp"
-        android:text="비밀번호를 잊으셨나요?"/>
+            android:background="@color/whiteColor"
+            android:layout_gravity="top"
+            android:id="@+id/login_layout"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/id_edit_layout"
+                android:layout_alignParentTop="true"
+                >
+                <EditText
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:hint="이메일"
+                    android:theme="@style/EditTheme"
+                    android:id="@+id/id_text"
+                    android:singleLine="true"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/id_edit_layout"
+                android:id="@+id/pw_edit_layout"
+                >
+                <EditText
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="비밀번호"
+                    android:inputType="textPassword"
+                    android:theme="@style/EditTheme"
+                    android:id="@+id/pw_text"
+                    android:singleLine="true"/>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_gravity="right"
+                android:layout_marginRight="17dp"
+                android:textColor="@color/baseColor"
+                android:layout_alignParentRight="true"
+                android:text="비밀번호를 잊으셨나요?"
+                android:layout_below="@id/pw_edit_layout"
+                android:id="@+id/forget_pw"/>
 
-    <TextView
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="39dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:text="로그인"
-        android:textSize="18dp"
-        android:gravity="center"
-        android:background="@drawable/round_button_selector"
-        android:id="@+id/loginBtn"
-        />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:text="로그인"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/baseColor"
+                android:background="@drawable/button_selector"
+                android:id="@+id/loginBtn"
+                android:layout_below="@id/forget_pw"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="회원가입하기"
+                android:id="@+id/signUpBtn"
+                android:layout_marginBottom="10dp"
+                android:layout_above="@id/signUpOwnerBtn"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="점주용 계정을 만들고 싶어요!"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/signUpOwnerBtn"
+                />
 
+        </RelativeLayout>
+        <ImageView
+            android:layout_gravity="top|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/harin_login_coupon"
+            android:id="@+id/harin_coupon"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            />
+    </FrameLayout>
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:layout_weight="1"
-        android:textSize="18dp"
-        android:textColor="#000000"
-        android:text="회원가입하기"
-        android:id="@+id/signUpBtn"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:layout_weight="1"
-        android:textSize="18dp"
-        android:textColor="#000000"
-        android:text="점주용 계정을 만들고 싶어요!"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/signUpOwnerBtn"
-        />
 
 </LinearLayout>

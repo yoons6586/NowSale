@@ -6,6 +6,7 @@ import com.example.yoonsung.nowsale.VO.OwnerVO;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+
 public class Config {
     public static String url="http://192.168.35.120:8080";
     public static ClientVO clientVO = new ClientVO();
@@ -15,4 +16,6 @@ public class Config {
             .baseUrl(Config.url)
             .addConverterFactory(GsonConverterFactory.create())
             .build();
+    public static String loadingContext="Loading...";
+    public static String naverMapClientID= "jXpEGi6SmZR_dAOl54_S";
 }

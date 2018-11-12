@@ -24,6 +24,12 @@ public interface OwnerService {
     @POST("/owner/login")
     Call<List<OwnerVO>> isLogin(@Body LoginVO loginVO);
 
+    @GET("/owner/coupon/count/{owner_key}")
+    Call<Integer> couponCount(@Path("owner_key")int owner_key);
+
+    @GET("/owner/sale/count/{owner_key}")
+    Call<Integer> saleCount(@Path("owner_key")int owner_key);
+
     @POST("/owner/coupon/update/{owner_key}")
     Call<String> registerCoupon(@Body CouponVO couponVO, @Path("owner_key")int owner_key);
 

@@ -1,8 +1,11 @@
 package com.example.demo.client.dao;
 
+import ch.qos.logback.core.net.server.Client;
 import com.example.demo.client.model.ClientCouponVO;
 import com.example.demo.client.model.ClientLoginVO;
 import com.example.demo.client.model.ClientVO;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -10,7 +13,9 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ClientLoginDao {
     private SqlSessionFactory sqlSessionFactory;
@@ -50,7 +55,13 @@ public class ClientLoginDao {
     public List<ClientVO> clientLoginSelect(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
+//            Map<String, ClientLoginVO> map = sqlSession.selectMap("dao.mybatisMapper.selectEveryClientIdPw","id");
+//            String client = String.valueOf(map.get("qwe").getPw());
+//            String clientPW = sqlSession.selectOne("dao.mybatisMapper.selectEveryClientIdPw",clientLoginVO);
+//            System.out.println("clientPW : "+clientPW);
             List<ClientVO> list = sqlSession.selectList("dao.mybatisMapper.selectClientLogin",clientLoginVO);
+
+
             sqlSession.commit();
             return list;
 

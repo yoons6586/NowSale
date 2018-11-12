@@ -112,5 +112,21 @@ public class OwnerController {
 
         return ownerSaleDeleteDao.ownerSaleDelete();
     }
+
+    @RequestMapping(value ="/coupon/count/{owner_key}",method = RequestMethod.GET)
+    @ApiOperation(value="쿠폰 등록을 할 때 3개이상은 막기 위함 -> 등록한 쿠폰 갯수 알려줌")
+    public ResponseEntity<Integer> couponCount(@PathVariable int owner_key){
+        int cnt = ownerMapper.getCouponCount(owner_key);
+
+        return new ResponseEntity<>(cnt,HttpStatus.OK);
+    }
+
+    @RequestMapping(value ="/sale/count/{owner_key}",method = RequestMethod.GET)
+    @ApiOperation(value="할인정보 등록을 할 때 3개이상은 막기 위함 -> 등록한 할인정보 갯수 알려줌")
+    public ResponseEntity<Integer> saleCount(@PathVariable int owner_key){
+        int cnt = ownerMapper.getSaleCount(owner_key);
+
+        return new ResponseEntity<>(cnt,HttpStatus.OK);
+    }
 }
 

@@ -54,6 +54,7 @@ public class ClientCouponInsertDao {
         try {
 
             sqlSession.insert("dao.mybatisMapper.insertClientCoupon",clientHaveCouponVO);
+            sqlSession.insert("dao.mybatisMapper.insertClientUsedCoupon",clientHaveCouponVO);
             remainCountList = sqlSession.selectList("dao.mybatisMapper.selectRemainCountCoupon",clientHaveCouponVO);
             sqlSession.update("dao.mybatisMapper.updateCouponRemainCount", new ClientCouponCountVO(clientHaveCouponVO.getCoupon_key(),remainCountList.get(0)-1));
             sqlSession.commit();

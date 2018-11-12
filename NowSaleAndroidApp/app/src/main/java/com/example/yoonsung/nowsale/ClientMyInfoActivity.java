@@ -55,7 +55,6 @@ public class ClientMyInfoActivity extends AppCompatActivity { // 관리자와 �
         editNickname = findViewById(R.id.edit_nickname);
         editPW = findViewById(R.id.edit_pw);
         editPWCheck=findViewById(R.id.edit_pw_check);
-
         textEmail.setText(Config.clientVO.getId());
         editNickname.setText(Config.clientVO.getNickName());
         editPW.setText(Config.clientVO.getPw());

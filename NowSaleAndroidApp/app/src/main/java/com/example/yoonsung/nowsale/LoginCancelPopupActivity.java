@@ -40,6 +40,16 @@ public class LoginCancelPopupActivity extends Activity {
             loginBtn.setText("탈퇴");
             contentText.setText("정말 탈퇴하실 껀가요??");
         }
+        else if(down==3){ // 쿠폰등록은 3개까지만
+            loginBtn.setVisibility(View.GONE);
+            cancelBtn.setText("확인");
+            contentText.setText("쿠폰 등록은 3개까지 가능합니다");
+        }
+        else if(down==4){
+            loginBtn.setVisibility(View.GONE);
+            cancelBtn.setText("확인");
+            contentText.setText("할인 등록은 3개까지 가능합니다");
+        }
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override

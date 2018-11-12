@@ -4,6 +4,7 @@ import com.example.yoonsung.nowsale.VO.AllOwnerClientKeyVO;
 import com.example.yoonsung.nowsale.VO.ClientVO;
 import com.example.yoonsung.nowsale.VO.CouponVO;
 import com.example.yoonsung.nowsale.VO.IsFavoriteGetCountVO;
+import com.example.yoonsung.nowsale.VO.MenuVO;
 
 import java.util.List;
 
@@ -19,6 +20,9 @@ import retrofit2.http.Path;
  */
 
 public interface AllService {
+    @GET("/all/adv/img/cnt")
+    Call<Integer> getAdvCount();
+
     @GET("/client/all")
     Call<List<ClientVO>> getUserRepositories(/*@Path("user") String userName*/);
 
@@ -45,5 +49,8 @@ public interface AllService {
 
     @GET("/all/overlap/{id}")
     Call<String> checkAllOverlap(@Path("id")String id);
+
+    @GET("/all/{owner_key}/menu")
+    Call<List<MenuVO>> getMenuList(@Path("owner_key")int owner_key);
 
 }

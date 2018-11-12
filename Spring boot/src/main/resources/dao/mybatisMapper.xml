@@ -55,7 +55,7 @@
     <select id="selectClientLogin" parameterType="com.example.demo.client.model.ClientLoginVO" resultType="com.example.demo.client.model.ClientVO">
         SELECT *
         FROM client_list
-        WHERE id=#{id} and pw=#{pw}
+        WHERE id=#{id}
     </select>
 
     <delete id="deleteClientCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO">
@@ -63,11 +63,21 @@
         WHERE (client_key=#{client_key} AND coupon_key = #{coupon_key})
     </delete>
 
+    <update id="updateClientCouponCount" parameterType="int">
+        UPDATE coupon_list
+        SET remain_count = remain_count+1
+        WHERE coupon_key = #{coupon_key}
+    </update>
+
     <insert id="insertClientCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO">
         INSERT INTO client_coupon(client_key,coupon_key)
         VALUES (#{client_key},#{coupon_key})
     </insert>
 
+    <insert id="insertClientUsedCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO">
+        INSERT INTO used_coupon(client_key,coupon_key)
+        VALUES (#{client_key},#{coupon_key})
+    </insert>
 
     <update id="updateCouponRemainCount" parameterType="com.example.demo.client.model.ClientHaveCouponVO">
       UPDATE coupon_list SET remain_count=#{remain_count}
@@ -87,6 +97,11 @@
 
     <insert id="insertClientSale" parameterType="com.example.demo.client.model.ClientHaveSaleVO">
         INSERT INTO client_sale(client_key,sale_key)
+        VALUES (#{client_key},#{sale_key})
+    </insert>
+
+    <insert id="insertUsedClientSale" parameterType="com.example.demo.client.model.ClientHaveSaleVO">
+        INSERT INTO used_sale(client_key,sale_key)
         VALUES (#{client_key},#{sale_key})
     </insert>
 

@@ -1,70 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-
-    android:gravity="bottom"
     android:orientation="vertical"
-    android:background="@drawable/nav_header_view"
-
+    android:background="@color/whiteColor"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
 
     >
-
-    <TextView
-        android:id="@+id/nav_header_loginPlease"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="로그인해주세요"
-
-        android:textColor="@color/baseColor"
-        android:textSize="20dp"
-        android:visibility="gone"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:textStyle="bold"
-        />
-
-
-
-    <TextView
-        android:id="@+id/nav_header_nickname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="윤쓰쓰"
-        android:textColor="@color/baseColor"
-        android:textSize="32dp"
-        android:visibility="visible"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
-    <View
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_centerInParent="true"
-        android:background="#000000"
-        />
+        android:layout_height="wrap_content"
+        android:background="@color/appMainColor"
+        android:layout_above="@id/nav_header_loginBtn"
+        android:layout_alignParentTop="true"
+        android:id="@+id/header1"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            >
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nav_header_sad"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/nav_header_sad"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nav_header_normal"
+                android:layout_toRightOf="@id/nav_header_sad"
+                android:layout_marginLeft="5dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/nav_header_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="윤쓰쓰"
+            android:textColor="@color/baseColor"
+            android:textSize="32dp"
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/nav_header_loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:background="@color/appMainColor"
         android:visibility="gone">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="로그인"
-            android:background="@drawable/list_selector"
+            android:layout_height="40dp"
+            android:text="로그인하기"
+            android:background="@drawable/yellow_btn_selector"
             android:textColor="@color/baseColor"
             android:gravity="center"
-            android:textSize="18dp"
-            android:visibility="visible"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_centerInParent="true"
-            android:background="#000000"
+            android:textSize="15sp"
             />
+
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

@@ -26,5 +26,12 @@ public interface OwnerMapper {
 
     @Select("SELECT sale_key FROM sale_list ORDER BY sale_key DESC limit 1")
     int getSaleKey();
+
+    @Select("SELECT count(*) FROM owner_have_coupon_view WHERE owner_key=#{owner_key} AND on_off=\"T\"")
+    int getCouponCount(int owner_key);
+
+    @Select("SELECT count(*) FROM owner_have_sale_view WHERE owner_key=#{owner_key} AND on_off=\"T\"")
+    int getSaleCount(int owner_key);
+
 }
 

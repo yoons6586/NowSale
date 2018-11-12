@@ -30,7 +30,7 @@ public class FAdapter extends FragmentStatePagerAdapter {
             case 0:
                 tabFragment = new FActivity();
 
-                bundle.putString("category", "food"); // key , value
+                bundle.putString("category", "alcohol"); // key , value
 
                 tabFragment.setArguments(bundle);
 
@@ -43,43 +43,43 @@ public class FAdapter extends FragmentStatePagerAdapter {
                 return tabFragment;
             case 2:
                 tabFragment = new FActivity();
-                bundle.putString("category", "food"); // key , value
+                bundle.putString("category", "health"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 3:
                 tabFragment = new FActivity();
-                bundle.putString("category", "food"); // key , value
+                bundle.putString("category", "play"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 4:
                 tabFragment = new FActivity();
-                bundle.putString("category", "food"); // key , value
+                bundle.putString("category", "fashion"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 5:
                 tabFragment = new FActivity();
-                bundle.putString("category", "food"); // key , value
+                bundle.putString("category", "beauty"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 6:
                 tabFragment = new FActivity();
-                bundle.putString("category", "food"); // key , value
+                bundle.putString("category", "study"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 7:
                 tabFragment = new FActivity();
-                bundle.putString("category", "food"); // key , value
+                bundle.putString("category", "cafe"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
             case 8:
                 tabFragment = new FActivity();
-                bundle.putString("category", "food"); // key , value
+                bundle.putString("category", "others"); // key , value
                 tabFragment.setArguments(bundle);
 
                 return tabFragment;
