@@ -2,675 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95bb5cfa-e20d-4fbd-9f23-7faaece68ab7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_cardview_v7_27_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_naver_maps_open_naver_map_api_2_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/LoadingAnimationActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/LoadingAnimationApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/LoadingAnimationFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabFragment1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabPagerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoViewPager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/VO/MenuVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/naverMap/NMapCalloutCustomOldOverlay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/naverMap/NMapPOIflagType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/naverMap/NMapViewerResourceProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/bg_speech.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/btn_green_highlight.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/btn_green_normal.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/btn_green_pressed.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/default_dot.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/frame_loading_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/ic_angle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/ic_map_arrive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/ic_map_arrive_over.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/ic_map_no_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/ic_map_no_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/ic_map_start.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/ic_map_start_over.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/ic_pin_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/ic_pin_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/indicator_selector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/pin_ballon_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/pin_ballon_bg.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/pin_ballon_on_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/pubtrans_ic_mylocation_off.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/pubtrans_ic_mylocation_on.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/selected_dot.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/square_edge.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/yellow_box.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_help.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_change_info.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/fragment_ex5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/navermap_fragment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/owner_change_info_app_bar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/owner_info_tab_fragment_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/progress_loading.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/section_ex5_header.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/section_ex5_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/values/arrays.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-19-37-12-877.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-19-37-12-877.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-19-52-45-790.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-19-52-45-790.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-19-55-55-738.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-19-55-55-738.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-22-43-37-619.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-22-43-37-619.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-22-47-08-119.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-22-47-08-119.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-22-50-54-162.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-22-50-54-162.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-22-53-00-229.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-23-22-53-00-229.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-17-27-41-774.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-17-27-41-774.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-17-48-01-488.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-17-48-01-488.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-17-53-10-542.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-17-53-10-542.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-17-56-52-542.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-17-56-52-542.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-17-58-29-135.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-17-58-29-135.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-00-19-974.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-00-19-974.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-02-30-159.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-02-30-159.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-18-44-304.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-18-44-304.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-23-32-357.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-23-32-357.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-28-07-373.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-28-07-373.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-36-21-537.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-36-21-537.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-39-21-252.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-39-21-252.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-47-10-713.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-18-47-10-713.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-19-11-57-309.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-19-11-57-309.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-19-16-00-004.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-19-16-00-004.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-19-36-37-418.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-19-36-37-418.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-19-44-42-374.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-19-44-42-374.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-02-27-197.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-02-27-197.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-07-07-439.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-07-07-439.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-09-03-270.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-09-03-270.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-11-22-026.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-11-22-026.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-26-51-327.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-26-51-327.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-29-25-745.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-29-25-745.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-35-06-373.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-35-06-373.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-40-07-439.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-20-40-07-439.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-22-34-15-174.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-22-34-15-174.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-22-39-27-119.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-22-39-27-119.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-22-47-35-486.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-22-47-35-486.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-22-59-27-108.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-22-59-27-108.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-01-26-996.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-01-26-996.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-02-29-459.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-02-29-459.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-03-56-076.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-03-56-076.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-04-18-120.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-04-18-120.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-05-31-397.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-05-31-397.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-08-09-782.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-08-09-782.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-10-18-975.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-10-18-975.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-12-25-389.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-12-25-389.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-22-21-976.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-22-21-976.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-23-13-374.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-24-23-23-13-374.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-25-34-704.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-25-34-704.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-29-17-680.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-29-17-680.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-37-42-420.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-37-42-420.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-41-31-298.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-41-31-298.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-42-47-918.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-42-47-918.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-51-50-735.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-51-50-735.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-56-26-014.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-56-26-014.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-56-56-007.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-00-56-56-007.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-02-13-359.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-02-13-359.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-12-23-454.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-12-23-454.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-16-49-970.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-16-49-970.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-29-28-869.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-29-28-869.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-34-51-441.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-34-51-441.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-40-57-154.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-40-57-154.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-41-39-784.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-41-39-784.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-49-57-890.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-49-57-890.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-51-57-849.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-51-57-849.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-55-26-835.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-55-26-835.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-57-05-427.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-01-57-05-427.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-02-04-40-375.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-02-04-40-375.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-02-06-59-476.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-02-06-59-476.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-19-48-339.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-19-48-339.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-21-18-242.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-21-18-242.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-43-05-713.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-43-05-713.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-46-58-483.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-46-58-483.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-48-47-671.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-48-47-671.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-53-32-991.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-53-32-991.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-57-22-232.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-18-57-22-232.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-19-01-32-181.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-19-01-32-181.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-19-12-00-926.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-19-12-00-926.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-19-15-45-971.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-19-15-45-971.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-19-43-33-116.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-19-43-33-116.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-19-46-49-726.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-19-46-49-726.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-20-13-24-288.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-25-20-13-24-288.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-00-17-34-349.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-00-17-34-349.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-00-50-59-715.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-00-50-59-715.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-00-51-44-733.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-00-51-44-733.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-00-53-32-532.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-00-53-32-532.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-00-59-06-885.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-00-59-06-885.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-01-15-465.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-01-15-465.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-03-44-195.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-03-44-195.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-04-04-504.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-04-04-504.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-13-02-627.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-13-02-627.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-14-52-740.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-14-52-740.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-17-04-423.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-17-04-423.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-20-37-019.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-20-37-019.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-28-13-766.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-28-13-766.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-28-30-249.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-28-30-249.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-29-36-627.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-29-36-627.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-29-41-567.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-29-41-567.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-29-56-556.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-29-56-556.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-30-02-185.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-30-02-185.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-39-04-879.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-39-04-879.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-40-58-359.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-40-58-359.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-50-56-504.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-50-56-504.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-54-46-109.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-01-54-46-109.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-05-27-358.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-05-27-358.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-07-43-327.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-07-43-327.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-11-59-304.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-11-59-304.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-14-01-154.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-14-01-154.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-17-14-645.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-17-14-645.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-26-17-627.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-26-17-627.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-29-26-846.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-29-26-846.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-31-34-945.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-31-34-945.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-36-50-601.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-36-50-601.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-38-28-366.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-38-28-366.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-38-59-305.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-38-59-305.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-41-59-170.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-27-02-41-59-170.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-26-13-687.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-26-13-687.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-28-42-518.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-28-42-518.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-31-20-278.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-31-20-278.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-41-36-497.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-41-36-497.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-48-21-848.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-48-21-848.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-51-34-710.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-51-34-710.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-54-31-227.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-17-54-31-227.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-18-01-01-845.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-18-01-01-845.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-18-03-24-181.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-18-03-24-181.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-18-08-56-645.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-18-08-56-645.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-19-31-46-209.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-19-31-46-209.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-19-32-21-472.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-19-32-21-472.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-19-59-37-522.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-19-59-37-522.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-20-01-16-174.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-20-01-16-174.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-20-28-33-718.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-20-28-33-718.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-20-34-57-008.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-20-34-57-008.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-20-37-26-090.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-20-37-26-090.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-20-40-16-776.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-20-40-16-776.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-22-53-30-324.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-22-53-30-324.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-22-59-48-743.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-22-59-48-743.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-23-11-33-561.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-23-11-33-561.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-23-37-32-891.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-23-37-32-891.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-23-39-39-626.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-23-39-39-626.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-23-55-38-642.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-29-23-55-38-642.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-05-54-686.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-05-54-686.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-13-47-427.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-13-47-427.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-16-54-542.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-16-54-542.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-20-28-546.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-20-28-546.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-22-39-383.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-22-39-383.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-33-15-780.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-33-15-780.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-35-03-857.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-00-35-03-857.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-01-19-51-310.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-01-19-51-310.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-01-23-08-417.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-01-23-08-417.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-04-13-847.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-04-13-847.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-18-52-555.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-18-52-555.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-25-07-664.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-25-07-664.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-28-21-629.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-28-21-629.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-48-02-405.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-48-02-405.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-51-25-936.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-02-51-25-936.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-08-18-981.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-08-18-981.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-11-31-349.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-11-31-349.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-14-34-542.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-14-34-542.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-16-13-452.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-16-13-452.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-19-17-997.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-19-17-997.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-22-22-978.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-22-22-978.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-27-34-322.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-27-34-322.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-31-42-904.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-31-42-904.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-34-39-225.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-17-34-39-225.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-18-40-00-927.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-18-40-00-927.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-18-42-09-983.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-18-42-09-983.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-18-44-45-408.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-18-44-45-408.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-19-02-02-491.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-19-02-02-491.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-20-44-44-949.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-20-44-44-949.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-20-48-17-183.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-20-48-17-183.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-20-52-16-429.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-20-52-16-429.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-20-58-18-952.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-20-58-18-952.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-06-02-109.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-06-02-109.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-07-59-117.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-07-59-117.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-10-42-728.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-10-42-728.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-13-26-780.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-13-26-780.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-15-11-372.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-15-11-372.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-16-48-424.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-16-48-424.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-17-39-693.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-17-39-693.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-21-19-247.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-21-19-247.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-27-07-660.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-27-07-660.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-29-59-540.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-29-59-540.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-31-58-161.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-21-31-58-161.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-23-44-36-811.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-23-44-36-811.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-23-52-53-669.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-23-52-53-669.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-23-56-49-300.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-30-23-56-49-300.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-05-28-404.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-05-28-404.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-11-03-495.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-11-03-495.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-27-07-031.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-27-07-031.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-32-43-443.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-32-43-443.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-35-07-265.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-35-07-265.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-37-53-592.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-37-53-592.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-43-13-985.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-43-13-985.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-48-19-772.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-00-48-19-772.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-01-11-59-793.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-01-11-59-793.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-07-19-736.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-07-19-736.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-11-03-168.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-11-03-168.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-18-42-707.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-18-42-707.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-22-02-805.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-22-02-805.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-45-29-475.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-45-29-475.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-51-19-890.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-02-51-19-890.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-19-45-28-768.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-19-45-28-768.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-23-47-579.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-23-47-579.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-25-21-658.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-25-21-658.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-29-19-552.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-29-19-552.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-31-32-070.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-31-32-070.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-35-46-912.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-35-46-912.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-51-52-445.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-20-51-52-445.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-20-54-537.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-20-54-537.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-23-56-205.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-23-56-205.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-25-38-766.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-25-38-766.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-27-54-705.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-27-54-705.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-30-23-186.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-30-23-186.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-32-49-922.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-32-49-922.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-34-26-941.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-34-26-941.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-50-45-791.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-50-45-791.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-53-31-713.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-53-31-713.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-57-14-341.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-10-31-21-57-14-341.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-22-20-429.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-22-20-429.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-23-44-906.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-23-44-906.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-25-58-344.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-25-58-344.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-27-09-563.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-27-09-563.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-29-09-509.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-29-09-509.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-30-45-129.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-30-45-129.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-37-54-568.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-37-54-568.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-38-05-866.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-38-05-866.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-38-58-464.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-38-58-464.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-39-03-802.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-39-03-802.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-42-17-099.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build/android-profile/profile-2018-11-01-20-42-17-099.rawproto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/MenuVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/model/MenuVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/drawable/owner/market/1/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/drawable/owner/market/1/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/drawable/owner/market/1/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/drawable/owner/market/1/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/drawable/owner/menu/1/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/drawable/owner/menu/1/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/drawable/owner/menu/1/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/drawable/owner/menu/1/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/taskJars.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/javaCompile/taskJars.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/fileSnapshots.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/built.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/cache.properties.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientMenuActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientMyInfoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientMyInfoActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/CouponCategoryActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FMainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/Loading1Activity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/LoginActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/LoginCancelPopupActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/LoginCancelPopupActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerCouponActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerRegisterCoupon2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerRegisterCoupon3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerRegisterCoupon4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/RegisterCouponActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/SignUpActivity1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/SignUpActivity2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/SignUpActivity3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/OwnerInfoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/OwnerInfoActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/SliderOwnerImageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/SliderOwnerImageAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/VO/CouponVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/VO/CouponVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/VO/IsFavoriteGetCountVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/VO/IsFavoriteGetCountVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/VO/OwnerVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/VO/OwnerVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/http/AllService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/http/AllService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/http/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/http/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/http/OwnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/http/OwnerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/alcohol.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/alcohol1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/beauty.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/blackheart.png" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/blackheart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/cafe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/colorheart.png" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/colorheart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/coupondownload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/fashion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/food.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/gamja.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/go.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/list_selector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/list_selector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/logo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/logo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/mackzoo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/nowsale.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/others.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/study.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_client_coupon_category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_client_coupon_category.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_client_myinfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_client_myinfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_client_setup.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_clientpage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_fragment_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_fragment_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_loading.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_loading.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_coupon.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_info.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/app_bar_client_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/app_bar_client_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/client_coupon_list_row.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/content_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/content_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/f_test_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/f_test_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/fragment_app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/fragment_app_bar_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/fragment_ex4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/fragment_ex4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/list_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/list_row.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/list_row_coupon_wallet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/list_row_coupon_wallet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/section_ex4_header.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/section_ex4_header.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/owner_info_tab_fragment_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/owner_info_tab_fragment_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/slider_market_img.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/slider_market_img.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/slider_owner_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/slider_owner_info.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring boot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring boot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/IsFavoriteGetCountVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/IsFavoriteGetCountVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerCouponShowVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerCouponShowVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerSaleShowVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerSaleShowVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponDeleteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponUseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientLoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientLoginDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientSaleInsertDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientSaleInsertDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientFavoriteMarketVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientFavoriteMarketVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientSaleVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientSaleVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/AllController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/AllController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/mapper/AllMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/mapper/AllMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/model/IsFavoriteGetCountVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/model/IsFavoriteGetCountVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/model/OwnerCouponShowVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/model/OwnerCouponShowVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/model/OwnerSaleShowVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/model/OwnerSaleShowVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/controller/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponDeleteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponDeleteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponInsertDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponInsertDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientLoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientLoginDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientSaleInsertDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientSaleInsertDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/model/ClientCouponVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/model/ClientCouponVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/model/ClientFavoriteMarketVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/model/ClientFavoriteMarketVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/model/ClientSaleVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/model/ClientSaleVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/mapper/OwnerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/mapper/OwnerMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/mybatisMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/mybatisMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -684,7 +35,7 @@
     <session id="249063524">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="59" />
+          <entry key="project.closed" value="60" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.18" value="1" />
@@ -698,7 +49,7 @@
           <entry key="project.open.time.31" value="3" />
           <entry key="project.open.time.32" value="3" />
           <entry key="project.open.time.33" value="2" />
-          <entry key="project.open.time.35" value="2" />
+          <entry key="project.open.time.35" value="3" />
           <entry key="project.open.time.37" value="3" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.43" value="1" />
@@ -719,7 +70,7 @@
           <entry key="project.open.time.68" value="2" />
           <entry key="project.open.time.77" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="58" />
+          <entry key="project.opened" value="59" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -978,7 +329,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1223,6 +573,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -1380,16 +731,18 @@
       <workItem from="1541821182939" duration="300000" />
       <workItem from="1541839015963" duration="460000" />
       <workItem from="1541908615177" duration="489000" />
+      <workItem from="1542010225929" duration="876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162554000" />
+    <option name="totallyTimeSpent" value="163430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19527897" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1981402" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />

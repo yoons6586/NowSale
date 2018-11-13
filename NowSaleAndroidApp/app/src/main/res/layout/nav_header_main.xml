@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/nav_header_height"
+    android:layout_height="220dp"
     android:orientation="vertical"
     android:background="@color/whiteColor"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
@@ -21,22 +21,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
             >
             <ImageView
-
-                android:layout_width="wrap_content"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/nav_header_sad"
-                android:layout_centerInParent="true"
-                android:layout_alignParentTop="true"
-                android:id="@+id/nav_header_sad"/>
+                android:id="@+id/nav_header_sad"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_toLeftOf="@id/nav_header_normal"/>
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/nav_header_normal"
-                android:layout_toRightOf="@id/nav_header_sad"
-                android:layout_marginLeft="5dp"/>
+                android:id="@+id/nav_header_normal"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+
+                />
         </RelativeLayout>
 
         <TextView

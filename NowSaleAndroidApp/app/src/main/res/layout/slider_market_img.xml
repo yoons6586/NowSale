@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="wrap_content"
     >
-    ​<ImageView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView"
-    />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/black_grd"/>
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            ​<ImageView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:id="@+id/imageView"
+                android:scaleType="centerCrop"
+            />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:background="@drawable/black_grd"/>
+        </FrameLayout>
+    </ScrollView>
 
-</FrameLayout>
+</LinearLayout>

@@ -1,14 +1,19 @@
 package activity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -35,7 +40,7 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
     private Intent get_intent;
 
     private TextView titleText;
-    private LinearLayout backBtn;
+    private LinearLayout backBtn,test;
     private SliderOwnerImageAdapter adapter;
     private ViewPager indicatorViewPager;
     private ViewPager ownerInfoViewPager;
@@ -63,6 +68,9 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
         }
 
         titleText=findViewById(R.id.title_txt);
+        test = findViewById(R.id.linear);
+        ownerInfoViewPager =findViewById(R.id.ownerInfoPager);
+        indicatorViewPager = (ViewPager) findViewById(R.id.view);
 
         backBtn = findViewById(R.id.back);
         backBtn.setOnClickListener(new View.OnClickListener() {
@@ -91,13 +99,28 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
         viewPager(사진 슬랑이드 되는 것)
         indicator 추가
          */
-        indicatorViewPager = (ViewPager) findViewById(R.id.view);
+
 
         adapter = new SliderOwnerImageAdapter(this,couponVO.getOwner_key(),isFavoriteGetCountVO.getMarket_img_cnt());
         indicatorViewPager.setAdapter(adapter);
 
         tabLayout = (TabLayout)findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(indicatorViewPager,true);
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        WindowManager windowManager = (WindowManager) getApplicationContext()
+                .getSystemService(Context.WINDOW_SERVICE);
+        windowManager.getDefaultDisplay().getMetrics(metrics);
+
+
+//        RelativeLayout.LayoutParams logo_params = (RelativeLayout.LayoutParams) logo.getLayoutParams();
+//        LinearLayout.LayoutParams test_params = (LinearLayout.LayoutParams) test.getLayoutParams();
+
+
+//        test_params.width = (int) (metrics.widthPixels);
+//        test_params.height = (int) (metrics.heightPixels);
+//
+//        test.setLayoutParams(test_params);
 
 
         Log.e("OwnerInfoActivity","owner_key : "+couponVO.getOwner_key());
@@ -118,10 +141,12 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
         tabLayout = (TabLayout) findViewById(R.id.ownerInfoTabLayout);
         tabLayout.addTab(tabLayout.newTab().setText("매장 정보"));
         tabLayout.addTab(tabLayout.newTab().setText("쿠폰 및 할인소식"));
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.appMainColor));
 
         // Initializing ViewPager
-        ownerInfoViewPager =findViewById(R.id.ownerInfoPager);
+
 
         // Creating TabPagerAdapter adapter
 //        FragmentManager fm = getSupportFragmentManager();
@@ -183,5 +208,14 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
             setResult(RESULT_OK,resultIntent);
         }
     }
+    public Point getScreenSize(Activity activity) {
+        Display display = activity.getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        return  size;
+    }
+
+
+
 }
 
