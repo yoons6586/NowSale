@@ -14,6 +14,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.HTTP;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 /**
@@ -31,10 +32,10 @@ public interface OwnerService {
     Call<Integer> saleCount(@Path("owner_key")int owner_key);
 
     @POST("/owner/coupon/update/{owner_key}")
-    Call<String> registerCoupon(@Body CouponVO couponVO, @Path("owner_key")int owner_key);
+    Call<Void> registerCoupon(@Body CouponVO couponVO, @Path("owner_key")int owner_key);
 
     @POST("/owner/sale/insert/{owner_key}")
-    Call<String> registerSale(@Body SaleVO saleVO, @Path("owner_key")int owner_key);
+    Call<Void> registerSale(@Body SaleVO saleVO, @Path("owner_key")int owner_key);
 
     @GET("/owner/coupon/get/{owner_key}")
     Call<List<CouponVO>> getRegisteredCoupon(@Path("owner_key")int owner_key);
@@ -47,4 +48,7 @@ public interface OwnerService {
 
     @HTTP(method = "DELETE",path="/owner/sale/delete",hasBody=true)
     Call<OwnerSaleVO> deleteOwnerSaleList(@Body OwnerSaleVO ownerSaleVO);
+
+    @PUT("/owner/info/update/{owner_key}")
+    Call<Void> updateOwnerInfo(@Path("owner_key")int owner_key, @Body OwnerVO ownerVO);
 }

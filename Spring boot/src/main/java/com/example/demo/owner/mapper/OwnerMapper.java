@@ -15,10 +15,10 @@ public interface OwnerMapper {
     @Select("SELECT id,pw FROM owner_list WHERE id=#{id} and pw=#{pw}")
     List<OwnerLoginVO> loginOwner(OwnerLoginVO ownerLoginVO);
 
-    @Select("SELECT * FROM owner_have_coupon_view WHERE owner_key=#{owner_key}")
+    @Select("SELECT * FROM owner_have_coupon_view WHERE owner_key=#{owner_key} AND on_off=\"T\"")
     List<OwnerCouponShowVO> getCouponOwner(int owner_key);
 
-    @Select("SELECT * FROM owner_have_sale_view WHERE owner_key=#{owner_key}")
+    @Select("SELECT * FROM owner_have_sale_view WHERE owner_key=#{owner_key} AND on_off=\"T\"")
     List<OwnerSaleShowVO> getSaleOwner(int owner_key);
 
     @Select("SELECT coupon_key FROM coupon_list ORDER BY coupon_key DESC limit 1")

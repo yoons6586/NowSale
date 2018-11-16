@@ -9,6 +9,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class ClientCouponCountVO {
-    private int coupon_key,remain_count;
+    private int coupon_key,remain_count,start_count;
 
 }

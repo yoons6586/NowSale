@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-
-    android:background="@drawable/round_button_black"
+    android:background="@color/whiteColor"
     android:orientation="vertical"
     android:layout_width="300dp"
     android:layout_height="wrap_content"
@@ -12,7 +11,55 @@
 
     <!-- Notice -->
     <LinearLayout
-        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/appMainColor"
+        android:paddingTop="25dp"
+        android:id="@+id/harinImg"
+        >
+        <ImageView
+            android:src="@drawable/harin_popup"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/content"
+        android:text="맥주 1병 서비스"
+        android:textColor="@color/baseColor"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/qualification_text"
+        android:text="신메뉴 주문시"
+        android:textSize="14sp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        android:text="2018-01-11 ~ 2019-02-22"
+        android:textSize="14sp"
+        android:gravity="center"/>
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="70dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="@color/appMainColor"
+        />
+    <LinearLayout
         android:layout_marginBottom="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -23,19 +70,23 @@
             android:id="@+id/textTitle"
             android:textSize="17sp"
             android:textColor="#000"
-            android:gravity="left|center"
+            android:gravity="center"
             android:text="쿠폰 사용 처리를 하시겠습니까?"
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/textContent"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:textColor="#000"
-            android:gravity="left|center"
-            android:text="사용 처리 후에는 쿠폰을 더 이상 쓸 수 없고\n쿠폰에 따라 재발급이 불가능 할 수 있습니다."
+            android:gravity="center"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:text="사용 처리 후에는 쿠폰을\n더 이상 쓸 수 없고\n쿠폰에 따라 재발급이\n불가능 할 수 있습니다."
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            />
     </LinearLayout>
     <!-- Notice -->
 
@@ -44,27 +95,48 @@
         android:orientation="horizontal"
         android:gravity="right"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="34dp"
+        android:layout_below="@id/text"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="8dp"
         >
-        <TextView
-            android:text="확인"
-            android:textSize="13sp"
-            android:textColor="@color/baseColor"
-            android:padding="16dp"
-            android:gravity="right|bottom"
-            android:layout_gravity="right"
-            android:layout_width="wrap_content"
-            android:layout_height="53dp"
-            android:id="@+id/OKBtn"/>
-        <TextView
-            android:text="취소"
-            android:textSize="13sp"
-            android:textColor="@color/baseColor"
-            android:padding="16dp"
-            android:gravity="right|bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="53dp"
-            android:id="@+id/cancelBtn"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_btn_selector"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/okBtn">
+            <TextView
+                android:text="발급하기"
+                android:textSize="13sp"
+                android:textColor="@color/baseColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/okText"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_btn_selector"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:id="@+id/cancelBtn">
+            <TextView
+                android:text="취소하기"
+                android:textSize="13sp"
+                android:textColor="@color/baseColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cancelText"
+                />
+        </LinearLayout>
+
     </LinearLayout>
     <!--// 닫기 버튼 -->
 

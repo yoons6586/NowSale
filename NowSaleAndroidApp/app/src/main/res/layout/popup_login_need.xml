@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-
-    android:background="@drawable/round_button_black"
+    android:background="@color/whiteColor"
     android:orientation="vertical"
     android:layout_width="250dp"
     android:layout_height="wrap_content"
@@ -10,12 +9,17 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/appMainColor"
+        android:paddingTop="25dp"
+        android:id="@+id/harinImg"
+        >
         <ImageView
             android:src="@drawable/harinsad"
-            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="130dp" />
+            android:layout_height="100dp" />
     </LinearLayout>
     <!-- //end 타이틀바 -->
 
@@ -23,11 +27,24 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/harinImg"
+        android:layout_marginTop="23dp"
+        android:id="@+id/text">
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="로그인해주세요 !"
+            android:textStyle="bold"
+            android:textColor="@color/baseColor"
+            android:gravity="center_horizontal"
+            android:textSize="15sp"
+            android:id="@+id/pleaseLoginText"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/contentText"
-            android:textSize="17sp"
-            android:textColor="#000"
+            android:textSize="14sp"
             android:gravity="center"
             android:text="로그인이 필요한 서비스 입니다!"
             android:layout_marginBottom="3dp"
@@ -41,27 +58,49 @@
         android:orientation="horizontal"
         android:gravity="right"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="34dp"
+        android:layout_below="@id/text"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="8dp"
         >
-        <TextView
-            android:text="로그인"
-            android:textSize="13sp"
-            android:textColor="@color/baseColor"
-            android:padding="16dp"
-            android:gravity="right|bottom"
-            android:layout_gravity="right"
-            android:layout_width="wrap_content"
-            android:layout_height="53dp"
-            android:id="@+id/loginBtn"/>
-        <TextView
-            android:text="취소"
-            android:textSize="13sp"
-            android:textColor="@color/baseColor"
-            android:padding="16dp"
-            android:gravity="right|bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="53dp"
-            android:id="@+id/cancelBtn"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_btn_selector"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/okBtn">
+            <TextView
+                android:text="로그인하기"
+                android:textSize="13sp"
+                android:textColor="@color/baseColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/okText"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_btn_selector"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:id="@+id/cancelBtn">
+            <TextView
+                android:text="취소하기"
+                android:textSize="13sp"
+                android:textColor="@color/baseColor"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cancelText"
+                />
+        </LinearLayout>
+
     </LinearLayout>
     <!--// 닫기 버튼 -->
 
@@ -71,4 +110,4 @@
 
 
 
-</LinearLayout>
+</RelativeLayout>

@@ -11,17 +11,230 @@
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_cardview_v7_27_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_cardview_v7_27_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_customtabs_27_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_customtabs_27_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_design_27_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_design_27_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_v4_27_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_v4_27_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_transition_27_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_android_support_transition_27_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_github_katoro_typekit_1_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_github_katoro_typekit_1_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_base_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_gcm_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_gcm_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_gcm_license_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_gcm_license_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_iid_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_iid_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_iid_license_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_iid_license_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_impl_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_impl_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_impl_license_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_impl_license_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_license_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_license_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_common_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_common_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_common_license_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_common_license_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_core_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_core_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_iid_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_iid_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_iid_license_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_iid_license_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_license_12_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_license_12_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_auth_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_auth_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_friends_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_friends_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_kakaolink_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_kakaolink_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_kakaonavi_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_kakaonavi_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_kakaostory_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_kakaostory_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_kakaotalk_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_kakaotalk_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_message_template_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_message_template_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_network_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_network_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_push_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_push_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_usermgmt_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_usermgmt_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_util_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_kakao_sdk_util_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_naver_maps_open_naver_map_api_2_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__com_naver_maps_open_naver_map_api_2_1_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__io_github_luizgrp_sectionedrecyclerviewadapter_sectionedrecyclerviewadapter_1_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__io_github_luizgrp_sectionedrecyclerviewadapter_sectionedrecyclerviewadapter_1_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/android_arch_core_common_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/android_arch_core_runtime_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/android_arch_lifecycle_common_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/android_arch_lifecycle_livedata_core_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/android_arch_lifecycle_runtime_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/android_arch_lifecycle_viewmodel_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_animated_vector_drawable_27_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_appcompat_v7_27_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_cardview_v7_27_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_constraint_constraint_layout_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_constraint_constraint_layout_solver_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_customtabs_27_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_design_27_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_recyclerview_v7_27_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_support_annotations_27_1_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_support_compat_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_support_core_ui_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_support_core_utils_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_support_fragment_27_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_support_media_compat_27_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_support_v4_27_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_support_vector_drawable_27_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_test_espresso_espresso_core_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_test_espresso_espresso_idling_resource_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_test_monitor_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_test_runner_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_android_support_transition_27_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_github_bumptech_glide_annotations_4_8_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_github_bumptech_glide_disklrucache_4_8_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_github_bumptech_glide_gifdecoder_4_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_github_bumptech_glide_glide_4_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_github_katoro_typekit_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_android_gms_play_services_base_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_android_gms_play_services_base_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_android_gms_play_services_basement_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_android_gms_play_services_basement_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_android_gms_play_services_gcm_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_android_gms_play_services_gcm_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_android_gms_play_services_iid_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_android_gms_play_services_iid_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_android_gms_play_services_tasks_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_android_gms_play_services_tasks_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_code_findbugs_jsr305_2_0_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_code_gson_gson_2_8_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_firebase_firebase_analytics_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_firebase_firebase_analytics_impl_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_firebase_firebase_analytics_impl_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_firebase_firebase_analytics_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_firebase_firebase_common_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_firebase_firebase_common_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_firebase_firebase_core_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_firebase_firebase_iid_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_firebase_firebase_iid_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_firebase_firebase_messaging_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_google_firebase_firebase_messaging_license_12_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_kakao_sdk_auth_1_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_kakao_sdk_friends_1_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_kakao_sdk_kakaolink_1_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_kakao_sdk_kakaonavi_1_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_kakao_sdk_kakaostory_1_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_kakao_sdk_kakaotalk_1_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_kakao_sdk_message_template_1_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_kakao_sdk_network_1_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_kakao_sdk_push_1_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_kakao_sdk_usermgmt_1_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_kakao_sdk_util_1_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_naver_maps_open_naver_map_api_2_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_squareup_okhttp3_okhttp_3_10_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_squareup_okio_okio_1_14_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_squareup_retrofit2_converter_gson_2_4_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/com_squareup_retrofit2_retrofit_2_4_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/cz_msebera_android_httpclient_4_4_1_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/io_github_luizgrp_sectionedrecyclerviewadapter_sectionedrecyclerviewadapter_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/javax_inject_javax_inject_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/junit_junit_4_12_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/org_glassfish_javax_annotation_10_0_b28_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/libraries/org_projectlombok_lombok_1_16_18_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/OwnerInfoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/OwnerInfoActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/SliderOwnerImageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/SliderOwnerImageAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/NowSaleAndroidApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/NowSaleAndroidApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/ClientMenuActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/CouponCategoryActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/FMainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/HelpActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/Loading1Activity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/LoginActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/OwnerChangeInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/OwnerInfoActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/OwnerRegisterCoupon2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/OwnerRegisterCoupon3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/OwnerRegisterCoupon4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/RegisterCouponActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/SignUpActivity1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/SignUpActivity2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/activity/SignUpActivity3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientCouponListPopupActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientCouponListPopupActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientMyInfoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/ClientMyInfoActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/LoginCancelPopupActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/LoginCancelPopupActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabFragment1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabFragment1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabPagerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/VO/OwnerVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/VO/OwnerVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/http/AllService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/http/AllService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/http/OwnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/http/OwnerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable-hdpi/harinsad.png" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable-hdpi/harinsad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable-mdpi/harinsad.png" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable-mdpi/harinsad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable-xhdpi/harinsad.png" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable-xhdpi/harinsad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable-xxhdpi/harinsad.png" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable-xxhdpi/harinsad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable-xxxhdpi/harinsad.png" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable-xxxhdpi/harinsad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/blackheart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/colorheart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/round_button_gray.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/round_button_gray.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/round_button_yellow.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/round_button_yellow.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/square_edge.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/drawable/square_edge.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_client_myinfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_client_myinfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_loading.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_loading.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_change_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_change_info.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/f_test_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/f_test_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/fragment_ex5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/fragment_ex5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/list_row.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/list_row_coupon_wallet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/list_row_coupon_wallet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/owner_info_tab_fragment_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/owner_info_tab_fragment_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/popup_login_need.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/popup_login_need.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/popup_use_cancel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/popup_use_cancel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/section_ex5_header.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/section_ex5_header.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/section_ex5_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/section_ex5_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/slider_market_img.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/slider_market_img.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/slider_owner_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/slider_owner_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponCountVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponCountVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/AllController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/AllController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/controller/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponInsertDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponInsertDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/model/ClientCouponCountVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/model/ClientCouponCountVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/mapper/OwnerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/mapper/OwnerMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/model/OwnerVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/model/OwnerVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/mybatisMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/mybatisMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -115,41 +328,96 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-2043320164">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.21" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="3" />
+          <entry key="java" value="22" />
+          <entry key="jpg" value="1" />
+          <entry key="png" value="1" />
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="3" />
+          <entry key="Image" value="2" />
+          <entry key="JAVA" value="22" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="710" />
+          <entry key="xml" value="128" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="710" />
+          <entry key="XML" value="128" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/security/WebSecurityConfig.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="482">
+              <caret line="147" column="41" selection-start-line="147" selection-start-column="41" selection-end-line="147" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerInfoUpdateDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="45" column="53" lean-forward="true" selection-start-line="45" selection-start-column="53" selection-end-line="46" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/adv/1.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/market/1/1.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/adv/2.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientSignupDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+            <state relative-caret-position="153">
+              <caret line="11" column="153" selection-start-line="11" selection-start-column="153" selection-end-line="11" selection-end-column="153" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="111" column="5" lean-forward="true" selection-start-line="97" selection-start-column="4" selection-end-line="111" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../Test/AndroidStudy/MyTemplete/app/src/androidTest/java/com/sauce/evspot/ApplicationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -157,48 +425,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+            <state relative-caret-position="233">
+              <caret line="113" column="70" selection-start-line="113" selection-start-column="70" selection-end-line="113" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientLoginDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+            <state relative-caret-position="476">
+              <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3553">
-              <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+            <state relative-caret-position="119">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
-                <element signature="e#10065#10066#0" expanded="true" />
-                <element signature="e#10148#10149#0" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/Map.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3145">
-              <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
+            <state relative-caret-position="68">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientLoginVO.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/1.3.1/mybatis-spring-boot-autoconfigure-1.3.1.jar!/org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="220">
+              <caret line="79" column="29" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -215,10 +482,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>alias</find>
-      <find>al</find>
-      <find>client</find>
-      <find>all_couponlist</find>
       <find>clientsig</find>
       <find>selectclient</find>
       <find>deleteClientSale</find>
@@ -229,7 +492,6 @@
       <find>owner_coupon</find>
       <find>selectcategoryshow</find>
       <find>selectCategoryShow</find>
-      <find>insertClientCoupon</find>
       <find>insertClientSale</find>
       <find>deleteClientCoupon</find>
       <find>insertClientUsedCoupon</find>
@@ -238,6 +500,18 @@
       <find>value</find>
       <find>get</find>
       <find>clientlogin</find>
+      <find>exception</find>
+      <find>insertClientCoupon</find>
+      <find>coupon</find>
+      <find>selectR</find>
+      <find>selectRemain</find>
+      <find>selectRe</find>
+      <find>selectRemainCountCoupon</find>
+      <find>updateCouponRe</find>
+      <find>insertCouponList</find>
+      <find>updateclientcouponcount</find>
+      <find>selectOwnerLogin</find>
+      <find>owner</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -251,8 +525,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponGetDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveSaleVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientSaleDeleteDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllFavoriteUpdateDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllFavoriteInsertDao.java" />
@@ -260,7 +532,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/AllOwnerClientKeyVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/ClientMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveCouponVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponCountVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerSakeShowVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllCategorySaleShowDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllCategoryMarketShowDao.java" />
@@ -278,14 +549,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerSaleDeleteDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/IsFavoriteGetCountVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/MenuVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerCouponShowVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerSaleShowVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientSaleVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientFavoriteMarketVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientSaleInsertDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponUseDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponCountAddVO.java" />
@@ -297,11 +565,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientLoginVO.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientLoginDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/security/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponCountVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerInfoUpdateDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" />
       </list>
     </option>
   </component>
@@ -318,8 +592,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -548,32 +822,10 @@
               <item name="drawable" type="462c0819:PsiDirectoryNode" />
               <item name="owner" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="drawable" type="462c0819:PsiDirectoryNode" />
-              <item name="owner" type="462c0819:PsiDirectoryNode" />
-              <item name="market" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="drawable" type="462c0819:PsiDirectoryNode" />
-              <item name="owner" type="462c0819:PsiDirectoryNode" />
-              <item name="market" type="462c0819:PsiDirectoryNode" />
-              <item name="1" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -590,6 +842,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -600,7 +853,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541790418837" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542197650624" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -611,35 +864,35 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/market" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/src/main/resources/drawable/owner" />
-      <recent name="$PROJECT_DIR$/src/main/resources/drawable" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.demo.owner.dao" />
+      <recent name="com.example.demo.all.model" />
+      <recent name="com.example.demo.board.controller" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.demo.all.controller" />
       <recent name="com.example.demo.all" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/adv" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/all/advertisement" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/demo/security" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo.owner.dao" />
       <recent name="com.example.demo.client.model" />
       <recent name="com.example.demo.client.dao" />
       <recent name="com.example.demo.all.model" />
-      <recent name="com.example.demo.owner.dao" />
       <recent name="com.example.demo.owner.model" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.demo.owner.dao" />
-      <recent name="com.example.demo.all.model" />
-      <recent name="com.example.demo.board.controller" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/market" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/drawable/owner" />
+      <recent name="$PROJECT_DIR$/src/main/resources/drawable" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -732,17 +985,28 @@
       <workItem from="1541839015963" duration="460000" />
       <workItem from="1541908615177" duration="489000" />
       <workItem from="1542010225929" duration="876000" />
+      <workItem from="1542081925148" duration="2871000" />
+      <workItem from="1542092803412" duration="427000" />
+      <workItem from="1542122316665" duration="472000" />
+      <workItem from="1542187473405" duration="1267000" />
+      <workItem from="1542215399704" duration="172000" />
+      <workItem from="1542252642561" duration="366000" />
+      <workItem from="1542278720678" duration="212000" />
+      <workItem from="1542280321086" duration="1807000" />
+      <workItem from="1542301495003" duration="1621000" />
+      <workItem from="1542369673162" duration="814000" />
+      <workItem from="1542383918374" duration="170000" />
+      <workItem from="1542388352568" duration="1576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163430000" />
+    <option name="totallyTimeSpent" value="175205000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1981402" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21001221" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -753,7 +1017,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28674698" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2867347" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -784,92 +1048,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/model/MarketVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="115" column="53" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerSaleShowVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="183" selection-start-line="11" selection-start-column="183" selection-end-line="11" selection-end-column="183" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/model/MenuVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/model/IsFavoriteGetCountVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/model/AllOwnerClientKeyVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="32" column="100" selection-start-line="32" selection-start-column="100" selection-end-line="32" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientSaleVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="165" selection-start-line="11" selection-start-column="165" selection-end-line="11" selection-end-column="165" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/ClientMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="165" selection-start-line="11" selection-start-column="165" selection-end-line="11" selection-end-column="165" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OwnerCouponShowVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="158" selection-start-line="11" selection-start-column="158" selection-end-line="11" selection-end-column="183" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientFavoriteMarketVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -885,27 +1063,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponCountAddVO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveCouponVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponDeleteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponUseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -920,24 +1077,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="56" column="71" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-security.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/security.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/swagger/SwaggerConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/security/MyWebSecurity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllCategoryCouponShowDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="50" column="78" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/config/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -956,13 +1099,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -987,13 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1008,22 +1137,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/all/advertisement/1.png" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/all/advertisement/2.png" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/security/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="61" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1040,10 +1159,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/market/1/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/logo1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/normal_img.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.5/mybatis-3.4.5.jar!/org/apache/ibatis/session/defaults/DefaultSqlSession.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+        <state relative-caret-position="493">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/myBatisConfiguration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllCategoryCouponShowDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponCountVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -1058,10 +1207,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3553">
           <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-          <folding>
-            <element signature="e#10065#10066#0" expanded="true" />
-            <element signature="e#10148#10149#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="60" column="86" selection-start-line="60" selection-start-column="86" selection-end-line="60" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerCouponUpdateDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerRegisterCouponVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerLoginDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponDeleteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="53" column="63" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientHaveCouponVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1079,8 +1273,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/market/1/1.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/../../../Test/AndroidStudy/MyTemplete/app/src/androidTest/java/com/sauce/evspot/ApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="111" column="5" lean-forward="true" selection-start-line="97" selection-start-column="4" selection-end-line="111" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#311#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/1.3.1/mybatis-spring-boot-autoconfigure-1.3.1.jar!/org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="79" column="29" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="153" selection-start-line="11" selection-start-column="153" selection-end-line="11" selection-end-column="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="113" column="70" selection-start-line="113" selection-start-column="70" selection-end-line="113" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="147" column="41" selection-start-line="147" selection-start-column="41" selection-end-line="147" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerInfoUpdateDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="45" column="53" lean-forward="true" selection-start-line="45" selection-start-column="53" selection-end-line="46" selection-end-column="63" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

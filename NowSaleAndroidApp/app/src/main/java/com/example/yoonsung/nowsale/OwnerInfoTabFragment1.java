@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -53,8 +55,8 @@ public class OwnerInfoTabFragment1 extends Fragment {
     private Intent get_intent;
     private LinearLayout backBtn;
     private TextView nameText;
-    private TextView phoneText;
-    private TextView introduceText,countText;
+    private TextView phoneText,workingTime,workingDay;
+    private TextView countText;
     private ImageView heart;
     private Boolean favBool;
     private Intent loginNeedPopupIntent;
@@ -76,6 +78,9 @@ public class OwnerInfoTabFragment1 extends Fragment {
     private NMapResourceProvider nMapResourceProvider;
     private NMapOverlayManager mapOverlayManager;
 
+    //화면 크기 설
+    private DisplayMetrics metrics;
+
 
 //126.914925, 37.528728
     @Override
@@ -92,15 +97,23 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
         nameText=(TextView)view.findViewById(R.id.marketName);
         phoneText=(TextView)view.findViewById(R.id.marketPhone);
-        introduceText=view.findViewById(R.id.marketIntroduce);
+        workingDay = view.findViewById(R.id.workingDay);
+        workingTime = view.findViewById(R.id.workingTime);
 
         countText=view.findViewById(R.id.favorite_count);
         heart=view.findViewById(R.id.dangol);
 
+        //화면 크기 설정
+        metrics = new DisplayMetrics();
+        WindowManager windowManager = (WindowManager) getContext()
+                .getSystemService(Context.WINDOW_SERVICE);
+        windowManager.getDefaultDisplay().getMetrics(metrics);
 
 
         favBool = isFavoriteGetCountVO.isDangol();
         countText.setText(""+isFavoriteGetCountVO.getDangol_count());
+        workingTime.setText(""+couponVO.getWorking_time());
+        workingDay.setText(""+couponVO.getWorking_day());
 
         //상품 이미지를 보여주기 위
         sectionAdapter = new SectionedRecyclerViewAdapter();
@@ -123,9 +136,6 @@ public class OwnerInfoTabFragment1 extends Fragment {
         });
         recyclerView.setLayoutManager(glm);
         recyclerView.setAdapter(sectionAdapter);
-
-
-
 
         Log.e("OwnerInfoTabFragment1","longitude : "+couponVO.getLongitude()+", latitude : "+couponVO.getLatitude());
 
@@ -169,7 +179,6 @@ public class OwnerInfoTabFragment1 extends Fragment {
         });
 
         nameText.setText(couponVO.getMarket_name());
-        introduceText.setText(couponVO.getMarket_introduce());
 
         return view;
     }
@@ -385,7 +394,11 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
         @Override
         public int getContentItemsTotal() {
-            return list.size();
+            try {
+                return list.size();
+            } catch (NullPointerException e ){
+                return 0;
+            }
         }
 
         @Override
@@ -402,6 +415,26 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
             itemHolder.menuName.setText(name);
             itemHolder.menuMoney.setText(money);
+
+            /*GridLayoutManager.LayoutParams view_params = (GridLayoutManager.LayoutParams) itemHolder.rootView.getLayoutParams();
+            FrameLayout.LayoutParams menuImgParams = (FrameLayout.LayoutParams) itemHolder.menuImg.getLayoutParams();
+
+            int view_w = (int) (metrics.widthPixels/2);
+            int view_h = (int)(view_w*0.92);
+            int menuImg_w = (int) (view_w);
+            int menuImg_h = (int) (view_h*0.73);
+            Log.e("rootView","w : "+view_w+", h : "+view_h);
+            Log.e("rootView","menuImg_w : "+menuImg_w+", menuImg_h : "+menuImg_h);
+
+            view_params.width = view_w;
+            view_params.height = view_h;
+            menuImgParams.width = menuImg_w;
+            menuImgParams.height = menuImg_h;
+
+            itemHolder.rootView.setLayoutParams(view_params);
+            itemHolder.menuImg.setLayoutParams(menuImgParams);*/
+
+
             Glide.with(getActivity()).load(Config.url+"/drawable/owner/menu/"+couponVO.getOwner_key()+"/"+(position+1)+".png").into(itemHolder.menuImg);
         }
 
@@ -434,12 +467,14 @@ public class OwnerInfoTabFragment1 extends Fragment {
         private final TextView menuName;
         private final TextView menuMoney;
         private final ImageView menuImg;
+        private final View rootView;
 
         ItemViewHolder(View view) {
             super(view);
             menuName = (TextView) view.findViewById(R.id.menuName);
             menuMoney = (TextView) view.findViewById(R.id.menuMoney);
             menuImg = (ImageView) view.findViewById(R.id.menuImg);
+            rootView = view;
         }
     }
 

@@ -132,7 +132,7 @@ public class ClientController {
     }
 
     @RequestMapping(value="/coupon/use",method = RequestMethod.DELETE)
-    @ApiOperation(value="client가 쿠폰을 사용하거나 삭제")
+    @ApiOperation(value="client가 쿠폰을 사용")
     public ResponseEntity<ClientHaveCouponVO> clientUseCoupon(@RequestBody ClientHaveCouponVO clientHaveCouponVO){
         System.out.println("/client/coupon/use 호출");
 
@@ -142,7 +142,7 @@ public class ClientController {
     }
 
     @RequestMapping(value="/coupon/delete",method = RequestMethod.DELETE)
-    @ApiOperation(value="client가 쿠폰을 사용하거나 삭제")
+    @ApiOperation(value="client가 쿠폰을 삭제")
     public ResponseEntity<ClientHaveCouponVO> clientDeleteCoupon(@RequestBody ClientHaveCouponVO clientHaveCouponVO){
         System.out.println("/client/coupon/delete 호출");
 
@@ -154,6 +154,7 @@ public class ClientController {
     @RequestMapping(value="/coupon/insert",method = RequestMethod.POST)
     @ApiOperation(value="client가 쿠폰 발급")
     public ResponseEntity<ClientHaveCouponVO> clientInsertCoupon(@RequestBody ClientHaveCouponVO clientHaveCouponVO){
+        System.out.println("/coupon/insert 호출");
         clientCouponInsertDao = new ClientCouponInsertDao(clientHaveCouponVO);
 
         return clientCouponInsertDao.clientCouponInsert();

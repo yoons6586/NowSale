@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class Config {
-    public static String url="http://192.168.35.120:8080";
+    public static String url="http://192.168.35.23:8080";
     public static ClientVO clientVO = new ClientVO();
     public static OwnerVO ownerVO = new OwnerVO();
     public static String who_key;

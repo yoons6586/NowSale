@@ -143,94 +143,101 @@
             android:layout_gravity="center_vertical|left"
             />
     </RelativeLayout>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="2.53"
-        android:weightSum="2"
-        android:orientation="vertical"
-        android:background="@drawable/round_button"
-        android:layout_marginRight="15dp"
+        android:layout_weight="1.56"
+        android:layout_marginRight="3dp"
         android:visibility="gone"
         android:id="@+id/useCancelLayout">
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="사용"
-            android:gravity="center"
-            android:textSize="16sp"
-            android:textColor="@color/baseColor"
-            android:id="@+id/useItem"
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_centerInParent="true"
-            android:background="@color/notChooseColor"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="삭제"
-            android:gravity="center"
-            android:textSize="16sp"
-            android:textColor="@color/baseColor"
-            android:id="@+id/deleteItem"
-            />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:text="사용"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/baseColor"
+                android:background="@drawable/coupon_use_delete_btn_selector"
+                android:id="@+id/useItem"
+                android:layout_marginBottom="5dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:text="삭제"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/baseColor"
+                android:id="@+id/deleteItem"
+                android:background="@drawable/coupon_use_delete_btn_selector"
+                />
+        </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_weight="2.53"
         android:weightSum="2"
         android:orientation="vertical"
         android:layout_marginRight="15dp"
         android:visibility="gone"
         android:id="@+id/deleteOwnerCouponLayout">
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             >
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="20"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/baseColor"
-                android:id="@+id/remainOwnerRegisteredCouponCount"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="/"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/baseColor"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="200"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/baseColor"
-                android:id="@+id/startOwnerRegisteredCouponCount"
-                />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="20"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/baseColor"
+                    android:id="@+id/remainOwnerRegisteredCouponCount"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="/"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/baseColor"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="200"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/baseColor"
+                    android:id="@+id/startOwnerRegisteredCouponCount"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="삭제"
             android:gravity="center"
-            android:background="@drawable/round_button"
-            android:textSize="16sp"
+            android:background="@drawable/coupon_use_delete_btn_selector"
+            android:textSize="13sp"
             android:textColor="@color/baseColor"
             android:id="@+id/deleteOwnerCoupon"
             />
@@ -240,16 +247,14 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="2.4"
-        android:layout_marginRight="15dp"
+        android:layout_weight="1.8"
+
         android:visibility="gone"
         android:id="@+id/deleteLayout">
         <TextView
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/round_button"
+            android:layout_height="50dp"
+            android:background="@drawable/coupon_use_delete_btn_selector"
             android:text="삭제"
             android:layout_gravity="center_vertical"
             android:gravity="center"
@@ -259,22 +264,4 @@
             />
 
     </LinearLayout>
-
-    <!--
-    <ImageView
-        android:layout_marginLeft="10dp"
-        android:layout_width="40dp"
-        android:layout_height="match_parent"
-
-        android:textSize="18dp"
-        android:layout_gravity="center"
-        android:background="@drawable/coupondownload"
-
-        android:textColor="#000000"
-        android:id="@+id/haveBtn"/>
-        -->
-
-
-
-
 </LinearLayout>

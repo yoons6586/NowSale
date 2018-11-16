@@ -71,4 +71,5 @@ public class OwnerInfoTabPagerAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return tabCount;
     }
+
 }

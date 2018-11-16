@@ -3,6 +3,8 @@ package com.example.demo.owner.controller;
 
 import com.example.demo.all.model.OwnerCouponShowVO;
 import com.example.demo.all.model.OwnerSaleShowVO;
+import com.example.demo.client.dao.ClientInfoUpdateDao;
+import com.example.demo.client.model.ClientVO;
 import com.example.demo.owner.dao.*;
 import com.example.demo.owner.mapper.OwnerMapper;
 import com.example.demo.owner.model.*;
@@ -24,6 +26,7 @@ public class OwnerController {
     private OwnerSaleInsertDao ownerSaleInsertDao;
     private OwnerCouponDeleteDao ownerCouponDeleteDao;
     private OwnerSaleDeleteDao ownerSaleDeleteDao;
+    private OwnerInfoUpdateDao ownerInfoUpdateDao;
 
     public OwnerController(OwnerMapper ownerMapper){
         this.ownerMapper=ownerMapper;
@@ -127,6 +130,22 @@ public class OwnerController {
         int cnt = ownerMapper.getSaleCount(owner_key);
 
         return new ResponseEntity<>(cnt,HttpStatus.OK);
+    }
+
+    @RequestMapping(value="/info/update/{owner_key}",method = RequestMethod.PUT)
+    @ApiOperation(value="점주의 정보 변경")
+    public ResponseEntity ownerInfoUpdate(@PathVariable(value="owner_key")int owner_key, @RequestBody OwnerVO ownerVO){
+
+        /*
+        클래스를 추가로 만들지 않기 위해 ClientVO를 사용하였고
+        실제로는 ClientVO의
+        user_key,pw,nickName,alarm_push,alarm_SMS,alarm_mail만 사용한다.
+        따라서 REST API에서도 이 부분만 보내주면 된다.
+         */
+        ownerVO.setOwner_key(owner_key);
+        ownerInfoUpdateDao = new OwnerInfoUpdateDao(ownerVO);
+
+        return ownerInfoUpdateDao.ownerInfoUpdate();
     }
 }
 

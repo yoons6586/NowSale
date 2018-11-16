@@ -32,7 +32,6 @@ import com.example.yoonsung.nowsale.http.OwnerService;
 import java.util.ArrayList;
 import java.util.List;
 
-import activity.OwnerInfoActivity;
 import cz.msebera.android.httpclient.HttpStatus;
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters;
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter;
@@ -396,14 +395,28 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
             }
             else if(coupon_sale_normal==2){
                 itemHolder.contentItem.setText(content);
-                itemHolder.dateItem.setText(startDate+" ~ "+expireDate);
+                try{
+                    Log.e("sdf",startDate);
+                    itemHolder.dateItem.setText(startDate+" ~ "+expireDate);
+                } catch(NullPointerException e){
+                    itemHolder.dateItem.setText("기간 제한 없음");
+                }
+
                 itemHolder.qualificationItem.setText(qualfication);
                 itemHolder.remainCountItem.setVisibility(View.GONE);
             }
             else if(coupon_sale_normal==1) {
                 itemHolder.contentItem.setText(content);
-                itemHolder.dateItem.setText(startDate+" ~ "+expireDate+" / ");
-                itemHolder.remainCountItem.setText(remainCount+"개 남음");
+                try{
+                    Log.e("sdf",startDate);
+                    itemHolder.dateItem.setText(startDate+" ~ "+expireDate);
+                } catch(NullPointerException e){
+                    itemHolder.dateItem.setText("기간 제한 없음");
+                }
+                if(remainCount ==0 && startCount==0)
+                    itemHolder.remainCountItem.setText(" / 무제한");
+                else
+                    itemHolder.remainCountItem.setText(" / "+remainCount+"개 남음");
                 itemHolder.qualificationItem.setText(qualfication);
             }
             if(what==1 || what==6){
@@ -433,7 +446,8 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
             }
 //            itemHolder.imgLogo.setImageResource(name.hashCode() % 2 == 0 ? R.drawable.logo1 : R.drawable.logo2);
-            Glide.with(getActivity()).load(Config.url+"/drawable/owner/"+list.get(position).getLogo_img()).into(itemHolder.imgLogo);
+            Glide.with(getActivity()).load(Config.url+"/drawable/owner/"+list.get(position).getLogo_img()+".png").into(itemHolder.imgLogo);
+            Log.e("FActivity","logo : "+Config.url+"/drawable/owner/"+list.get(position).getLogo_img());
 
             if(what!=6) {
                 itemHolder.rootView.setOnClickListener(new View.OnClickListener() {
@@ -456,8 +470,15 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 //                            response.body();
                                 Log.e("response", "count : " + response);
 //                            List<IsFavoriteGetCountVO> list = response.body();
-                                IsFavoriteGetCountVO isFavoriteGetCountVO = response.body();
-                                Log.e("count", "count : " + isFavoriteGetCountVO.getDangol_count());
+                                IsFavoriteGetCountVO isFavoriteGetCountVO = new IsFavoriteGetCountVO();
+                                isFavoriteGetCountVO = response.body();
+                                try{
+                                    Log.e("count", "count : " + isFavoriteGetCountVO.getDangol_count());
+                                }
+                                catch (NullPointerException e){
+                                    isFavoriteGetCountVO = new IsFavoriteGetCountVO();
+                                }
+
                                 intent.putExtra("dangol", isFavoriteGetCountVO);
                                 if(what!=4) {
                                     Log.e("Factivity","startactivity 실행");
@@ -508,7 +529,9 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                                                             sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
                                                             title),
                                                     Toast.LENGTH_SHORT).show();
-                                            itemHolder.remainCountItem.setText(remainCount-1+"개 남음");
+                                            if(remainCount ==0 && startCount==0){}
+                                            else
+                                                itemHolder.remainCountItem.setText(remainCount-1+"개 남음");
                                         } else if (response.code() == HttpStatus.SC_INTERNAL_SERVER_ERROR) {
                                             Toast.makeText(getContext(),
                                                     String.format("중복된 쿠폰입니다.",
@@ -518,7 +541,14 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
                                             Log.e("클라이언트 쿠폰 중복", "중복이다");
 
-
+                                        } else if (response.code() == HttpStatus.SC_CONFLICT){
+                                            Log.e("FActivity","0개입니다.");
+                                            Toast.makeText(getContext(),
+                                                    String.format("쿠폰이 모두 나갔습니다.",
+                                                            sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
+                                                            title),
+                                                    Toast.LENGTH_SHORT).show();
+                                            onRefresh();
                                         }
                                     }
 
@@ -703,8 +733,8 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
         private final View rootView;
         private final ImageView imgLogo;
         private final TextView contentItem,useItem,deleteItem,dateItem,remainCountItem,qualificationItem,remainOwnerRegisteredCouponCount,deleteOwnerCoupon,startOwnerRegisteredCouponCount,deleteSale;
-        private final LinearLayout useCancelLayout,deleteLayout,deleteOwnerCouponLayout;
-        private final RelativeLayout imgDownload,imgHeart,imgGo;
+        private final LinearLayout deleteLayout,deleteOwnerCouponLayout;
+        private final RelativeLayout imgDownload,imgHeart,imgGo,useCancelLayout;
 
         ItemViewHolder(View view) {
             super(view);

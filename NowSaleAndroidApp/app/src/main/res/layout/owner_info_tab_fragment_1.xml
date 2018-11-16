@@ -1,38 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffffffff">
+    android:background="@color/app_background_color"
+
+    >
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+
         android:id="@+id/scrollView">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:orientation="vertical">
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="100dp"
+                android:background="@color/whiteColor"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="6dp"
                 >
-                <TextView
-                    android:layout_width="match_parent"
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/marketInfo"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/baseColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:text="매장 이름"
+                        android:gravity="left|center_vertical"
+                        android:id="@+id/marketName"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="12dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="영업시간 : "
+                        android:layout_below="@id/marketName"
+                        android:id="@+id/text1"
+                        android:textColor="@color/baseColor"
+                        android:textSize="15sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/baseColor"
+                        android:textSize="15sp"
+                        android:text="..."
+                        android:gravity="left|center_vertical"
+                        android:id="@+id/workingTime"
+                        android:layout_below="@id/marketName"
+                        android:layout_toRightOf="@id/text1"
+                        android:layout_marginBottom="5dp"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="영업일 : "
+                        android:layout_below="@id/workingTime"
+                        android:id="@+id/text2"
+                        android:textColor="@color/baseColor"
+                        android:textSize="15sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/baseColor"
+                        android:textSize="15sp"
+                        android:text="..."
+                        android:id="@+id/workingDay"
+                        android:gravity="left|center_vertical"
+                        android:layout_below="@id/workingTime"
+                        android:layout_toRightOf="@id/text2"
+                        />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/baseColor"
-                    android:textSize="20sp"
-                    android:text="매장 이름"
-                    android:gravity="left|center_vertical"
-                    android:id="@+id/marketName"/>
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_alignRight="@+id/marketName"
-                    android:src="@drawable/heart"
-                    android:id="@+id/dangol"/>
+                    android:id="@+id/dangol_layout"
+                    android:orientation="vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/blackheart"
+                        android:id="@+id/dangol"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="단골가게"
+                        android:textColor="@color/baseColor"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/dangol_layout"
+                    android:layout_centerVertical="true"
+
+                    android:orientation="vertical"
+                    android:layout_marginRight="20dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/call"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="전화하기"
+                        android:textColor="@color/baseColor"/>
+
+                </LinearLayout>
                 <TextView
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
@@ -41,41 +142,56 @@
                     android:textSize="20dp"
                     android:id="@+id/favorite_count"
                     android:textColor="@color/baseColor"
-                    android:layout_alignRight="@id/marketName"
-                    android:layout_alignBottom="@id/dangol"
+                    android:visibility="gone"
+
                     android:layout_alignParentBottom="true"/>
 
             </RelativeLayout>
 
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="@color/baseColor"
-                android:text="매장소개\n매장소개"
-                
-                android:id="@+id/marketIntroduce"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_centerInParent="true"
-                android:background="@color/notChooseColor"
-                android:layout_marginTop="10dp"
 
-                />
             <android.support.v7.widget.RecyclerView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/whiteColor"
+                xmlns:tools="http://schemas.android.com/tools">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="매장위치"
+                        android:textColor="@color/baseColor"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:id="@+id/tvTitle"/>
+                    <View
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"
 
+                        android:background="@color/baseColor"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_gravity="center_horizontal"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
             <com.nhn.android.maps.NMapView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:id="@+id/mapView"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"

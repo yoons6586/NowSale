@@ -7,156 +7,161 @@
     tools:context="com.example.yoonsung.nowsale.activity.LoginActivity"
     android:orientation="vertical"
     android:weightSum="22"
-    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-    android:layout_marginRight="@dimen/activity_horizontal_margin"
-    android:layout_marginTop="@dimen/activity_vertical_margin"
-    android:layout_marginBottom="@dimen/activity_vertical_margin">
-    <LinearLayout
+
+    android:background="@color/app_background_color">
+    <ImageView
+        android:padding="15dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/black_back"
+        android:id="@+id/back"
+        android:layout_gravity="left"/>
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+
         >
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:background="@drawable/back"
-            android:id="@+id/back"/>
-        <TextView
-            android:layout_width="0dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:textColor="@color/baseColor"
-            android:text="쿠폰 등록"
-            android:id="@+id/txt_title"/>
+            android:background="@color/whiteColor"
+            android:layout_gravity="top"
+            android:id="@+id/layout"
+            >
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/start_layout"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/baseColor"
+                android:text="STEP1"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/start_layout"
+            android:layout_marginTop="17dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="어떤 내용의 쿠폰을 등록하시겠어요?"
+                android:gravity="center"
+                android:id="@+id/txt_content"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:textColor="@color/baseColor"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="7dp"
+                        android:text="할인조건"
+                        android:textColor="@color/baseColor"
+                        android:textSize="18sp"
+                        android:id="@+id/txt1"/>
+                </RelativeLayout>
+                <EditText
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:theme="@style/EditTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:hint="이만원 이상 주문했을 때"
+                    android:textColor="@color/baseColor"
+                    android:textSize="18sp"
+                    android:id="@id/edit1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="혜택"
+                        android:textColor="@color/baseColor"
+                        android:textSize="18sp"
+                        android:id="@+id/txt2"/>
+                </RelativeLayout>
+
+                <EditText
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:theme="@style/EditTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:hint="2000원 할인"
+                    android:textColor="@color/baseColor"
+                    android:textSize="18sp"
+                    android:id="@id/edit2"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="잘 모르겠어요!"
+                android:textColor="@color/baseColor"
+                android:textSize="15sp"
+                android:layout_marginTop="35dp"/>
+            <TextView
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_height="40dp"
+                android:text="다음"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/cursorColor"
+                android:background="@drawable/round_button_gray"/>
+        </LinearLayout>
+        </RelativeLayout>
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
+            android:id="@+id/harin_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/harin_login_coupon"
+            android:visibility="visible"
             />
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_height="1dp"
-        android:layout_centerInParent="true"
-        android:background="@color/cursorColor"
-        />
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="STEP2"
-        android:textSize="30dp"
-        android:layout_gravity="center|center_vertical"
-        android:textColor="@color/baseColor"
-        android:textStyle="bold"
-        android:layout_weight="2.4"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="어떤 내용의 쿠폰을 등록하시겠어요?"
-        android:gravity="center"
-        android:id="@+id/txt_content"
-        android:textSize="21dp"
-        android:layout_gravity="center|center_vertical"
-        android:textColor="@color/baseColor"
-        android:layout_weight="3"
-        />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.4"
-            android:gravity="bottom|center_horizontal"
-            android:layout_marginBottom="7dp"
-            android:layout_marginRight="5dp"
-            android:text="할인조건"
-            android:textColor="@color/baseColor"
-            android:textSize="20dp"
-            android:id="@+id/txt1"/>
-
-        <EditText
-            android:inputType="textEmailAddress"
-            android:singleLine="true"
-            android:theme="@style/EditTheme"
-            android:layout_marginLeft="20dp"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:layout_weight="4"
-            android:hint="이만원 이상 주문했을 때"
-            android:textColor="@color/baseColor"
-            android:textSize="20dp"
-            android:id="@id/edit1"/>
-
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.4"
-            android:gravity="bottom|center_horizontal"
-            android:layout_marginBottom="7dp"
-            android:layout_marginRight="5dp"
-            android:text="혜택"
-            android:textColor="@color/baseColor"
-            android:textSize="20dp"
-            android:id="@+id/txt2"/>
-
-        <EditText
-            android:inputType="textEmailAddress"
-            android:singleLine="true"
-            android:theme="@style/EditTheme"
-            android:layout_marginLeft="20dp"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:layout_weight="4"
-            android:hint="2000원 할인"
-            android:textColor="@color/baseColor"
-            android:textSize="20dp"
-            android:id="@id/edit2"/>
-
-
-
-    </LinearLayout>
-    <View
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="4"/>
-    <Button
-        android:id="@+id/next"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="0dp"
-        android:layout_weight="2.3"
-        android:layout_gravity="bottom"
-        android:text="다음"
-        android:textSize="18dp"
-        android:textColor="@color/cursorColor"
-        android:background="@drawable/round_button_gray"/>
+    </FrameLayout>
 </LinearLayout>

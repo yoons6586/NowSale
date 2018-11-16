@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ClientCouponInsertDao {
     private SqlSessionFactory sqlSessionFactory;
-    private List<Integer> remainCountList;
+    private List<ClientCouponCountVO> remainCountList;
 
     private ClientHaveCouponVO clientHaveCouponVO;
     public ClientCouponInsertDao(ClientHaveCouponVO clientHaveCouponVO){
@@ -56,7 +56,12 @@ public class ClientCouponInsertDao {
             sqlSession.insert("dao.mybatisMapper.insertClientCoupon",clientHaveCouponVO);
             sqlSession.insert("dao.mybatisMapper.insertClientUsedCoupon",clientHaveCouponVO);
             remainCountList = sqlSession.selectList("dao.mybatisMapper.selectRemainCountCoupon",clientHaveCouponVO);
-            sqlSession.update("dao.mybatisMapper.updateCouponRemainCount", new ClientCouponCountVO(clientHaveCouponVO.getCoupon_key(),remainCountList.get(0)-1));
+            if(remainCountList.get(0).getRemain_count()==0 && remainCountList.get(0).getStart_count()!=0)
+                return new ResponseEntity<ClientHaveCouponVO>(clientHaveCouponVO, HttpStatus.CONFLICT);
+            else if(remainCountList.get(0).getRemain_count()==0 && remainCountList.get(0).getStart_count()==0){
+            }
+            else
+                sqlSession.update("dao.mybatisMapper.updateCouponRemainCount", new ClientCouponCountVO(clientHaveCouponVO.getCoupon_key(),remainCountList.get(0).getRemain_count()-1,remainCountList.get(0).getStart_count()));
             sqlSession.commit();
             return new ResponseEntity<ClientHaveCouponVO>(clientHaveCouponVO, HttpStatus.OK);
 

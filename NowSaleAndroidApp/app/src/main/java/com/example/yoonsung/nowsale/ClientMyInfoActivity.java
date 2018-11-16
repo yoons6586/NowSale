@@ -1,18 +1,29 @@
 package com.example.yoonsung.nowsale;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.yoonsung.nowsale.VO.ClientVO;
+import com.example.yoonsung.nowsale.VO.OwnerVO;
 import com.example.yoonsung.nowsale.http.ClientService;
+import com.example.yoonsung.nowsale.http.OwnerService;
+import com.tsengvn.typekit.Typekit;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -24,19 +35,37 @@ import retrofit2.Response;
 
 public class ClientMyInfoActivity extends AppCompatActivity { // 관리자와 사용자 로그인이 둘이 서로 달라야 함
     private CheckBox boxPush1,boxPush2,boxEmail1,boxEmail2,boxSMS1,boxSMS2;
-    private ImageView backBtn;
-    private TextView textEmail,changeBtn,logoutBtn,deleteClientBtn;
+    private ImageView backBtn,harin_coupon;
+    private TextView textEmail,logoutBtn,deleteClientBtn;
     private EditText editNickname,editPW,editPWCheck;
-    private Intent intentDialog,resultIntent;
+    private Intent intentDialog,resultIntent,getIntent;
+    private LinearLayout start_layout, changeBtn;
+    private RelativeLayout layout;
     private int deleteClient = 3;
+    private int clientOwner;
+    private final int isClient=1,isOwner=2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_myinfo);
 
+        Typekit.getInstance()
+                .addNormal(Typekit.createFromAsset(this, "fonts/NanumBarunpenRegular.otf"))
+                .addBold(Typekit.createFromAsset(this, "fonts/NanumBarunpenBold.otf"));
+
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            // 21 버전 이상일 때
+            getWindow().setStatusBarColor(getResources().getColor(R.color.statusBarColor));
+        }
+
+
         intentDialog = new Intent(this,Dialog.class);
         resultIntent = new Intent();
+        getIntent = getIntent();
+
+        clientOwner = getIntent.getIntExtra("clientOwner",-1);
 
         boxPush1 = findViewById(R.id.check_push1);
         boxPush2 = findViewById(R.id.check_push2);
@@ -55,35 +84,99 @@ public class ClientMyInfoActivity extends AppCompatActivity { // 관리자와 �
         editNickname = findViewById(R.id.edit_nickname);
         editPW = findViewById(R.id.edit_pw);
         editPWCheck=findViewById(R.id.edit_pw_check);
-        textEmail.setText(Config.clientVO.getId());
-        editNickname.setText(Config.clientVO.getNickName());
-        editPW.setText(Config.clientVO.getPw());
-        editPWCheck.setText(Config.clientVO.getPw());
 
-        if(Config.clientVO.getAlarm_push().equals("T")) {
-            boxPush1.setChecked(true);
-            boxPush2.setChecked(false);
+        layout = findViewById(R.id.layout);
+        start_layout = findViewById(R.id.start_layout);
+        harin_coupon = findViewById(R.id.harin_coupon);
+
+
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        WindowManager windowManager = (WindowManager) getApplicationContext()
+                .getSystemService(Context.WINDOW_SERVICE);
+        windowManager.getDefaultDisplay().getMetrics(metrics);
+
+        FrameLayout.LayoutParams harin_params = (FrameLayout.LayoutParams) harin_coupon.getLayoutParams();
+        FrameLayout.LayoutParams linear_params = (FrameLayout.LayoutParams) layout.getLayoutParams();
+        RelativeLayout.LayoutParams edit_params = (RelativeLayout.LayoutParams) start_layout.getLayoutParams();
+
+        harin_params.width = (int) (metrics.widthPixels/3);
+        harin_params.height = harin_params.width;
+        linear_params.topMargin = harin_params.height/2;
+        edit_params.topMargin = harin_params.height/2+50;
+
+        harin_coupon.setLayoutParams(harin_params);
+        layout.setLayoutParams(linear_params);
+        start_layout.setLayoutParams(edit_params);
+
+
+        switch (clientOwner){
+            case isClient :
+
+                textEmail.setText(Config.clientVO.getId());
+                editNickname.setText(Config.clientVO.getNickName());
+                editPW.setText(Config.clientVO.getPw());
+                editPWCheck.setText(Config.clientVO.getPw());
+
+                if(Config.clientVO.getAlarm_push().equals("T")) {
+                    boxPush1.setChecked(true);
+                    boxPush2.setChecked(false);
+                }
+                else {
+                    boxPush1.setChecked(false);
+                    boxPush2.setChecked(true);
+                }
+                if(Config.clientVO.getAlarm_mail().equals("T")) {
+                    boxEmail1.setChecked(true);
+                    boxEmail2.setChecked(false);
+                }
+                else {
+                    boxEmail1.setChecked(false);
+                    boxEmail2.setChecked(true);
+                }
+                if(Config.clientVO.getAlarm_SMS().equals("T")) {
+                    boxSMS1.setChecked(true);
+                    boxSMS2.setChecked(false);
+                }
+                else {
+                    boxSMS1.setChecked(false);
+                    boxSMS2.setChecked(true);
+                }
+                break;
+            case isOwner :
+                deleteClientBtn.setVisibility(View.GONE);
+                textEmail.setText(Config.ownerVO.getId());
+                editNickname.setText(Config.ownerVO.getNickName());
+                editPW.setText(Config.ownerVO.getPw());
+                editPWCheck.setText(Config.ownerVO.getPw());
+
+                if(Config.ownerVO.getAlarm_push().equals("T")) {
+                    boxPush1.setChecked(true);
+                    boxPush2.setChecked(false);
+                }
+                else {
+                    boxPush1.setChecked(false);
+                    boxPush2.setChecked(true);
+                }
+                if(Config.ownerVO.getAlarm_mail().equals("T")) {
+                    boxEmail1.setChecked(true);
+                    boxEmail2.setChecked(false);
+                }
+                else {
+                    boxEmail1.setChecked(false);
+                    boxEmail2.setChecked(true);
+                }
+                if(Config.ownerVO.getAlarm_SMS().equals("T")) {
+                    boxSMS1.setChecked(true);
+                    boxSMS2.setChecked(false);
+                }
+                else {
+                    boxSMS1.setChecked(false);
+                    boxSMS2.setChecked(true);
+                }
+                break;
         }
-        else {
-            boxPush1.setChecked(false);
-            boxPush2.setChecked(true);
-        }
-        if(Config.clientVO.getAlarm_mail().equals("T")) {
-            boxEmail1.setChecked(true);
-            boxEmail2.setChecked(false);
-        }
-        else {
-            boxEmail1.setChecked(false);
-            boxEmail2.setChecked(true);
-        }
-        if(Config.clientVO.getAlarm_SMS().equals("T")) {
-            boxSMS1.setChecked(true);
-            boxSMS2.setChecked(false);
-        }
-        else {
-            boxSMS1.setChecked(false);
-            boxSMS2.setChecked(true);
-        }
+
 
         boxPush1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,49 +244,94 @@ public class ClientMyInfoActivity extends AppCompatActivity { // 관리자와 �
                     editPWCheck.setHintTextColor(Color.RED);
                 }
                 if(check){
-                    Config.clientVO.setPw(editPW.getText().toString());
-                    Config.clientVO.setNickName(editNickname.getText().toString());
-                    if(boxPush1.isChecked())
-                        Config.clientVO.setAlarm_push("T");
-                    else
-                        Config.clientVO.setAlarm_push("F");
-                    if(boxEmail1.isChecked())
-                        Config.clientVO.setAlarm_mail("T");
-                    else
-                        Config.clientVO.setAlarm_mail("F");
-                    if(boxSMS1.isChecked())
-                        Config.clientVO.setAlarm_SMS("T");
-                    else
-                        Config.clientVO.setAlarm_SMS("F");
-
+                    switch (clientOwner){
+                        case isClient :
+                            Config.clientVO.setPw(editPW.getText().toString());
+                            Config.clientVO.setNickName(editNickname.getText().toString());
+                            if(boxPush1.isChecked())
+                                Config.clientVO.setAlarm_push("T");
+                            else
+                                Config.clientVO.setAlarm_push("F");
+                            if(boxEmail1.isChecked())
+                                Config.clientVO.setAlarm_mail("T");
+                            else
+                                Config.clientVO.setAlarm_mail("F");
+                            if(boxSMS1.isChecked())
+                                Config.clientVO.setAlarm_SMS("T");
+                            else
+                                Config.clientVO.setAlarm_SMS("F");
 
 //                    new ClientMyInfoActivity.SendPostJSON().execute(Config.url+"/changeClientInfo?user_key="+Config.clientInfoData.getUser_key());
-                    ClientService clientService = Config.retrofit.create(ClientService.class);
-                    Call<ClientVO> request = clientService.updateClientInfo(Config.clientVO.getClient_key(),Config.clientVO);
-                    request.enqueue(new Callback<ClientVO>() {
-                        @Override
-                        public void onResponse(Call<ClientVO> call, Response<ClientVO> response) {
-                            if(response.code()== HttpStatus.SC_OK) {
+                            ClientService clientService = Config.retrofit.create(ClientService.class);
+                            Call<Void> request = clientService.updateClientInfo(Config.clientVO.getClient_key(),Config.clientVO);
+                            request.enqueue(new Callback<Void>() {
+                                @Override
+                                public void onResponse(Call<Void> call, Response<Void> response) {
+                                    if(response.code()== HttpStatus.SC_OK) {
 
-                                Log.e("ClientMyInfoActivity", "수정완료");
+                                        Log.e("ClientMyInfoActivity", "client수정완료");
+                                        resultIntent.putExtra("change_logout_deleteClient",1);
+                                        setResult(RESULT_OK,resultIntent);
+                                        finish();
+                                    }
+                                }
 
-                            }
-                        }
+                                @Override
+                                public void onFailure(Call<Void> call, Throwable t) {
+                                    Log.e("ClientMyInfoActivity", "client수정실패");
+                                }
+                            });
 
-                        @Override
-                        public void onFailure(Call<ClientVO> call, Throwable t) {
 
-                        }
-                    });
+                            break;
 
-                    resultIntent.putExtra("change_logout_deleteClient",1);
-                    setResult(RESULT_OK,resultIntent);
-                    finish();
+                        case isOwner :
+                            Config.ownerVO.setPw(editPW.getText().toString());
+                            Config.ownerVO.setNickName(editNickname.getText().toString());
+                            if(boxPush1.isChecked())
+                                Config.ownerVO.setAlarm_push("T");
+                            else
+                                Config.ownerVO.setAlarm_push("F");
+                            if(boxEmail1.isChecked())
+                                Config.ownerVO.setAlarm_mail("T");
+                            else
+                                Config.ownerVO.setAlarm_mail("F");
+                            if(boxSMS1.isChecked())
+                                Config.ownerVO.setAlarm_SMS("T");
+                            else
+                                Config.ownerVO.setAlarm_SMS("F");
+
+//                    new ClientMyInfoActivity.SendPostJSON().execute(Config.url+"/changeClientInfo?user_key="+Config.clientInfoData.getUser_key());
+                            OwnerService ownerService = Config.retrofit.create(OwnerService.class);
+                            Call<Void> ownerRequest = ownerService.updateOwnerInfo(Config.ownerVO.getOwner_key(),Config.ownerVO);
+                            ownerRequest.enqueue(new Callback<Void>() {
+                                @Override
+                                public void onResponse(Call<Void> call, Response<Void> response) {
+                                    if(response.code()== HttpStatus.SC_OK) {
+
+                                        resultIntent.putExtra("change_logout_deleteClient",1);
+                                        setResult(RESULT_OK,resultIntent);
+                                        finish();
+                                        Log.e("ClientMyInfoActivity", "수정완료");
+
+                                    }
+                                }
+
+                                @Override
+                                public void onFailure(Call<Void> call, Throwable t) {
+                                    Log.e("ClientMyInfoActivity", "수정실패");
+                                }
+                            });
+
+                            break;
+                    }
+
 
 
                 }
             }
         });
+
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -209,6 +347,7 @@ public class ClientMyInfoActivity extends AppCompatActivity { // 관리자와 �
                 resultIntent.putExtra("change_logout_deleteClient",2);
                 setResult(RESULT_OK,resultIntent);
                 Config.clientVO = new ClientVO();
+                Config.ownerVO = new OwnerVO();
                 finish();
             }
         });
@@ -260,5 +399,10 @@ public class ClientMyInfoActivity extends AppCompatActivity { // 관리자와 �
                 finish();
             }
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 }

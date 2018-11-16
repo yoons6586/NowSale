@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:layout_below="@id/id_edit_layout"
                 android:id="@+id/pw_edit_layout"
                 >

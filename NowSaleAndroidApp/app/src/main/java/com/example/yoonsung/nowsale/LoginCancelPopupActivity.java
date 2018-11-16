@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class LoginCancelPopupActivity extends Activity {
     private Intent getIntent,loginIntent;
-    private TextView loginBtn,cancelBtn,contentText;
-    private Button okBtn;
+    private TextView contentText,okText,cancelText,pleaseLoginText;
+    private LinearLayout okBtn,cancelBtn;
     private int isOwner,down;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,12 @@ public class LoginCancelPopupActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.popup_login_need);
 
-        loginBtn = findViewById(R.id.loginBtn);
+        okBtn = findViewById(R.id.okBtn);
         cancelBtn = findViewById(R.id.cancelBtn);
         contentText = findViewById(R.id.contentText);
+        okText = findViewById(R.id.okText);
+        cancelText = findViewById(R.id.cancelText);
+        pleaseLoginText = findViewById(R.id.pleaseLoginText);
 
         getIntent = getIntent();
         isOwner = getIntent.getIntExtra("isOwner",0);
@@ -31,27 +34,35 @@ public class LoginCancelPopupActivity extends Activity {
 
         if(isOwner == 1 || down ==1){ // 점주입니다.
             contentText.setText("고객으로 로그인 해주세요!");
-            loginBtn.setVisibility(View.INVISIBLE);
+            okBtn.setVisibility(View.GONE);
+            pleaseLoginText.setVisibility(View.GONE);
+            contentText.setTextColor(getResources().getColor(R.color.baseColor));
         }
         if(down == 0){
-            loginBtn.setVisibility(View.INVISIBLE);
+            okBtn.setVisibility(View.GONE);
         }
         else if(down==2){ //회원 탈퇴
-            loginBtn.setText("탈퇴");
+            okText.setText("탈퇴하기");
             contentText.setText("정말 탈퇴하실 껀가요??");
+            pleaseLoginText.setVisibility(View.GONE);
+            contentText.setTextColor(getResources().getColor(R.color.baseColor));
         }
         else if(down==3){ // 쿠폰등록은 3개까지만
-            loginBtn.setVisibility(View.GONE);
-            cancelBtn.setText("확인");
+            okBtn.setVisibility(View.GONE);
+            cancelText.setText("확인");
             contentText.setText("쿠폰 등록은 3개까지 가능합니다");
+            pleaseLoginText.setVisibility(View.GONE);
+            contentText.setTextColor(getResources().getColor(R.color.baseColor));
         }
         else if(down==4){
-            loginBtn.setVisibility(View.GONE);
-            cancelBtn.setText("확인");
+            okBtn.setVisibility(View.GONE);
+            cancelText.setText("확인");
             contentText.setText("할인 등록은 3개까지 가능합니다");
+            pleaseLoginText.setVisibility(View.GONE);
+            contentText.setTextColor(getResources().getColor(R.color.baseColor));
         }
 
-        loginBtn.setOnClickListener(new View.OnClickListener() {
+        okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setResult(RESULT_OK);

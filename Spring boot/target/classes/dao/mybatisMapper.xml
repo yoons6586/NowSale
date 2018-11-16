@@ -20,7 +20,7 @@
     <select id="selectCategoryShow" parameterType="String" resultType="com.example.demo.all.model.OwnerCouponShowVO">
         SELECT *
         FROM owner_have_coupon_view
-        WHERE category=#{category} AND on_off="T"
+        WHERE category=#{category} AND on_off="T" AND !(start_count != 0 AND remain_count = 0)
     </select>
 
     <select id="selectCategorySaleShow" parameterType="String" resultType="com.example.demo.all.model.OwnerSaleShowVO">
@@ -66,7 +66,7 @@
     <update id="updateClientCouponCount" parameterType="int">
         UPDATE coupon_list
         SET remain_count = remain_count+1
-        WHERE coupon_key = #{coupon_key}
+        WHERE coupon_key = #{coupon_key} AND (start_count!=0)
     </update>
 
     <insert id="insertClientCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO">
@@ -84,8 +84,8 @@
       WHERE coupon_key=#{coupon_key}
     </update>
 
-    <select id="selectRemainCountCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO" resultType="int">
-        SELECT remain_count
+    <select id="selectRemainCountCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO" resultType="com.example.demo.client.model.ClientCouponCountVO">
+        SELECT remain_count,start_count,coupon_key
         FROM coupon_list
         WHERE coupon_key=#{coupon_key}
     </select>
@@ -110,6 +110,12 @@
         FROM owner_list
         WHERE id=#{id} and pw=#{pw}
     </select>
+
+    <update id="updateOwnerInfo" parameterType="com.example.demo.owner.model.OwnerVO">
+        UPDATE owner_list
+        SET nickName=#{nickName},pw=#{pw},alarm_push=#{alarm_push},alarm_mail=#{alarm_mail},alarm_SMS=#{alarm_SMS}
+        WHERE owner_key=#{owner_key}
+    </update>
     
     <insert id="insertCouponList" parameterType="com.example.demo.owner.model.OwnerRegisterCouponVO">
         INSERT INTO coupon_list(owner_key,coupon_key,start_date,expire_date,qualification,content,start_count,remain_count,on_off)

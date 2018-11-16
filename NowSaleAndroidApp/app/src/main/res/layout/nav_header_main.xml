@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:text="윤쓰쓰"
             android:textColor="@color/baseColor"
-            android:textSize="32dp"
+            android:textSize="50sp"
             android:visibility="visible"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_alignParentBottom="true"/>

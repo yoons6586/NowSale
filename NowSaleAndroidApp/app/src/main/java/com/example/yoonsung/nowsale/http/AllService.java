@@ -18,7 +18,6 @@ import retrofit2.http.Path;
 /**
  * Created by yoonsung on 2018. 10. 8..
  */
-
 public interface AllService {
     @GET("/all/adv/img/cnt")
     Call<Integer> getAdvCount();

@@ -55,5 +55,5 @@ public interface ClientService {
     Call<List<CouponVO>> getClientFavoriteMarket(@Path("client_key") int client_key);
 
     @PUT("/client/info/update/{client_key}")
-    Call<ClientVO> updateClientInfo(@Path("client_key")int client_key,@Body ClientVO clientVO);
+    Call<Void> updateClientInfo(@Path("client_key")int client_key,@Body ClientVO clientVO);
 }
