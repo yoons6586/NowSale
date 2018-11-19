@@ -57,6 +57,10 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
     private View view;
     private int ownerInfoOwnerKey;
     private SwipeRefreshLayout swipeLayout;
+    private RelativeLayout couponWalletLayout,saleWalletLayout;
+    private LinearLayout noCouponSale;
+    private TextView noText1, noText2, noText3, noText4;
+    private ImageView harinImg;
 
     @Nullable
     @Override
@@ -74,9 +78,18 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
         clientService = Config.retrofit.create(ClientService.class);
         ownerService = Config.retrofit.create(OwnerService.class);
 
-
         swipeLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipe_layout);
+        couponWalletLayout = view.findViewById(R.id.couponWalletLayout);
+        saleWalletLayout = view.findViewById(R.id.saleWalletLayout);
+        noCouponSale = view.findViewById(R.id.noCouponSale);
+        noText1 = view.findViewById(R.id.notext1);
+        noText2 = view.findViewById(R.id.notext2);
+        noText3 = view.findViewById(R.id.notext3);
+        noText4 = view.findViewById(R.id.notext4);
+        harinImg = view.findViewById(R.id.harinImg);
+
         swipeLayout.setOnRefreshListener((SwipeRefreshLayout.OnRefreshListener) this);
+
 
 
         LoadingAnimationApplication.getInstance().progressON(getActivity(), Config.loadingContext);
@@ -95,7 +108,8 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                         List<CouponVO> couponVOList = response.body();
                         couponDatas = couponVOList;
 
-                        sectionAdapter.addSection(new ExpandableContactsSection("다운가능한 쿠폰", couponDatas,marketInfo_intent,1));
+                        if(couponDatas.size()!=0)
+                            sectionAdapter.addSection(new ExpandableContactsSection("다운가능한 쿠폰", couponDatas,marketInfo_intent,1));
 
                         Call<List<CouponVO>> saleRequset = allService.getCategorySale(category);
                         saleRequset.enqueue(new Callback<List<CouponVO>>() {
@@ -103,8 +117,8 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                             public void onResponse(Call<List<CouponVO>> call, Response<List<CouponVO>> response) {
                                 List<CouponVO> couponVOList = response.body();
                                 saleDatas = couponVOList;
-
-                                sectionAdapter.addSection(new ExpandableContactsSection("진행중인 할인행사", saleDatas,marketInfo_intent,2));
+                                if(saleDatas.size()!=0)
+                                    sectionAdapter.addSection(new ExpandableContactsSection("진행중인 할인행사", saleDatas,marketInfo_intent,2));
 
                                 Call<List<CouponVO>> marketRequest = allService.getCategoryMarket(category);
                                 marketRequest.enqueue(new Callback<List<CouponVO>>() {
@@ -115,11 +129,14 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
                                         List<CouponVO> marketVOList = response.body();
                                         marketDatas = marketVOList;
-
-                                        sectionAdapter.addSection(new ExpandableContactsSection("등록된 가게", marketDatas,marketInfo_intent,3));
+                                        if(marketDatas.size()!=0)
+                                            sectionAdapter.addSection(new ExpandableContactsSection("등록된 가게", marketDatas,marketInfo_intent,3));
                                         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
                                         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                                         recyclerView.setAdapter(sectionAdapter);
+                                        if(couponDatas.size()==0 && saleDatas.size()==0 && marketDatas.size()==0)
+                                            noCouponSale.setVisibility(View.VISIBLE);
+
 
                                     }
 
@@ -150,7 +167,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
                 break;
             case 2 : // client coupon list
-
+                couponWalletLayout.setVisibility(View.VISIBLE);
                 Call<List<CouponVO>> clientCouponRequest = clientService.getClientCouponList(Config.clientVO.getClient_key());
                 clientCouponRequest.enqueue(new Callback<List<CouponVO>>() {
                     @Override
@@ -158,8 +175,13 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                         LoadingAnimationApplication.getInstance().progressOFF();
                         List<CouponVO> couponVOList = response.body();
                         couponDatas = couponVOList;
-
-                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("쿠폰 목록", couponDatas,marketInfo_intent,1));
+                        if(couponDatas.size()!=0)
+                            sectionAdapter.addSection(new FActivity.ExpandableContactsSection("쿠폰 목록", couponDatas,marketInfo_intent,1));
+                        else {
+                            noCouponSale.setVisibility(View.VISIBLE);
+                            noText1.setText("저장한 쿠폰이 아직 없어요!");
+                            noText2.setText("쿠폰을 등록해서 사용해주세요!");
+                        }
 
 
                         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
@@ -178,6 +200,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
                 break;
             case 3 : // client sale list
+                saleWalletLayout.setVisibility(View.VISIBLE);
                 Call<List<CouponVO>> clientSaleRequest = clientService.getClientSaleList(Config.clientVO.getClient_key());
                 clientSaleRequest.enqueue(new Callback<List<CouponVO>>() {
                     @Override
@@ -185,9 +208,14 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                         LoadingAnimationApplication.getInstance().progressOFF();
                         List<CouponVO> saleVOList = response.body();
                         saleDatas = saleVOList;
-
-                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("할인 정보", saleDatas,marketInfo_intent,2));
-
+                        if(saleDatas.size()!=0)
+                            sectionAdapter.addSection(new FActivity.ExpandableContactsSection("할인 정보", saleDatas,marketInfo_intent,2));
+                        else {
+                            noCouponSale.setVisibility(View.VISIBLE);
+                            noText1.setText("저장한 할인정보기 아직 없어요!");
+                            noText2.setText("할인정보를 등록해주세요!");
+                            harinImg.setImageDrawable(harinImg.getResources().getDrawable(R.drawable.harindangol));
+                        }
 
                         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
                         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -212,8 +240,16 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                         LoadingAnimationApplication.getInstance().progressOFF();
                         List<CouponVO> marketVOList = response.body();
                         marketDatas = marketVOList;
+                        if(marketDatas.size()!=0)
+                            sectionAdapter.addSection(new FActivity.ExpandableContactsSection("단골 매장", marketDatas,marketInfo_intent,3));
+                        else {
+                            noCouponSale.setVisibility(View.VISIBLE);
+                            noText1.setText("저장한 단골가게가 아직 없어요!");
+                            noText3.setVisibility(View.VISIBLE);
+                            noText4.setVisibility(View.VISIBLE);
+                            harinImg.setImageDrawable(harinImg.getResources().getDrawable(R.drawable.harindangol));
 
-                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("단골 매장", marketDatas,marketInfo_intent,3));
+                        }
 
                         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
                         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -240,7 +276,8 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 //                        for(int i=0;i<couponDatas.size();i++){
 //                            Log.e("coupon",couponDatas.get(i).getQualification());
 //                        }
-                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("다운가능한 쿠폰",couponDatas,marketInfo_intent,1));
+                        if(couponDatas.size()!=0)
+                            sectionAdapter.addSection(new FActivity.ExpandableContactsSection("다운가능한 쿠폰",couponDatas,marketInfo_intent,1));
 
                         Call<List<CouponVO>> ownerSaleRequest = ownerService.getRegisteredSale(Config.ownerVO.getOwner_key());
                         ownerSaleRequest.enqueue(new Callback<List<CouponVO>>() {
@@ -250,8 +287,16 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                                 Log.e("response","sale : "+response.code());
                                 List<CouponVO> saleVOList = response.body();
                                 saleDatas = saleVOList;
+                                if(saleDatas.size()!=0)
+                                    sectionAdapter.addSection(new FActivity.ExpandableContactsSection("진행중인 할인행사",saleDatas,marketInfo_intent,2));
 
-                                sectionAdapter.addSection(new FActivity.ExpandableContactsSection("진행중인 할인행사",saleDatas,marketInfo_intent,2));
+                                if(couponDatas.size()==0 && saleDatas.size()==0) {
+                                    noCouponSale.setVisibility(View.VISIBLE);
+                                    noText1.setText("아직 등록한 쿠폰이나 할인정보가 없습니다");
+                                    noText2.setText("쿠폰과 할인정보를 등록하여 고객들에게 보여주세요!");
+                                }
+
+
                                 RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
                                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                                 recyclerView.setAdapter(sectionAdapter);
@@ -289,7 +334,8 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 //                        for(int i=0;i<couponDatas.size();i++){
 //                            Log.e("coupon",couponDatas.get(i).getQualification());
 //                        }
-                        sectionAdapter.addSection(new FActivity.ExpandableContactsSection("다운가능한 쿠폰",couponDatas,marketInfo_intent,1));
+                        if(couponDatas.size()!=0)
+                            sectionAdapter.addSection(new FActivity.ExpandableContactsSection("다운가능한 쿠폰",couponDatas,marketInfo_intent,1));
 
                         Call<List<CouponVO>> ownerInfoSaleRequest = ownerService.getRegisteredSale(ownerInfoOwnerKey);
                         ownerInfoSaleRequest.enqueue(new Callback<List<CouponVO>>() {
@@ -299,8 +345,11 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                                 Log.e("response","sale : "+response.code());
                                 List<CouponVO> saleVOList = response.body();
                                 saleDatas = saleVOList;
-
-                                sectionAdapter.addSection(new FActivity.ExpandableContactsSection("진행중인 할인행사",saleDatas,marketInfo_intent,2));
+                                if(saleDatas.size()!=0)
+                                    sectionAdapter.addSection(new FActivity.ExpandableContactsSection("진행중인 할인행사",saleDatas,marketInfo_intent,2));
+                                if(couponDatas.size()==0 && saleDatas.size()==0) {
+                                    noCouponSale.setVisibility(View.VISIBLE);
+                                }
                                 RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
                                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                                 recyclerView.setAdapter(sectionAdapter);
@@ -389,7 +438,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
             if(coupon_sale_normal==3) {
                 itemHolder.contentItem.setText(marketName);
-                itemHolder.dateItem.setVisibility(View.GONE);
+                itemHolder.dateLayout.setVisibility(View.GONE);
                 itemHolder.remainCountItem.setVisibility(View.GONE);
                 itemHolder.qualificationItem.setVisibility(View.GONE);
             }
@@ -401,7 +450,6 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                 } catch(NullPointerException e){
                     itemHolder.dateItem.setText("기간 제한 없음");
                 }
-
                 itemHolder.qualificationItem.setText(qualfication);
                 itemHolder.remainCountItem.setVisibility(View.GONE);
             }
@@ -436,8 +484,12 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                 switch (coupon_sale_normal){
                     case 1:
                         itemHolder.deleteOwnerCouponLayout.setVisibility(View.VISIBLE);
-                        itemHolder.remainOwnerRegisteredCouponCount.setText(""+remainCount);
-                        itemHolder.startOwnerRegisteredCouponCount.setText(""+startCount);
+                        if(remainCount==0 && startCount==0){
+                               itemHolder.countLayout.setVisibility(View.GONE);
+                        } else {
+                            itemHolder.remainOwnerRegisteredCouponCount.setText("" + remainCount);
+                            itemHolder.startOwnerRegisteredCouponCount.setText("" + startCount);
+                        }
                         break;
                     case 2:
                         itemHolder.deleteLayout.setVisibility(View.VISIBLE);
@@ -576,10 +628,10 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                             }
                             else {
                                 ClientService service = Config.retrofit.create(ClientService.class);
-                                Call<String> request = service.insertClientSaleList(new ClientSaleVO(Config.clientVO.getClient_key(), sale_key));
-                                request.enqueue(new Callback<String>() {
+                                Call<Void> request = service.insertClientSaleList(new ClientSaleVO(Config.clientVO.getClient_key(), sale_key));
+                                request.enqueue(new Callback<Void>() {
                                     @Override
-                                    public void onResponse(Call<String> call, Response<String> response) {
+                                    public void onResponse(Call<Void> call, Response<Void> response) {
                                         Log.e("responseCode",""+response.code());
                                         if (response.code() == HttpStatus.SC_OK) {
                                             Log.e("클라이언트 할인제품 중복", "중복 아니다");
@@ -590,7 +642,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                                                     Toast.LENGTH_SHORT).show();
                                         } else if (response.code() == HttpStatus.SC_INTERNAL_SERVER_ERROR) {
                                             Toast.makeText(getContext(),
-                                                    String.format("중복된 쿠폰입니다.",
+                                                    String.format("중복된 할인정보입니다.",
                                                             sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
                                                             title),
                                                     Toast.LENGTH_SHORT).show();
@@ -602,7 +654,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                                     }
 
                                     @Override
-                                    public void onFailure(Call<String> call, Throwable t) {
+                                    public void onFailure(Call<Void> call, Throwable t) {
                                         Log.e("responseCode","failure");
                                     }
 
@@ -612,11 +664,12 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                     });
                     break;
 
-                case 2 :
+                case 2 : // client 쿠폰 사용, 삭제
                     itemHolder.useItem.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(getActivity(),ClientCouponListPopupActivity.class);
+                            intent.putExtra("couponVO",list.get(position));
                             intent.putExtra("position",position);
                             intent.putExtra("what",11); // 쿠폰 사용
 //                    startActivityForResult(new Intent(getActivity(),ClientCouponListPopupActivity.class),1);
@@ -627,6 +680,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(getActivity(),ClientCouponListPopupActivity.class);
+                            intent.putExtra("couponVO",list.get(position));
                             intent.putExtra("position",position);
                             intent.putExtra("what",12); // 쿠폰 삭제
                             startActivityForResult(intent,12);
@@ -644,6 +698,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(getActivity(),ClientCouponListPopupActivity.class);
+                            intent.putExtra("couponVO",list.get(position));
                             intent.putExtra("position",position);
                             intent.putExtra("what",13);
                             startActivityForResult(intent,13);
@@ -657,6 +712,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(getActivity(),ClientCouponListPopupActivity.class);
+                            intent.putExtra("couponVO",list.get(position));
                             intent.putExtra("position",position);
                             intent.putExtra("what",51); // 삭제
                             startActivityForResult(intent,51);
@@ -666,6 +722,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(getActivity(),ClientCouponListPopupActivity.class);
+                            intent.putExtra("couponVO",list.get(position));
                             intent.putExtra("position",position);
                             intent.putExtra("what",52); // 삭제
                             startActivityForResult(intent,52);
@@ -733,8 +790,8 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
         private final View rootView;
         private final ImageView imgLogo;
         private final TextView contentItem,useItem,deleteItem,dateItem,remainCountItem,qualificationItem,remainOwnerRegisteredCouponCount,deleteOwnerCoupon,startOwnerRegisteredCouponCount,deleteSale;
-        private final LinearLayout deleteLayout,deleteOwnerCouponLayout;
-        private final RelativeLayout imgDownload,imgHeart,imgGo,useCancelLayout;
+        private final LinearLayout deleteLayout,deleteOwnerCouponLayout,countLayout;
+        private final RelativeLayout imgDownload,imgHeart,imgGo,useCancelLayout,dateLayout;
 
         ItemViewHolder(View view) {
             super(view);
@@ -757,6 +814,8 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
             startOwnerRegisteredCouponCount=view.findViewById(R.id.startOwnerRegisteredCouponCount);
             deleteOwnerCoupon = view.findViewById(R.id.deleteOwnerCoupon);
             deleteSale = view.findViewById(R.id.deleteSale);
+            countLayout = view.findViewById(R.id.countLayout);
+            dateLayout = view.findViewById(R.id.dateLayout);
 
             switch (what){
                 case 1:

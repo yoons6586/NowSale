@@ -5,6 +5,263 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_background_color">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/whiteColor"
+            android:id="@+id/couponWalletLayout"
+            android:visibility="gone"
+            android:layout_marginTop="3dp">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/harincoupon_left"
+                    android:layout_marginLeft="20dp"/>
+                <ImageView
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/harincoupon_right"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+
+                            android:id="@+id/text1"
+                            >
+                                <View
+                                    android:layout_width="27dp"
+                                    android:layout_height="8dp"
+                                    android:background="@drawable/yellow_box"
+                                    android:layout_gravity="center"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="쿠폰"
+                                    android:textColor="@color/baseColor"
+                                    android:layout_gravity="center"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"/>
+
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/text1"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/text2"
+                            android:textColor="@color/baseColor"
+                            android:textSize="16sp"
+                            android:text="을 직원에게 보여주세요!"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/text3"
+                                    android:textColor="@color/baseColor"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:text="사용처리"
+                                    android:layout_alignParentLeft="true"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/baseColor"
+                                    android:textSize="16sp"
+                                    android:text="는 직원에게!"
+                                    android:layout_toRightOf="@id/text3"
+                                    />
+                        </RelativeLayout>
+
+                </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/whiteColor"
+            android:id="@+id/saleWalletLayout"
+            android:visibility="gone"
+            android:layout_marginTop="3dp">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/harinsale_left"
+                    android:layout_marginLeft="20dp"/>
+                <ImageView
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/harinsale_right"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+
+                            android:id="@+id/saletext1"
+                            >
+                                <View
+                                    android:layout_width="54dp"
+                                    android:layout_height="8dp"
+                                    android:background="@drawable/yellow_box"
+                                    android:layout_gravity="center"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="할인소식"
+                                    android:textColor="@color/baseColor"
+                                    android:layout_gravity="center"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"/>
+
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/saletext1"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/saletext2"
+                            android:textColor="@color/baseColor"
+                            android:textSize="16sp"
+                            android:text="은 직원에게"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/saletext1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/saletext3"
+                                    android:textColor="@color/baseColor"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:text="보여주지 않아도"
+                                    android:layout_alignParentLeft="true"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/baseColor"
+                                    android:textSize="16sp"
+                                    android:text="돼요!"
+                                    android:layout_toRightOf="@id/saletext3"
+                                    />
+                        </RelativeLayout>
+
+                </RelativeLayout>
+
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:id="@+id/noCouponSale">
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2.4"
+                            android:orientation="horizontal">
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.7" />
+                                <ImageView
+                                    android:layout_marginTop="50dp"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/harincoupon_sad"
+                                    android:id="@+id/harinImg"
+                                    />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_marginTop="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="아직 등록한 쿠폰이나 할인소식이 없어요!"
+                            android:textColor="@color/baseColor"
+                            android:textStyle="bold"
+                            android:id="@+id/notext1"
+                            />
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="단골가게를 등록하시면"
+                            android:textColor="@color/baseColor"
+                            android:id="@+id/notext2"
+                            />
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="한눈에 단골가게를 볼 수 있고"
+                            android:textColor="@color/baseColor"
+                            android:id="@+id/notext3"
+                            android:visibility="gone"
+                            />
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="쿠폰과 할인혜택을 더 쉽게 볼 수 있어요!"
+                            android:textColor="@color/baseColor"
+                            android:id="@+id/notext4"
+                            android:visibility="gone"/>
+                </LinearLayout>
+
+        </ScrollView>
         <android.support.v4.widget.SwipeRefreshLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"

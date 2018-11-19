@@ -3,19 +3,29 @@ package com.example.demo.client.controller;
 import com.example.demo.client.dao.*;
 import com.example.demo.client.mapper.ClientMapper;
 import com.example.demo.client.model.*;
+import com.google.api.Http;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mail.MailSender;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/client")
 public class ClientController {
+
+    @Autowired
+    MailSender mailSender;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -32,6 +42,7 @@ public class ClientController {
     private ClientCouponInsertDao clientCouponInsertDao;
     private ClientSaleDeleteDao clientSaleDeleteDao;
     private ClientSaleInsertDao clientSaleInsertDao;
+    private ClientLostPasswordDao clientLostPasswordDao;
 
     public ClientController(ClientMapper clientMapper){
         this.clientMapper=clientMapper;
@@ -106,6 +117,7 @@ public class ClientController {
         따라서 REST API에서도 이 부분만 보내주면 된다.
          */
         clientVO.setClient_key(client_key);
+        clientVO.setPw(passwordEncoder.encode(clientVO.getPw()));
         clientInfoUpdateDao = new ClientInfoUpdateDao(clientVO);
 
         return clientInfoUpdateDao.clientInfoUpdate();
@@ -117,7 +129,6 @@ public class ClientController {
         clientInfoDeleteDao = new ClientInfoDeleteDao(client_key);
         return clientInfoDeleteDao.clientInfoDelete();
     }
-
 
     @RequestMapping(value = "/signup",method = RequestMethod.POST)
     @ApiOperation(value = "client 회원가입")
@@ -177,6 +188,50 @@ public class ClientController {
         return clientSaleInsertDao.clientSaleInsert();
     }
 
+    @RequestMapping(value="/find/password",method = RequestMethod.POST)
+    @ApiOperation(value = "클라이언트 비밀번호 찾기")
+    public ResponseEntity<Void> clientFindPassword(@RequestBody ClientEmailVO clientEmailVO) throws MessagingException {
+        ClientLoginVO clientLoginVO = new ClientLoginVO();
+
+        System.out.println("email1 : "+clientEmailVO.getId());
+        int isExistEmail = clientMapper.isExistEmail(clientEmailVO.getId());
+
+        if(isExistEmail==1){
+            String tempPassword = UUID.randomUUID().toString().replaceAll("-", ""); // -를 제거해 주었다.
+            tempPassword = tempPassword.substring(0, 10); //uuid를 앞에서부터 10자리 잘라줌.
+
+//            System.out.println("임시비밀번호 : "+tempPassword);
+
+            SimpleMailMessage mail = new SimpleMailMessage();
+            mail.setFrom("chaphcapbrothers@gmail.com");
+            mail.setTo(clientEmailVO.getId());
+            mail.setSubject("지금은할인중 임시비밀번호 입니다!!");
+            mail.setText("안녕하세요. 지금은할인중입니다.\n\n" +
+                    "아래와 같이 임시비밀번호를 발급해드립니다.\n\n\n" +
+                    "임시 비밀번호 : "+tempPassword+"\n\n" +
+                    "본 메일에 대해 고객님 본인이 요청하신 것이 아닌 경우,\n\n" +
+                    "지금은할인중 고객센터로 문의주시기 바랍니다.\n\n" +
+                    "고객님의 안전하고 편리한 서비스를 위해 최선을 다하겠습니다.\n\n" +
+                    "감사합니다.\n\n\n" +
+                    "지금은할인중 드림\n");
+            try {
+                this.mailSender.send(mail);
+                clientLoginVO.setId(clientEmailVO.getId());
+                clientLoginVO.setPw(passwordEncoder.encode(tempPassword));
+
+                clientLostPasswordDao = new ClientLostPasswordDao(clientLoginVO);
+                clientLostPasswordDao.clientLostPassword();
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("메시지 전송 실패");
+
+                return new ResponseEntity<>(HttpStatus.CONFLICT); // 메일전송 실패
+            }
+            return new ResponseEntity<>(HttpStatus.OK); // 메일 전송 성공
+        } else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND); // 없는 이메일
+        }
+    }
 
 
 

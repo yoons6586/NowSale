@@ -40,12 +40,14 @@
             android:gravity="center_horizontal"
             android:textSize="15sp"
             android:id="@+id/pleaseLoginText"
+            android:lineSpacingExtra="3dp"
             />
         <TextView
             android:layout_marginTop="10dp"
             android:id="@+id/contentText"
             android:textSize="14sp"
             android:gravity="center"
+            android:lineSpacingExtra="3dp"
             android:text="로그인이 필요한 서비스 입니다!"
             android:layout_marginBottom="3dp"
             android:layout_width="match_parent"

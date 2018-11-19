@@ -24,9 +24,11 @@ public interface ClientMapper {
     @Select("SELECT id,pw FROM client_list WHERE id=#{id} and pw=#{pw}")
     List<ClientLoginVO> loginClient(ClientLoginVO clientLoginVO);
 
-
     @Select("SELECT * FROM favorite_market_view WHERE client_key=#{client_key}")
     List<ClientFavoriteMarketVO> getFavoriteMarket(@Param("client_key")int client_key);
+
+    @Select("SELECT count(*) FROM client_list WHERE ID=#{email}")
+    int isExistEmail(String email);
 
 }
 

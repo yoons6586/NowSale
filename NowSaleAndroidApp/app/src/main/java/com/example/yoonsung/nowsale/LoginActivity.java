@@ -37,12 +37,14 @@ public class LoginActivity extends AppCompatActivity { // 관리자와 사용자
     private EditText pw_edit;
     private String user_id, user_pw;
     private TextView loginBtn;
-    private TextView signupBtn;
+    private TextView signupBtn,ownerSignUp,forgetPw;
     private ClientService clientService;
     private OwnerService ownerService;
     private ImageView backBtn,logo,harin_coupon;
     private LinearLayout id_edit_layout;
     private RelativeLayout login_linear;
+
+    private final int clientSignUp = 1000,lostPassword = 2000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +57,7 @@ public class LoginActivity extends AppCompatActivity { // 관리자와 사용자
             getWindow().setStatusBarColor(getResources().getColor(R.color.statusBarColor));
         }
 
+        forgetPw = findViewById(R.id.forget_pw);
         id_edit = (EditText) findViewById(R.id.id_text);
         pw_edit = (EditText) findViewById(R.id.pw_text);
         backBtn = findViewById(R.id.back);
@@ -64,6 +67,7 @@ public class LoginActivity extends AppCompatActivity { // 관리자와 사용자
         harin_coupon = findViewById(R.id.harin_coupon);
         login_linear = findViewById(R.id.login_layout);
         id_edit_layout = findViewById(R.id.id_edit_layout);
+        ownerSignUp = findViewById(R.id.signUpOwnerBtn);
 //        client_intent = new Intent(this,)
 
         DisplayMetrics metrics = new DisplayMetrics();
@@ -103,6 +107,20 @@ public class LoginActivity extends AppCompatActivity { // 관리자와 사용자
         food_img.setLayoutParams(img_params);
         health_img.setLayoutParams(img_params);
 */
+
+        forgetPw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(new Intent(LoginActivity.this,ClientLostPasswordActivity.class),lostPassword);
+            }
+        });
+
+        ownerSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,OwnerSignUp.class));
+            }
+        });
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -202,7 +220,7 @@ public class LoginActivity extends AppCompatActivity { // 관리자와 사용자
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, SignUpActivity1.class));
+                startActivityForResult(new Intent(LoginActivity.this, SignUpActivity1.class),clientSignUp);
             }
         });
     }
@@ -212,6 +230,25 @@ public class LoginActivity extends AppCompatActivity { // 관리자와 사용자
         LoadingAnimationApplication.getInstance().progressOFF();
 
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==clientSignUp){
+            if(resultCode==RESULT_OK){
+                Intent intentDialog = new Intent(this,Dialog.class);
+                intentDialog.putExtra("message", "가입완료!! 로그인해주세요!!");
+                startActivity(intentDialog);
+            }
+        }
+        else if(requestCode==lostPassword){
+            if(resultCode==RESULT_OK){
+                Intent intentDialog = new Intent(this,Dialog.class);
+                intentDialog.putExtra("message", "이메일로 전송된 임시비밀번호로\n로그인 해주세요!");
+                startActivity(intentDialog);
+            }
+        }
+    }
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(TypekitContextWrapper.wrap(newBase));

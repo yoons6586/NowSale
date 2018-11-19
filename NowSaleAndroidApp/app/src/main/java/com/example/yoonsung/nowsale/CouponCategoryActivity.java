@@ -26,6 +26,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.yoonsung.nowsale.VO.ClientVO;
+import com.example.yoonsung.nowsale.VO.IsFavoriteGetCountVO;
 import com.example.yoonsung.nowsale.VO.LoginVO;
 import com.example.yoonsung.nowsale.VO.OwnerVO;
 import com.example.yoonsung.nowsale.http.AllService;
@@ -59,7 +60,8 @@ public class CouponCategoryActivity extends AppCompatActivity
     final private int loginPopup = 1000;
     final private int loginActivity = 2000;
     final private int ownerCouponRegisterRequest = 4000;
-    private int loginResult=3000,ownerChangeResult=4001;
+    private final int loginResult=3000,ownerChangeResult=4001;
+
     private int nav_header_nickName_textSize=30;
 
 
@@ -495,6 +497,23 @@ public class CouponCategoryActivity extends AppCompatActivity
 
         }
         else if(id==R.id.nav_owner_frequenter){
+            AllService service = Config.retrofit.create(AllService.class);
+            //단골삭제
+            Call<IsFavoriteGetCountVO> request = service.isFavoriteGetCount(Config.ownerVO.getOwner_key(),0);
+            request.enqueue(new Callback<IsFavoriteGetCountVO>() {
+                @Override
+                public void onResponse(Call<IsFavoriteGetCountVO> call, Response<IsFavoriteGetCountVO> response) {
+                    IsFavoriteGetCountVO isFavoriteGetCountVO = response.body();
+                    Intent intent = new Intent(CouponCategoryActivity.this,OwnerDangolActivity.class);
+                    intent.putExtra("dangolCnt",isFavoriteGetCountVO.getDangol_count());
+                    startActivity(intent);
+                }
+
+                @Override
+                public void onFailure(Call<IsFavoriteGetCountVO> call, Throwable t) {
+                    Log.e("destroy", "OwnerInfoActivity의 http 코드 : " );
+                }
+            });
 
         }
         else if(id==R.id.nav_owner_change_info){
@@ -524,7 +543,6 @@ public class CouponCategoryActivity extends AppCompatActivity
             walletIntent.putExtra("wallet",2); // 단골 가게 목록
             startActivity(walletIntent);
         }
-
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -656,6 +674,7 @@ public class CouponCategoryActivity extends AppCompatActivity
                 startActivity(intentDialog);
             }
         }
+
 
 
     }

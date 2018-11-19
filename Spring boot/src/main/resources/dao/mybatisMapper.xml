@@ -12,6 +12,12 @@
         WHERE client_key=#{client_key}
     </update>
 
+    <update id="updateClientPassword" parameterType="com.example.demo.client.model.ClientLoginVO">
+        UPDATE client_list
+        SET pw = #{pw}
+        WHERE id = #{id}
+    </update>
+
     <delete id="deleteClientInfo" parameterType="int">
         DELETE FROM client_list
         WHERE client_key=#{client_key}

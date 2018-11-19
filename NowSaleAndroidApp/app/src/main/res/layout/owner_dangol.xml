@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.yoonsung.nowsale.activity.LoginActivity"
+    android:orientation="vertical"
+    android:background="@color/app_background_color">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/appMainColor"
+        >
+        <android.support.constraint.ConstraintLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            >
+            <android.support.constraint.Guideline
+                android:id="@+id/gd_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.2" />
+            <android.support.constraint.Guideline
+                android:id="@+id/gd_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/back"
+                android:layout_gravity="left|center_vertical">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/back"
+
+                    android:layout_gravity="left|center_vertical"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_white"
+                app:layout_constraintLeft_toRightOf="@id/gd_left"
+                app:layout_constraintRight_toLeftOf="@id/gd_right"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="단골가게"
+                    android:layout_gravity="center"
+                    android:id="@+id/title_txt"
+                    android:textColor="@color/baseColor"
+                    android:textSize="18sp"
+
+                    />
+            </FrameLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="단골 수"
+                android:textColor="@color/baseColor"
+                android:layout_marginTop="35dp"
+                />
+            <TextView
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="4명"
+                android:textColor="@color/baseColor"
+                android:id="@+id/dangolCnt"
+                android:textStyle="bold"
+                />
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/harindangol"
+                android:id="@+id/harindangol"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="단골가게는 현재 업데이트 중입니다!"
+                android:textColor="@color/baseColor"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="조~금만 기다려주세요!"
+                android:textColor="@color/baseColor"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+   
+
+</LinearLayout>
+
+<!--
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="match_parent"
+android:text="변경"
+android:textColor="@color/appMainColor"
+android:id="@+id/change"
+android:gravity="center"
+android:textSize="20sp"
+android:layout_gravity="right"/>
+-->

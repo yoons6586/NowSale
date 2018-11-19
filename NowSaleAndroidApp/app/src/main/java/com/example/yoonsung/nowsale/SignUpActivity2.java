@@ -10,19 +10,24 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.yoonsung.nowsale.VO.ClientVO;
 import com.example.yoonsung.nowsale.http.AllService;
+import com.example.yoonsung.nowsale.http.ClientService;
 import com.tsengvn.typekit.Typekit;
 import com.tsengvn.typekit.TypekitContextWrapper;
 
@@ -37,15 +42,18 @@ import retrofit2.Response;
 public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEditorActionListener{ // 관리자와 사용자 로그인이 둘이 서로 달라야 함
     private Intent get_intent,next_intent;
     private ClientVO clientVO;
-    private EditText edit1,edit2,edit3;
-    private TextView year_txt;
-    private ImageView yearSelect;
-    private Button btn;
+    private EditText edit1,edit2,edit3,edit4;
+    private TextView year_txt,btn;
+    private ImageView yearSelect,back;
     private int edit_num=1;
     private Boolean overlapBool;
     private String id;
     private DatePickerDialog.OnDateSetListener d;
     private CheckBox check_male,check_female;
+
+    private RelativeLayout layout;
+    private LinearLayout start_layout;
+    private ImageView harin_coupon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,15 +70,45 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
             getWindow().setStatusBarColor(getResources().getColor(R.color.statusBarColor));
         }
 
-
         year_txt = findViewById(R.id.year_txt);
         edit1 = findViewById(R.id.edit1);
         edit2 = findViewById(R.id.edit2);
         edit3 = findViewById(R.id.edit3);
+        edit4 = findViewById(R.id.edit_nickname);
         btn = findViewById(R.id.btn);
         yearSelect = findViewById(R.id.select_year);
         check_male = findViewById(R.id.check_male);
         check_female = findViewById(R.id.check_female);
+        back = findViewById(R.id.back);
+
+        layout = findViewById(R.id.layout);
+        start_layout = findViewById(R.id.start_layout);
+        harin_coupon = findViewById(R.id.harin_coupon);
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        WindowManager windowManager = (WindowManager) getApplicationContext()
+                .getSystemService(Context.WINDOW_SERVICE);
+        windowManager.getDefaultDisplay().getMetrics(metrics);
+
+        FrameLayout.LayoutParams harin_params = (FrameLayout.LayoutParams) harin_coupon.getLayoutParams();
+        FrameLayout.LayoutParams linear_params = (FrameLayout.LayoutParams) layout.getLayoutParams();
+        RelativeLayout.LayoutParams edit_params = (RelativeLayout.LayoutParams) start_layout.getLayoutParams();
+
+        harin_params.width = (int) (metrics.widthPixels/3);
+        harin_params.height = harin_params.width;
+        linear_params.topMargin = harin_params.height/2;
+        edit_params.topMargin = harin_params.height/2+50;
+
+        harin_coupon.setLayoutParams(harin_params);
+        layout.setLayoutParams(linear_params);
+        start_layout.setLayoutParams(edit_params);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         d = new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -82,9 +120,9 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                         if(edit2.getText().toString().equals(edit3.getText().toString())){
                             if((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
                                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                    btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_yellow));
+                                    btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.yellow_btn_selector));
                                 } else {
-                                    btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                                    btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.yellow_btn_selector));
                                 }
                                 btn.setTextColor(Color.BLACK);
                             }
@@ -247,11 +285,30 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                 if(isValidEmail(edit1.getText().toString())){
                     if(edit2.getText().toString().equals("")==false){
                         if(edit2.getText().toString().equals(edit3.getText().toString())){
-                            if((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
-                                clientVO.setId(edit1.getText().toString());
-                                clientVO.setPw(edit2.getText().toString());
-                                next_intent.putExtra("ClientVO", clientVO);
-                                startActivity(next_intent);
+                            if(!edit4.getText().toString().equals("")) {
+                                if ((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
+                                    clientVO.setId(edit1.getText().toString());
+                                    clientVO.setPw(edit2.getText().toString());
+                                    clientVO.setNickName(edit4.getText().toString());
+//                                next_intent.putExtra("ClientVO", clientVO);
+//                                startActivity(next_intent);
+                                    ClientService clientService = Config.retrofit.create(ClientService.class);
+                                    Call<Void> requset = clientService.signUpClient(clientVO);
+                                    requset.enqueue(new Callback<Void>() {
+                                        @Override
+                                        public void onResponse(Call<Void> call, Response<Void> response) {
+                                            if (response.code() == HttpStatus.SC_OK) {
+                                                setResult(RESULT_OK);
+                                                finish();
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onFailure(Call<Void> call, Throwable t) {
+
+                                        }
+                                    });
+                                }
                             }
                         }
 
@@ -270,16 +327,17 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                 try {
                     if (isValidEmail(edit1.getText().toString())) {
                         if (edit2.getText().toString().equals("") == false) {
-                            if (edit2.getText().toString().equals(edit3.getText().toString())) {
-                                if ((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
-                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                        btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
-                                    } else {
-                                        btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                            if(!edit4.getText().toString().equals(""))
+                                if (edit2.getText().toString().equals(edit3.getText().toString())) {
+                                    if ((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
+                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.yellow_btn_selector));
+                                        } else {
+                                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.yellow_btn_selector));
+                                        }
+                                        btn.setTextColor(Color.BLACK);
                                     }
-                                    btn.setTextColor(Color.BLACK);
                                 }
-                            }
 
                         }
                     }
@@ -298,16 +356,17 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                 try {
                     if (isValidEmail(edit1.getText().toString())) {
                         if (edit2.getText().toString().equals("") == false) {
-                            if (edit2.getText().toString().equals(edit3.getText().toString())) {
-                                if ((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
-                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                                        btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
-                                    } else {
-                                        btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                            if(!edit4.getText().toString().equals(""))
+                                if (edit2.getText().toString().equals(edit3.getText().toString())) {
+                                    if ((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
+                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.yellow_btn_selector));
+                                        } else {
+                                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.yellow_btn_selector));
+                                        }
+                                        btn.setTextColor(Color.BLACK);
                                     }
-                                    btn.setTextColor(Color.BLACK);
                                 }
-                            }
 
                         }
                     }
@@ -372,9 +431,9 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                 if(edit2.getText().toString().equals("")==false && edit3.getText().toString().equals("")==false){
                     if(isValidEmail(s.toString()) && (check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)){
                         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_yellow));
+                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.yellow_btn_selector));
                         } else {
-                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.yellow_btn_selector));
                         }
                         btn.setTextColor(Color.BLACK);
                     }
@@ -430,9 +489,9 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                 if(edit1.getText().toString().equals("")==false && edit3.getText().toString().equals("")==false){
                     if(edit3.getText().toString().equals(s.toString())  && (check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)){
                         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.round_button_yellow));
+                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this,R.drawable.yellow_btn_selector));
                         } else {
-                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.yellow_btn_selector));
                         }
                         btn.setTextColor(Color.BLACK);
                     }
@@ -487,9 +546,9 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                 if (edit1.getText().toString().equals("") == false && edit2.getText().toString().equals("") == false) {
                     if (edit2.getText().toString().equals(s.toString()) && (check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                            btn.setBackground(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.yellow_btn_selector));
                         } else {
-                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.round_button_yellow));
+                            btn.setBackgroundDrawable(ContextCompat.getDrawable(SignUpActivity2.this, R.drawable.yellow_btn_selector));
                         }
                         btn.setTextColor(Color.BLACK);
                     } else {

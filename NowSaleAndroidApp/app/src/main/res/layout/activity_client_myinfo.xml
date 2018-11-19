@@ -15,385 +15,408 @@
         android:src="@drawable/black_back"
         android:id="@+id/back"
         android:layout_gravity="left"/>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:layout_marginTop="25dp"
-        android:layout_marginBottom="15dp"
-        >
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp">
+
         <RelativeLayout
+            android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/whiteColor"
             android:layout_gravity="top"
-            android:id="@+id/layout"
-            >
+            android:background="@color/whiteColor">
+
             <LinearLayout
-                android:layout_alignParentTop="true"
+                android:id="@+id/start_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/start_layout"
-                >
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
                     android:gravity="center"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/baseColor"
                     android:text="개인정보수정"
-                    android:layout_gravity="center_horizontal"/>
+                    android:textColor="@color/baseColor"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
+
             <ScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_below="@id/start_layout"
-                >
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-                <LinearLayout
-                    android:layout_alignParentTop="true"
-                    android:id="@+id/email_layout"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/start_layout">
+
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="20dp"
-                    >
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:text="이메일"
-                        android:gravity="center_vertical|left"
-                        android:theme="@style/EditTheme"
-                        android:inputType="textEmailAddress"
-                        android:textSize="15dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/baseColor"
-                        android:gravity="center_vertical|left"
-                        android:textSize="18sp"
-                        android:id="@+id/txt_email"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@id/email_layout"
-                    android:id="@+id/nickName_layout"
-                    >
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:text="닉네임"
-                        android:gravity="center_vertical|left"
-                        android:textSize="15dp"/>
-                    <EditText
+                    android:layout_height="match_parent"
+                    android:background="@color/whiteColor">
+
+                    <LinearLayout
+                        android:id="@+id/email_layout"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/baseColor"
-                        android:theme="@style/EditTheme"
-                        android:textSize="18sp"
-                        android:inputType="text"
-                        android:singleLine="true"
-                        android:background="@drawable/round_button_gray"
-                        android:id="@+id/edit_nickname"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@id/nickName_layout"
-                    android:id="@+id/pw_layout"
-                    >
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:text="비밀번호"
-                        android:gravity="center_vertical|left"
-                        android:textSize="15dp"/>
-                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:inputType="textEmailAddress"
+                            android:text="이메일"
+                            android:textSize="15dp"
+                            android:theme="@style/EditTheme" />
+
+                        <TextView
+                            android:id="@+id/txt_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:textColor="@color/baseColor"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/nickName_layout"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/baseColor"
-                        android:textSize="15dp"
-                        android:background="@drawable/round_button_gray"
-                        android:theme="@style/EditTheme"
-                        android:inputType="textPassword"
-                        android:id="@+id/edit_pw"
-                        android:maxLength="16"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@id/pw_layout"
-                    android:id="@+id/editPw_layout"
-                    >
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:text="비밀번호 확인"
-                        android:gravity="center_vertical|left"
-                        android:textSize="15dp"/>
-                    <EditText
+                        android:layout_height="30dp"
+                        android:layout_below="@id/email_layout"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:text="닉네임"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/edit_nickname"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/round_button_gray"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textColor="@color/baseColor"
+                            android:textSize="18sp"
+                            android:theme="@style/EditTheme" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pw_layout"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/baseColor"
-                        android:theme="@style/EditTheme"
-                        android:inputType="textPassword"
-                        android:textSize="15dp"
-                        android:background="@drawable/round_button_gray"
-                        android:id="@+id/edit_pw_check"
-                        android:maxLength="16"/>
-                </LinearLayout>
-                <TextView
-                    android:layout_marginTop="30dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="마케팅 정보 수신 동의"
-                    android:textColor="@color/baseColor"
-                    android:layout_marginLeft="18dp"
-                    android:textSize="17dp"
-                    android:layout_below="@id/editPw_layout"
-                    android:id="@+id/marketing"/>
-                <TextView
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="더 많은 할인혜택을 받아보실 수 있어요!"
-                    android:textColor="@color/baseColor"
-                    android:textSize="14dp"
-                    android:layout_below="@id/marketing"
-                    android:id="@+id/text"/>
-                <LinearLayout
-                    android:layout_marginLeft="18dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="18dp"
-                    android:layout_below="@id/text"
-                    android:id="@+id/pushAlarm_layout"
+                        android:layout_height="35dp"
+                        android:layout_below="@id/nickName_layout"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
 
-                    >
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:text="푸쉬알람 수신동의"
-                        android:gravity="center_vertical|left"
-                        android:textColor="@color/baseColor"
-                        android:textSize="15dp"/>
-                    <CheckBox
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:button="@android:color/transparent"
-                        android:background="@drawable/checkbox_yellow_circle"
-                        android:id="@+id/check_push1"
-                        />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_height="match_parent"
-                        android:text="동의함"
-                        android:layout_weight="0.6"
-                        android:textColor="@color/baseColor"
-                        android:gravity="center_vertical|left"/>
-                    <CheckBox
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:button="@android:color/transparent"
-                        android:background="@drawable/checkbox_yellow_circle"
-                        android:id="@+id/check_push2"
-                        />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
-                        android:text="동의안함"
-                        android:gravity="center_vertical|left"
-                        android:layout_weight="0.6"
-                        android:textColor="@color/baseColor"
-                        />
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:text="비밀번호"
+                            android:textSize="15dp" />
 
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginLeft="18dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@id/pushAlarm_layout"
-                    android:id="@+id/pushMail_layout"
-                    >
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:text="메일 수신동의"
-                        android:gravity="center_vertical|left"
-                        android:textColor="@color/baseColor"
-                        android:textSize="15dp"/>
-                    <CheckBox
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:button="@android:color/transparent"
-                        android:background="@drawable/checkbox_yellow_circle"
-                        android:id="@+id/check_mail1"
-                        />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_height="match_parent"
-                        android:text="동의함"
-                        android:layout_weight="0.6"
-                        android:textColor="@color/baseColor"
-                        android:gravity="center_vertical|left"/>
-                    <CheckBox
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:button="@android:color/transparent"
-                        android:id="@+id/check_mail2"
-                        android:background="@drawable/checkbox_yellow_circle"
-                        />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
-                        android:text="동의안함"
-                        android:gravity="center_vertical|left"
-                        android:layout_weight="0.6"
-                        android:textColor="@color/baseColor"
-                        />
+                        <EditText
+                            android:id="@+id/edit_pw"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/round_button_gray"
+                            android:inputType="textPassword"
+                            android:maxLength="16"
+                            android:textColor="@color/baseColor"
+                            android:textSize="15dp"
+                            android:theme="@style/EditTheme" />
+                    </LinearLayout>
 
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginLeft="18dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@id/pushMail_layout"
-                    android:id="@+id/SMS_layout"
-                    >
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:text="SMS 수신동의"
-                        android:gravity="center_vertical|left"
-                        android:textColor="@color/baseColor"
-                        android:textSize="15dp"/>
-                    <CheckBox
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:button="@android:color/transparent"
-                        android:background="@drawable/checkbox_yellow_circle"
-                        android:id="@+id/check_sms1"
-                        />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_height="match_parent"
-                        android:text="동의함"
-                        android:layout_weight="0.6"
-                        android:textColor="@color/baseColor"
-                        android:gravity="center_vertical|left"/>
-                    <CheckBox
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:button="@android:color/transparent"
-                        android:background="@drawable/checkbox_yellow_circle"
-                        android:id="@+id/check_sms2"
-                        />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
-                        android:text="동의안함"
-                        android:gravity="center_vertical|left"
-                        android:layout_weight="0.6"
-                        android:textColor="@color/baseColor"
-                        />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/yellow_btn_selector"
-                    android:layout_below="@id/SMS_layout"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="30dp"
-                    android:id="@+id/changeBtn">
-                    <TextView
+                    <LinearLayout
+                        android:id="@+id/editPw_layout"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="수정 완료"
-                        android:textSize="18sp"
-                        android:textColor="@color/baseColor"/>
+                        android:layout_height="35dp"
+                        android:layout_below="@id/pw_layout"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/logout_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:orientation="horizontal"
-                    android:layout_below="@id/changeBtn"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|left"
+                            android:text="비밀번호 확인"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/edit_pw_check"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/round_button_gray"
+                            android:inputType="textPassword"
+                            android:maxLength="16"
+                            android:textColor="@color/baseColor"
+                            android:textSize="15dp"
+                            android:theme="@style/EditTheme" />
+                    </LinearLayout>
+
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="로그아웃"
-                        android:gravity="bottom"
-                        android:textSize="13sp"
-                        android:textColor="@color/cursorColor"
+                        android:id="@+id/marketing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/editPw_layout"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="30dp"
+                        android:text="마케팅 정보 수신 동의"
+                        android:textColor="@color/baseColor"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/marketing"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="5dp"
+                        android:text="더 많은 할인혜택을 받아보실 수 있어요!"
+                        android:textColor="@color/baseColor"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:id="@+id/pushAlarm_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="18dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical|left"
+                            android:text="푸쉬알람 수신동의"
+                            android:textColor="@color/baseColor"
+                            android:textSize="15dp" />
+
+                        <CheckBox
+                            android:id="@+id/check_push1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/checkbox_yellow_circle"
+                            android:button="@android:color/transparent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="0.6"
+                            android:gravity="center_vertical|left"
+                            android:text="동의함"
+                            android:textColor="@color/baseColor" />
+
+                        <CheckBox
+                            android:id="@+id/check_push2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/checkbox_yellow_circle"
+                            android:button="@android:color/transparent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="0.6"
+                            android:gravity="center_vertical|left"
+                            android:text="동의안함"
+                            android:textColor="@color/baseColor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pushMail_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pushAlarm_layout"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical|left"
+                            android:text="메일 수신동의"
+                            android:textColor="@color/baseColor"
+                            android:textSize="15dp" />
+
+                        <CheckBox
+                            android:id="@+id/check_mail1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/checkbox_yellow_circle"
+                            android:button="@android:color/transparent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="0.6"
+                            android:gravity="center_vertical|left"
+                            android:text="동의함"
+                            android:textColor="@color/baseColor" />
+
+                        <CheckBox
+                            android:id="@+id/check_mail2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/checkbox_yellow_circle"
+                            android:button="@android:color/transparent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="0.6"
+                            android:gravity="center_vertical|left"
+                            android:text="동의안함"
+                            android:textColor="@color/baseColor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/SMS_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pushMail_layout"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical|left"
+                            android:text="SMS 수신동의"
+                            android:textColor="@color/baseColor"
+                            android:textSize="15dp" />
+
+                        <CheckBox
+                            android:id="@+id/check_sms1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/checkbox_yellow_circle"
+                            android:button="@android:color/transparent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="0.6"
+                            android:gravity="center_vertical|left"
+                            android:text="동의함"
+                            android:textColor="@color/baseColor" />
+
+                        <CheckBox
+                            android:id="@+id/check_sms2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/checkbox_yellow_circle"
+                            android:button="@android:color/transparent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="0.6"
+                            android:gravity="center_vertical|left"
+                            android:text="동의안함"
+                            android:textColor="@color/baseColor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/changeBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/SMS_layout"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/yellow_btn_selector">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="수정 완료"
+                            android:textColor="@color/baseColor"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/logout_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/changeBtn"
+                        android:layout_alignParentRight="true"
                         android:layout_marginRight="10dp"
-                        android:id="@+id/logoutBtn"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="회원탈퇴"
-                        android:gravity="bottom"
-                        android:textSize="13sp"
-                        android:textColor="@color/cursorColor"
-                        android:id="@+id/deleteClientBtn"/>
+                        android:layout_marginBottom="10dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
-            </RelativeLayout>
+                        <TextView
+                            android:id="@+id/logoutBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:gravity="bottom"
+                            android:text="로그아웃"
+                            android:textColor="@color/cursorColor"
+                            android:textSize="13sp" />
 
+                        <TextView
+                            android:id="@+id/deleteClientBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:text="회원탈퇴"
+                            android:textColor="@color/cursorColor"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
 
 
             </ScrollView>
 
         </RelativeLayout>
+
         <ImageView
             android:id="@+id/harin_coupon"
             android:layout_width="wrap_content"
@@ -402,8 +425,7 @@
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
             android:src="@drawable/harin_login_coupon"
-            android:visibility="visible"
-            />
+            android:visibility="visible" />
     </FrameLayout>
 
 

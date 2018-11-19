@@ -2,6 +2,7 @@ package com.example.yoonsung.nowsale;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -67,6 +68,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
     private AllService allService;
     private ScrollView scrollView;
     private List<MenuVO> menuDatas;
+    private LinearLayout dangolLayout,phoneLayout;
 
     //fagment -> activity 데이터 전달을 위한 데이터
     private OnFavSetListener onFavSetListener;
@@ -99,6 +101,8 @@ public class OwnerInfoTabFragment1 extends Fragment {
         phoneText=(TextView)view.findViewById(R.id.marketPhone);
         workingDay = view.findViewById(R.id.workingDay);
         workingTime = view.findViewById(R.id.workingTime);
+        dangolLayout = view.findViewById(R.id.dangol_layout);
+        phoneLayout = view.findViewById(R.id.phoneLayout);
 
         countText=view.findViewById(R.id.favorite_count);
         heart=view.findViewById(R.id.dangol);
@@ -145,7 +149,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
         else{
             heart.setImageResource(R.drawable.blackheart);
         }
-        heart.setOnClickListener(new View.OnClickListener() {
+        dangolLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -175,6 +179,13 @@ public class OwnerInfoTabFragment1 extends Fragment {
                     startActivity(loginNeedPopupIntent);
                 }
 
+            }
+        });
+        phoneLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String mobileNum = "tel:"+couponVO.getPhone();
+                startActivity(new Intent("android.intent.action.DIAL", Uri.parse(mobileNum)));
             }
         });
 

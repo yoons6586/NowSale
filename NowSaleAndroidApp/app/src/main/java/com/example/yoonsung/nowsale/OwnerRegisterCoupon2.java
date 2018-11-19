@@ -127,6 +127,13 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
                 }
             }
         });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
     private boolean isValidPassword(String password) {
         boolean err = false;

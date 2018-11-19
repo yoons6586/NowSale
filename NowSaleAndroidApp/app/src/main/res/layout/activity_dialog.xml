@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
-    android:background="#eeeeee"
+    android:background="@color/whiteColor"
     android:orientation="vertical"
     android:layout_width="300dp"
     android:layout_height="wrap_content"
@@ -12,60 +12,74 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:text="Notice"
-            android:textSize="20sp"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:background="@color/appMainColor"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/appMainColor"
+        android:paddingTop="25dp"
+        android:id="@+id/harinImg"
+        >
+        <ImageView
+            android:src="@drawable/harin_popup"
             android:layout_width="match_parent"
-            android:layout_height="53dp" />
+            android:layout_height="100dp" />
     </LinearLayout>
     <!-- //end 타이틀바 -->
 
     <!-- Notice -->
     <LinearLayout
-        android:padding="24dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/harinImg"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/text">
         <TextView
-            android:id="@+id/txtText"
-            android:textSize="15sp"
-            android:textColor="#000"
-            android:alpha="0.87"
-            android:gravity="center"
-            android:layout_marginBottom="3dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="로그인해주세요 !"
+            android:textColor="@color/baseColor"
+            android:gravity="center_horizontal"
+            android:textSize="15sp"
+            android:id="@+id/txtText"
+            android:lineSpacingExtra="3dp"
+            />
     </LinearLayout>
     <!-- Notice -->
-
-    <View
-        android:background="#66bdbdbd"
-        android:layout_width="match_parent"
-        android:layout_height="1dp" />
 
     <!-- 닫기 버튼 -->
     <LinearLayout
         android:orientation="horizontal"
-        android:gravity="center"
+        android:gravity="right"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1">
-        <Button
-            android:text="확인"
-            android:textSize="15sp"
-            android:textColor="@color/appMainColor"
-            android:padding="16dp"
-            android:gravity="center"
-            android:background="#00000000"
+        android:layout_height="34dp"
+        android:layout_below="@id/text"
+
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="8dp"
+        >
+        <LinearLayout
             android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_height="53dp"
-            android:onClick="mOnComplete"/>
+            android:background="@drawable/yellow_btn_selector"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/okBtn">
+            <TextView
+                android:text="확인"
+                android:textSize="13sp"
+                android:textColor="@color/baseColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/okText"/>
+        </LinearLayout>
+
     </LinearLayout>
+
     <!--// 닫기 버튼 -->
 
 

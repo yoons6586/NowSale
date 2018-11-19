@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="appMainColor">#ffd609</color>
+    <color name="kakaonColor">#ffe800</color>
     <color name="baseColor">#000000</color>
     <color name="cursorColor">#a2a5a5</color>
     <color name="hilightColor">#ffcd54</color>

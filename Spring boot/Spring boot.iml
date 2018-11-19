@@ -61,7 +61,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-web:5.0.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.0.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.0.9.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.0.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.0.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-security:2.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.0.9.RELEASE" level="project" />
@@ -168,5 +167,10 @@
     <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.29.Final" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.json-simple:json-simple:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-mail:1.5.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.0.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:5.0.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.6.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
   </component>
 </module>

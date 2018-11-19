@@ -94,11 +94,12 @@
                     android:id="@+id/dangol_layout"
                     android:orientation="vertical"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
                     android:layout_marginRight="20dp">
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/blackheart"
                         android:id="@+id/dangol"
                         android:layout_gravity="center_horizontal"
@@ -107,7 +108,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="13sp"
+                        android:textSize="10sp"
                         android:text="단골가게"
                         android:textColor="@color/baseColor"/>
                 </LinearLayout>
@@ -115,13 +116,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toLeftOf="@id/dangol_layout"
-                    android:layout_centerVertical="true"
-
+                    android:layout_alignParentBottom="true"
                     android:orientation="vertical"
-                    android:layout_marginRight="20dp">
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/phoneLayout">
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/call"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
@@ -129,7 +131,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="13sp"
+                        android:textSize="10sp"
                         android:text="전화하기"
                         android:textColor="@color/baseColor"/>
 

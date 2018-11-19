@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Dialog extends Activity {
     private Intent intent;
     private TextView text;
+    private LinearLayout okBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,8 +21,15 @@ public class Dialog extends Activity {
         setContentView(R.layout.activity_dialog);
         text = findViewById(R.id.txtText);
         intent = getIntent();
+        okBtn = findViewById(R.id.okBtn);
 
         text.setText(intent.getStringExtra("message"));
+        okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     public void mOnComplete(View v){ // 여기서 레알 삭제 시켜야됨

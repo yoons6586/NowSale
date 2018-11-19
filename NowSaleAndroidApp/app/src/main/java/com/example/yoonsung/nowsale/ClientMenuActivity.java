@@ -11,11 +11,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.yoonsung.nowsale.FActivity;
-import com.example.yoonsung.nowsale.R;
 import com.tsengvn.typekit.Typekit;
 import com.tsengvn.typekit.TypekitContextWrapper;
 
@@ -24,7 +22,7 @@ public class ClientMenuActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private Intent get_intent;
     private int whatWallet=-1;
-    private ImageView backBtn;
+    private LinearLayout backBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

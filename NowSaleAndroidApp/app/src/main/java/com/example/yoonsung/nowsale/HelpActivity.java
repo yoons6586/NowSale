@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.yoonsung.nowsale.kakao.PlusFriendService;
@@ -16,7 +16,7 @@ import com.tsengvn.typekit.TypekitContextWrapper;
 
 
 public class HelpActivity extends AppCompatActivity { // 관리자와 사용자 로그인이 둘이 서로 달라야 함
-    private ImageView backBtn;
+    private LinearLayout backBtn;
     private FrameLayout kakaoLinkBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

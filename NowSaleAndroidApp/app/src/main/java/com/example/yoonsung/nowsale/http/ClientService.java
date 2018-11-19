@@ -49,11 +49,17 @@ public interface ClientService {
     Call<ClientCouponVO> insertClientCouponList(@Body ClientCouponVO clientCouponVO);
 
     @POST("/client/sale/insert")
-    Call<String> insertClientSaleList(@Body ClientSaleVO clientSaleVO);
+    Call<Void> insertClientSaleList(@Body ClientSaleVO clientSaleVO);
 
     @GET("/client/favorite/market/{client_key}")
     Call<List<CouponVO>> getClientFavoriteMarket(@Path("client_key") int client_key);
 
     @PUT("/client/info/update/{client_key}")
     Call<Void> updateClientInfo(@Path("client_key")int client_key,@Body ClientVO clientVO);
+
+    @POST("/client/signup")
+    Call<Void> signUpClient(@Body ClientVO clientVO);
+
+    @POST("/client/find/password")
+    Call<Void> findPassword(@Body LoginVO clientVO);
 }

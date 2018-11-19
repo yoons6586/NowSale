@@ -76,6 +76,13 @@
             <version>1.18.2</version>
             <scope>provided</scope>
         </dependency>
+        <!-- 비밀번호 메일 전송을 위함-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+            <version>1.5.3.RELEASE</version>
+        </dependency>
+
     </dependencies>
 
     <build>

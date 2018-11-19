@@ -74,7 +74,8 @@
             android:text="쿠폰 사용 처리를 하시겠습니까?"
             android:textStyle="bold"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"/>
         <TextView
             android:id="@+id/textContent"
             android:textSize="14sp"
@@ -83,6 +84,7 @@
             android:layout_marginRight="25dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="5dp"
+            android:lineSpacingExtra="3dp"
             android:text="사용 처리 후에는 쿠폰을\n더 이상 쓸 수 없고\n쿠폰에 따라 재발급이\n불가능 할 수 있습니다."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
