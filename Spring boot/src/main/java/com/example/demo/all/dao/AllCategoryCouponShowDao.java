@@ -18,7 +18,7 @@ public class AllCategoryCouponShowDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "./MybatisConfiguration.xml");
+                    "mybatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 //            this.clientHaveCouponOwnerInfoVO = clientHaveCouponOwnerInfoVO;
             this.category=category;
