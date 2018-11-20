@@ -34,7 +34,7 @@ public class OwnerRegisterCoupon3 extends AppCompatActivity { // 관리자와 �
     private CheckBox check;
     private InputMethodManager imm;
     private CouponVO couponVO;
-
+    private TextView forgetBtn,forgetText;
     private RelativeLayout layout;
     private LinearLayout start_layout;
     private ImageView harin_coupon;
@@ -65,6 +65,8 @@ public class OwnerRegisterCoupon3 extends AppCompatActivity { // 관리자와 �
         next = findViewById(R.id.next);
         back = findViewById(R.id.back);
         check = findViewById(R.id.check);
+        forgetBtn = findViewById(R.id.forgetBtn);
+        forgetText = findViewById(R.id.forgetText);
 
         layout = findViewById(R.id.layout);
         start_layout = findViewById(R.id.start_layout);
@@ -148,6 +150,16 @@ public class OwnerRegisterCoupon3 extends AppCompatActivity { // 관리자와 �
                     edit1.setClickable(false);
                     edit1.setFocusable(false);
                 }
+            }
+        });
+
+        forgetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(forgetText.getVisibility()==View.GONE)
+                    forgetText.setVisibility(View.VISIBLE);
+                else
+                    forgetText.setVisibility(View.GONE);
             }
         });
 

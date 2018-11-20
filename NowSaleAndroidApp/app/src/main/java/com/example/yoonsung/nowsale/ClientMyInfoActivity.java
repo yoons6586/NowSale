@@ -242,7 +242,14 @@ public class ClientMyInfoActivity extends AppCompatActivity { // 관리자와 �
                     editPWCheck.setText("");
                     editPWCheck.setHint("비밀번호확인이 틀렸습니다");
                     editPWCheck.setHintTextColor(Color.RED);
+                } else if(editPW.getText().toString().length() < 8){
+                    check=false;
+                    editPW.setText("");
+                    editPWCheck.setText("");
+                    editPW.setHint("비밀번호는 8자 이상입니다.");
+                    editPW.setHintTextColor(Color.RED);
                 }
+
                 if(check){
                     switch (clientOwner){
                         case isClient :
@@ -311,9 +318,9 @@ public class ClientMyInfoActivity extends AppCompatActivity { // 관리자와 �
 
                                         resultIntent.putExtra("change_logout_deleteClient",1);
                                         setResult(RESULT_OK,resultIntent);
-                                        finish();
                                         Log.e("ClientMyInfoActivity", "수정완료");
 
+                                        finish();
                                     }
                                 }
 

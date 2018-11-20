@@ -33,6 +33,7 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
     private EditText edit1,edit2;
     private TextView txt1,txt2,txtContent;
     private TextView next;
+    private TextView forgetBtn,forgetText;
     private ImageView back;
     private CouponVO couponVO;
     private SaleVO saleVO;
@@ -58,6 +59,9 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
         couponVO = new CouponVO();
         saleVO = new SaleVO();
 
+        forgetBtn = findViewById(R.id.forgetBtn);
+        forgetText = findViewById(R.id.forgetText);
+
         txtContent = findViewById(R.id.txt_content);
         edit1 = findViewById(R.id.edit1);
         edit2 = findViewById(R.id.edit2);
@@ -65,6 +69,8 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
         txt2 = findViewById(R.id.txt2);
         next = findViewById(R.id.next);
         back = findViewById(R.id.back);
+
+
 
         layout = findViewById(R.id.layout);
         start_layout = findViewById(R.id.start_layout);
@@ -74,8 +80,8 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
 
         choose = get_intent.getIntExtra("choose",0);
         if(choose==2){
-
             txtContent.setText("어떤 내용의 할인행사를 등록하시겠어요?");
+            forgetText.setText(R.string.forgetSaleStep1);
         }
 
         DisplayMetrics metrics = new DisplayMetrics();
@@ -132,6 +138,16 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        forgetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(forgetText.getVisibility()==View.GONE)
+                    forgetText.setVisibility(View.VISIBLE);
+                else
+                    forgetText.setVisibility(View.GONE);
             }
         });
     }

@@ -60,6 +60,4 @@ public interface ClientService {
     @POST("/client/signup")
     Call<Void> signUpClient(@Body ClientVO clientVO);
 
-    @POST("/client/find/password")
-    Call<Void> findPassword(@Body LoginVO clientVO);
 }

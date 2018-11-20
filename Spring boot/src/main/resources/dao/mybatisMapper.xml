@@ -12,11 +12,17 @@
         WHERE client_key=#{client_key}
     </update>
 
-    <update id="updateClientPassword" parameterType="com.example.demo.client.model.ClientLoginVO">
+    <update id="updateClientPassword" parameterType="com.example.demo.all.model.AllLoginInfoVO">
         UPDATE client_list
         SET pw = #{pw}
         WHERE id = #{id}
     </update>
+    <update id="updateOwnerPassword" parameterType="com.example.demo.all.model.AllLoginInfoVO">
+        UPDATE owner_list
+        SET pw = #{pw}
+        WHERE id = #{id}
+    </update>
+
 
     <delete id="deleteClientInfo" parameterType="int">
         DELETE FROM client_list
@@ -114,7 +120,7 @@
     <select id="selectOwnerLogin" parameterType="com.example.demo.owner.model.OwnerLoginVO" resultType="com.example.demo.owner.model.OwnerVO">
         SELECT *
         FROM owner_list
-        WHERE id=#{id} and pw=#{pw}
+        WHERE id=#{id}
     </select>
 
     <update id="updateOwnerInfo" parameterType="com.example.demo.owner.model.OwnerVO">

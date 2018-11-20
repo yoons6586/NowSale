@@ -122,7 +122,8 @@ public class OwnerInfoTabFragment1 extends Fragment {
         //상품 이미지를 보여주기 위
         sectionAdapter = new SectionedRecyclerViewAdapter();
 
-        sectionAdapter.addSection(new MovieSection("주요 상품", menuDatas));
+        if(menuDatas.size()!=0)
+            sectionAdapter.addSection(new MovieSection("주요 상품", menuDatas));
 
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
 

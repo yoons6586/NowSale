@@ -11,8 +11,10 @@ import com.example.demo.owner.model.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.binding.BindingException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +22,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/owner")
 public class OwnerController {
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
     private OwnerMapper ownerMapper;
     private OwnerLoginDao ownerLoginDao;
     private OwnerCouponUpdateDao ownerCouponUpdateDao;
@@ -31,16 +36,29 @@ public class OwnerController {
     public OwnerController(OwnerMapper ownerMapper){
         this.ownerMapper=ownerMapper;
     }
+
     @RequestMapping(value="/login",method=RequestMethod.POST)
     @ApiOperation(value="owner 로그인을 하기 위한 id,pw 체크")
     public ResponseEntity<List<OwnerVO>> loginOwner(@RequestBody OwnerLoginVO ownerLoginVO){
         ownerLoginDao = new OwnerLoginDao(ownerLoginVO);
         List<OwnerVO> list = ownerLoginDao.ownerLoginSelect();
         System.out.println("size : "+list.size());
-        if(list.size()>0)
-            return new ResponseEntity<List<OwnerVO>>(list,HttpStatus.OK);
-        else
-            return new ResponseEntity<List<OwnerVO>>(list,HttpStatus.NOT_FOUND);
+        String tmp = passwordEncoder.encode("123");
+
+        System.out.println("123 : "+tmp);
+        if(list.size()>0) {
+//            ownerLoginVO.setPw(passwordEncoder.encode(ownerLoginVO.getPw()));
+            System.out.println("pw : "+ownerLoginVO.getPw());
+            System.out.println("pw : "+list.get(0).getPw());
+
+            if(passwordEncoder.matches(ownerLoginVO.getPw(),list.get(0).getPw())){
+                list.get(0).setPw(ownerLoginVO.getPw());
+                return new ResponseEntity<List<OwnerVO>>(list, HttpStatus.OK);
+            }
+        }
+
+        list.clear();
+        return new ResponseEntity<List<OwnerVO>>(list,HttpStatus.NOT_FOUND);
     }
 
     @RequestMapping(value="/coupon/get/{owner_key}",method = RequestMethod.GET)
@@ -143,6 +161,8 @@ public class OwnerController {
         따라서 REST API에서도 이 부분만 보내주면 된다.
          */
         ownerVO.setOwner_key(owner_key);
+        ownerVO.setPw(passwordEncoder.encode(ownerVO.getPw()));
+
         ownerInfoUpdateDao = new OwnerInfoUpdateDao(ownerVO);
 
         return ownerInfoUpdateDao.ownerInfoUpdate();

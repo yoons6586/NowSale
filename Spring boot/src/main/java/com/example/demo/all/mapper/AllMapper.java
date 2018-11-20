@@ -37,5 +37,11 @@ public interface AllMapper {
 
     @Select("SELECT menu_img_name,menu_name,menu_money FROM owner_menu_list WHERE owner_key=#{owner_key}")
     List<MenuVO> getMenuItem(@Param("owner_key")int owner_key);
+
+    @Select("SELECT count(*) FROM client_list WHERE ID=#{email}")
+    int isClientExistEmail(String email);
+
+    @Select("SELECT count(*) FROM owner_list WHERE ID=#{email}")
+    int isOwnerExistEmail(String email);
 }
 

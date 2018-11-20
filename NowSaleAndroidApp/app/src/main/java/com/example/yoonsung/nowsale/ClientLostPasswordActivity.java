@@ -27,7 +27,7 @@ import android.widget.Toast;
 
 import com.example.yoonsung.nowsale.VO.ClientVO;
 import com.example.yoonsung.nowsale.VO.LoginVO;
-import com.example.yoonsung.nowsale.http.ClientService;
+import com.example.yoonsung.nowsale.http.AllService;
 import com.tsengvn.typekit.Typekit;
 import com.tsengvn.typekit.TypekitContextWrapper;
 
@@ -133,9 +133,9 @@ public class ClientLostPasswordActivity extends AppCompatActivity implements Tex
                 if(isValidEmail(edit1.getText().toString())){
                     LoadingAnimationApplication.getInstance().progressON(ClientLostPasswordActivity.this, Config.loadingContext);
 
-                    ClientService clientService = Config.retrofit.create(ClientService.class);
-                    LoginVO clientVO = new LoginVO(edit1.getText().toString(),"0");
-                    Call<Void> request = clientService.findPassword(clientVO);
+                    AllService allService = Config.retrofit.create(AllService.class);
+                    LoginVO loginVO = new LoginVO(edit1.getText().toString(),"0");
+                    Call<Void> request = allService.findPassword(loginVO);
                     request.enqueue(new Callback<Void>() {
                         @Override
                         public void onResponse(Call<Void> call, Response<Void> response) {

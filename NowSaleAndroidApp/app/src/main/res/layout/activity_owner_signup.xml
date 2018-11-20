@@ -30,9 +30,7 @@
             android:layout_gravity="top"
             android:id="@+id/layout"
             >
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -45,7 +43,7 @@
                         android:orientation="horizontal"
                         android:id="@+id/start_layout"
                         android:layout_centerHorizontal="true"
-                        >
+                        android:layout_marginBottom="15dp">
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -57,172 +55,177 @@
                             android:layout_gravity="center_horizontal"/>
 
                     </LinearLayout>
-                    <TextView
-                        android:layout_below="@id/start_layout"
+                    <ScrollView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="점주용 계정은 매장 확인 및"
-                        android:layout_marginTop="15dp"
-                        android:id="@+id/text1"
-                        android:textSize="16sp"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@color/baseColor"
-                        />
-                    <TextView
-                        android:layout_below="@id/text1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="부정 회원가입 방지를 위하여"
-                        android:layout_marginTop="3dp"
-                        android:id="@+id/text2"
-                        android:textSize="16sp"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@color/baseColor"
-                        />
-                    <TextView
-                        android:layout_below="@id/text2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="카카오톡 플러스친구 (지금은할인중)"
-                        android:layout_marginTop="3dp"
-                        android:id="@+id/text3"
-                        android:textSize="16sp"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@color/baseColor"
-                        android:textStyle="bold"
-                        />
-                    <RelativeLayout
-                        android:layout_below="@id/text3"
-                        android:layout_centerHorizontal="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:id="@+id/textLayout1">
-                        <TextView
-                            android:layout_alignParentLeft="true"
+                        android:layout_below="@id/start_layout">
+                        <RelativeLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="1:1문의"
-                            android:layout_marginTop="3dp"
-                            android:id="@+id/text4"
-                            android:textSize="16sp"
-                            android:textColor="@color/baseColor"
-                            android:textStyle="bold"
-                            />
-                        <TextView
-                            android:layout_toRightOf="@id/text4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="대화, "
-                            android:layout_marginTop="3dp"
-                            android:id="@+id/text5"
-                            android:textSize="16sp"
-                            android:textColor="@color/baseColor"
-                            />
-                        <TextView
-                            android:layout_toRightOf="@id/text5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="문자메시지 및 유선"
-                            android:layout_marginTop="3dp"
-                            android:id="@+id/text6"
-                            android:textSize="16sp"
-                            android:textColor="@color/baseColor"
-                            android:textStyle="bold"
-                            />
-                        <TextView
-                            android:layout_toRightOf="@id/text6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="을 통해"
-                            android:layout_marginTop="3dp"
-                            android:id="@+id/text7"
-                            android:textSize="16sp"
-                            android:textColor="@color/baseColor"
-                            />
-                    </RelativeLayout>
-                    <TextView
-                        android:layout_below="@id/textLayout1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="발급되고 있습니다."
-                        android:layout_marginTop="3dp"
-                        android:id="@+id/text8"
-                        android:textSize="16sp"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@color/baseColor"
-                        />
-                    <TextView
-                        android:layout_below="@id/text8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="아래 이미지를 터치하시면 바로 이동됩니다."
-                        android:layout_marginTop="20dp"
-                        android:id="@+id/text9"
-                        android:textSize="16sp"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@color/baseColor"
-                        android:textStyle="bold"
-                        />
-                    <RelativeLayout
-                        android:layout_below="@id/text9"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:background="@drawable/yellow_kakao_selector"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:id="@+id/kakaoLinkBtn">
-                        <TextView
-                            android:layout_toRightOf="@id/kakoImg"
-                            android:layout_marginRight="15dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="카카오톡에서 지금은 할인중 친구추가 해주세요"
-                            android:textSize="13sp"
-                            android:textColor="@color/baseColor"
-                            android:layout_gravity="left"
-                            />
-                        <ImageView
-                            android:layout_alignParentLeft="true"
-                            android:layout_width="20dp"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/kakao_account_logo"
-                            android:id="@+id/kakoImg"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp"/>
-                    </RelativeLayout>
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_alignParentTop="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="점주용 계정은 매장 확인 및"
 
-                    <TextView
-                        android:layout_below="@id/kakaoLinkBtn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="문자를 통한 가입 신청"
-                        android:layout_marginTop="20dp"
-                        android:id="@+id/text10"
-                        android:textSize="16sp"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@color/baseColor"
-                        />
-                    <TextView
-                        android:layout_below="@id/text10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="010-5013-3819"
-                        android:layout_marginTop="5dp"
-                        android:textSize="22sp"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@color/baseColor"
-                        android:textStyle="bold"
-                        android:id="@+id/phoneText"
-                        />
+                                android:id="@+id/text1"
+                                android:textSize="16sp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/baseColor"
+                                />
+                            <TextView
+                                android:layout_below="@id/text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="부정 회원가입 방지를 위하여"
+                                android:layout_marginTop="3dp"
+                                android:id="@+id/text2"
+                                android:textSize="16sp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/baseColor"
+                                />
+                            <TextView
+                                android:layout_below="@id/text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="카카오톡 플러스친구 (지금은할인중)"
+                                android:layout_marginTop="3dp"
+                                android:id="@+id/text3"
+                                android:textSize="16sp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/baseColor"
+                                android:textStyle="bold"
+                                />
+                            <RelativeLayout
+                                android:layout_below="@id/text3"
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:id="@+id/textLayout1">
+                                <TextView
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1:1문의"
+                                    android:layout_marginTop="3dp"
+                                    android:id="@+id/text4"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/baseColor"
+                                    android:textStyle="bold"
+                                    />
+                                <TextView
+                                    android:layout_toRightOf="@id/text4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="대화, "
+                                    android:layout_marginTop="3dp"
+                                    android:id="@+id/text5"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/baseColor"
+                                    />
+                                <TextView
+                                    android:layout_toRightOf="@id/text5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="문자메시지 및 유선"
+                                    android:layout_marginTop="3dp"
+                                    android:id="@+id/text6"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/baseColor"
+                                    android:textStyle="bold"
+                                    />
+                                <TextView
+                                    android:layout_toRightOf="@id/text6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="을 통해"
+                                    android:layout_marginTop="3dp"
+                                    android:id="@+id/text7"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/baseColor"
+                                    />
+                            </RelativeLayout>
+                            <TextView
+                                android:layout_below="@id/textLayout1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="발급되고 있습니다."
+                                android:layout_marginTop="3dp"
+                                android:id="@+id/text8"
+                                android:textSize="16sp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/baseColor"
+                                />
+                            <TextView
+                                android:layout_below="@id/text8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="아래 이미지를 터치하시면 바로 이동됩니다."
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/text9"
+                                android:textSize="16sp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/baseColor"
+                                android:textStyle="bold"
+                                />
+                            <RelativeLayout
+                                android:layout_below="@id/text9"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/yellow_kakao_selector"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:id="@+id/kakaoLinkBtn">
+                                <TextView
+                                    android:layout_toRightOf="@id/kakoImg"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="카카오톡에서 지금은 할인중 친구추가 해주세요"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/baseColor"
+                                    android:layout_gravity="left"
+                                    />
+                                <ImageView
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/kakao_account_logo"
+                                    android:id="@+id/kakoImg"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"/>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_below="@id/kakaoLinkBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="문자를 통한 가입 신청"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/text10"
+                                android:textSize="16sp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/baseColor"
+                                />
+                            <TextView
+                                android:layout_below="@id/text10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="010-5013-3819"
+                                android:layout_marginTop="5dp"
+                                android:textSize="22sp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/baseColor"
+                                android:textStyle="bold"
+                                android:id="@+id/phoneText"
+                                />
+                        </RelativeLayout>
+                    </ScrollView>
                 </RelativeLayout>
-
-
-            </ScrollView>
-
         </RelativeLayout>
         <ImageView
             android:id="@+id/harin_coupon"

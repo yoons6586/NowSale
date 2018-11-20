@@ -32,10 +32,6 @@ public class Dialog extends Activity {
         });
     }
 
-    public void mOnComplete(View v){ // 여기서 레알 삭제 시켜야됨
-        finish();
-    }
-
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         //바깥레이어 클릭시 안닫히게

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.yoonsung.nowsale.activity.LoginActivity"
     android:orientation="vertical"
     android:weightSum="22"
     android:background="@color/app_background_color">
@@ -30,111 +28,132 @@
             android:layout_gravity="top"
             android:id="@+id/layout"
             >
-            <ScrollView
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_alignParentTop="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:id="@+id/start_layout"
-                        >
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/baseColor"
-                            android:text="STEP2"
-                            android:layout_gravity="center_horizontal"/>
-
-                    </LinearLayout>
-                    <LinearLayout
+                <LinearLayout
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/start_layout"
+                    >
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_below="@id/start_layout"
-                        android:layout_marginTop="15dp"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="몇 개의 쿠폰을 발행하시겠어요?"
-                            android:textSize="20sp"
-                            android:layout_gravity="center|center_vertical"
-                            android:textColor="@color/baseColor"
-                            />
-                        <CheckBox
-                            android:layout_marginTop="25dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18sp"
-                            android:layout_gravity="center"
-                            android:text="쿠폰 개수 제한"
-                            android:id="@+id/check"/>
+                        android:gravity="center"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/baseColor"
+                        android:text="STEP2"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/start_layout"
+                    >
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginTop="10dp"
-                            android:orientation="horizontal"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="15dp"
                             >
-                            <EditText
-                                android:singleLine="true"
-                                android:theme="@style/EditTheme"
-                                android:layout_marginLeft="70dp"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:gravity="bottom"
-                                android:layout_weight="4"
-                                android:textColor="@color/baseColor"
-                                android:textSize="18sp"
-                                android:id="@id/edit1"
-                                android:inputType="number"/>
-
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="bottom"
-                                android:layout_marginBottom="7dp"
-                                android:layout_marginRight="13dp"
-                                android:layout_marginLeft="13dp"
-                                android:text="장"
+                                android:text="몇 개의 쿠폰을 발행하시겠어요?"
+                                android:textSize="20sp"
+                                android:layout_gravity="center|center_vertical"
                                 android:textColor="@color/baseColor"
-                                android:textSize="20dp"
-                                android:id="@+id/txt1"/>
-                        </LinearLayout>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="잘 모르겠어요!"
-                            android:textColor="@color/baseColor"
-                            android:textSize="15sp"
-                            android:layout_marginTop="35dp"/>
-                        <TextView
-                            android:id="@+id/next"
-                            android:layout_width="match_parent"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp"
-                            android:layout_marginTop="30dp"
-                            android:layout_height="40dp"
-                            android:gravity="center"
-                            android:text="다음"
-                            android:textSize="15sp"
-                            android:textColor="@color/baseColor"
-                            android:background="@drawable/yellow_btn_selector"/>
-                    </LinearLayout>
+                                />
+                            <CheckBox
+                                android:layout_marginTop="25dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:layout_gravity="center"
+                                android:text="쿠폰 개수 제한"
+                                android:id="@+id/check"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                >
+                                <EditText
+                                    android:singleLine="true"
+                                    android:theme="@style/EditTheme"
+                                    android:layout_marginLeft="70dp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="bottom"
+                                    android:layout_weight="4"
+                                    android:textColor="@color/baseColor"
+                                    android:textSize="18sp"
+                                    android:id="@id/edit1"
+                                    android:inputType="number"/>
 
-                </RelativeLayout>
-            </ScrollView>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="bottom"
+                                    android:layout_marginBottom="7dp"
+                                    android:layout_marginRight="13dp"
+                                    android:layout_marginLeft="13dp"
+                                    android:text="장"
+                                    android:textColor="@color/baseColor"
+                                    android:textSize="20dp"
+                                    android:id="@+id/txt1"/>
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="잘 모르겠어요!"
+                                android:textColor="@color/baseColor"
+                                android:textSize="15sp"
+                                android:layout_marginTop="35dp"
+                                android:id="@+id/forgetBtn"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="30dp"
+                                android:lineSpacingExtra="3dp"
+                                android:text="@string/forgetCouponStep2"
+                                android:textColor="@color/baseColor"
+                                android:textSize="16sp"
+                                android:visibility="gone"
+                                android:id="@+id/forgetText"/>
+                            <TextView
+                                android:id="@+id/next"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:text="다음"
+                                android:textSize="15sp"
+                                android:textColor="@color/baseColor"
+                                android:background="@drawable/yellow_btn_selector"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+
+            </RelativeLayout>
+
         </RelativeLayout>
         <ImageView
             android:id="@+id/harin_coupon"

@@ -5,16 +5,21 @@ package com.example.demo.all.controller;
 import com.example.demo.all.dao.*;
 import com.example.demo.all.mapper.AllMapper;
 import com.example.demo.all.model.*;
+import com.example.demo.client.dao.ClientLostPasswordDao;
+import com.example.demo.client.model.ClientEmailVO;
+import com.example.demo.client.model.ClientLoginVO;
 import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.exceptions.TooManyResultsException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mail.MailSender;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import javax.mail.MessagingException;
+import java.util.*;
 
 @RestController
 @RequestMapping("/all")
@@ -24,7 +29,15 @@ public class AllController {
     private AllFavoriteDeleteDao allFavoriteDeleteDao;
     private AllCategorySaleShowDao allCategorySaleShowDao;
     private AllCategoryMarketShowDao allCategoryMarketShowDao;
+    private AllLostPasswordDao allLostPasswordDao;
+
     private AllMapper allMapper;
+
+    @Autowired
+    MailSender mailSender;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     public AllController(AllMapper allMapper){
         this.allMapper=allMapper;
@@ -262,6 +275,64 @@ public class AllController {
         }
 
         return new ResponseEntity<List<MenuVO>>(list,HttpStatus.OK);
+    }
+
+    @RequestMapping(value="/find/password",method = RequestMethod.POST)
+    @ApiOperation(value = "고객, 점주 비밀번호 찾기")
+    public ResponseEntity<Void> clientFindPassword(@RequestBody AllEmailVO allEmailVO) throws MessagingException {
+
+        System.out.println("email1 : "+allEmailVO.getId());
+        int isClientExistEmail = allMapper.isClientExistEmail(allEmailVO.getId());
+        if(isClientExistEmail==1) {
+            if (sendEmail(allEmailVO.getId(),1)) {
+                return new ResponseEntity<>(HttpStatus.OK);
+            } else
+                return new ResponseEntity<>(HttpStatus.CONFLICT);
+        } else{
+            int isOwnerExistEmail = allMapper.isOwnerExistEmail(allEmailVO.getId());
+            if(isOwnerExistEmail==1) {
+                if (sendEmail(allEmailVO.getId(),2)) {
+                    return new ResponseEntity<>(HttpStatus.OK);
+                } else
+                    return new ResponseEntity<>(HttpStatus.CONFLICT);
+            } else
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    public boolean sendEmail(String email,int clientOwner){
+        AllLoginInfoVO allLoginInfoVO = new AllLoginInfoVO();
+        String tempPassword = UUID.randomUUID().toString().replaceAll("-", ""); // -를 제거해 주었다.
+        tempPassword = tempPassword.substring(0, 10); //uuid를 앞에서부터 10자리 잘라줌.
+
+//            System.out.println("임시비밀번호 : "+tempPassword);
+
+        SimpleMailMessage mail = new SimpleMailMessage();
+        mail.setFrom("chaphcapbrothers@gmail.com");
+        mail.setTo(email);
+        mail.setSubject("지금은할인중 임시비밀번호 입니다!!");
+        mail.setText("안녕하세요. 지금은할인중입니다.\n\n" +
+                "아래와 같이 임시비밀번호를 발급해드립니다.\n\n\n" +
+                "임시 비밀번호 : "+tempPassword+"\n\n" +
+                "본 메일에 대해 고객님 본인이 요청하신 것이 아닌 경우,\n\n" +
+                "지금은할인중 고객센터로 문의주시기 바랍니다.\n\n" +
+                "고객님의 안전하고 편리한 서비스를 위해 최선을 다하겠습니다.\n\n" +
+                "감사합니다.\n\n\n" +
+                "지금은할인중 드림\n");
+        try {
+            this.mailSender.send(mail);
+            allLoginInfoVO.setId(email);
+            allLoginInfoVO.setPw(passwordEncoder.encode(tempPassword));
+
+            allLostPasswordDao = new AllLostPasswordDao(allLoginInfoVO,clientOwner);
+            allLostPasswordDao.allLostPassword();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("메시지 전송 실패");
+
+            return false;
+        }
     }
 
 }

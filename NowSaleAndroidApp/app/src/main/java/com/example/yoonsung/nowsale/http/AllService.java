@@ -4,6 +4,7 @@ import com.example.yoonsung.nowsale.VO.AllOwnerClientKeyVO;
 import com.example.yoonsung.nowsale.VO.ClientVO;
 import com.example.yoonsung.nowsale.VO.CouponVO;
 import com.example.yoonsung.nowsale.VO.IsFavoriteGetCountVO;
+import com.example.yoonsung.nowsale.VO.LoginVO;
 import com.example.yoonsung.nowsale.VO.MenuVO;
 
 import java.util.List;
@@ -51,5 +52,8 @@ public interface AllService {
 
     @GET("/all/{owner_key}/menu")
     Call<List<MenuVO>> getMenuList(@Path("owner_key")int owner_key);
+
+    @POST("/all/find/password")
+    Call<Void> findPassword(@Body LoginVO loginVO);
 
 }

@@ -30,143 +30,170 @@
             android:layout_gravity="top"
             android:id="@+id/layout"
             >
-            <ScrollView
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RelativeLayout
-                    android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/whiteColor">
+
+
+                <LinearLayout
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/whiteColor">
-
-
-                    <LinearLayout
-                        android:layout_alignParentTop="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:id="@+id/start_layout"
-                        >
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/baseColor"
-                            android:id="@+id/txt_step"
-                            android:text="STEP3"
-                            android:layout_gravity="center_horizontal"/>
-
-                    </LinearLayout>
-                    <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/start_layout"
+                    >
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_below="@id/start_layout"
-                        android:layout_marginTop="15dp"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/txt_content"
-                            android:text="유효기간을 지정해주세요"
-                            android:textSize="20sp"
-                            android:gravity="center"
-                            android:layout_gravity="center|center_vertical"
-                            android:textColor="@color/baseColor"
-                            />
-                        <CheckBox
-                            android:layout_marginTop="25dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18sp"
-                            android:layout_gravity="center"
-                            android:text="행사기간 지정"
-                            android:id="@+id/check"
-                            android:visibility="visible"/>
-                        <RelativeLayout
-                            android:layout_gravity="center"
-                            android:layout_width="230dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginRight="30dp"
-                            android:layout_marginTop="10dp">
+                        android:gravity="center"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/baseColor"
+                        android:id="@+id/txt_step"
+                        android:text="STEP3"
+                        android:layout_gravity="center_horizontal"/>
 
-                            <EditText
-                                android:inputType="textEmailAddress"
-                                android:singleLine="true"
-                                android:theme="@style/EditTheme"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="10dp"
-                                android:paddingLeft="15dp"
-                                android:hint="2020/08/31"
-                                android:textColor="@color/baseColor"
-                                android:textSize="18sp"
-                                android:id="@+id/edit1"
-                                android:layout_toLeftOf="@id/txt1"/>
-
-                            <TextView
-                                android:layout_alignParentRight="true"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="7dp"
-                                android:text="부터"
-                                android:textColor="@color/baseColor"
-                                android:textSize="18dp"
-                                android:id="@+id/txt1"
-                                android:layout_centerVertical="true"/>
-
-                        </RelativeLayout>
-                        <RelativeLayout
-                            android:layout_gravity="center"
-                            android:layout_width="230dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp">
-
-                            <EditText
-                                android:inputType="textEmailAddress"
-                                android:singleLine="true"
-                                android:theme="@style/EditTheme"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:paddingLeft="15dp"
-                                android:hint="2020/08/31"
-                                android:textColor="@color/baseColor"
-                                android:textSize="18sp"
-                                android:id="@+id/edit2"
-                                android:layout_toLeftOf="@id/txt2"
-                                android:layout_marginRight="10dp"/>
-
-                            <TextView
-                                android:layout_alignParentRight="true"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_marginBottom="7dp"
-                                android:text="까지"
-                                android:textColor="@color/baseColor"
-                                android:textSize="18sp"
-                                android:id="@+id/txt2"/>
-
-                        </RelativeLayout>
-
-
-                        <TextView
-                            android:id="@+id/next"
+                </LinearLayout>
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/start_layout">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp"
-                            android:layout_marginTop="30dp"
-                            android:layout_height="40dp"
-                            android:gravity="center"
-                            android:text="발급"
-                            android:textSize="15sp"
-                            android:textColor="@color/baseColor"
-                            android:background="@drawable/yellow_btn_selector"/>
-                    </LinearLayout>
-                </RelativeLayout>
-            </ScrollView>
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="15dp"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txt_content"
+                                android:text="유효기간을 지정해주세요"
+                                android:textSize="20sp"
+                                android:gravity="center"
+                                android:layout_gravity="center|center_vertical"
+                                android:textColor="@color/baseColor"
+                                />
+                            <CheckBox
+                                android:layout_marginTop="25dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:layout_gravity="center"
+                                android:text="행사기간 지정"
+                                android:id="@+id/check"
+                                android:visibility="visible"/>
+                            <RelativeLayout
+                                android:layout_gravity="center"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_marginTop="10dp">
+
+                                <EditText
+                                    android:inputType="textEmailAddress"
+                                    android:singleLine="true"
+                                    android:theme="@style/EditTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:paddingLeft="15dp"
+                                    android:hint="2020/08/31"
+                                    android:textColor="@color/baseColor"
+                                    android:textSize="18sp"
+                                    android:id="@+id/edit1"
+                                    android:layout_toLeftOf="@id/txt1"/>
+
+                                <TextView
+                                    android:layout_alignParentRight="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="7dp"
+                                    android:text="부터"
+                                    android:textColor="@color/baseColor"
+                                    android:textSize="18dp"
+                                    android:id="@+id/txt1"
+                                    android:layout_centerVertical="true"/>
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_gravity="center"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp">
+
+                                <EditText
+                                    android:inputType="textEmailAddress"
+                                    android:singleLine="true"
+                                    android:theme="@style/EditTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="15dp"
+                                    android:hint="2020/08/31"
+                                    android:textColor="@color/baseColor"
+                                    android:textSize="18sp"
+                                    android:id="@+id/edit2"
+                                    android:layout_toLeftOf="@id/txt2"
+                                    android:layout_marginRight="10dp"/>
+
+                                <TextView
+                                    android:layout_alignParentRight="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginBottom="7dp"
+                                    android:text="까지"
+                                    android:textColor="@color/baseColor"
+                                    android:textSize="18sp"
+                                    android:id="@+id/txt2"/>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="잘 모르겠어요!"
+                                android:textColor="@color/baseColor"
+                                android:textSize="15sp"
+                                android:layout_marginTop="35dp"
+                                android:id="@+id/forgetBtn"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="30dp"
+                                android:lineSpacingExtra="3dp"
+                                android:text="@string/forgetCouponStep3"
+                                android:textColor="@color/baseColor"
+                                android:textSize="16sp"
+                                android:visibility="gone"
+                                android:id="@+id/forgetText"/>
+
+                            <TextView
+                                android:id="@+id/next"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:text="발급"
+                                android:textSize="15sp"
+                                android:textColor="@color/baseColor"
+                                android:background="@drawable/yellow_btn_selector"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </RelativeLayout>
+
         </RelativeLayout>
         <ImageView
             android:id="@+id/harin_coupon"

@@ -191,8 +191,7 @@ public class LoginActivity extends AppCompatActivity { // 관리자와 사용자
 
                                             }
                                         });
-
-
+                                        Config.ownerVO.setPw(user_pw);
                                         finish();
                                     } else {
                                         Toast.makeText(getApplicationContext(), "없는 id 또는 pw입니다.", Toast.LENGTH_SHORT).show();

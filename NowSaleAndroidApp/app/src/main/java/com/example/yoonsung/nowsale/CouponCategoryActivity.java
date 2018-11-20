@@ -32,6 +32,7 @@ import com.example.yoonsung.nowsale.VO.OwnerVO;
 import com.example.yoonsung.nowsale.http.AllService;
 import com.example.yoonsung.nowsale.http.ClientService;
 import com.example.yoonsung.nowsale.http.OwnerService;
+import com.example.yoonsung.nowsale.network.ConnectionDetector;
 import com.tsengvn.typekit.Typekit;
 import com.tsengvn.typekit.TypekitContextWrapper;
 
@@ -61,7 +62,6 @@ public class CouponCategoryActivity extends AppCompatActivity
     final private int loginActivity = 2000;
     final private int ownerCouponRegisterRequest = 4000;
     private final int loginResult=3000,ownerChangeResult=4001;
-
     private int nav_header_nickName_textSize=30;
 
 
@@ -73,7 +73,11 @@ public class CouponCategoryActivity extends AppCompatActivity
     private ViewPager indicatorViewPager;
     private SliderAdvertisementImageAdapter adapter;
     private TabLayout tabLayout;
-    //
+
+    //네트워크
+    private ConnectionDetector connectionDetector;
+    private final int pleaseConnectToInternet = 356;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,35 +107,11 @@ public class CouponCategoryActivity extends AppCompatActivity
             getWindow().setStatusBarColor(getResources().getColor(R.color.statusBarColor));
         }
 
-
-
-        AllService allService = Config.retrofit.create(AllService.class);
-        Call<Integer> ownerMenuRequest = allService.getAdvCount();
-        ownerMenuRequest.enqueue(new Callback<Integer>() {
-            @Override
-            public void onResponse(Call<Integer> call, Response<Integer> response) {
-                int advCnt = response.body();
-                indicatorViewPager = (ViewPager) findViewById(R.id.view);
-
-                adapter = new SliderAdvertisementImageAdapter(CouponCategoryActivity.this,advCnt);
-                indicatorViewPager.setClipToPadding(false);
-                indicatorViewPager.setAdapter(adapter);
-
-
-                tabLayout = (TabLayout)findViewById(R.id.tab_layout);
-                tabLayout.setupWithViewPager(indicatorViewPager,true);
-            }
-
-            @Override
-            public void onFailure(Call<Integer> call, Throwable t) {
-
-            }
-        });
-
         Log.e("화면","clientcouponcategoryactivity실행");
 //        ownerCouponData = new OwnerCouponData();
         Intent intent = new Intent(this, Loading1Activity.class);
         startActivity(intent);
+
         context = getApplicationContext();
         nowSaleIntent = new Intent(this,FMainActivity.class);
         walletIntent = new Intent(this,ClientMenuActivity.class);
@@ -206,77 +186,104 @@ public class CouponCategoryActivity extends AppCompatActivity
 
 */
 
+    //네트워크
+        connectionDetector = new ConnectionDetector(this);
+        if(!connectionDetector.isConnectingToInternet()) {
+            Intent network_intent = new Intent(this, Dialog.class);
+            network_intent.putExtra("message", getString(R.string.please_connect_to_internet));
+            startActivityForResult(network_intent,pleaseConnectToInternet);
+        }
 
+        AllService allService = Config.retrofit.create(AllService.class);
+        Call<Integer> ownerMenuRequest = allService.getAdvCount();
+        ownerMenuRequest.enqueue(new Callback<Integer>() {
+            @Override
+            public void onResponse(Call<Integer> call, Response<Integer> response) {
+                int advCnt = response.body();
+                indicatorViewPager = (ViewPager) findViewById(R.id.view);
+
+                adapter = new SliderAdvertisementImageAdapter(CouponCategoryActivity.this, advCnt);
+                indicatorViewPager.setClipToPadding(false);
+                indicatorViewPager.setAdapter(adapter);
+
+
+                tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+                tabLayout.setupWithViewPager(indicatorViewPager, true);
+            }
+
+            @Override
+            public void onFailure(Call<Integer> call, Throwable t) {
+
+            }
+        });
 
         alcohol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nowSaleIntent.putExtra("position",0);
+                nowSaleIntent.putExtra("position", 0);
                 startActivity(nowSaleIntent);
             }
         });
         food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nowSaleIntent.putExtra("position",1);
+                nowSaleIntent.putExtra("position", 1);
                 startActivity(nowSaleIntent);
             }
         });
         health.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nowSaleIntent.putExtra("position",2);
+                nowSaleIntent.putExtra("position", 2);
                 startActivity(nowSaleIntent);
             }
         });
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nowSaleIntent.putExtra("position",3);
+                nowSaleIntent.putExtra("position", 3);
                 startActivity(nowSaleIntent);
             }
         });
         fashion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nowSaleIntent.putExtra("position",4);
+                nowSaleIntent.putExtra("position", 4);
                 startActivity(nowSaleIntent);
             }
         });
         beauty.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nowSaleIntent.putExtra("position",5);
+                nowSaleIntent.putExtra("position", 5);
                 startActivity(nowSaleIntent);
             }
         });
         study.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nowSaleIntent.putExtra("position",6);
+                nowSaleIntent.putExtra("position", 6);
                 startActivity(nowSaleIntent);
             }
         });
         cafe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nowSaleIntent.putExtra("position",7);
+                nowSaleIntent.putExtra("position", 7);
                 startActivity(nowSaleIntent);
             }
         });
         others.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nowSaleIntent.putExtra("position",8);
+                nowSaleIntent.putExtra("position", 8);
                 startActivity(nowSaleIntent);
             }
         });
 
 
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -286,15 +293,15 @@ public class CouponCategoryActivity extends AppCompatActivity
         toggle.syncState();
 
 
-        /*
-        nav_header 설정하기 -> 처음에 로그인 안되어 있으면 당연히 로그인 해달라고 떠야함
-         */
+    /*
+    nav_header 설정하기 -> 처음에 로그인 안되어 있으면 당연히 로그인 해달라고 떠야함
+     */
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         nav_header_view = navigationView.getHeaderView(0);
 
-        nav_header_nickname= (TextView) nav_header_view.findViewById(R.id.nav_header_nickname);
+        nav_header_nickname = (TextView) nav_header_view.findViewById(R.id.nav_header_nickname);
 //        nav_header_loginPlease = (TextView) nav_header_view.findViewById(R.id.nav_header_loginPlease);
         nav_header_loginBtn = (LinearLayout) nav_header_view.findViewById(R.id.nav_header_loginBtn);
 
@@ -305,19 +312,19 @@ public class CouponCategoryActivity extends AppCompatActivity
         nav_header_loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivityForResult(loginIntent,loginActivity);
+                startActivityForResult(loginIntent, loginActivity);
             }
         });
 
-        nav_header_nickname.setTextAppearance(this,R.style.TextAppearance_AppCompat_Body1);
+        nav_header_nickname.setTextAppearance(this, R.style.TextAppearance_AppCompat_Body1);
 
 //        navigationView.inflateMenu(0);
         activity_main_drawer = navigationView.getMenu(); // 네비게이션 메
 
         //ㅈㅏ동 로그인
         SharedPreferences sf = getSharedPreferences(sfName, MODE_PRIVATE);
-        user_id = sf.getString("ID","");
-        user_pw = sf.getString("PW","");
+        user_id = sf.getString("ID", "");
+        user_pw = sf.getString("PW", "");
 
         //자동로그인해라
         clientService = Config.retrofit.create(ClientService.class);
@@ -327,13 +334,13 @@ public class CouponCategoryActivity extends AppCompatActivity
             public void onResponse(Call<List<ClientVO>> call, Response<List<ClientVO>> response) {
 //                        int count = response.body();
                 List<ClientVO> list = response.body();
-                if (response.code()==200) {
+                if (response.code() == 200) {
                     Config.clientVO = list.get(0);
                     Config.who_key = "C";
                     nav_header_nickname.setVisibility(View.VISIBLE);
 //                    nav_header_loginPlease.setVisibility(View.GONE);
                     nav_header_loginBtn.setVisibility(View.GONE);
-                    nav_header_nickname.setText(""+Config.clientVO.getNickName()+"님");
+                    nav_header_nickname.setText("" + Config.clientVO.getNickName() + "님");
                     nav_header_nickname.setTextSize(nav_header_nickName_textSize);
                     activity_main_drawer.getItem(5).setVisible(false);
                 } else {
@@ -343,7 +350,7 @@ public class CouponCategoryActivity extends AppCompatActivity
                         @Override
                         public void onResponse(Call<List<OwnerVO>> call, Response<List<OwnerVO>> response) {
                             List<OwnerVO> list = response.body();
-                            if (response.code()==200) {
+                            if (response.code() == 200) {
                                 Config.ownerVO = list.get(0);
                                 Config.who_key = "O";
 
@@ -354,7 +361,7 @@ public class CouponCategoryActivity extends AppCompatActivity
                                     public void onResponse(Call<Integer> call, Response<Integer> response) {
                                         Config.ownerVO.setCoupon_cnt(response.body());
 
-                                        Log.e("Login","couponCount : "+Config.ownerVO.getCoupon_cnt());
+                                        Log.e("Login", "couponCount : " + Config.ownerVO.getCoupon_cnt());
                                     }
 
                                     @Override
@@ -368,7 +375,7 @@ public class CouponCategoryActivity extends AppCompatActivity
                                     @Override
                                     public void onResponse(Call<Integer> call, Response<Integer> response) {
                                         Config.ownerVO.setSale_cnt(response.body());
-                                        Log.e("Login","saleCount : "+Config.ownerVO.getSale_cnt());
+                                        Log.e("Login", "saleCount : " + Config.ownerVO.getSale_cnt());
                                     }
 
                                     @Override
@@ -379,7 +386,7 @@ public class CouponCategoryActivity extends AppCompatActivity
                                 nav_header_nickname.setVisibility(View.VISIBLE);
 //                                nav_header_loginPlease.setVisibility(View.GONE);
                                 nav_header_loginBtn.setVisibility(View.GONE);
-                                nav_header_nickname.setText(""+Config.ownerVO.getNickName()+"님");
+                                nav_header_nickname.setText("" + Config.ownerVO.getNickName() + "님");
                                 nav_header_nickname.setTextSize(nav_header_nickName_textSize);
                                 activity_main_drawer.getItem(5).setVisible(true);
 
@@ -399,6 +406,7 @@ public class CouponCategoryActivity extends AppCompatActivity
 
             }
         });
+
 
     }
     @Override
@@ -673,6 +681,11 @@ public class CouponCategoryActivity extends AppCompatActivity
                 intentDialog.putExtra("message", "발급되었습니다");
                 startActivity(intentDialog);
             }
+        }
+
+        //네트워크
+        if(requestCode==pleaseConnectToInternet){
+            finish();
         }
 
 

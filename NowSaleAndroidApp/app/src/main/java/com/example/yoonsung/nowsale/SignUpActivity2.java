@@ -286,28 +286,43 @@ public class SignUpActivity2 extends AppCompatActivity implements TextView.OnEdi
                     if(edit2.getText().toString().equals("")==false){
                         if(edit2.getText().toString().equals(edit3.getText().toString())){
                             if(!edit4.getText().toString().equals("")) {
-                                if ((check_male.isChecked() || check_female.isChecked()) && (Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
-                                    clientVO.setId(edit1.getText().toString());
-                                    clientVO.setPw(edit2.getText().toString());
-                                    clientVO.setNickName(edit4.getText().toString());
-//                                next_intent.putExtra("ClientVO", clientVO);
-//                                startActivity(next_intent);
-                                    ClientService clientService = Config.retrofit.create(ClientService.class);
-                                    Call<Void> requset = clientService.signUpClient(clientVO);
-                                    requset.enqueue(new Callback<Void>() {
-                                        @Override
-                                        public void onResponse(Call<Void> call, Response<Void> response) {
-                                            if (response.code() == HttpStatus.SC_OK) {
-                                                setResult(RESULT_OK);
-                                                finish();
+                                if(check_female.isChecked() || check_male.isChecked()) {
+                                    try{
+                                        if ((Integer.parseInt(year_txt.getText().toString()) >= 1940 && Integer.parseInt(year_txt.getText().toString()) <= 3000)) {
+                                            if (edit2.getText().toString().length() < 8) {
+                                                edit2.setText("");
+                                                edit3.setText("");
+                                                edit2.setHint("비밀번호는 8자 이상입니다.");
+                                                edit2.setHintTextColor(Color.RED);
+                                            } else {
+
+                                                clientVO.setId(edit1.getText().toString());
+                                                clientVO.setPw(edit2.getText().toString());
+                                                clientVO.setNickName(edit4.getText().toString());
+                                                //                                next_intent.putExtra("ClientVO", clientVO);
+                                                //                                startActivity(next_intent);
+                                                ClientService clientService = Config.retrofit.create(ClientService.class);
+                                                Call<Void> requset = clientService.signUpClient(clientVO);
+                                                requset.enqueue(new Callback<Void>() {
+                                                    @Override
+                                                    public void onResponse(Call<Void> call, Response<Void> response) {
+                                                        if (response.code() == HttpStatus.SC_OK) {
+                                                            setResult(RESULT_OK);
+                                                            finish();
+                                                        }
+                                                    }
+
+                                                    @Override
+                                                    public void onFailure(Call<Void> call, Throwable t) {
+
+                                                    }
+                                                });
                                             }
                                         }
-
-                                        @Override
-                                        public void onFailure(Call<Void> call, Throwable t) {
-
-                                        }
-                                    });
+                                    } catch (NumberFormatException e){
+                                        year_txt.setText("연도를 설정해주세요");
+                                        year_txt.setTextColor(Color.RED);
+                                    }
                                 }
                             }
                         }

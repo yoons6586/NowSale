@@ -24,8 +24,7 @@ import java.util.UUID;
 @RequestMapping("/client")
 public class ClientController {
 
-    @Autowired
-    MailSender mailSender;
+
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -42,7 +41,6 @@ public class ClientController {
     private ClientCouponInsertDao clientCouponInsertDao;
     private ClientSaleDeleteDao clientSaleDeleteDao;
     private ClientSaleInsertDao clientSaleInsertDao;
-    private ClientLostPasswordDao clientLostPasswordDao;
 
     public ClientController(ClientMapper clientMapper){
         this.clientMapper=clientMapper;
@@ -71,9 +69,10 @@ public class ClientController {
 
 
         if(list.size()>0) {
-            System.out.println("clientPW : " + list.get(0).getPw());
-            if(passwordEncoder.matches(clientLoginVO.getPw(),list.get(0).getPw()))
+            if(passwordEncoder.matches(clientLoginVO.getPw(),list.get(0).getPw())) {
+                list.get(0).setPw(clientLoginVO.getPw());
                 return new ResponseEntity<List<ClientVO>>(list, HttpStatus.OK);
+            }
         }
 
         list.clear();
@@ -188,50 +187,7 @@ public class ClientController {
         return clientSaleInsertDao.clientSaleInsert();
     }
 
-    @RequestMapping(value="/find/password",method = RequestMethod.POST)
-    @ApiOperation(value = "클라이언트 비밀번호 찾기")
-    public ResponseEntity<Void> clientFindPassword(@RequestBody ClientEmailVO clientEmailVO) throws MessagingException {
-        ClientLoginVO clientLoginVO = new ClientLoginVO();
 
-        System.out.println("email1 : "+clientEmailVO.getId());
-        int isExistEmail = clientMapper.isExistEmail(clientEmailVO.getId());
-
-        if(isExistEmail==1){
-            String tempPassword = UUID.randomUUID().toString().replaceAll("-", ""); // -를 제거해 주었다.
-            tempPassword = tempPassword.substring(0, 10); //uuid를 앞에서부터 10자리 잘라줌.
-
-//            System.out.println("임시비밀번호 : "+tempPassword);
-
-            SimpleMailMessage mail = new SimpleMailMessage();
-            mail.setFrom("chaphcapbrothers@gmail.com");
-            mail.setTo(clientEmailVO.getId());
-            mail.setSubject("지금은할인중 임시비밀번호 입니다!!");
-            mail.setText("안녕하세요. 지금은할인중입니다.\n\n" +
-                    "아래와 같이 임시비밀번호를 발급해드립니다.\n\n\n" +
-                    "임시 비밀번호 : "+tempPassword+"\n\n" +
-                    "본 메일에 대해 고객님 본인이 요청하신 것이 아닌 경우,\n\n" +
-                    "지금은할인중 고객센터로 문의주시기 바랍니다.\n\n" +
-                    "고객님의 안전하고 편리한 서비스를 위해 최선을 다하겠습니다.\n\n" +
-                    "감사합니다.\n\n\n" +
-                    "지금은할인중 드림\n");
-            try {
-                this.mailSender.send(mail);
-                clientLoginVO.setId(clientEmailVO.getId());
-                clientLoginVO.setPw(passwordEncoder.encode(tempPassword));
-
-                clientLostPasswordDao = new ClientLostPasswordDao(clientLoginVO);
-                clientLostPasswordDao.clientLostPassword();
-            } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println("메시지 전송 실패");
-
-                return new ResponseEntity<>(HttpStatus.CONFLICT); // 메일전송 실패
-            }
-            return new ResponseEntity<>(HttpStatus.OK); // 메일 전송 성공
-        } else{
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND); // 없는 이메일
-        }
-    }
 
 
 

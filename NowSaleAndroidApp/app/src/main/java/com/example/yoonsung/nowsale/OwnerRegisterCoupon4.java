@@ -49,7 +49,7 @@ public class OwnerRegisterCoupon4 extends AppCompatActivity { // 관리자와 �
     private CouponVO couponVO;
     private SaleVO saleVO;
     private CheckBox check;
-
+    private TextView forgetBtn,forgetText;
     private RelativeLayout layout;
     private LinearLayout start_layout;
     private ImageView harin_coupon;
@@ -75,6 +75,8 @@ public class OwnerRegisterCoupon4 extends AppCompatActivity { // 관리자와 �
         saleVO = (SaleVO) get_intent.getSerializableExtra("SaleVO");
         choose = get_intent.getIntExtra("choose",0);
 
+        forgetBtn = findViewById(R.id.forgetBtn);
+        forgetText = findViewById(R.id.forgetText);
         check  = findViewById(R.id.check);
         edit1 = findViewById(R.id.edit1);
         edit2 = findViewById(R.id.edit2);
@@ -112,6 +114,7 @@ public class OwnerRegisterCoupon4 extends AppCompatActivity { // 관리자와 �
         if(choose==2){
             txtStep.setText("STEP 2");
             txtContent.setText("행사기간을 지정하시겠어요?");
+            forgetText.setText(R.string.forgetSaleStep2);
             check.setVisibility(View.VISIBLE);
             if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                 next.setBackground(ContextCompat.getDrawable(OwnerRegisterCoupon4.this,R.drawable.yellow_btn_selector));
@@ -248,6 +251,16 @@ public class OwnerRegisterCoupon4 extends AppCompatActivity { // 관리자와 �
                     edit2.setText("");
                     edit2.setHint("");
                 }
+            }
+        });
+
+        forgetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(forgetText.getVisibility()==View.GONE)
+                    forgetText.setVisibility(View.VISIBLE);
+                else
+                    forgetText.setVisibility(View.GONE);
             }
         });
     }
