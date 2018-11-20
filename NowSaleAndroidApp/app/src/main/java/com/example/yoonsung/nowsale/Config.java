@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class Config {
-    public static String url="http://ec2-52-78-108-161.ap-northeast-2.compute.amazonaws.com:8080";
+    public static String url="http://192.168.35.23:8080";
     public static ClientVO clientVO = new ClientVO();
     public static OwnerVO ownerVO = new OwnerVO();
     public static String who_key;

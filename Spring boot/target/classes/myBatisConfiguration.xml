@@ -10,9 +10,9 @@
             </transactionManager>
             <dataSource type="UNPOOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver" />
-                <property name="url" value="jdbc:mysql://localhost:3306/nowsale_db?useSSL=false" />
-                <property name="username" value="root" />
-                <property name="password" value="dbsals123" />
+                <property name="url" value="jdbc:mysql://nowsale.cp07lk6aasji.ap-northeast-2.rds.amazonaws.com:3306/nowsale_db" />
+                <property name="username" value="skawk5678" />
+                <property name="password" value="dbstjd123" />
 
             </dataSource>
         </environment>
