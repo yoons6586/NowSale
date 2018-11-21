@@ -5,8 +5,6 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,7 +18,7 @@ public class ClientHaveCouponDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "MybatisConfiguration.xml");
+                    "myBatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 
             this.client_key = client_key;

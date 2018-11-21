@@ -20,7 +20,7 @@ public class ClientCouponDeleteDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "MybatisConfiguration.xml");
+                    "myBatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 
             this.clientHaveCouponVO = clientHaveCouponVO;

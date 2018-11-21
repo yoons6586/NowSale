@@ -1,6 +1,5 @@
 package com.example.demo.owner.dao;
 
-import com.example.demo.owner.model.OwnerRegisterCouponVO;
 import com.example.demo.owner.model.OwnerRegisterSaleVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -19,7 +18,7 @@ public class OwnerSaleInsertDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "MybatisConfiguration.xml");
+                    "myBatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
             this.ownerRegisterSaleVO=ownerRegisterSaleVO;
 

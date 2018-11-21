@@ -1,6 +1,5 @@
 package com.example.demo.client.dao;
 
-import com.example.demo.client.model.ClientCouponVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -19,7 +18,7 @@ public class ClientInfoDeleteDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "MybatisConfiguration.xml");
+                    "myBatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 
             this.client_key = client_key;

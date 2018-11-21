@@ -1,7 +1,6 @@
 package com.example.demo.owner.dao;
 
 import com.example.demo.owner.model.OwnerHaveCouponVO;
-import com.example.demo.owner.model.OwnerRegisterCouponVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -19,7 +18,7 @@ public class OwnerCouponDeleteDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "MybatisConfiguration.xml");
+                    "myBatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
             this.ownerHaveCouponVO = ownerHaveCouponVO;
 

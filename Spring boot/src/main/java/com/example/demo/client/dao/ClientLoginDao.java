@@ -1,11 +1,7 @@
 package com.example.demo.client.dao;
 
-import ch.qos.logback.core.net.server.Client;
-import com.example.demo.client.model.ClientCouponVO;
 import com.example.demo.client.model.ClientLoginVO;
 import com.example.demo.client.model.ClientVO;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -13,9 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ClientLoginDao {
     private SqlSessionFactory sqlSessionFactory;
@@ -25,7 +19,7 @@ public class ClientLoginDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "MybatisConfiguration.xml");
+                    "myBatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 
             this.clientLoginVO = clientLoginVO;

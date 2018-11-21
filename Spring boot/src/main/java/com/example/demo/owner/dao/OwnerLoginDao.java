@@ -1,7 +1,5 @@
 package com.example.demo.owner.dao;
 
-import com.example.demo.client.model.ClientLoginVO;
-import com.example.demo.client.model.ClientVO;
 import com.example.demo.owner.model.OwnerLoginVO;
 import com.example.demo.owner.model.OwnerVO;
 import org.apache.ibatis.io.Resources;
@@ -21,7 +19,7 @@ public class OwnerLoginDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "MybatisConfiguration.xml");
+                    "myBatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 
             this.ownerLoginVO = ownerLoginVO;

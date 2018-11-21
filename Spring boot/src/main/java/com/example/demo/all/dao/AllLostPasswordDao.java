@@ -1,7 +1,6 @@
 package com.example.demo.all.dao;
 
 import com.example.demo.all.model.AllLoginInfoVO;
-import com.example.demo.client.model.ClientLoginVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -20,7 +19,7 @@ public class AllLostPasswordDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "MybatisConfiguration.xml");
+                    "myBatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 
             this.allLoginInfoVO = allLoginInfoVO;

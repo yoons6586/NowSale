@@ -1,6 +1,5 @@
 package com.example.demo.all.dao;
 
-import com.example.demo.all.model.OwnerCouponShowVO;
 import com.example.demo.all.model.OwnerSaleShowVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -19,7 +18,7 @@ public class AllCategorySaleShowDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "MybatisConfiguration.xml");
+                    "myBatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 //            this.clientHaveCouponOwnerInfoVO = clientHaveCouponOwnerInfoVO;
             this.category=category;

@@ -1,8 +1,6 @@
 package com.example.demo.all.dao;
 
 import com.example.demo.all.model.AllOwnerClientKeyVO;
-import com.example.demo.client.model.ClientHaveCouponVO;
-import com.example.demo.client.model.ClientHaveSaleVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -22,7 +20,7 @@ public class AllFavoriteInsertDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "MybatisConfiguration.xml");
+                    "myBatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 
             this.allOwnerClientKeyVO = allOwnerClientKeyVO;

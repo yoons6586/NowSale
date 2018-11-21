@@ -1,6 +1,5 @@
 package com.example.demo.client.dao;
 
-import com.example.demo.client.model.ClientCouponVO;
 import com.example.demo.client.model.ClientVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -19,7 +18,7 @@ public class ClientInfoUpdateDao {
         InputStream is = null;
         try {
             is = Resources.getResourceAsStream(
-                    "MybatisConfiguration.xml");
+                    "myBatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
             this.clientVO = clientVO;
 
