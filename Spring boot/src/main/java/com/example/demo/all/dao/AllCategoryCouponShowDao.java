@@ -20,7 +20,7 @@ public class AllCategoryCouponShowDao {
         InputStream is = null;
         try {
 //            is = Class.get
-            File file = new ClassPathResource("mybatisConfiguration.xml").getFile();
+
 
             is = Resources.getResourceAsStream(
                     "mybatisConfiguration.xml");
