@@ -5,29 +5,21 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.springframework.core.io.ClassPathResource;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Reader;
 import java.util.List;
 
 public class AllCategoryCouponShowDao {
     private SqlSessionFactory sqlSessionFactory;
 
     private String category;
-    String resource = "myBatisConfiguration.xml";
     public AllCategoryCouponShowDao(String category){
         InputStream is = null;
-        Reader reader = null;
         try {
-//            is = Class.get
-            reader = Resources.getResourceAsReader(resource);
-
             is = Resources.getResourceAsStream(
-                    "myBatisConfiguration.xml");
-            sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
+                    "mybatisConfiguration.xml");
+            sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 //            this.clientHaveCouponOwnerInfoVO = clientHaveCouponOwnerInfoVO;
             this.category=category;
 //            sqlSessionFactoryBuilder은 만듦과 동시에 builder함수만 쓰고 갖다버림
