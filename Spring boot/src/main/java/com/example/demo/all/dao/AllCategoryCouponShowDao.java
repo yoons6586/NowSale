@@ -5,7 +5,9 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.core.io.ClassPathResource;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -17,6 +19,9 @@ public class AllCategoryCouponShowDao {
     public AllCategoryCouponShowDao(String category){
         InputStream is = null;
         try {
+//            is = Class.get
+            File file = new ClassPathResource("mybatisConfiguration.xml").getFile();
+
             is = Resources.getResourceAsStream(
                     "mybatisConfiguration.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
