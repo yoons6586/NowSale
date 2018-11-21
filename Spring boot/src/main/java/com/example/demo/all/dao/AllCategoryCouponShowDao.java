@@ -10,21 +10,24 @@ import org.springframework.core.io.ClassPathResource;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Reader;
 import java.util.List;
 
 public class AllCategoryCouponShowDao {
     private SqlSessionFactory sqlSessionFactory;
 
     private String category;
+    String resource = "myBatisConfiguration.xml";
     public AllCategoryCouponShowDao(String category){
         InputStream is = null;
+        Reader reader = null;
         try {
 //            is = Class.get
-
+            reader = Resources.getResourceAsReader(resource);
 
             is = Resources.getResourceAsStream(
-                    "mybatisConfiguration.xml");
-            sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
+                    "myBatisConfiguration.xml");
+            sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
 //            this.clientHaveCouponOwnerInfoVO = clientHaveCouponOwnerInfoVO;
             this.category=category;
 //            sqlSessionFactoryBuilder은 만듦과 동시에 builder함수만 쓰고 갖다버림
