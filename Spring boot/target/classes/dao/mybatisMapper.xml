@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.mybatisMapper">
+    <select id="selectAll" resultType="com.example.demo.client.model.DeptVO" >
+        SELECT * FROM client_list;
+    </select>
+
+    <update id="updateClientInfo" parameterType="com.example.demo.client.model.ClientVO">
+        UPDATE client_list
+        SET nickName=#{nickName},pw=#{pw},alarm_push=#{alarm_push},alarm_mail=#{alarm_mail},alarm_SMS=#{alarm_SMS}
+        WHERE client_key=#{client_key}
+    </update>
+
+    <update id="updateClientPassword" parameterType="com.example.demo.all.model.AllLoginInfoVO">
+        UPDATE client_list
+        SET pw = #{pw}
+        WHERE id = #{id}
+    </update>
+    <update id="updateOwnerPassword" parameterType="com.example.demo.all.model.AllLoginInfoVO">
+        UPDATE owner_list
+        SET pw = #{pw}
+        WHERE id = #{id}
+    </update>
+
+
+    <delete id="deleteClientInfo" parameterType="int">
+        DELETE FROM client_list
+        WHERE client_key=#{client_key}
+    </delete>
+
+    <select id="selectCategoryShow" parameterType="String" resultType="com.example.demo.all.model.OwnerCouponShowVO">
+        SELECT *
+        FROM owner_have_coupon_view
+        WHERE category=#{category} AND on_off="T" AND !(start_count != 0 AND remain_count = 0)
+    </select>
+
+    <select id="selectCategorySaleShow" parameterType="String" resultType="com.example.demo.all.model.OwnerSaleShowVO">
+        SELECT *
+        FROM owner_have_sale_view
+        WHERE category=#{category} AND on_off="T"
+    </select>
+
+    <select id="selectCategoryMarketShow" parameterType="String" resultType="com.example.demo.all.model.MarketVO">
+        SELECT *
+        FROM owner_list
+        WHERE category=#{category}
+    </select>
+
+    <insert id="clientSignup" parameterType="com.example.demo.client.model.ClientVO">
+        INSERT INTO client_list(client_key,who_key,ID,PW,nickName,PHONE,alarm_push,alarm_mail,alarm_SMS,gender,birth)
+        VALUES (#{client_key},"C",#{id},#{pw},#{nickName},#{phone},#{alarm_push},#{alarm_mail},#{alarm_SMS},#{gender},#{birth})
+    </insert>
+
+    <select id="selectClientHaveCoupon" parameterType="int" resultType="com.example.demo.client.model.ClientCouponVO">
+        SELECT *
+        FROM client_have_coupon_view
+        WHERE client_key = #{client_key}
+    </select>
+    
+    <select id="selectClientHaveSale" parameterType="int" resultType="com.example.demo.client.model.ClientSaleVO">
+        SELECT *
+        FROM client_have_sale_view
+        WHERE client_key = #{client_key}
+    </select>
+
+    <select id="selectClientLogin" parameterType="com.example.demo.client.model.ClientLoginVO" resultType="com.example.demo.client.model.ClientVO">
+        SELECT *
+        FROM client_list
+        WHERE id=#{id}
+    </select>
+
+    <delete id="deleteClientCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO">
+        DELETE FROM client_coupon
+        WHERE (client_key=#{client_key} AND coupon_key = #{coupon_key})
+    </delete>
+
+    <update id="updateClientCouponCount" parameterType="int">
+        UPDATE coupon_list
+        SET remain_count = remain_count+1
+        WHERE coupon_key = #{coupon_key} AND (start_count!=0)
+    </update>
+
+    <insert id="insertClientCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO">
+        INSERT INTO client_coupon(client_key,coupon_key)
+        VALUES (#{client_key},#{coupon_key})
+    </insert>
+
+    <insert id="insertClientUsedCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO">
+        INSERT INTO used_coupon(client_key,coupon_key)
+        VALUES (#{client_key},#{coupon_key})
+    </insert>
+
+    <update id="updateCouponRemainCount" parameterType="com.example.demo.client.model.ClientHaveCouponVO">
+      UPDATE coupon_list SET remain_count=#{remain_count}
+      WHERE coupon_key=#{coupon_key}
+    </update>
+
+    <select id="selectRemainCountCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO" resultType="com.example.demo.client.model.ClientCouponCountVO">
+        SELECT remain_count,start_count,coupon_key
+        FROM coupon_list
+        WHERE coupon_key=#{coupon_key}
+    </select>
+
+    <delete id="deleteClientSale" parameterType="com.example.demo.client.model.ClientHaveSaleVO">
+        DELETE FROM client_sale
+        WHERE (client_key=#{client_key} AND sale_key = #{sale_key})
+    </delete>
+
+    <insert id="insertClientSale" parameterType="com.example.demo.client.model.ClientHaveSaleVO">
+        INSERT INTO client_sale(client_key,sale_key)
+        VALUES (#{client_key},#{sale_key})
+    </insert>
+
+    <insert id="insertUsedClientSale" parameterType="com.example.demo.client.model.ClientHaveSaleVO">
+        INSERT INTO used_sale(client_key,sale_key)
+        VALUES (#{client_key},#{sale_key})
+    </insert>
+
+    <select id="selectOwnerLogin" parameterType="com.example.demo.owner.model.OwnerLoginVO" resultType="com.example.demo.owner.model.OwnerVO">
+        SELECT *
+        FROM owner_list
+        WHERE id=#{id}
+    </select>
+
+    <update id="updateOwnerInfo" parameterType="com.example.demo.owner.model.OwnerVO">
+        UPDATE owner_list
+        SET nickName=#{nickName},pw=#{pw},alarm_push=#{alarm_push},alarm_mail=#{alarm_mail},alarm_SMS=#{alarm_SMS}
+        WHERE owner_key=#{owner_key}
+    </update>
+    
+    <insert id="insertCouponList" parameterType="com.example.demo.owner.model.OwnerRegisterCouponVO">
+        INSERT INTO coupon_list(owner_key,coupon_key,start_date,expire_date,qualification,content,start_count,remain_count,on_off)
+        VALUES(#{owner_key},#{coupon_key},#{start_date},#{expire_date},#{qualification},#{content},#{start_count},#{remain_count},"T")
+    </insert>
+
+    <insert id="insertSaleList" parameterType="com.example.demo.owner.model.OwnerRegisterSaleVO">
+        INSERT INTO sale_list(owner_key,sale_key,start_date,expire_date,qualification,content,on_off)
+        VALUES(#{owner_key},#{sale_key},#{start_date},#{expire_date},#{qualification},#{content},"T")
+    </insert>
+
+
+    <insert id="insertAllFavorite" parameterType="com.example.demo.all.model.AllOwnerClientKeyVO">
+        INSERT INTO favorite_market_list(owner_key,client_key)
+        VALUES(#{owner_key},#{client_key})
+    </insert>
+
+    <delete id="deleteAllFavorite" parameterType="com.example.demo.all.model.AllOwnerClientKeyVO">
+        DELETE FROM favorite_market_list
+        WHERE owner_key=#{owner_key} AND client_key=#{client_key}
+    </delete>
+
+    <update id="changeOnOffCoupon" parameterType="int">
+        UPDATE coupon_list
+        SET on_off="F"
+        WHERE coupon_key=#{coupon_key}
+    </update>
+
+
+    <update id="changeOnOffSale" parameterType="int">
+        UPDATE sale_list
+        SET on_off="F"
+        WHERE sale_key=#{sale_key}
+    </update>
+
+</mapper>
+
