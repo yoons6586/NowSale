@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="016de979-abad-4acd-bd92-e227b3229d1a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerRegisterCoupon4.java" beforeDir="false" afterPath="$PROJECT_DIR$/NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerRegisterCoupon4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring boot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring boot/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="302163602">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
+    <option name="WARN_ABOUT_DETACHED_HEAD" value="false" />
+    <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
+    <option name="ADD_SUFFIX_TO_CHERRY_PICKS_OF_PUBLISHED_COMMITS" value="false" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/Backend/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/Backend/node_modules/@types/babel-types/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/@types/babylon/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/accepts/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/acorn-globals/node_modules/acorn/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/acorn-globals/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/acorn/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/align-text/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/amdefine/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/array-flatten/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/asap/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/babel-runtime/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/babel-types/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/babylon/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/basic-auth/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/bignumber.js/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/bytes/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/camelcase/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/center-align/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/character-parser/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/clean-css/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/cliui/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/constantinople/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/content-disposition/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/content-type/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/cookie-parser/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/cookie-signature/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/cookie/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/core-js/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/core-util-is/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/cors/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/decamelize/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/depd/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/destroy/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/doctypes/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/ee-first/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/encodeurl/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/escape-html/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/esutils/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/etag/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/express/node_modules/body-parser/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/express/node_modules/iconv-lite/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/express/node_modules/raw-body/node_modules/depd/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/express/node_modules/raw-body/node_modules/http-errors/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/express/node_modules/raw-body/node_modules/setprototypeof/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/express/node_modules/raw-body/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/express/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/finalhandler/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/forwarded/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/fresh/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/function-bind/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/graceful-readlink/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/has/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/http-errors/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/ipaddr.js/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/is-buffer/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/is-expression/node_modules/acorn/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/is-expression/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/is-promise/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/is-regex/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/isarray/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/js-stringify/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/jstransformer/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/lazy-cache/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/lodash/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/longest/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/media-typer/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/merge-descriptors/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/methods/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/mime-db/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/mime-types/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/mime/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/morgan/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/mysql/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/negotiator/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/object-assign/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/on-finished/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/on-headers/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/parseurl/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/path-parse/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/path-to-regexp/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/process-nextick-args/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/promise/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/proxy-addr/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug-attrs/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug-code-gen/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug-error/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug-filters/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug-lexer/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug-linker/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug-load/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug-parser/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug-runtime/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug-strip-comments/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug-walk/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/pug/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/qs/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/range-parser/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/readable-stream/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/regenerator-runtime/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/repeat-string/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/resolve/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/resolve/test/module_dir/zmodules/bbb/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/resolve/test/resolver/baz/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/resolve/test/resolver/browser_field/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/resolve/test/resolver/dot_main/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/resolve/test/resolver/dot_slash_main/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/resolve/test/resolver/incorrect_main/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/right-align/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/send/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/serve-static/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/setprototypeof/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/source-map/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/sqlstring/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/string_decoder/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/to-fast-properties/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/token-stream/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/type-is/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/uglify-js/node_modules/source-map/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/uglify-js/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/uglify-to-browserify/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/unpipe/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/util-deprecate/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/utils-merge/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/vary/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/void-elements/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/window-size/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/with/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/wordwrap/package.json" />
+      <path value="$PROJECT_DIR$/Backend/node_modules/yargs/package.json" />
+      <path value="$PROJECT_DIR$/Backend/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="107" />
+    <option name="y" value="93" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="NowSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NowSale" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="016de979-abad-4acd-bd92-e227b3229d1a" name="Default Changelist" comment="" />
+      <created>1542847125908</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542847125908</updated>
+      <workItem from="1542847127274" duration="38000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="38000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="107" y="93" width="1440" height="877" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Learn" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -375,7 +375,8 @@ public class OwnerRegisterCoupon4 extends AppCompatActivity { // 관리자와 �
                         Log.e("responseCode",""+response.code());
                         if (response.code() == HttpStatus.SC_OK) {
                             Log.e("registerCoupon", "할인정보가 등록되었습니다");
-                            setResult(3);
+                            setResult(RESULT_OK);
+
                             finish();
 
                         } else if (response.code() == HttpStatus.SC_INTERNAL_SERVER_ERROR) {
