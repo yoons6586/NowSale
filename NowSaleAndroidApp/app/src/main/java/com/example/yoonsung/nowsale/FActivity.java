@@ -511,6 +511,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                         category = list.get(position).getCategory();
                         intent.putExtra("category", category);
                         intent.putExtra("CouponVO", list.get(position));
+                        Log.e("Map","FActivity, Longitude : "+list.get(position).getLongitude());
                         intent.putExtra("position",position);
                         Log.e("owner_key", "" + list.get(position).getOwner_key());
                         Log.e("client_key", "" + Config.clientVO.getClient_key());

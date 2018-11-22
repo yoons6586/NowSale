@@ -214,7 +214,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
         mMapView.setFocusable(true);
 //        mMapView.setFocusableInTouchMode(true);
         mMapView.setScalingFactor(2.0F);
-        Log.e("owenrInfoTabFragment1","longitude : "+couponVO.getLongitude()+", latitude : "+couponVO.getLatitude());
+        Log.e("Map","longitude : "+couponVO.getLongitude()+", latitude : "+couponVO.getLatitude());
         nGeoPoint = new NGeoPoint(couponVO.getLongitude(), couponVO.getLatitude());
         nMapController.setMapCenter(nGeoPoint,11);
         mMapView.requestFocus();

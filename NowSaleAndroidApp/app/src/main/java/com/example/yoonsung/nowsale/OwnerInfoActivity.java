@@ -88,6 +88,7 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
         what = get_intent.getIntExtra("what",-1);
         position = get_intent.getIntExtra("position",-1);
         Log.e("OwnerInfoActivity","position : "+position);
+        Log.e("Map","longitude : "+couponVO.getLongitude()+", latitude : "+couponVO.getLatitude());
 
         category=get_intent.getStringExtra("category");
 

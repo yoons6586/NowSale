@@ -14,9 +14,11 @@
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerRegisterCoupon4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerRegisterCoupon4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/FActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabFragment1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabFragment1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring boot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring boot/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring boot/src/main/java/com/example/demo/all/model/MarketVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring boot/src/main/java/com/example/demo/all/model/MarketVO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,10 +63,11 @@
     <session id="344162565">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -127,7 +130,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="107" />
     <option name="y" value="93" />
     <option name="width" value="1440" />
@@ -246,15 +249,16 @@
       <workItem from="1538732991776" duration="594000" />
       <workItem from="1538794995873" duration="86000" />
       <workItem from="1542818418398" duration="1168000" />
-      <workItem from="1542847091048" duration="598000" />
+      <workItem from="1542847091048" duration="1196000" />
+      <workItem from="1542890718539" duration="223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112187000" />
+    <option name="totallyTimeSpent" value="113008000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="107" y="93" width="1440" height="877" extended-state="0" />
+    <frame x="107" y="93" width="1440" height="877" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.27540502" />

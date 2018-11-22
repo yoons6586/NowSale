@@ -10,5 +10,5 @@ import lombok.Setter;
 @NoArgsConstructor
 public class MarketVO {
     private int owner_key;
-    private String address,market_name,phone,logo_img,market_introduce,category,location,owner_img;
+    private String address,market_name,phone,logo_img,market_introduce,category,location,owner_img,longitude,latitude,working_day,working_time;
 }

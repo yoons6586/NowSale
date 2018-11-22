@@ -6,6 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Map" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="warn" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
@@ -58,18 +59,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_client_coupon_category.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_client_coupon_category.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4560">
-              <caret line="304" column="38" selection-start-line="304" selection-start-column="38" selection-end-line="304" selection-end-column="38" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="play.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/play.png">
           <provider selected="true" editor-type-id="images">
@@ -86,11 +75,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OwnerRegisterCoupon4.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OwnerRegisterCoupon4.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerRegisterCoupon4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
+            <state relative-caret-position="371">
               <caret line="374" column="40" selection-start-line="374" selection-start-column="40" selection-end-line="374" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/FActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="513" column="97" selection-start-line="513" selection-start-column="97" selection-end-line="513" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OwnerInfoTabFragment1.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabFragment1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="216" column="18" selection-start-line="216" selection-start-column="18" selection-end-line="216" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OwnerInfoTabPagerAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabPagerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-250">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OwnerInfoActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -101,32 +126,6 @@
             <state relative-caret-position="315">
               <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="others.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/others.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="others.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/others.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_dialog.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dialog.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
@@ -6689,7 +6688,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/frame_loading.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/HelpActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/SignUpActivity3.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/default_dot.xml" />
@@ -6713,7 +6711,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_login_need.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_use_cancel.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/FActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/http/ClientService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/ClientLostPasswordActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/http/AllService.java" />
@@ -6729,7 +6726,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_owner_register_coupon4.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_owner_signup.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabFragment1.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_ex4.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/network/ConnectionDectector.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/Dialog.java" />
@@ -6740,6 +6736,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_client_coupon_category.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/Config.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerRegisterCoupon4.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabFragment1.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/FActivity.java" />
       </list>
     </option>
   </component>
@@ -6770,7 +6769,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -6793,15 +6793,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="device.picker.selection" value="3f34b89e" />
+    <property name="device.picker.selection" value="Pixel_2_XL_API_28" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -6987,7 +6986,7 @@
     <frame x="188" y="23" width="1351" height="1018" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32962137" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
@@ -6997,12 +6996,12 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32962137" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32962137" />
-      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.49961802" weight="0.33184856" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="7" sideWeight="0.49961802" visible="true" weight="0.33184856" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.1749427" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49961802" visible="true" weight="0.27282852" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49961802" weight="0.27282852" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
@@ -7023,26 +7022,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="50" column="59" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_lost_pw.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="108" column="51" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/GoogleEmailSender/EmailServiceImpl.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ok_cancel_popup.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OkCancelPopUpActivity.java" />
@@ -7258,13 +7237,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabFragment1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="125" column="12" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_row_coupon_wallet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1770">
@@ -7303,13 +7275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/FActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="83" column="53" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -7404,8 +7369,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerRegisterCoupon4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
+        <state relative-caret-position="371">
           <caret line="374" column="40" selection-start-line="374" selection-start-column="40" selection-end-line="374" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-250">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoTabFragment1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="216" column="18" selection-start-line="216" selection-start-column="18" selection-end-line="216" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/OwnerInfoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoonsung/nowsale/FActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="513" column="97" selection-start-line="513" selection-start-column="97" selection-end-line="513" selection-end-column="97" />
         </state>
       </provider>
     </entry>
