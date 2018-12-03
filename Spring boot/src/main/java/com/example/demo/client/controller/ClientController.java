@@ -134,6 +134,11 @@ public class ClientController {
     public ResponseEntity<String> clientSignup(@RequestBody ClientVO clientVO){
         int client_key = clientMapper.getUserKey()+1;
         System.out.println("client_key : "+client_key);
+        //TODO id 중복확인 해야됨..
+        String clientCheckId = clientMapper.clientOverlapId(clientVO.getId());
+        if(clientCheckId!=null){
+            return new ResponseEntity<>("overlap ID",HttpStatus.CONFLICT);
+        }
 
         clientVO.setClient_key(client_key);
         clientVO.setPw(passwordEncoder.encode(clientVO.getPw()));

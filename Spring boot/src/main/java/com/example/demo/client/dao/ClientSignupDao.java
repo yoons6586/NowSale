@@ -42,6 +42,7 @@ public class ClientSignupDao {
     public ResponseEntity<String> clientSignup(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
+
             sqlSession.insert("dao.mybatisMapper.clientSignup",clientVO);
             sqlSession.commit();
             //commit이 있기에 트랜잭션 관리할 수 있다.

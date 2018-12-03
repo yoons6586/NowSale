@@ -201,8 +201,13 @@ public class OwnerRegisterCoupon4 extends AppCompatActivity { // 관리자와 �
                             /*
                             서버로 쿠폰 발급 보내기~
                              */
-                            couponVO.setStart_date(edit1.getText().toString());
-                            couponVO.setExpire_date(edit2.getText().toString());
+                            String start_date = edit1.getText().toString();
+                            String expire_date = edit2.getText().toString();
+//                            System.out.println(");
+//                            Log.e("start_date","start_date : "+a);
+//                            Log.e("expire_date","expire_date : "+b);
+                            saleVO.setStart_date(start_date);
+                            saleVO.setExpire_date(expire_date);
 
                             popUpIntent.putExtra("what",3);
                             popUpIntent.putExtra("saleVO",saleVO);

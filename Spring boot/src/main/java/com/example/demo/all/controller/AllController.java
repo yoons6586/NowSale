@@ -5,9 +5,6 @@ package com.example.demo.all.controller;
 import com.example.demo.all.dao.*;
 import com.example.demo.all.mapper.AllMapper;
 import com.example.demo.all.model.*;
-import com.example.demo.client.dao.ClientLostPasswordDao;
-import com.example.demo.client.model.ClientEmailVO;
-import com.example.demo.client.model.ClientLoginVO;
 import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +32,7 @@ public class AllController {
 
     @Autowired
     MailSender mailSender;
+
 
     @Autowired
     private PasswordEncoder passwordEncoder;
