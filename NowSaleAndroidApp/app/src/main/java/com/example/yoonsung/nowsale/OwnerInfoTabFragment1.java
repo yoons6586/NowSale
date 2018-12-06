@@ -92,7 +92,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
 
         couponVO = (CouponVO) getArguments().getSerializable("CouponVO");
-        dangolWithMarketMenuImg = (DangolWithMarketMenuImg) getArguments().getSerializable("IsFavoriteGetCountVO");
+        dangolWithMarketMenuImg = (DangolWithMarketMenuImg) getArguments().getParcelable("IsFavoriteGetCountVO");
         menuDatas = getArguments().getParcelableArrayList("menuDatas");
 
         loginNeedPopupIntent = new Intent(getActivity(),LoginCancelPopupActivity.class);
@@ -114,7 +114,8 @@ public class OwnerInfoTabFragment1 extends Fragment {
         windowManager.getDefaultDisplay().getMetrics(metrics);
 
 
-        favBool = dangolWithMarketMenuImg.getDangol();
+        favBool = dangolWithMarketMenuImg.isDangol();
+//        favBool =false;
         countText.setText(""+dangolWithMarketMenuImg.getDangol_count());
         workingTime.setText(""+couponVO.getWorking_time());
         workingDay.setText(""+couponVO.getWorking_day());
@@ -144,7 +145,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
         Log.e("OwnerInfoTabFragment1","longitude : "+couponVO.getLongitude()+", latitude : "+couponVO.getLatitude());
 
-        if(dangolWithMarketMenuImg.getDangol()){
+        if(dangolWithMarketMenuImg.isDangol()){
             heart.setImageResource(R.drawable.colorheart);
         }
         else{
@@ -155,7 +156,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
             public void onClick(View v) {
 
                 if(Config.clientVO.getClient_key()!=0) {
-                    if (dangolWithMarketMenuImg.getDangol()) {
+                    if (dangolWithMarketMenuImg.isDangol()) {
                         dangolWithMarketMenuImg.setDangol_count(dangolWithMarketMenuImg.getDangol_count() - 1);
                         dangolWithMarketMenuImg.setDangol(false);
                         heart.setImageResource(R.drawable.blackheart);
@@ -166,7 +167,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
                         heart.setImageResource(R.drawable.colorheart);
                         countText.setText("" + dangolWithMarketMenuImg.getDangol_count());
                     }
-                    if(favBool != dangolWithMarketMenuImg.getDangol()){
+                    if(favBool != dangolWithMarketMenuImg.isDangol()){
                         onFavSetListener.onFavSet(true); // 삭제해라
                     }
                     else
@@ -350,7 +351,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
         AllService service = Config.retrofit.create(AllService.class);
         if (favBool) {
-            if (favBool != dangolWithMarketMenuImg.getDangol()) {
+            if (favBool != dangolWithMarketMenuImg.isDangol()) {
                 //단골삭제
                 Call<String> request = service.deleteFavorite(allOwnerClientKeyVO);
                 request.enqueue(new Callback<String>() {
@@ -366,7 +367,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
                 });
             }
         } else {
-            if (favBool != dangolWithMarketMenuImg.getDangol()) {
+            if (favBool != dangolWithMarketMenuImg.isDangol()) {
                 //단골등록
                 Call<String> request = service.insertFavorite(allOwnerClientKeyVO);
                 request.enqueue(new Callback<String>() {

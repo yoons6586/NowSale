@@ -13,8 +13,8 @@ import java.util.List;
 @Mapper
 public interface AllMapper {
     //광고판 이미지 갯수
-    @Select("SELECT * FROM adv_img_cnt")
-    int getAdvImgCnt();
+    @Select("SELECT * FROM adv_img_uri")
+    List<AdvImgVO> getAdvImgCnt();
 
     //단골 숫자 세는 것
     @Select("SELECT count(*) FROM favorite_market_list WHERE owner_key=#{owner_key}")

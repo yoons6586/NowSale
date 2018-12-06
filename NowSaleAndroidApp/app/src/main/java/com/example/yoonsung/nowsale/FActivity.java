@@ -523,12 +523,13 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 //                            response.body();
                                 Log.e("response", "count : " + response);
 //                            List<IsFavoriteGetCountVO> list = response.body();
-                                DangolWithMarketMenuImg dangolWithMarketMenuImg = new DangolWithMarketMenuImg();
+                                DangolWithMarketMenuImg dangolWithMarketMenuImg;
                                 dangolWithMarketMenuImg = response.body();
-
-                                if(dangolWithMarketMenuImg.getDangol_count()==null)
-                                    dangolWithMarketMenuImg.setDangol_count(0);
                                 Log.e("count", "count : " + dangolWithMarketMenuImg.getDangol_count());
+//                                Log.e("dangole",dangolWithMarketMenuImg.toString());
+                                for(int i=0;i<dangolWithMarketMenuImg.getMarketImgVOList().size();i++){
+                                    Log.e("dangole",dangolWithMarketMenuImg.getMarketImgVOList().get(i).getMarket_img());
+                                }
 
                                 intent.putExtra("dangol", dangolWithMarketMenuImg);
                                 if(what!=4) {

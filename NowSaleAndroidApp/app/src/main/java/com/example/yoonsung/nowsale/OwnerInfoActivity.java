@@ -84,7 +84,9 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
 
         get_intent=getIntent();
         couponVO = (CouponVO) get_intent.getSerializableExtra("CouponVO");
-        dangolWithMarketMenuImg = (DangolWithMarketMenuImg) get_intent.getSerializableExtra("dangol");
+        dangolWithMarketMenuImg = (DangolWithMarketMenuImg) get_intent.getParcelableExtra("dangol");
+        Log.e("ownerinfocount",""+dangolWithMarketMenuImg.getDangol_count());
+        Log.e("ownerinfocount","menusize: "+dangolWithMarketMenuImg.getMarketImgVOList().size());
         what = get_intent.getIntExtra("what",-1);
         position = get_intent.getIntExtra("position",-1);
         Log.e("OwnerInfoActivity","position : "+position);
@@ -104,19 +106,20 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
          */
 
 
-        if(dangolWithMarketMenuImg.getMarketImgVOList()!=null)
-            adapter = new SliderOwnerImageAdapter(this,couponVO.getOwner_key(),dangolWithMarketMenuImg);
-        else {
-            adapter = new SliderOwnerImageAdapter(this, couponVO.getOwner_key(), null);
-        }
+
+        adapter = new SliderOwnerImageAdapter(this, couponVO.getOwner_key(), dangolWithMarketMenuImg);
+
+
         indicatorViewPager.setAdapter(adapter);
 
         marketImgTab = (TabLayout) findViewById(R.id.tab_layout);
-        if(dangolWithMarketMenuImg.getMarketImgVOList()!=null) {
+
+        if(dangolWithMarketMenuImg.getMarketImgVOList().size()!=0)
             marketImgTab.setupWithViewPager(indicatorViewPager, true);
-        }
         else
             marketImgTab.setVisibility(View.GONE);
+
+
 
         //tab 크기 조절
 //        tabHost.getCurrentTab();

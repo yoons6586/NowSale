@@ -3,6 +3,7 @@ package com.example.demo.all.controller;
 
 
 import com.example.demo.all.dao.*;
+import com.example.demo.all.mapper.AdvImgVO;
 import com.example.demo.all.mapper.AllMapper;
 import com.example.demo.all.model.*;
 import io.swagger.annotations.ApiOperation;
@@ -40,9 +41,9 @@ public class AllController {
     public AllController(AllMapper allMapper){
         this.allMapper=allMapper;
     }
-    @RequestMapping(value="/adv/img/cnt",method = RequestMethod.GET)
-    @ApiOperation(value="광고판 이미지 갯수 리턴")
-    public ResponseEntity<Integer> advImgCount(){
+    @RequestMapping(value="/adv/img",method = RequestMethod.GET)
+    @ApiOperation(value="광고판 이미지 url 리턴")
+    public ResponseEntity<List<AdvImgVO>> advImgCount(){
         return new ResponseEntity<>(allMapper.getAdvImgCnt(),HttpStatus.OK);
     }
 

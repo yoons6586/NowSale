@@ -10,6 +10,7 @@ import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.util.Log;
 
 import com.example.yoonsung.nowsale.VO.CouponVO;
 import com.example.yoonsung.nowsale.VO.DangolWithMarketMenuImg;
@@ -47,7 +48,10 @@ public class OwnerInfoTabPagerAdapter extends FragmentStatePagerAdapter {
 
                 Bundle bundle1 = new Bundle(3); // 파라미터는 전달할 데이터 개수
                 bundle1.putSerializable("CouponVO",couponVO);
-                bundle1.putSerializable("IsFavoriteGetCountVO",dangolWithMarketMenuImg);
+                Log.e("check","확인");
+                for(int i=0;i<dangolWithMarketMenuImg.getMarketImgVOList().size();i++)
+                    Log.e("check",dangolWithMarketMenuImg.getMarketImgVOList().get(i).getMarket_img());
+                bundle1.putParcelable("IsFavoriteGetCountVO",dangolWithMarketMenuImg);
 //                bundle1.putSerializable("menuDatas",list);
                 bundle1.putParcelableArrayList("menuDatas", (ArrayList<? extends Parcelable>) list);
                 tabFragment1.setArguments(bundle1);

@@ -31,7 +31,7 @@ public class SliderOwnerImageAdapter extends PagerAdapter { // 관리자와 사�
 
     @Override
     public int getCount() {
-        if(dangolWithMarketMenuImg==null)
+        if(dangolWithMarketMenuImg.getMarketImgVOList().size()==0)
             return 1;
         return dangolWithMarketMenuImg.getMarketImgVOList().size();
     }
@@ -46,8 +46,8 @@ public class SliderOwnerImageAdapter extends PagerAdapter { // 관리자와 사�
                 (Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.slider_market_img, container, false);
         ImageView imageView = (ImageView)v.findViewById(R.id.imageView);
-
-        Glide.with(context).load(Config.url+dangolWithMarketMenuImg.getMarketImgVOList().get(position)).into(imageView);
+        if(dangolWithMarketMenuImg.getMarketImgVOList().size()!=0)
+            Glide.with(context).load(Config.url+dangolWithMarketMenuImg.getMarketImgVOList().get(position).getMarket_img()).into(imageView);
 
         container.addView(v);
 
