@@ -527,9 +527,9 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                                 dangolWithMarketMenuImg = response.body();
                                 Log.e("count", "count : " + dangolWithMarketMenuImg.getDangol_count());
 //                                Log.e("dangole",dangolWithMarketMenuImg.toString());
-                                for(int i=0;i<dangolWithMarketMenuImg.getMarketImgVOList().size();i++){
-                                    Log.e("dangole",dangolWithMarketMenuImg.getMarketImgVOList().get(i).getMarket_img());
-                                }
+//                                for(int i=0;i<dangolWithMarketMenuImg.getMarketImgVOList().size();i++){
+//                                    Log.e("dangole",dangolWithMarketMenuImg.getMarketImgVOList().get(i).getMarket_img());
+//                                }
 
                                 intent.putExtra("dangol", dangolWithMarketMenuImg);
                                 if(what!=4) {

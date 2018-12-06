@@ -15,6 +15,7 @@ public class Loading1Activity extends Activity {
             // 21 버전 이상일 때
             getWindow().setStatusBarColor(getResources().getColor(R.color.statusBarColor));
         }
+
         startLoading();
 
         //네트워크

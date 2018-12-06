@@ -1,5 +1,6 @@
 package com.example.yoonsung.nowsale.http;
 
+import com.example.yoonsung.nowsale.AdvImgVO;
 import com.example.yoonsung.nowsale.VO.AllOwnerClientKeyVO;
 import com.example.yoonsung.nowsale.VO.ClientVO;
 import com.example.yoonsung.nowsale.VO.CouponVO;
@@ -20,8 +21,8 @@ import retrofit2.http.Path;
  * Created by yoonsung on 2018. 10. 8..
  */
 public interface AllService {
-    @GET("/all/adv/img/cnt")
-    Call<Integer> getAdvCount();
+    @GET("/all/adv/img")
+    Call<List<AdvImgVO>> getAdvUri();
 
     @GET("/client/all")
     Call<List<ClientVO>> getUserRepositories(/*@Path("user") String userName*/);

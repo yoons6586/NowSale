@@ -49,8 +49,6 @@ public class OwnerInfoTabPagerAdapter extends FragmentStatePagerAdapter {
                 Bundle bundle1 = new Bundle(3); // 파라미터는 전달할 데이터 개수
                 bundle1.putSerializable("CouponVO",couponVO);
                 Log.e("check","확인");
-                for(int i=0;i<dangolWithMarketMenuImg.getMarketImgVOList().size();i++)
-                    Log.e("check",dangolWithMarketMenuImg.getMarketImgVOList().get(i).getMarket_img());
                 bundle1.putParcelable("IsFavoriteGetCountVO",dangolWithMarketMenuImg);
 //                bundle1.putSerializable("menuDatas",list);
                 bundle1.putParcelableArrayList("menuDatas", (ArrayList<? extends Parcelable>) list);

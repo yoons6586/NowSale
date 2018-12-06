@@ -195,14 +195,17 @@ public class CouponCategoryActivity extends AppCompatActivity
         }
 
         AllService allService = Config.retrofit.create(AllService.class);
-        Call<Integer> ownerMenuRequest = allService.getAdvCount();
-        ownerMenuRequest.enqueue(new Callback<Integer>() {
+        Call<List<AdvImgVO>> ownerMenuRequest = allService.getAdvUri();
+        ownerMenuRequest.enqueue(new Callback<List<AdvImgVO>>() {
             @Override
-            public void onResponse(Call<Integer> call, Response<Integer> response) {
-                int advCnt = response.body();
+            public void onResponse(Call<List<AdvImgVO>> call, Response<List<AdvImgVO>> response) {
+//                int advCnt = response.body();
+                List<AdvImgVO> advImgVOList = response.body();
                 indicatorViewPager = (ViewPager) findViewById(R.id.view);
+//                for(int i=0;i<advImgVOList.size();i++)
+//                    Log.e("CouponCateadv",advImgVOList.get(i).getAdv_img_uri());
 
-                adapter = new SliderAdvertisementImageAdapter(CouponCategoryActivity.this, advCnt);
+                adapter = new SliderAdvertisementImageAdapter(CouponCategoryActivity.this, advImgVOList);
                 indicatorViewPager.setClipToPadding(false);
                 indicatorViewPager.setAdapter(adapter);
 
@@ -212,7 +215,7 @@ public class CouponCategoryActivity extends AppCompatActivity
             }
 
             @Override
-            public void onFailure(Call<Integer> call, Throwable t) {
+            public void onFailure(Call<List<AdvImgVO>> call, Throwable t) {
 
             }
         });

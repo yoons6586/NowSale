@@ -12,24 +12,26 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.List;
+
 public class SliderAdvertisementImageAdapter extends PagerAdapter { // 관리자와 사용자 로그인이 둘이 서로 달라야 함
 //    private int[] images = {R.drawable.beauty,R.drawable.fashion,R.drawable.alcohol1};
     private LayoutInflater inflater;
     private Context context;
-    private int adv_img_cnt;
+    private List<AdvImgVO> advImgVOList;
 
 
 //    Glide.with(getActivity()).load(Config.url+"/drawable/owner/"+list.get(position).getLogo_img()).into(itemHolder.imgLogo);
 
-    public SliderAdvertisementImageAdapter(Context context,int adv_img_cnt){
+    public SliderAdvertisementImageAdapter(Context context,List<AdvImgVO> advImgVOList){
         this.context = context;
-        this.adv_img_cnt=adv_img_cnt;
+        this.advImgVOList = advImgVOList;
     }
 
 
     @Override
     public int getCount() {
-        return adv_img_cnt;
+        return advImgVOList.size();
     }
 
     @Override
@@ -43,8 +45,8 @@ public class SliderAdvertisementImageAdapter extends PagerAdapter { // 관리자
         View v = inflater.inflate(R.layout.slider_owner_info, container, false);
         ImageView imageView = (ImageView)v.findViewById(R.id.imageView);
 
-        Glide.with(context).load(Config.url+"/drawable/adv/"+(position+1)+".png").into(imageView);
-        Log.e("SliderAdver",Config.url+"/drawable/adv/"+(position+1)+".png");
+        Glide.with(context).load(Config.url+advImgVOList.get(position).getAdv_img()).into(imageView);
+        Log.e("SliderAdver",Config.url+advImgVOList.get(position).getAdv_img());
 
         container.addView(v);
 
