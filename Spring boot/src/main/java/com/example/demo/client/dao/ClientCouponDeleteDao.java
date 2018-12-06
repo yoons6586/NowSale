@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import java.io.IOException;
 import java.io.InputStream;
 
+//TODO 보통 Dao 클래스를 여러개 만들지 않고 하나의 Class안에서 CRUD 를 처리하면 된다...
+//TODO 같은 Table은 보통 CRUD처리를 한 Class내에서 한다.
 public class ClientCouponDeleteDao {
     private SqlSessionFactory sqlSessionFactory;
 
@@ -50,6 +52,8 @@ public class ClientCouponDeleteDao {
     public ResponseEntity<ClientHaveCouponVO> clientCouponDelete(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
+            //TODO 지워졌는지 안지워졌는지 update됐는지 안됏는지 확인해야됨
+            //TODO delete,update return 값 뭐 오는지 확인해보기 ->
             sqlSession.delete("dao.mybatisMapper.deleteClientCoupon",clientHaveCouponVO);
             sqlSession.update("dao.mybatisMapper.updateClientCouponCount",clientHaveCouponVO.getCoupon_key());
 

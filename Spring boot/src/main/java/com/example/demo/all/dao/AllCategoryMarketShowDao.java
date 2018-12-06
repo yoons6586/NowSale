@@ -48,7 +48,9 @@ public class AllCategoryMarketShowDao {
     public List<MarketVO> selectCategoryMarketShow(){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
-            return sqlSession.selectList("dao.mybatisMapper.selectCategoryMarketShow",category);
+            List<MarketVO> list = sqlSession.selectList("dao.mybatisMapper.selectCategoryMarketShow",category);
+
+            return list;
 
         }
         finally {

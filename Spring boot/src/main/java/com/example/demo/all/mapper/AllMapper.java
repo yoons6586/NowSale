@@ -1,5 +1,6 @@
 package com.example.demo.all.mapper;
 
+import com.example.demo.all.model.MarketImgVO;
 import com.example.demo.all.model.MenuVO;
 import com.example.demo.client.model.ClientCouponVO;
 import com.example.demo.client.model.ClientVO;
@@ -29,11 +30,11 @@ public interface AllMapper {
     @Select("SELECT id FROM owner_list WHERE id=#{id}")
     String ownerOverlapId(String id);
 
-    @Select("SELECT market_img_cnt FROM owner_list WHERE owner_key=#{owner_key}")
-    int getMarketImgCount(@Param("owner_key")int owner_key);
+    @Select("SELECT menu_img_name,menu_name,menu_money FROM owner_menu_list WHERE owner_key=#{owner_key}")
+    List<MenuVO> getMenuImg(@Param("owner_key")int owner_key);
 
-    @Select("SELECT count(*) FROM owner_menu_list WHERE owner_key=#{owner_key}")
-    int getMenuImgCount(@Param("owner_key")int owner_key);
+    @Select("SELECT market_img FROM market_img WHERE owner_key=#{owner_key}")
+    List<MarketImgVO> getMarketImg(@Param("owner_key")int owner_key);
 
     @Select("SELECT menu_img_name,menu_name,menu_money FROM owner_menu_list WHERE owner_key=#{owner_key}")
     List<MenuVO> getMenuItem(@Param("owner_key")int owner_key);

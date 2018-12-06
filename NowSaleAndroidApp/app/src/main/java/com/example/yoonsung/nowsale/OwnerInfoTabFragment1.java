@@ -22,7 +22,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.yoonsung.nowsale.VO.AllOwnerClientKeyVO;
 import com.example.yoonsung.nowsale.VO.CouponVO;
-import com.example.yoonsung.nowsale.VO.IsFavoriteGetCountVO;
+import com.example.yoonsung.nowsale.VO.DangolWithMarketMenuImg;
 import com.example.yoonsung.nowsale.VO.MenuVO;
 import com.example.yoonsung.nowsale.http.AllService;
 import com.example.yoonsung.nowsale.naverMap.NMapPOIflagType;
@@ -63,7 +63,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
     private Intent loginNeedPopupIntent;
     private AllOwnerClientKeyVO allOwnerClientKeyVO;
     private CouponVO couponVO;
-    private IsFavoriteGetCountVO isFavoriteGetCountVO;
+    private DangolWithMarketMenuImg dangolWithMarketMenuImg;
     private SectionedRecyclerViewAdapter sectionAdapter;
     private AllService allService;
     private ScrollView scrollView;
@@ -92,7 +92,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
 
         couponVO = (CouponVO) getArguments().getSerializable("CouponVO");
-        isFavoriteGetCountVO = (IsFavoriteGetCountVO) getArguments().getSerializable("IsFavoriteGetCountVO");
+        dangolWithMarketMenuImg = (DangolWithMarketMenuImg) getArguments().getSerializable("IsFavoriteGetCountVO");
         menuDatas = getArguments().getParcelableArrayList("menuDatas");
 
         loginNeedPopupIntent = new Intent(getActivity(),LoginCancelPopupActivity.class);
@@ -114,8 +114,8 @@ public class OwnerInfoTabFragment1 extends Fragment {
         windowManager.getDefaultDisplay().getMetrics(metrics);
 
 
-        favBool = isFavoriteGetCountVO.isDangol();
-        countText.setText(""+isFavoriteGetCountVO.getDangol_count());
+        favBool = dangolWithMarketMenuImg.getDangol();
+        countText.setText(""+dangolWithMarketMenuImg.getDangol_count());
         workingTime.setText(""+couponVO.getWorking_time());
         workingDay.setText(""+couponVO.getWorking_day());
 
@@ -144,7 +144,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
         Log.e("OwnerInfoTabFragment1","longitude : "+couponVO.getLongitude()+", latitude : "+couponVO.getLatitude());
 
-        if(isFavoriteGetCountVO.isDangol()){
+        if(dangolWithMarketMenuImg.getDangol()){
             heart.setImageResource(R.drawable.colorheart);
         }
         else{
@@ -155,18 +155,18 @@ public class OwnerInfoTabFragment1 extends Fragment {
             public void onClick(View v) {
 
                 if(Config.clientVO.getClient_key()!=0) {
-                    if (isFavoriteGetCountVO.isDangol()) {
-                        isFavoriteGetCountVO.setDangol_count(isFavoriteGetCountVO.getDangol_count() - 1);
-                        isFavoriteGetCountVO.setDangol(false);
+                    if (dangolWithMarketMenuImg.getDangol()) {
+                        dangolWithMarketMenuImg.setDangol_count(dangolWithMarketMenuImg.getDangol_count() - 1);
+                        dangolWithMarketMenuImg.setDangol(false);
                         heart.setImageResource(R.drawable.blackheart);
-                        countText.setText("" + isFavoriteGetCountVO.getDangol_count());
+                        countText.setText("" + dangolWithMarketMenuImg.getDangol_count());
                     } else {
-                        isFavoriteGetCountVO.setDangol_count(isFavoriteGetCountVO.getDangol_count() + 1);
-                        isFavoriteGetCountVO.setDangol(true);
+                        dangolWithMarketMenuImg.setDangol_count(dangolWithMarketMenuImg.getDangol_count() + 1);
+                        dangolWithMarketMenuImg.setDangol(true);
                         heart.setImageResource(R.drawable.colorheart);
-                        countText.setText("" + isFavoriteGetCountVO.getDangol_count());
+                        countText.setText("" + dangolWithMarketMenuImg.getDangol_count());
                     }
-                    if(favBool != isFavoriteGetCountVO.isDangol()){
+                    if(favBool != dangolWithMarketMenuImg.getDangol()){
                         onFavSetListener.onFavSet(true); // 삭제해라
                     }
                     else
@@ -350,7 +350,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
         AllService service = Config.retrofit.create(AllService.class);
         if (favBool) {
-            if (favBool != isFavoriteGetCountVO.isDangol()) {
+            if (favBool != dangolWithMarketMenuImg.getDangol()) {
                 //단골삭제
                 Call<String> request = service.deleteFavorite(allOwnerClientKeyVO);
                 request.enqueue(new Callback<String>() {
@@ -366,7 +366,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
                 });
             }
         } else {
-            if (favBool != isFavoriteGetCountVO.isDangol()) {
+            if (favBool != dangolWithMarketMenuImg.getDangol()) {
                 //단골등록
                 Call<String> request = service.insertFavorite(allOwnerClientKeyVO);
                 request.enqueue(new Callback<String>() {
@@ -424,6 +424,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
             String name = list.get(position).getMenu_name();
             String money = list.get(position).getMenu_money();
+            String menu_img = list.get(position).getMenu_img_name();
 
             itemHolder.menuName.setText(name);
             itemHolder.menuMoney.setText(money);
@@ -446,8 +447,8 @@ public class OwnerInfoTabFragment1 extends Fragment {
             itemHolder.rootView.setLayoutParams(view_params);
             itemHolder.menuImg.setLayoutParams(menuImgParams);*/
 
-
-            Glide.with(getActivity()).load(Config.url+"/drawable/owner/menu/"+couponVO.getOwner_key()+"/"+(position+1)+".png").into(itemHolder.menuImg);
+            Log.e("menu_img",menu_img);
+            Glide.with(getActivity()).load(Config.url+menu_img).into(itemHolder.menuImg);
         }
 
         @Override

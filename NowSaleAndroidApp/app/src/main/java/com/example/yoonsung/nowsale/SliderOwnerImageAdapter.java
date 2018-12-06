@@ -10,26 +10,30 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
+import com.example.yoonsung.nowsale.VO.DangolWithMarketMenuImg;
 
 public class SliderOwnerImageAdapter extends PagerAdapter { // 관리자와 사용자 로그인이 둘이 서로 달라야 함
 //    private int[] images = {R.drawable.beauty,R.drawable.fashion,R.drawable.alcohol1};
     private LayoutInflater inflater;
     private Context context;
-    private int owner_key,market_img_cnt;
+    private int owner_key;
+    private DangolWithMarketMenuImg dangolWithMarketMenuImg;
 
 
 //    Glide.with(getActivity()).load(Config.url+"/drawable/owner/"+list.get(position).getLogo_img()).into(itemHolder.imgLogo);
 
-    public SliderOwnerImageAdapter(Context context,int owner_key,int market_img_cnt){
+    public SliderOwnerImageAdapter(Context context, int owner_key, DangolWithMarketMenuImg dangolWithMarketMenuImg){
         this.context = context;
         this.owner_key=owner_key;
-        this.market_img_cnt=market_img_cnt;
+        this.dangolWithMarketMenuImg = dangolWithMarketMenuImg;
     }
 
 
     @Override
     public int getCount() {
-        return market_img_cnt;
+        if(dangolWithMarketMenuImg==null)
+            return 1;
+        return dangolWithMarketMenuImg.getMarketImgVOList().size();
     }
 
     @Override
@@ -43,7 +47,7 @@ public class SliderOwnerImageAdapter extends PagerAdapter { // 관리자와 사�
         View v = inflater.inflate(R.layout.slider_market_img, container, false);
         ImageView imageView = (ImageView)v.findViewById(R.id.imageView);
 
-        Glide.with(context).load(Config.url+"/drawable/owner/market/"+owner_key+"/"+(position+1)+".png").into(imageView);
+        Glide.with(context).load(Config.url+dangolWithMarketMenuImg.getMarketImgVOList().get(position)).into(imageView);
 
         container.addView(v);
 

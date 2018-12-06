@@ -22,7 +22,7 @@ import com.bumptech.glide.Glide;
 import com.example.yoonsung.nowsale.VO.ClientCouponVO;
 import com.example.yoonsung.nowsale.VO.ClientSaleVO;
 import com.example.yoonsung.nowsale.VO.CouponVO;
-import com.example.yoonsung.nowsale.VO.IsFavoriteGetCountVO;
+import com.example.yoonsung.nowsale.VO.DangolWithMarketMenuImg;
 import com.example.yoonsung.nowsale.VO.OwnerCouponVO;
 import com.example.yoonsung.nowsale.VO.OwnerSaleVO;
 import com.example.yoonsung.nowsale.http.AllService;
@@ -498,8 +498,8 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
             }
 //            itemHolder.imgLogo.setImageResource(name.hashCode() % 2 == 0 ? R.drawable.logo1 : R.drawable.logo2);
-            Glide.with(getActivity()).load(Config.url+"/drawable/owner/"+list.get(position).getLogo_img()+".png").into(itemHolder.imgLogo);
-            Log.e("FActivity","logo : "+Config.url+"/drawable/owner/"+list.get(position).getLogo_img());
+            Glide.with(getActivity()).load(Config.url+list.get(position).getLogo_img()).into(itemHolder.imgLogo);
+//            Log.e("FActivity","logo : "+Config.url+"/drawable/owner/"+list.get(position).getLogo_img());
 
             if(what!=6) {
                 itemHolder.rootView.setOnClickListener(new View.OnClickListener() {
@@ -516,23 +516,21 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                         Log.e("owner_key", "" + list.get(position).getOwner_key());
                         Log.e("client_key", "" + Config.clientVO.getClient_key());
                         AllService service = Config.retrofit.create(AllService.class);
-                        Call<IsFavoriteGetCountVO> request = service.isFavoriteGetCount(list.get(position).getOwner_key(), Config.clientVO.getClient_key());
-                        request.enqueue(new Callback<IsFavoriteGetCountVO>() {
+                        Call<DangolWithMarketMenuImg> request = service.dangolwithImg(list.get(position).getOwner_key(), Config.clientVO.getClient_key());
+                        request.enqueue(new Callback<DangolWithMarketMenuImg>() {
                             @Override
-                            public void onResponse(Call<IsFavoriteGetCountVO> call, Response<IsFavoriteGetCountVO> response) {
+                            public void onResponse(Call<DangolWithMarketMenuImg> call, Response<DangolWithMarketMenuImg> response) {
 //                            response.body();
                                 Log.e("response", "count : " + response);
 //                            List<IsFavoriteGetCountVO> list = response.body();
-                                IsFavoriteGetCountVO isFavoriteGetCountVO = new IsFavoriteGetCountVO();
-                                isFavoriteGetCountVO = response.body();
-                                try{
-                                    Log.e("count", "count : " + isFavoriteGetCountVO.getDangol_count());
-                                }
-                                catch (NullPointerException e){
-                                    isFavoriteGetCountVO = new IsFavoriteGetCountVO();
-                                }
+                                DangolWithMarketMenuImg dangolWithMarketMenuImg = new DangolWithMarketMenuImg();
+                                dangolWithMarketMenuImg = response.body();
 
-                                intent.putExtra("dangol", isFavoriteGetCountVO);
+                                if(dangolWithMarketMenuImg.getDangol_count()==null)
+                                    dangolWithMarketMenuImg.setDangol_count(0);
+                                Log.e("count", "count : " + dangolWithMarketMenuImg.getDangol_count());
+
+                                intent.putExtra("dangol", dangolWithMarketMenuImg);
                                 if(what!=4) {
                                     Log.e("Factivity","startactivity 실행");
                                     startActivity(intent);
@@ -545,7 +543,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                             }
 
                             @Override
-                            public void onFailure(Call<IsFavoriteGetCountVO> call, Throwable t) {
+                            public void onFailure(Call<DangolWithMarketMenuImg> call, Throwable t) {
 
                             }
                         });

@@ -89,7 +89,6 @@ public class OwnerController {
             coupon_key=1;
         }
         System.out.println("coupon_key : "+coupon_key);
-//
         ownerRegisterCouponVO.setOwner_key(owner_key);
         ownerRegisterCouponVO.setCoupon_key(coupon_key);
         ownerCouponUpdateDao = new OwnerCouponUpdateDao(ownerRegisterCouponVO);

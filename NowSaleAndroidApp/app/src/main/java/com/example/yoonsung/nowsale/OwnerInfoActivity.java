@@ -23,7 +23,7 @@ import android.widget.TextView;
 
 import com.example.yoonsung.nowsale.VO.AllOwnerClientKeyVO;
 import com.example.yoonsung.nowsale.VO.CouponVO;
-import com.example.yoonsung.nowsale.VO.IsFavoriteGetCountVO;
+import com.example.yoonsung.nowsale.VO.DangolWithMarketMenuImg;
 import com.example.yoonsung.nowsale.VO.MenuVO;
 import com.example.yoonsung.nowsale.http.AllService;
 import com.tsengvn.typekit.Typekit;
@@ -47,7 +47,7 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
     private CouponVO couponVO;
     private String category;
     private AllOwnerClientKeyVO allOwnerClientKeyVO;
-    private IsFavoriteGetCountVO isFavoriteGetCountVO;
+    private DangolWithMarketMenuImg dangolWithMarketMenuImg;
     private AllService allService;
     private List<MenuVO> list;
     private TabLayout tabLayout,ownerPageTab,marketImgTab;
@@ -84,7 +84,7 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
 
         get_intent=getIntent();
         couponVO = (CouponVO) get_intent.getSerializableExtra("CouponVO");
-        isFavoriteGetCountVO = (IsFavoriteGetCountVO) get_intent.getSerializableExtra("dangol");
+        dangolWithMarketMenuImg = (DangolWithMarketMenuImg) get_intent.getSerializableExtra("dangol");
         what = get_intent.getIntExtra("what",-1);
         position = get_intent.getIntExtra("position",-1);
         Log.e("OwnerInfoActivity","position : "+position);
@@ -104,14 +104,15 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
          */
 
 
-        if(isFavoriteGetCountVO.getMarket_img_cnt()!=0)
-            adapter = new SliderOwnerImageAdapter(this,couponVO.getOwner_key(),isFavoriteGetCountVO.getMarket_img_cnt());
-        else
-            adapter = new SliderOwnerImageAdapter(this,couponVO.getOwner_key(),1);
+        if(dangolWithMarketMenuImg.getMarketImgVOList()!=null)
+            adapter = new SliderOwnerImageAdapter(this,couponVO.getOwner_key(),dangolWithMarketMenuImg);
+        else {
+            adapter = new SliderOwnerImageAdapter(this, couponVO.getOwner_key(), null);
+        }
         indicatorViewPager.setAdapter(adapter);
 
         marketImgTab = (TabLayout) findViewById(R.id.tab_layout);
-        if(isFavoriteGetCountVO.getMarket_img_cnt()!=0) {
+        if(dangolWithMarketMenuImg.getMarketImgVOList()!=null) {
             marketImgTab.setupWithViewPager(indicatorViewPager, true);
         }
         else
@@ -178,7 +179,7 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
 
                 }
 //                sectionAdapter.addSection(new OwnerInfoTabFragment1.MovieSection("주요 상품", menuDatas));
-                OwnerInfoTabPagerAdapter pagerAdapter = new OwnerInfoTabPagerAdapter(getSupportFragmentManager(), 2,couponVO,isFavoriteGetCountVO,list);
+                OwnerInfoTabPagerAdapter pagerAdapter = new OwnerInfoTabPagerAdapter(getSupportFragmentManager(), 2,couponVO,dangolWithMarketMenuImg,list);
 
                 ownerInfoViewPager.setAdapter(pagerAdapter);
                 ownerInfoViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(ownerPageTab));

@@ -23,9 +23,6 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/client")
 public class ClientController {
-
-
-
     @Autowired
     private PasswordEncoder passwordEncoder;
 
@@ -56,6 +53,10 @@ public class ClientController {
     @RequestMapping(value="/login",method=RequestMethod.POST)
     @ApiOperation(value="client 로그인을 하기 위한 id,pw 체크")
     public ResponseEntity<List<ClientVO>> loginClient(@RequestBody ClientLoginVO clientLoginVO){
+        //TODO TEST CASE 작성.
+        //TODO Parameter 로 ID 를 넘겨서 PW 비교하기.
+        //TODO 기본적으로 NullPointerException은 해결하기.
+
         clientLoginDao = new ClientLoginDao(clientLoginVO);
         List<ClientVO> list = clientLoginDao.clientLoginSelect();
         System.out.println("size : "+list.size());
@@ -65,9 +66,6 @@ public class ClientController {
             System.out.println("우와 신기");
 
 //        UsernamePasswordAuthenticationToken
-
-
-
         if(list.size()>0) {
             if(passwordEncoder.matches(clientLoginVO.getPw(),list.get(0).getPw())) {
                 list.get(0).setPw(clientLoginVO.getPw());
@@ -75,22 +73,26 @@ public class ClientController {
             }
         }
 
-        list.clear();
+        list.clear(); // 확인해보고 삭제하기
+
         return new ResponseEntity<List<ClientVO>>(list,HttpStatus.NOT_FOUND);
     }
+    //TODO 보통 client는 안쓰고 customer를 사용한다...
 
     @RequestMapping(value="/coupon/have/{client_key}",method = RequestMethod.GET)
     @ApiOperation(value="client가 가지고 있는 쿠폰 목록 가져오기")
-    public ResponseEntity<List<ClientCouponVO>> clientCouponGet(@PathVariable(value="client_key")int client_key){
+    public ResponseEntity<List<ClientCouponVO>> clientCouponGet(@PathVariable(value="client_key")Integer client_key){
+        //TODO
         clientHaveCouponDao = new ClientHaveCouponDao(client_key);
         List<ClientCouponVO> list = clientHaveCouponDao.clientHaveCouponSelect();
 
         return new ResponseEntity<List<ClientCouponVO>>(list,HttpStatus.OK);
     }
+    //TODO 모델 만들 때는 무조건 Integer로 만드는 게 좋음!! -> NullPointerException 날 수도 있음....!!!
 
     @RequestMapping(value="/sale/have/{client_key}",method = RequestMethod.GET)
     @ApiOperation(value="client 등록한 할인 정보 가지고 오기")
-    public ResponseEntity<List<ClientSaleVO>> clientSaleGet(@PathVariable(value="client_key")int client_key){
+    public ResponseEntity<List<ClientSaleVO>> clientSaleGet(@PathVariable(value="client_key")Integer client_key){
         clientHaveSaleDao = new ClientHaveSaleDao(client_key);
         List<ClientSaleVO> list = clientHaveSaleDao.clientHaveSaleSelect();
 
@@ -99,7 +101,7 @@ public class ClientController {
 
     @RequestMapping(value="/favorite/market/{client_key}",method = RequestMethod.GET)
     @ApiOperation(value ="client가 등록한 단골매장")
-    public ResponseEntity<List<ClientFavoriteMarketVO>> clientFavoriteMarket(@PathVariable("client_key")int client_key){
+    public ResponseEntity<List<ClientFavoriteMarketVO>> clientFavoriteMarket(@PathVariable("client_key")Integer client_key){
 
         List<ClientFavoriteMarketVO> list = clientMapper.getFavoriteMarket(client_key);
         return new ResponseEntity<List<ClientFavoriteMarketVO>>(list,HttpStatus.OK);
@@ -107,7 +109,7 @@ public class ClientController {
 
     @RequestMapping(value="/info/update/{client_key}",method = RequestMethod.PUT)
     @ApiOperation(value="클라이언트의 정보 변경")
-    public ResponseEntity<String> clientInfoUpdate(@PathVariable(value="client_key")int client_key, @RequestBody ClientVO clientVO){
+    public ResponseEntity<String> clientInfoUpdate(@PathVariable(value="client_key")Integer client_key, @RequestBody ClientVO clientVO){
 
         /*
         클래스를 추가로 만들지 않기 위해 ClientVO를 사용하였고
@@ -121,10 +123,11 @@ public class ClientController {
 
         return clientInfoUpdateDao.clientInfoUpdate();
     }
+    //TODO 변수명 짓는 것은 다 별로임 -> 동사가 먼저 나와야됨!!!!!
 
     @RequestMapping(value="/info/delete/{client_key}",method = RequestMethod.DELETE)
     @ApiOperation(value="클라이언트 회원 탈퇴")
-    public ResponseEntity<String> clientInfoDelete(@PathVariable(value="client_key")int client_key){
+    public ResponseEntity<String> clientInfoDelete(@PathVariable(value="client_key")Integer client_key){
         clientInfoDeleteDao = new ClientInfoDeleteDao(client_key);
         return clientInfoDeleteDao.clientInfoDelete();
     }
@@ -134,7 +137,7 @@ public class ClientController {
     public ResponseEntity<String> clientSignup(@RequestBody ClientVO clientVO){
         int client_key = clientMapper.getUserKey()+1;
         System.out.println("client_key : "+client_key);
-        //TODO id 중복확인 해야됨..
+
         String clientCheckId = clientMapper.clientOverlapId(clientVO.getId());
         if(clientCheckId!=null){
             return new ResponseEntity<>("overlap ID",HttpStatus.CONFLICT);
@@ -155,6 +158,7 @@ public class ClientController {
         return clientCouponUseDao.clientCouponUse();
 
     }
+    //TODO
 
     @RequestMapping(value="/coupon/delete",method = RequestMethod.DELETE)
     @ApiOperation(value="client가 쿠폰을 삭제")

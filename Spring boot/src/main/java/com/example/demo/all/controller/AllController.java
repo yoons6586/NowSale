@@ -93,10 +93,12 @@ public class AllController {
     }
 
     @RequestMapping(value="/favorite/is/get/count/{owner_key}/{client_key}",method = RequestMethod.GET)
-    @ApiOperation(value = "단골인지 아닌지랑 단골 숫자 같이 주는 것")
-    public ResponseEntity<IsFavoriteGetCountVO> isFavoriteGetCount(@PathVariable(value = "owner_key")int owner_key,@PathVariable(value="client_key")int client_key){
-        int market_img_cnt,menu_img_cnt,count;
-        IsFavoriteGetCountVO isFavoriteGetCountVO;
+    @ApiOperation(value = "단골인지 아닌지랑, market_img, menu_img 줄 것입니다.")
+    public ResponseEntity<DangolWithMarketMenuImg> isFavoriteGetCount(@PathVariable(value = "owner_key")int owner_key,@PathVariable(value="client_key")int client_key){
+        int count;
+        List<MenuVO> menuVOList;
+        List<MarketImgVO> marketImgVOList;
+        DangolWithMarketMenuImg dangolWithMarketMenuImg;
         List<Integer> isFavorite = allMapper.isFavorite(owner_key,client_key);
 
         try {
@@ -106,29 +108,27 @@ public class AllController {
         }
 
         try{
-            market_img_cnt = allMapper.getMarketImgCount(owner_key);
+            menuVOList = allMapper.getMenuImg(owner_key);
         } catch(TooManyResultsException e){
-            market_img_cnt=0;
+            menuVOList = null;
         } catch (NullPointerException e){
-            market_img_cnt=0;
+            menuVOList = null;
         }
 
         try {
-            menu_img_cnt = allMapper.getMenuImgCount(owner_key);
+            marketImgVOList = allMapper.getMarketImg(owner_key);
+
         } catch (TooManyResultsException e){
-            menu_img_cnt=0;
+            marketImgVOList = null;
         }
 
         if(isFavorite.size()==1){ // 단골이다/
-            isFavoriteGetCountVO = new IsFavoriteGetCountVO(count,true,market_img_cnt,menu_img_cnt);
-//            list.add(isFavoriteGetCountVO);
-//            isFavoriteGetCountVO.isDangol()
-            return new ResponseEntity<IsFavoriteGetCountVO>(isFavoriteGetCountVO,HttpStatus.OK);
+            dangolWithMarketMenuImg = new DangolWithMarketMenuImg(count,true,menuVOList,marketImgVOList);
+            return new ResponseEntity<>(dangolWithMarketMenuImg,HttpStatus.OK);
         }
         else{ // 단골이 아니다.
-            isFavoriteGetCountVO = new IsFavoriteGetCountVO(count,false,market_img_cnt,menu_img_cnt);
-//            list.add(isFavoriteGetCountVO);
-            return new ResponseEntity<IsFavoriteGetCountVO>(isFavoriteGetCountVO,HttpStatus.OK);
+            dangolWithMarketMenuImg = new DangolWithMarketMenuImg(count,false,menuVOList,marketImgVOList);
+            return new ResponseEntity<>(dangolWithMarketMenuImg,HttpStatus.OK);
         }
     }
 

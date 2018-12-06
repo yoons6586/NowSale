@@ -3,7 +3,7 @@ package com.example.yoonsung.nowsale.http;
 import com.example.yoonsung.nowsale.VO.AllOwnerClientKeyVO;
 import com.example.yoonsung.nowsale.VO.ClientVO;
 import com.example.yoonsung.nowsale.VO.CouponVO;
-import com.example.yoonsung.nowsale.VO.IsFavoriteGetCountVO;
+import com.example.yoonsung.nowsale.VO.DangolWithMarketMenuImg;
 import com.example.yoonsung.nowsale.VO.LoginVO;
 import com.example.yoonsung.nowsale.VO.MenuVO;
 
@@ -39,7 +39,7 @@ public interface AllService {
     Call<Integer> getFavoriteCount(@Path("owner_key") int owner_key);
 
     @GET("/all/favorite/is/get/count/{owner_key}/{client_key}")
-    Call<IsFavoriteGetCountVO> isFavoriteGetCount(@Path("owner_key") int owner_key, @Path("client_key") int client_key);
+    Call<DangolWithMarketMenuImg> dangolwithImg(@Path("owner_key") int owner_key, @Path("client_key") int client_key);
 
     @HTTP(method = "DELETE",path="/all/favorite/delete",hasBody = true)
     Call<String> deleteFavorite(@Body AllOwnerClientKeyVO allOwnerClientKeyVO);

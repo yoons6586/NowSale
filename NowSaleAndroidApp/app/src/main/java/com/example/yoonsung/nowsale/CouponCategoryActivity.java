@@ -26,7 +26,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.yoonsung.nowsale.VO.ClientVO;
-import com.example.yoonsung.nowsale.VO.IsFavoriteGetCountVO;
+import com.example.yoonsung.nowsale.VO.DangolWithMarketMenuImg;
 import com.example.yoonsung.nowsale.VO.LoginVO;
 import com.example.yoonsung.nowsale.VO.OwnerVO;
 import com.example.yoonsung.nowsale.http.AllService;
@@ -507,18 +507,18 @@ public class CouponCategoryActivity extends AppCompatActivity
         else if(id==R.id.nav_owner_frequenter){
             AllService service = Config.retrofit.create(AllService.class);
             //단골삭제
-            Call<IsFavoriteGetCountVO> request = service.isFavoriteGetCount(Config.ownerVO.getOwner_key(),0);
-            request.enqueue(new Callback<IsFavoriteGetCountVO>() {
+            Call<DangolWithMarketMenuImg> request = service.dangolwithImg(Config.ownerVO.getOwner_key(),0);
+            request.enqueue(new Callback<DangolWithMarketMenuImg>() {
                 @Override
-                public void onResponse(Call<IsFavoriteGetCountVO> call, Response<IsFavoriteGetCountVO> response) {
-                    IsFavoriteGetCountVO isFavoriteGetCountVO = response.body();
+                public void onResponse(Call<DangolWithMarketMenuImg> call, Response<DangolWithMarketMenuImg> response) {
+                    DangolWithMarketMenuImg dangolWithMarketMenuImg = response.body();
                     Intent intent = new Intent(CouponCategoryActivity.this,OwnerDangolActivity.class);
-                    intent.putExtra("dangolCnt",isFavoriteGetCountVO.getDangol_count());
+                    intent.putExtra("dangolCnt",dangolWithMarketMenuImg.getDangol_count());
                     startActivity(intent);
                 }
 
                 @Override
-                public void onFailure(Call<IsFavoriteGetCountVO> call, Throwable t) {
+                public void onFailure(Call<DangolWithMarketMenuImg> call, Throwable t) {
                     Log.e("destroy", "OwnerInfoActivity의 http 코드 : " );
                 }
             });

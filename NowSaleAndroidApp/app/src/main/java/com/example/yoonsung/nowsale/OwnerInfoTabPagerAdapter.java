@@ -12,7 +12,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.yoonsung.nowsale.VO.CouponVO;
-import com.example.yoonsung.nowsale.VO.IsFavoriteGetCountVO;
+import com.example.yoonsung.nowsale.VO.DangolWithMarketMenuImg;
 import com.example.yoonsung.nowsale.VO.MenuVO;
 
 import java.util.ArrayList;
@@ -23,17 +23,17 @@ public class OwnerInfoTabPagerAdapter extends FragmentStatePagerAdapter {
     // Count number of tabs
     private int tabCount;
     private CouponVO couponVO;
-    private IsFavoriteGetCountVO isFavoriteGetCountVO;
+    private DangolWithMarketMenuImg dangolWithMarketMenuImg;
     private List<MenuVO> list;
 
 
 
-    public OwnerInfoTabPagerAdapter(FragmentManager fm, int tabCount, CouponVO couponVO, IsFavoriteGetCountVO isFavoriteGetCountVO,List<MenuVO> list) {
+    public OwnerInfoTabPagerAdapter(FragmentManager fm, int tabCount, CouponVO couponVO, DangolWithMarketMenuImg dangolWithMarketMenuImg, List<MenuVO> list) {
         super(fm);
 
         this.tabCount = tabCount;
         this.couponVO = couponVO;
-        this.isFavoriteGetCountVO = isFavoriteGetCountVO;
+        this.dangolWithMarketMenuImg = dangolWithMarketMenuImg;
         this.list = list;
     }
 
@@ -47,7 +47,7 @@ public class OwnerInfoTabPagerAdapter extends FragmentStatePagerAdapter {
 
                 Bundle bundle1 = new Bundle(3); // 파라미터는 전달할 데이터 개수
                 bundle1.putSerializable("CouponVO",couponVO);
-                bundle1.putSerializable("IsFavoriteGetCountVO",isFavoriteGetCountVO);
+                bundle1.putSerializable("IsFavoriteGetCountVO",dangolWithMarketMenuImg);
 //                bundle1.putSerializable("menuDatas",list);
                 bundle1.putParcelableArrayList("menuDatas", (ArrayList<? extends Parcelable>) list);
                 tabFragment1.setArguments(bundle1);
