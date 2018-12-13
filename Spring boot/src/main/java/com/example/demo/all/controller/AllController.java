@@ -299,6 +299,11 @@ public class AllController {
         }
     }
 
+    @GetMapping("/login/naver/test")
+    public void naverLoginTest(){
+        System.out.println("Test");
+    }
+
     public boolean sendEmail(String email,int clientOwner){
         AllLoginInfoVO allLoginInfoVO = new AllLoginInfoVO();
         String tempPassword = UUID.randomUUID().toString().replaceAll("-", ""); // -를 제거해 주었다.
