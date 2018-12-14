@@ -6,6 +6,9 @@ import com.example.demo.all.dao.*;
 import com.example.demo.all.mapper.AdvImgVO;
 import com.example.demo.all.mapper.AllMapper;
 import com.example.demo.all.model.*;
+import com.example.demo.all.service.OAuthLoginService;
+import com.example.demo.client.mapper.ClientMapper;
+import com.example.demo.client.model.ClientVO;
 import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,11 +31,17 @@ public class AllController {
     private AllCategorySaleShowDao allCategorySaleShowDao;
     private AllCategoryMarketShowDao allCategoryMarketShowDao;
     private AllLostPasswordDao allLostPasswordDao;
+    private ClientVO clientVO;
 
     private AllMapper allMapper;
 
+    private ClientMapper clientMapper;
+
     @Autowired
     MailSender mailSender;
+
+    @Autowired
+    OAuthLoginService oAuthLoginService;
 
 
     @Autowired
@@ -296,6 +305,46 @@ public class AllController {
                     return new ResponseEntity<>(HttpStatus.CONFLICT);
             } else
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    //TODO oauth 로그인 타입, 정보 받고 중복 아이디 체크하기
+    @RequestMapping(value = "/login/oauth",method = RequestMethod.POST)
+    @ApiOperation("oauth 로그인 인증,provider_type = naver or kakao")
+    public ResponseEntity<ClientVO> oauthLogin(@RequestBody OAuthLoginVO oAuthLoginVO) {
+        this.clientVO = new ClientVO();
+        /*
+        provider_type = "naver","login"
+        중복 체크 -> 이미 있는 아이디인지 없는 아이디인지 확인하기
+        로그인을 제대로 한 후 provider type을 보내주면 그 타입에 중복아이디 확인을 하여 없으면 로그인 있으면
+        로그인이면 어떤걸 보내주고
+        회원가입이면 어떤걸 보내줄지 설정하기
+         */
+        this.clientVO = oAuthLoginService.oAuthLogin(oAuthLoginVO);
+
+        if(this.clientVO == null){
+            return new ResponseEntity<>((ClientVO) null,HttpStatus.NOT_FOUND); // -> 회원가입 해라
+        } else {
+            return new ResponseEntity<>((ClientVO) this.clientVO,HttpStatus.OK);
+        }
+
+
+
+    }
+
+    @RequestMapping(value = "/signup/oauth",method = RequestMethod.POST)
+    @ApiOperation("oauth 회원가입")
+    public ResponseEntity<ClientVO> oauthSignUp(@RequestBody ClientVO clientVO) {
+        this.clientVO = new ClientVO();
+        int client_key = allMapper.getUserKey()+1;
+
+        clientVO.setClient_key(client_key);
+        this.clientVO = oAuthLoginService.oAuthSignUp(clientVO); // 회원가입 한 후에 바로 로그인 되어야 한다 -> response로 clientVO줘야 함
+
+        if(this.clientVO == null){
+            return new ResponseEntity<>((ClientVO) null,HttpStatus.CONFLICT); // -> 회원가입 해라
+        } else {
+            return new ResponseEntity<>((ClientVO) this.clientVO,HttpStatus.OK);
         }
     }
 
