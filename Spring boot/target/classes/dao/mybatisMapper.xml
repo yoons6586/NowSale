@@ -48,8 +48,8 @@
     </select>
 
     <insert id="clientSignup" parameterType="com.example.demo.client.model.ClientVO">
-        INSERT INTO client_list(client_key,who_key,ID,PW,nickName,PHONE,alarm_push,alarm_mail,alarm_SMS,gender,birth)
-        VALUES (#{client_key},"C",#{id},#{pw},#{nickName},#{phone},#{alarm_push},#{alarm_mail},#{alarm_SMS},#{gender},#{birth})
+        INSERT INTO client_list(client_key,who_key,ID,PW,nickName,PHONE,alarm_push,alarm_mail,alarm_SMS,gender,birth,refresh_token,provider_type)
+        VALUES (#{client_key},"C",#{id},#{pw},#{nickName},#{phone},#{alarm_push},#{alarm_mail},#{alarm_SMS},#{gender},#{birth},#{refresh_token},#{provider_type})
     </insert>
 
     <select id="selectClientHaveCoupon" parameterType="int" resultType="com.example.demo.client.model.ClientCouponVO">
@@ -68,6 +68,20 @@
         SELECT *
         FROM client_list
         WHERE id=#{id}
+    </select>
+
+    <select id="selectClientOAuthNaverLogin" parameterType="com.example.demo.all.model.OAuthLoginVO" resultType="com.example.demo.client.model.ClientVO">
+        SELECT *
+        FROM client_list
+        WHERE id=#{id} and provider_type = "naver"
+    </select>
+
+
+
+    <select id="selectClientOAuthKakaoLogin" parameterType="com.example.demo.all.model.OAuthLoginVO" resultType="com.example.demo.client.model.ClientVO">
+        SELECT *
+        FROM client_list
+        WHERE id=#{id} and provider_type = "kakao"
     </select>
 
     <delete id="deleteClientCoupon" parameterType="com.example.demo.client.model.ClientHaveCouponVO">

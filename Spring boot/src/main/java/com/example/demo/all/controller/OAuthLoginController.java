@@ -13,7 +13,6 @@ public class OAuthLoginController {
 		return "naverLoginApi";
 	}
 
-
-
-
+	@GetMapping("/owner/signUp")
+	public String ownerSignUp(){ return "ownerSignUp"; }
 }

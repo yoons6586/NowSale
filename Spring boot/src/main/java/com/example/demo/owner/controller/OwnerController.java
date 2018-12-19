@@ -166,5 +166,21 @@ public class OwnerController {
 
         return ownerInfoUpdateDao.ownerInfoUpdate();
     }
+
+    //TODO 오너 회원가입 flow 짜기
+    @RequestMapping(value = "/signUp",method=RequestMethod.POST)
+    @ApiOperation(value = "점주 회원가입")
+    public ResponseEntity ownerSignUp(@RequestBody OwnerVO ownerVO){
+        System.out.println("/signUp 호출");
+        /*
+        id 중복체크 해줘야 -> oAuth도 생각하기
+         */
+
+        System.out.println(ownerVO.toString());
+
+
+
+        return new ResponseEntity(HttpStatus.OK);
+    }
 }
 
