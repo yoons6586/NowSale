@@ -131,6 +131,11 @@
         VALUES (#{client_key},#{sale_key})
     </insert>
 
+    <insert id="insertSignUpOwner" parameterType="com.example.demo.owner.model.OwnerVO">
+        INSERT INTO owner_list(owner_key,who_key,id,pw,address,nickName,phone,logo_img,market_name,market_introduce,category,owner_img,market_img_cnt,longitude,latitude,working_day,working_time,alarm_push,alarm_mail,alarm_SMS)
+        VALUES (#{owner_key},"O",#{id},#{pw},#{address},#{nickName},#{phone},#{logo_img},#{market_name},#{market_introduce},#{category},#{owner_img},#{market_img_cnt},#{longitude},#{latitude},#{working_day},#{working_time},#{alarm_push},#{alarm_mail},#{alarm_SMS})
+    </insert>
+
     <select id="selectOwnerLogin" parameterType="com.example.demo.owner.model.OwnerLoginVO" resultType="com.example.demo.owner.model.OwnerVO">
         SELECT *
         FROM owner_list

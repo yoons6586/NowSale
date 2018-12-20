@@ -17,6 +17,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -32,6 +35,7 @@ public class OwnerController {
     private OwnerCouponDeleteDao ownerCouponDeleteDao;
     private OwnerSaleDeleteDao ownerSaleDeleteDao;
     private OwnerInfoUpdateDao ownerInfoUpdateDao;
+    private OwnerDao ownerDao;
 
     public OwnerController(OwnerMapper ownerMapper){
         this.ownerMapper=ownerMapper;
@@ -79,7 +83,7 @@ public class OwnerController {
 
     @RequestMapping(value = "/coupon/update/{owner_key}",method = RequestMethod.POST)
     @ApiOperation(value="새로운 쿠폰 등록")
-    public ResponseEntity<String> couponUpdate(@PathVariable("owner_key")int owner_key, @RequestBody OwnerRegisterCouponVO ownerRegisterCouponVO){
+    public ResponseEntity<String> couponUpdate(@PathVariable("owner_key")int owner_key, @RequestBody OwnerRegisterCouponVO ownerRegisterCouponVO) throws ParseException {
         int coupon_key;
 //        System.out.println("owner_key : "+key);
         try{
@@ -89,6 +93,14 @@ public class OwnerController {
             coupon_key=1;
         }
         System.out.println("coupon_key : "+coupon_key);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date expire_date = sdf.parse(ownerRegisterCouponVO.getExpire_date());
+        Date start_date = sdf.parse(ownerRegisterCouponVO.getStart_date());
+
+        if(start_date.after(expire_date))
+            return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
+
         ownerRegisterCouponVO.setOwner_key(owner_key);
         ownerRegisterCouponVO.setCoupon_key(coupon_key);
         ownerRegisterCouponVO.setRemain_count(ownerRegisterCouponVO.getStart_count());
@@ -100,7 +112,7 @@ public class OwnerController {
 
     @RequestMapping(value="/sale/insert/{owner_key}",method = RequestMethod.POST)
     @ApiOperation(value="새로운 할인정보 등록")
-    public ResponseEntity<String> saleInsert(@PathVariable("owner_key")int owner_key, @RequestBody OwnerRegisterSaleVO ownerRegisterSaleVO){
+    public ResponseEntity<String> saleInsert(@PathVariable("owner_key")int owner_key, @RequestBody OwnerRegisterSaleVO ownerRegisterSaleVO) throws ParseException {
         int sale_key;
         try{
             sale_key = ownerMapper.getSaleKey()+1;
@@ -110,6 +122,14 @@ public class OwnerController {
         }
 
         System.out.println("sale_key : "+sale_key);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date expire_date = sdf.parse(ownerRegisterSaleVO.getExpire_date());
+        Date start_date = sdf.parse(ownerRegisterSaleVO.getStart_date());
+
+        if(start_date.after(expire_date))
+            return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
+
 
         ownerRegisterSaleVO.setOwner_key(owner_key);
         ownerRegisterSaleVO.setSale_key(sale_key);
@@ -173,16 +193,19 @@ public class OwnerController {
     @RequestMapping(value = "/signUp",method=RequestMethod.POST)
     @ApiOperation(value = "점주 회원가입")
     public ResponseEntity ownerSignUp(@RequestBody OwnerVO ownerVO){
+        ownerDao = new OwnerDao();
         System.out.println("/signUp 호출");
-        /*
-        id 중복체크 해줘야 -> oAuth도 생각하기
-         */
 
-        System.out.println(ownerVO.toString());
+        int owner_key;
+        try{
+            owner_key = ownerMapper.getOwnerKey()+1;
+        }
+        catch (BindingException e){
+            owner_key=1;
+        }
+        ownerVO.setOwner_key(owner_key);
 
-
-
-        return new ResponseEntity(HttpStatus.OK);
+        return ownerDao.signUpOwner(ownerVO);
     }
 }
 
