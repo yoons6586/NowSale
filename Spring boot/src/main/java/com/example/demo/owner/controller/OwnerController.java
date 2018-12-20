@@ -11,6 +11,7 @@ import com.example.demo.owner.model.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.binding.BindingException;
+import org.apache.ibatis.jdbc.Null;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -109,6 +110,8 @@ public class OwnerController {
             ownerRegisterCouponVO.setExpire_date(null);
             ownerRegisterCouponVO.setStart_date(null);
             e.printStackTrace();
+        } catch (NullPointerException e){
+            e.printStackTrace();
         }
 
         ownerRegisterCouponVO.setOwner_key(owner_key);
@@ -133,7 +136,7 @@ public class OwnerController {
 
         System.out.println("sale_key : "+sale_key);
 
-        try{
+        try {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date current_date = new Date();
             Date expire_date = sdf.parse(ownerRegisterSaleVO.getExpire_date());
@@ -152,11 +155,9 @@ public class OwnerController {
             ownerRegisterSaleVO.setExpire_date(null);
             ownerRegisterSaleVO.setStart_date(null);
             e.printStackTrace();
+        } catch (NullPointerException e){
+            e.printStackTrace();
         }
-
-
-
-
 
         ownerRegisterSaleVO.setOwner_key(owner_key);
         ownerRegisterSaleVO.setSale_key(sale_key);

@@ -61,8 +61,6 @@ public class ClientCouponListPopupActivity extends Activity {
             contentText.setText("삭제 후에는\n쿠폰이 지갑에서 삭제되고\n쿠폰 사용을 위해서는 재발급을 받아야 합니다.");
         }
         else if(what==2){ // 점주 쿠폰 등록
-
-
             okText.setText("발급하기");
             titleText.setText("쿠폰을 정말 발급하시겠습니까?");
             contentText.setText("쿠폰 발급 후 취소를 할 경우\n고객에게 이미 발급된\n쿠폰은 취소할 수 없습니다");
