@@ -105,13 +105,23 @@ public class OwnerController {
             Date expire_date = sdf.parse(ownerRegisterCouponVO.getExpire_date());
             Date start_date = sdf.parse(ownerRegisterCouponVO.getStart_date());
             Date current_date = new Date();
+            String current = sdf.format(current_date);
+            current_date = sdf.parse(current);
+
+            //TODO 현재 날짜로 등록하면 막힌다;;;; -> 해결
 
             if (start_date.after(expire_date))
                 return new ResponseEntity<>("wrong date", HttpStatus.CONFLICT);
-            if(current_date.after(expire_date))
+            if(current_date.equals(expire_date)){}
+            else if(current_date.after(expire_date))
                 return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
-            if(current_date.after(start_date))
-                return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
+            if(current_date.equals(start_date)){
+                System.out.println("현재날짜랑 동일!!!!");
+            }
+            else if(current_date.after(start_date)) {
+                System.out.println("현재날짜랑 다름");
+                return new ResponseEntity<>("wrong date", HttpStatus.CONFLICT);
+            }
         } catch (ParseException e){
             ownerRegisterCouponVO.setExpire_date(null);
             ownerRegisterCouponVO.setStart_date(null);
@@ -151,6 +161,8 @@ public class OwnerController {
             Date current_date = new Date();
             Date expire_date = sdf.parse(ownerRegisterSaleVO.getExpire_date());
             Date start_date = sdf.parse(ownerRegisterSaleVO.getStart_date());
+            String current = sdf.format(current_date);
+            current_date = sdf.parse(current);
 
             if(start_date.after(expire_date))
                 return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
