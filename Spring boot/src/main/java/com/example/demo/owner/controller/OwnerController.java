@@ -91,6 +91,7 @@ public class OwnerController {
         System.out.println("coupon_key : "+coupon_key);
         ownerRegisterCouponVO.setOwner_key(owner_key);
         ownerRegisterCouponVO.setCoupon_key(coupon_key);
+        ownerRegisterCouponVO.setRemain_count(ownerRegisterCouponVO.getStart_count());
         ownerCouponUpdateDao = new OwnerCouponUpdateDao(ownerRegisterCouponVO);
 //
         return ownerCouponUpdateDao.ownerCouponUpdate();
@@ -168,6 +169,7 @@ public class OwnerController {
     }
 
     //TODO 오너 회원가입 flow 짜기
+    //TODO 이미지 파일 넣기!!
     @RequestMapping(value = "/signUp",method=RequestMethod.POST)
     @ApiOperation(value = "점주 회원가입")
     public ResponseEntity ownerSignUp(@RequestBody OwnerVO ownerVO){
