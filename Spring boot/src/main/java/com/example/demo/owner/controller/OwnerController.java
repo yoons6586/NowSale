@@ -93,13 +93,23 @@ public class OwnerController {
             coupon_key=1;
         }
         System.out.println("coupon_key : "+coupon_key);
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            Date expire_date = sdf.parse(ownerRegisterCouponVO.getExpire_date());
+            Date start_date = sdf.parse(ownerRegisterCouponVO.getStart_date());
+            Date current_date = new Date();
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date expire_date = sdf.parse(ownerRegisterCouponVO.getExpire_date());
-        Date start_date = sdf.parse(ownerRegisterCouponVO.getStart_date());
-
-        if(start_date.after(expire_date))
-            return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
+            if (start_date.after(expire_date))
+                return new ResponseEntity<>("wrong date", HttpStatus.CONFLICT);
+            if(current_date.after(expire_date))
+                return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
+            if(current_date.after(start_date))
+                return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
+        } catch (ParseException e){
+            ownerRegisterCouponVO.setExpire_date(null);
+            ownerRegisterCouponVO.setStart_date(null);
+            e.printStackTrace();
+        }
 
         ownerRegisterCouponVO.setOwner_key(owner_key);
         ownerRegisterCouponVO.setCoupon_key(coupon_key);
@@ -123,12 +133,29 @@ public class OwnerController {
 
         System.out.println("sale_key : "+sale_key);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date expire_date = sdf.parse(ownerRegisterSaleVO.getExpire_date());
-        Date start_date = sdf.parse(ownerRegisterSaleVO.getStart_date());
+        try{
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            Date current_date = new Date();
+            Date expire_date = sdf.parse(ownerRegisterSaleVO.getExpire_date());
+            Date start_date = sdf.parse(ownerRegisterSaleVO.getStart_date());
 
-        if(start_date.after(expire_date))
-            return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
+            if(start_date.after(expire_date))
+                return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
+
+            if(current_date.after(expire_date))
+                return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
+
+            if(current_date.after(start_date))
+                return new ResponseEntity<>("wrong date",HttpStatus.CONFLICT);
+
+        } catch (ParseException e){
+            ownerRegisterSaleVO.setExpire_date(null);
+            ownerRegisterSaleVO.setStart_date(null);
+            e.printStackTrace();
+        }
+
+
+
 
 
         ownerRegisterSaleVO.setOwner_key(owner_key);
