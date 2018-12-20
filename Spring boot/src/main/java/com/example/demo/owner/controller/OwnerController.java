@@ -87,6 +87,12 @@ public class OwnerController {
     public ResponseEntity<String> couponUpdate(@PathVariable("owner_key")int owner_key, @RequestBody OwnerRegisterCouponVO ownerRegisterCouponVO) throws ParseException {
         int coupon_key;
 //        System.out.println("owner_key : "+key);
+        int coupon_cnt;
+
+        coupon_cnt = ownerMapper.getCouponCount(owner_key);
+        if(coupon_cnt > 3)
+            return new ResponseEntity<>("maximum coupon count",HttpStatus.BAD_REQUEST);
+
         try{
             coupon_key=ownerMapper.getCouponKey()+1;
         }
@@ -127,6 +133,10 @@ public class OwnerController {
     @ApiOperation(value="새로운 할인정보 등록")
     public ResponseEntity<String> saleInsert(@PathVariable("owner_key")int owner_key, @RequestBody OwnerRegisterSaleVO ownerRegisterSaleVO) throws ParseException {
         int sale_key;
+
+        int sale_cnt = ownerMapper.getSaleCount(owner_key);
+        if(sale_cnt > 3)
+            return new ResponseEntity<>("maximum coupon count",HttpStatus.BAD_REQUEST);
         try{
             sale_key = ownerMapper.getSaleKey()+1;
         }
