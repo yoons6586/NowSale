@@ -1,14 +1,11 @@
 package com.example.demo.all.controller;
-
-
-
 import com.example.demo.all.dao.*;
-import com.example.demo.all.mapper.AdvImgVO;
 import com.example.demo.all.mapper.AllMapper;
-import com.example.demo.all.model.*;
 import com.example.demo.all.service.OAuthLoginService;
 import com.example.demo.client.mapper.ClientMapper;
+import com.example.demo.all.mapper.AdvImgVO;
 import com.example.demo.client.model.ClientVO;
+import com.example.demo.all.model.*;
 import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -104,7 +101,7 @@ public class AllController {
 
     @RequestMapping(value="/favorite/is/get/count/{owner_key}/{client_key}",method = RequestMethod.GET)
     @ApiOperation(value = "단골인지 아닌지랑, market_img, menu_img 줄 것입니다.")
-    public ResponseEntity<DangolWithMarketMenuImg> isFavoriteGetCount(@PathVariable(value = "owner_key")int owner_key,@PathVariable(value="client_key")int client_key){
+    public ResponseEntity<DangolWithMarketMenuImg> isFavoriteGetCount(@PathVariable(value = "owner_key")int owner_key, @PathVariable(value="client_key")int client_key){
         int count;
         List<MenuVO> menuVOList;
         List<MarketImgVO> marketImgVOList;

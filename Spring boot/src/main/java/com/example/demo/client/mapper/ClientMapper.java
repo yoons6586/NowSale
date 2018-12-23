@@ -1,10 +1,8 @@
 package com.example.demo.client.mapper;
 
-import com.example.demo.client.model.ClientCouponVO;
 import com.example.demo.client.model.ClientFavoriteMarketVO;
 import com.example.demo.client.model.ClientLoginVO;
 import com.example.demo.client.model.ClientVO;
-import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
-                <com.example.yoonsung.nowsale.pageAdapter.MeasuredViewPager
+                <com.chapchapbrothers.nowsale.pageAdapter.MeasuredViewPager
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/view"

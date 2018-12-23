@@ -1,7 +1,7 @@
 package com.example.demo.client.dao;
 
-import com.example.demo.client.model.ClientCouponCountVO;
 import com.example.demo.client.model.ClientHaveCouponVO;
+import com.example.demo.client.model.ClientCouponCountVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

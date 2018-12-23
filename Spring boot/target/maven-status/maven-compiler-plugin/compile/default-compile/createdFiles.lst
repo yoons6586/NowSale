@@ -1,15 +1,20 @@
 com/example/demo/all/controller/AllController$1.class
 com/example/demo/all/model/MenuVO.class
 com/example/demo/owner/mapper/OwnerMapper.class
+com/example/demo/all/model/OAuthLoginVO.class
 com/example/demo/owner/controller/OwnerController.class
 com/example/demo/all/dao/AllFavoriteInsertDao.class
+com/example/demo/all/controller/OAuthLoginController.class
 com/example/demo/client/dao/ClientSaleDeleteDao.class
 com/example/demo/owner/dao/OwnerSaleDeleteDao.class
 com/example/demo/client/dao/ClientCouponDeleteDao.class
 com/example/demo/client/model/ClientHaveCouponVO.class
 com/example/demo/client/model/ClientCouponVO.class
+com/example/demo/owner/dao/OwnerDao.class
 com/example/demo/client/model/ClientLoginVO.class
 com/example/demo/owner/dao/OwnerCouponUpdateDao.class
+com/example/demo/all/model/MarketImgVO.class
+com/example/demo/all/model/DangolWithMarketMenuImg.class
 com/example/demo/client/model/ClientCouponCountVO.class
 com/example/demo/config/SwaggerConfig.class
 com/example/demo/all/model/AllEmailVO.class
@@ -21,6 +26,7 @@ com/example/demo/client/dao/ClientCouponInsertDao.class
 com/example/demo/client/model/ClientSaleVO.class
 com/example/demo/owner/dao/OwnerInfoUpdateDao.class
 com/example/demo/all/dao/AllCategoryCouponShowDao.class
+com/example/demo/all/dao/OAuthLoginDao.class
 com/example/demo/all/model/OwnerInfoMarketGetVO.class
 com/example/demo/all/dao/AllLostPasswordDao.class
 com/example/demo/client/dao/ClientSaleInsertDao.class
@@ -32,8 +38,10 @@ com/example/demo/all/model/AllOwnerClientKeyVO.class
 com/example/demo/client/dao/ClientInfoUpdateDao.class
 com/example/demo/owner/model/OwnerRegisterSaleVO.class
 com/example/demo/all/model/OwnerSaleShowVO.class
+com/example/demo/all/mapper/AdvImgVO.class
 com/example/demo/DemoApplication.class
 com/example/demo/all/controller/AllController.class
+com/example/demo/all/service/OAuthLoginService.class
 com/example/demo/client/model/ClientVO.class
 com/example/demo/all/model/OwnerCouponShowVO.class
 com/example/demo/security/WebSecurityConfig.class
@@ -59,4 +67,3 @@ com/example/demo/owner/dao/OwnerCouponDeleteDao.class
 com/example/demo/client/model/ClientHaveCouponOwnerInfoVO.class
 com/example/demo/client/dao/ClientHaveCouponDao.class
 com/example/demo/all/model/MarketVO.class
-com/example/demo/all/model/IsFavoriteGetCountVO.class

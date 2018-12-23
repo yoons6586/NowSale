@@ -1,9 +1,7 @@
 package com.example.demo.all.mapper;
 
-import com.example.demo.all.model.MarketImgVO;
 import com.example.demo.all.model.MenuVO;
-import com.example.demo.client.model.ClientCouponVO;
-import com.example.demo.client.model.ClientVO;
+import com.example.demo.all.model.MarketImgVO;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 

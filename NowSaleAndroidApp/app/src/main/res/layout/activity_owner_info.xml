@@ -81,7 +81,7 @@
                 android:id="@+id/frame"
                 android:layout_above="@id/linear"
                 >
-                <com.example.yoonsung.nowsale.pageAdapter.MeasuredViewPager
+                <com.chapchapbrothers.nowsale.pageAdapter.MeasuredViewPager
                     class="android.support.v4.view.ViewPager"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
                     android:layout_marginTop="3dp"
                     />
 
-                <com.example.yoonsung.nowsale.pageAdapter.MeasuredViewPager
+                <com.chapchapbrothers.nowsale.pageAdapter.MeasuredViewPager
                     android:id="@+id/ownerInfoPager"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -3,22 +3,14 @@ package com.example.demo.client.controller;
 import com.example.demo.client.dao.*;
 import com.example.demo.client.mapper.ClientMapper;
 import com.example.demo.client.model.*;
-import com.google.api.Http;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.mail.MailSender;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import javax.mail.MessagingException;
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/client")

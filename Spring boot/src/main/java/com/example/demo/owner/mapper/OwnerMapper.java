@@ -1,11 +1,10 @@
 package com.example.demo.owner.mapper;
 
-import com.example.demo.all.model.OwnerCouponShowVO;
 import com.example.demo.all.model.OwnerSaleShowVO;
+import com.example.demo.all.model.OwnerCouponShowVO;
 import com.example.demo.owner.model.OwnerLoginVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

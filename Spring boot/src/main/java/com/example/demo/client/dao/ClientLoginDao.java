@@ -1,7 +1,7 @@
 package com.example.demo.client.dao;
 
-import com.example.demo.client.model.ClientLoginVO;
 import com.example.demo.client.model.ClientVO;
+import com.example.demo.client.model.ClientLoginVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

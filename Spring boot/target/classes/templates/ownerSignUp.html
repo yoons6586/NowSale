@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>점주 회원가입</title>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+
+			// click on button submit
+		$(document).ready(function () {
+			$("#submit").on('click', function(){
+				// send ajax
+				var ownerData = {
+					id : $("#id").val(),
+					pw : $("#pw").val(),
+					address : $("#address").val(),
+					nickName : $("#nickName").val(),
+					phone : $("#phone").val(),
+					market_name : $("#market_name").val(),
+					market_introduce : $("#market_introduce").val(),
+					category : $("#category").val(),
+					longitude : $("#longitude").val(),
+					latitude : $("#latitude").val(),
+					working_day : $("#working_day").val(),
+					working_time : $("#working_time").val(),
+					alarm_push : $("#alarm_push").val(),
+					alarm_mail : $("#alarm_mail").val(),
+					alarm_SMS : $("#alarm_SMS").val()
+				}
+				$.ajax({
+					url: '/owner/signUp', // url where to submit the request
+					contentType : "application/json",
+					type : "POST", // type of action POST || GET
+					dataType : 'json', // data type
+					data : JSON.stringify(ownerData), // 왜 JSON 형식으로 넘어가지 않는 것일까......
+					success : function(result) {
+						// you can see the result from the console
+						// tab of the developer tools
+						console.log(result);
+					},
+					error: function(xhr, resp, text) {
+						console.log(xhr, resp, text);
+					}
+				})
+			});
+		});
+
+
+		</script>
+	</head>
+	<body>
+		<form id="form" action="" method = post>
+			아이디: <input type="text" name="id" id="id"><br>
+			비밀번호: <input type="text" name="pw" id="pw"><br>
+			주소 : <input type="test" id="address"><br>
+			닉네임 : <input type="test" id="nickName"><br>
+			폰번호 : <input type="test" id="phone"><br>
+			매장 이름 : <input type="test" id="market_name"><br>
+			매장 소개 : <input type="test" id="market_introduce"><br>
+			카테고리 : <input type="test" id="category"><br>
+			longitude : <input type="test" id="longitude"><br>
+			latitude : <input type="test" id="latitude"><br>
+			working_day : <input type="test" id="working_day"><br>
+			영업시간 : <input type="test" id="working_time"><br>
+			push alarm T,F : <input type="test" id="alarm_push"><br>
+			mail alarm T,F : <input type="test" id="alarm_mail"><br>
+			SMS alarm T,F : <input type="test" id="alarm_SMS"><br>
+			<input id ="submit" type=button name="submit" value="회원가입">
+		</form>
+
+
+	</body>
+</html>
+
+<!-- 회원가입 버튼 누르면 다른 곳으로 보내지게끔 하면 될듯??? http 통신을 이용해서! -->

@@ -1,8 +1,6 @@
 package com.example.demo.all.dao;
 
-import ch.qos.logback.core.net.server.Client;
 import com.example.demo.all.model.OAuthLoginVO;
-import com.example.demo.all.model.OwnerCouponShowVO;
 import com.example.demo.client.model.ClientVO;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -11,7 +9,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 
 public class OAuthLoginDao {
     private SqlSessionFactory sqlSessionFactory;

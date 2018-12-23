@@ -1,17 +1,13 @@
 package com.example.demo.owner.controller;
 
 
-import com.example.demo.all.model.OwnerCouponShowVO;
 import com.example.demo.all.model.OwnerSaleShowVO;
-import com.example.demo.client.dao.ClientInfoUpdateDao;
-import com.example.demo.client.model.ClientVO;
+import com.example.demo.all.model.OwnerCouponShowVO;
 import com.example.demo.owner.dao.*;
 import com.example.demo.owner.mapper.OwnerMapper;
 import com.example.demo.owner.model.*;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.binding.BindingException;
-import org.apache.ibatis.jdbc.Null;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
