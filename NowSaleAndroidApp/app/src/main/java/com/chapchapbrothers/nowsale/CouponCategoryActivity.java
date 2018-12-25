@@ -139,52 +139,6 @@ public class CouponCategoryActivity extends AppCompatActivity
         others_img = findViewById(R.id.others_img);
 
 
-/*
-        DisplayMetrics metrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) getApplicationContext()
-                .getSystemService(Context.WINDOW_SERVICE);
-        windowManager.getDefaultDisplay().getMetrics(metrics);
-
-        LinearLayout.LayoutParams alcohol_linear_params = (LinearLayout.LayoutParams) alcohol.getLayoutParams();
-        LinearLayout.LayoutParams food_linear_params = (LinearLayout.LayoutParams) food.getLayoutParams();
-        LinearLayout.LayoutParams health_linear_params = (LinearLayout.LayoutParams) health.getLayoutParams();
-
-        RelativeLayout.LayoutParams img_params = (RelativeLayout.LayoutParams) alcohol_img.getLayoutParams();
-
-        img_params.width = metrics.widthPixels/4;
-        img_params.height = img_params.width;
-
-        alcohol_linear_params.width = metrics.widthPixels/3;
-        alcohol_linear_params.height = alcohol_linear_params.width;
-
-        food_linear_params.width = metrics.widthPixels/3;
-        food_linear_params.height = alcohol_linear_params.width;
-
-        health_linear_params.width = metrics.widthPixels/3;
-        health_linear_params.height = alcohol_linear_params.width;
-
-
-        alcohol_img.setLayoutParams(img_params);
-        food_img.setLayoutParams(img_params);
-        health_img.setLayoutParams(img_params);
-        play_img.setLayoutParams(img_params);
-        fashion_img.setLayoutParams(img_params);
-        beauty_img.setLayoutParams(img_params);
-        study_img.setLayoutParams(img_params);
-        cafe_img.setLayoutParams(img_params);
-        others_img.setLayoutParams(img_params);
-
-        alcohol.setLayoutParams(alcohol_linear_params);
-        food.setLayoutParams(food_linear_params);
-        health.setLayoutParams(health_linear_params);
-        play.setLayoutParams(alcohol_linear_params);
-        fashion.setLayoutParams(food_linear_params);
-        beauty.setLayoutParams(health_linear_params);
-        study.setLayoutParams(alcohol_linear_params);
-        cafe.setLayoutParams(food_linear_params);
-        others.setLayoutParams(health_linear_params);
-
-*/
 
     //네트워크
         connectionDetector = new ConnectionDetector(this);
@@ -199,12 +153,8 @@ public class CouponCategoryActivity extends AppCompatActivity
         ownerMenuRequest.enqueue(new Callback<List<AdvImgVO>>() {
             @Override
             public void onResponse(Call<List<AdvImgVO>> call, Response<List<AdvImgVO>> response) {
-//                int advCnt = response.body();
                 List<AdvImgVO> advImgVOList = response.body();
                 indicatorViewPager = (ViewPager) findViewById(R.id.view);
-//                for(int i=0;i<advImgVOList.size();i++)
-//                    Log.e("CouponCateadv",advImgVOList.get(i).getAdv_img_uri());
-
                 adapter = new SliderAdvertisementImageAdapter(CouponCategoryActivity.this, advImgVOList);
                 indicatorViewPager.setClipToPadding(false);
                 indicatorViewPager.setAdapter(adapter);
@@ -329,6 +279,8 @@ public class CouponCategoryActivity extends AppCompatActivity
         user_id = sf.getString("ID", "");
         user_pw = sf.getString("PW", "");
 
+        activity_main_drawer.getItem(4).setVisible(false);
+
         //자동로그인해라
         clientService = Config.retrofit.create(ClientService.class);
         Call<List<ClientVO>> request = clientService.isLogin(new LoginVO(user_id, user_pw));
@@ -389,9 +341,19 @@ public class CouponCategoryActivity extends AppCompatActivity
                                 nav_header_nickname.setVisibility(View.VISIBLE);
 //                                nav_header_loginPlease.setVisibility(View.GONE);
                                 nav_header_loginBtn.setVisibility(View.GONE);
-                                nav_header_nickname.setText("" + Config.ownerVO.getNickName() + "님");
+                                nav_header_nickname.setText("" + Config.ownerVO.getNickName() + "사장님");
                                 nav_header_nickname.setTextSize(nav_header_nickName_textSize);
-                                activity_main_drawer.getItem(5).setVisible(true);
+
+                                activity_main_drawer.getItem(5).setVisible(false);
+                                activity_main_drawer.getItem(6).setVisible(true);
+                                activity_main_drawer.getItem(7).setVisible(true);
+                                activity_main_drawer.getItem(8).setVisible(true);
+                                activity_main_drawer.getItem(9).setVisible(true);
+                                activity_main_drawer.getItem(10).setVisible(true);
+                                activity_main_drawer.getItem(0).setVisible(false);
+                                activity_main_drawer.getItem(1).setVisible(false);
+                                activity_main_drawer.getItem(2).setVisible(false);
+                                activity_main_drawer.getItem(3).setVisible(false);
 
                             }
                         }
@@ -582,7 +544,16 @@ public class CouponCategoryActivity extends AppCompatActivity
                 nav_header_loginBtn.setVisibility(View.GONE);
                 nav_header_nickname.setText(""+Config.ownerVO.getNickName()+"님");
                 nav_header_nickname.setTextSize(nav_header_nickName_textSize);
-                activity_main_drawer.getItem(5).setVisible(true);
+                activity_main_drawer.getItem(0).setVisible(false);
+                activity_main_drawer.getItem(1).setVisible(false);
+                activity_main_drawer.getItem(2).setVisible(false);
+                activity_main_drawer.getItem(3).setVisible(false);
+                activity_main_drawer.getItem(5).setVisible(false);
+                activity_main_drawer.getItem(6).setVisible(true);
+                activity_main_drawer.getItem(7).setVisible(true);
+                activity_main_drawer.getItem(8).setVisible(true);
+                activity_main_drawer.getItem(9).setVisible(true);
+                activity_main_drawer.getItem(10).setVisible(true);
             }
         }
         if(requestCode==loginPopup){
@@ -613,6 +584,10 @@ public class CouponCategoryActivity extends AppCompatActivity
                         nav_header_nickname.setVisibility(View.GONE);
 //                        nav_header_loginPlease.setVisibility(View.VISIBLE);
                         nav_header_loginBtn.setVisibility(View.VISIBLE);
+                        activity_main_drawer.getItem(0).setVisible(true);
+                        activity_main_drawer.getItem(1).setVisible(true);
+                        activity_main_drawer.getItem(2).setVisible(true);
+                        activity_main_drawer.getItem(3).setVisible(true);
                         activity_main_drawer.getItem(5).setVisible(false);
                         activity_main_drawer.getItem(6).setVisible(false);
                         activity_main_drawer.getItem(7).setVisible(false);
@@ -664,6 +639,10 @@ public class CouponCategoryActivity extends AppCompatActivity
                         nav_header_nickname.setVisibility(View.GONE);
 //                        nav_header_loginPlease.setVisibility(View.VISIBLE);
                         nav_header_loginBtn.setVisibility(View.VISIBLE);
+                        activity_main_drawer.getItem(0).setVisible(true);
+                        activity_main_drawer.getItem(1).setVisible(true);
+                        activity_main_drawer.getItem(2).setVisible(true);
+                        activity_main_drawer.getItem(3).setVisible(true);
                         activity_main_drawer.getItem(5).setVisible(false);
                         activity_main_drawer.getItem(6).setVisible(false);
                         activity_main_drawer.getItem(7).setVisible(false);

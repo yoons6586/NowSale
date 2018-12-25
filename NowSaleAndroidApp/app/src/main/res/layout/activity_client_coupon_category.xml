@@ -251,67 +251,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5.3dp"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5.3dp"
-                    android:layout_marginRight="5.3dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/list_selector"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alcohol" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5.3dp"
-
-                    android:layout_weight="1"
-                    android:background="@drawable/list_selector"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alcohol" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5.3dp"
-
-                    android:layout_weight="1"
-                    android:background="@drawable/list_selector"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/alcohol" />
-
-                </RelativeLayout>
-
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/coupon_category_bottom"/>
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 

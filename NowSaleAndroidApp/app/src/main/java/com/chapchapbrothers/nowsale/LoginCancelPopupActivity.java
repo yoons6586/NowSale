@@ -43,7 +43,7 @@ public class LoginCancelPopupActivity extends Activity {
         }
         else if(down==2){ //회원 탈퇴
             okText.setText("탈퇴하기");
-            contentText.setText("정말 탈퇴하실 껀가요??");
+            contentText.setText("정말 탈퇴하시겠습니까?");
             pleaseLoginText.setVisibility(View.GONE);
             contentText.setTextColor(getResources().getColor(R.color.baseColor));
         }

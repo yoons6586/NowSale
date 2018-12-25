@@ -100,7 +100,8 @@
                                     android:textColor="@color/baseColor"
                                     android:textSize="18sp"
                                     android:id="@id/edit1"
-                                    android:inputType="number"/>
+                                    android:inputType="number"
+                                    android:maxLength="3"/>
 
                                 <TextView
                                     android:layout_width="0dp"

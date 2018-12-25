@@ -100,14 +100,8 @@ public class OwnerInfoActivity extends FragmentActivity implements OwnerInfoTabF
             resultIntent.putExtra("position",position);
             setResult(RESULT_OK,resultIntent);
         }
-        /*
-        viewPager(사진 슬랑이드 되는 것)
-        indicator 추가
-         */
 
-
-
-        adapter = new SliderOwnerImageAdapter(this, couponVO.getOwner_key(), dangolWithMarketMenuImg);
+        adapter = new SliderOwnerImageAdapter(this, couponVO.getOwner_key(), dangolWithMarketMenuImg,couponVO);
 
 
         indicatorViewPager.setAdapter(adapter);
