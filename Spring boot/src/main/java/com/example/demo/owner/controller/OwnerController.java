@@ -86,8 +86,9 @@ public class OwnerController {
         int coupon_cnt;
 
         coupon_cnt = ownerMapper.getCouponCount(owner_key);
-        if(coupon_cnt > 3)
-            return new ResponseEntity<>("maximum coupon count",HttpStatus.BAD_REQUEST);
+        System.out.println("coupon_cnt : "+coupon_cnt);
+        if(coupon_cnt >= 3)
+            return new ResponseEntity<>("maximum coupon count",HttpStatus.UNAUTHORIZED);
 
         try{
             coupon_key=ownerMapper.getCouponKey()+1;
@@ -141,8 +142,8 @@ public class OwnerController {
         int sale_key;
 
         int sale_cnt = ownerMapper.getSaleCount(owner_key);
-        if(sale_cnt > 3)
-            return new ResponseEntity<>("maximum coupon count",HttpStatus.BAD_REQUEST);
+        if(sale_cnt >= 3)
+            return new ResponseEntity<>("maximum coupon count",HttpStatus.UNAUTHORIZED);
         try{
             sale_key = ownerMapper.getSaleKey()+1;
         }

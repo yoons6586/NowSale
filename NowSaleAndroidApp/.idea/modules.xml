@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/libraries/kakaotalk/kakaotalk.iml" filepath="$PROJECT_DIR$/libraries/kakaotalk/kakaotalk.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/message-template/message-template.iml" filepath="$PROJECT_DIR$/libraries/message-template/message-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/naveridlogin_android_sdk_4.2.0/naveridlogin_android_sdk_4.2.0.iml" filepath="$PROJECT_DIR$/naveridlogin_android_sdk_4.2.0/naveridlogin_android_sdk_4.2.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/network/network.iml" filepath="$PROJECT_DIR$/libraries/network/network.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/plusfriend/plusfriend.iml" filepath="$PROJECT_DIR$/libraries/plusfriend/plusfriend.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/push/push.iml" filepath="$PROJECT_DIR$/libraries/push/push.iml" />

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.example.yoonsung.nowsale"
+        applicationId "com.chapchapbrothers.nowsale"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
@@ -31,6 +31,15 @@ dependencies {
     implementation 'com.android.support:design:27.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+
+
+    //네이버 아이디로 로그인하기
+    implementation project(path: ':naveridlogin_android_sdk_4.2.0')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-core-utils:27.1.1'
+    implementation 'com.android.support:customtabs:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+
     //이미지 로딩 : glide
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'

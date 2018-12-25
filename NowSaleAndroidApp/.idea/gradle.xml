@@ -28,6 +28,7 @@
             <option value="$PROJECT_DIR$/libraries/test-common" />
             <option value="$PROJECT_DIR$/libraries/usermgmt" />
             <option value="$PROJECT_DIR$/libraries/util" />
+            <option value="$PROJECT_DIR$/naveridlogin_android_sdk_4.2.0" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
