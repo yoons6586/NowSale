@@ -20,7 +20,8 @@
         android:name="com.chapchapbrothers.nowsale.LoadingAnimationApplication"
         android:largeHeap="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name">
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key"
