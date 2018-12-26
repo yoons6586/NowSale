@@ -11,6 +11,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebView;
 import android.widget.CheckBox;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -33,6 +34,9 @@ public class SignUpActivity1 extends AppCompatActivity { // 관리자와 사용�
     private RelativeLayout layout;
     private LinearLayout start_layout;
     private ImageView harin_coupon;
+    private WebView serviceWebView;
+    private WebView privacyWebView;
+    private LinearLayout serviceRuleLayout,privacyRuleLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +56,10 @@ public class SignUpActivity1 extends AppCompatActivity { // 관리자와 사용�
         clientVO = new ClientVO();
         next_intent = new Intent(this,SignUpActivity2.class);
 
+        serviceWebView=findViewById(R.id.service_webview);
+        privacyWebView= findViewById(R.id.privacy_webview);
+        serviceRuleLayout = findViewById(R.id.check3_layout);
+        privacyRuleLayout=findViewById(R.id.check4_layout);
         back = findViewById(R.id.back);
         box1 = findViewById(R.id.checkBox1);
         box2 = findViewById(R.id.checkBox2);
@@ -86,6 +94,31 @@ public class SignUpActivity1 extends AppCompatActivity { // 관리자와 사용�
         harin_coupon.setLayoutParams(harin_params);
         layout.setLayoutParams(linear_params);
         start_layout.setLayoutParams(edit_params);
+
+        privacyWebView.loadUrl("file:///android_asset/www/privacy_rule.html");
+        serviceWebView.loadUrl("file:///android_asset/www/service_rule.html");
+
+        privacyWebView.setVisibility(View.GONE);
+        serviceWebView.setVisibility(View.GONE);
+
+        privacyRuleLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(privacyWebView.getVisibility()==View.GONE)
+                    privacyWebView.setVisibility(View.VISIBLE);
+                else
+                    privacyWebView.setVisibility(View.GONE);
+            }
+        });
+        serviceRuleLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(serviceWebView.getVisibility()==View.GONE)
+                    serviceWebView.setVisibility(View.VISIBLE);
+                else
+                    serviceWebView.setVisibility(View.GONE);
+            }
+        });
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

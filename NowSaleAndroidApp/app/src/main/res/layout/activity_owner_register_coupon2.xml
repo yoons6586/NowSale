@@ -118,7 +118,8 @@
                                     android:singleLine="true"
                                     android:textColor="@color/baseColor"
                                     android:textSize="18sp"
-                                    android:theme="@style/EditTheme" />
+                                    android:theme="@style/EditTheme"
+                                    android:maxLength="16"/>
                             </LinearLayout>
 
                             <LinearLayout
@@ -154,7 +155,8 @@
                                     android:singleLine="true"
                                     android:textColor="@color/baseColor"
                                     android:textSize="18sp"
-                                    android:theme="@style/EditTheme" />
+                                    android:theme="@style/EditTheme"
+                                    android:maxLength="12"/>
                             </LinearLayout>
 
                             <TextView

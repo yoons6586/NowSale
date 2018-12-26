@@ -74,7 +74,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                >
+                tools:ignore="WebViewLayout">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -154,11 +154,18 @@
                         android:textColor="@color/baseColor"
                         />
                 </LinearLayout>
+                <WebView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/service_webview"
+                    android:layout_below="@id/check3_layout">
+
+                </WebView>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/check4_layout"
-                    android:layout_below="@id/check3_layout"
+                    android:layout_below="@id/service_webview"
                     android:orientation="horizontal"
                     android:layout_marginLeft="20dp">
                     <CheckBox
@@ -176,10 +183,27 @@
                         android:textColor="@color/baseColor"
                         />
                 </LinearLayout>
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/service_scrollview"
+                    android:layout_below="@id/check4_layout">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:orientation="vertical">
+                        <WebView
+                            android:id="@+id/privacy_webview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+                </ScrollView>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/check4_layout"
+                    android:layout_below="@id/service_scrollview"
                     android:id="@+id/check5_layout"
                     android:orientation="horizontal"
                     android:layout_marginLeft="20dp">

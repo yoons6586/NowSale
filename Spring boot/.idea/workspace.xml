@@ -4,23 +4,11 @@
     <list default="true" id="95bb5cfa-e20d-4fbd-9f23-7faaece68ab7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/release/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/release/app-release.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/chapchapbrothers/nowsale/CouponCategoryActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/chapchapbrothers/nowsale/CouponCategoryActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/chapchapbrothers/nowsale/LoginCancelPopupActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/chapchapbrothers/nowsale/LoginCancelPopupActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/chapchapbrothers/nowsale/OwnerInfoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/chapchapbrothers/nowsale/OwnerInfoActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/chapchapbrothers/nowsale/SliderOwnerImageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/java/com/chapchapbrothers/nowsale/SliderOwnerImageAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_client_coupon_category.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_client_coupon_category.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/activity_owner_register_coupon3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/slider_market_img.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/layout/slider_market_img.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -117,11 +105,11 @@
     <session id="-2043320164">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="46" />
+          <entry key="project.closed" value="47" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="5" />
-          <entry key="project.open.time.11" value="5" />
+          <entry key="project.open.time.11" value="6" />
           <entry key="project.open.time.12" value="5" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="3" />
@@ -134,7 +122,7 @@
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="5" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="46" />
+          <entry key="project.opened" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -191,8 +179,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="103" column="43" lean-forward="true" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
+            <state relative-caret-position="193">
+              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -212,7 +200,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
+            <state relative-caret-position="114">
               <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -440,8 +428,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="demo" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Spring boot" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="demo" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Spring boot" type="616d4139:PackageViewModuleNode" />
+              <item name="com.example.demo" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -579,22 +581,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="demo" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Spring boot" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="demo" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Spring boot" type="616d4139:PackageViewModuleNode" />
-              <item name="com.example.demo" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -804,17 +792,18 @@
       <workItem from="1545266975257" duration="11125000" />
       <workItem from="1545377170954" duration="1674000" />
       <workItem from="1545716374676" duration="1250000" />
+      <workItem from="1545796774749" duration="241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286851000" />
+    <option name="totallyTimeSpent" value="287092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1898657" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1916972" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1111,10 +1100,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientHaveCouponDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
           <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1152,40 +1175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
           <caret line="50" column="78" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/config/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="103" column="43" lean-forward="true" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
