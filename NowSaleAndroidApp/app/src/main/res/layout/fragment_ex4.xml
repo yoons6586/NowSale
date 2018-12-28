@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -267,13 +267,32 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/swipe_layout">
+            android:id="@+id/swipe_layout"
+            android:layout_below="@id/couponWalletLayout"
+            android:layout_above="@id/notice_txt">
                 <android.support.v7.widget.RecyclerView
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/recyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
         </android.support.v4.widget.SwipeRefreshLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/notice_txt"
+            android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- 할인쿠폰은 중복사용 및 재사용이 불가능합니다.\n- 쿠폰 및 할인행사 이용시 사용조건과 유효기간을 꼭 확인하여 주시기 바랍니다\n- 쿠폰 및 할인행사의 할인조건이 매장마다 더 있을 수 있으니 사용 전 매장에서 조건을 꼭 확인해주시기 바랍니다.\n- 쿠폰 및 할인행사는 본 매장의 사정에 따라 조기종료 또는 변경될 수 있습니다."
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textSize="11sp"
+                    android:layout_marginTop="5dp"
+                    android:lineSpacingExtra="1dp"
+                    android:layout_marginBottom="5dp"/>
+        </LinearLayout>
 
 
-</LinearLayout>
+</RelativeLayout>

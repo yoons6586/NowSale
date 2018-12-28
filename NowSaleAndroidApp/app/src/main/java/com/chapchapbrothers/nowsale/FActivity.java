@@ -58,10 +58,9 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
     private int ownerInfoOwnerKey;
     private SwipeRefreshLayout swipeLayout;
     private RelativeLayout couponWalletLayout,saleWalletLayout;
-    private LinearLayout noCouponSale;
+    private LinearLayout noCouponSale,notice_txt_layout;
     private TextView noText1, noText2, noText3, noText4;
     private ImageView harinImg;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -87,17 +86,14 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
         noText3 = view.findViewById(R.id.notext3);
         noText4 = view.findViewById(R.id.notext4);
         harinImg = view.findViewById(R.id.harinImg);
+        notice_txt_layout = view.findViewById(R.id.notice_txt);
 
         swipeLayout.setOnRefreshListener((SwipeRefreshLayout.OnRefreshListener) this);
 
-
-
-        LoadingAnimationApplication.getInstance().progressON(getActivity(), Config.loadingContext);
+//        LoadingAnimationApplication.getInstance().progressON(getActivity(), Config.loadingContext);
         switch(what){
             case 1 : // category coupon에서 들어오는 것
                 //안드로이드 로딩 애니메이션
-
-
 
                 category=getArguments().getString("category");
 
@@ -168,6 +164,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                 break;
             case 2 : // client coupon list
                 couponWalletLayout.setVisibility(View.VISIBLE);
+                notice_txt_layout.setVisibility(View.VISIBLE);
                 Call<List<CouponVO>> clientCouponRequest = clientService.getClientCouponList(Config.clientVO.getClient_key());
                 clientCouponRequest.enqueue(new Callback<List<CouponVO>>() {
                     @Override
@@ -201,6 +198,7 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
                 break;
             case 3 : // client sale list
                 saleWalletLayout.setVisibility(View.VISIBLE);
+                notice_txt_layout.setVisibility(View.VISIBLE);
                 Call<List<CouponVO>> clientSaleRequest = clientService.getClientSaleList(Config.clientVO.getClient_key());
                 clientSaleRequest.enqueue(new Callback<List<CouponVO>>() {
                     @Override
@@ -498,7 +496,12 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
             }
 //            itemHolder.imgLogo.setImageResource(name.hashCode() % 2 == 0 ? R.drawable.logo1 : R.drawable.logo2);
-            Glide.with(getActivity()).load(Config.url+list.get(position).getLogo_img()).into(itemHolder.imgLogo);
+            try{
+                Log.e("logo_img",list.get(position).getLogo_img());
+                Glide.with(getActivity()).load(Config.url + list.get(position).getLogo_img()).into(itemHolder.imgLogo);
+            } catch (NullPointerException e){
+
+            }
 //            Log.e("FActivity","logo : "+Config.url+"/drawable/owner/"+list.get(position).getLogo_img());
 
             if(what!=6) {

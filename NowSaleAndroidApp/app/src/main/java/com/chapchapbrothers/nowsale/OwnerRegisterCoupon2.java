@@ -66,9 +66,6 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
         txt2 = findViewById(R.id.txt2);
         next = findViewById(R.id.next);
         back = findViewById(R.id.back);
-
-
-
         layout = findViewById(R.id.layout);
         start_layout = findViewById(R.id.start_layout);
         harin_coupon = findViewById(R.id.harin_coupon);
@@ -100,7 +97,7 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
         start_layout.setLayoutParams(edit_params);
 
 
-        edit1.addTextChangedListener(textWatcherInput1);
+        edit2.addTextChangedListener(textWatcherInput1);
 //        edit2.addTextChangedListener(textWatcherInput2);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,7 +108,7 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!edit1.getText().toString().equals("")){
+                if(!edit2.getText().toString().equals("")){
                     if(choose==1) {
                         next_intent = new Intent(OwnerRegisterCoupon2.this,OwnerRegisterCoupon3.class);
                         couponVO.setQualification(edit1.getText().toString());
@@ -153,7 +150,7 @@ public class OwnerRegisterCoupon2 extends AppCompatActivity { // 관리자와 �
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             // TODO Auto-generated method stub
-            if(!edit1.getText().toString().equals("")){
+            if(!edit2.getText().toString().equals("")){
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                     next.setBackground(ContextCompat.getDrawable(OwnerRegisterCoupon2.this,R.drawable.yellow_btn_selector));
                 } else {
