@@ -23,7 +23,7 @@ public interface OwnerMapper {
     @Select("SELECT coupon_key FROM coupon_list ORDER BY coupon_key DESC limit 1")
     int getCouponKey();
 
-    @Select("SELECT owner_key FROM owner_list ORDER BY owner{_key DESC limit 1")
+    @Select("SELECT owner_key FROM owner_list ORDER BY owner_key DESC limit 1")
     int getOwnerKey();
 
     @Select("SELECT sale_key FROM sale_list ORDER BY sale_key DESC limit 1")

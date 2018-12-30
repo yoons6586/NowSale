@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8">
 		<title>점주 회원가입</title>
 
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
 
 			// click on button submit
@@ -34,41 +34,38 @@
 					contentType : "application/json",
 					type : "POST", // type of action POST || GET
 					dataType : 'json', // data type
-					data : JSON.stringify(ownerData), // 왜 JSON 형식으로 넘어가지 않는 것일까......
+					data : JSON.stringify(ownerData),
 					success : function(result) {
-						// you can see the result from the console
-						// tab of the developer tools
-						console.log(result);
-					},
-					error: function(xhr, resp, text) {
-						console.log(xhr, resp, text);
+						$('#result').text("sdfsdfsdf");
 					}
 				})
+				alert("회원가입 완료");
+
 			});
 		});
-
-
 		</script>
 	</head>
 	<body>
 		<form id="form" action="" method = post>
 			아이디: <input type="text" name="id" id="id"><br>
 			비밀번호: <input type="text" name="pw" id="pw"><br>
-			주소 : <input type="test" id="address"><br>
-			닉네임 : <input type="test" id="nickName"><br>
-			폰번호 : <input type="test" id="phone"><br>
-			매장 이름 : <input type="test" id="market_name"><br>
-			매장 소개 : <input type="test" id="market_introduce"><br>
-			카테고리 : <input type="test" id="category"><br>
-			longitude : <input type="test" id="longitude"><br>
-			latitude : <input type="test" id="latitude"><br>
-			working_day : <input type="test" id="working_day"><br>
-			영업시간 : <input type="test" id="working_time"><br>
-			push alarm T,F : <input type="test" id="alarm_push"><br>
-			mail alarm T,F : <input type="test" id="alarm_mail"><br>
-			SMS alarm T,F : <input type="test" id="alarm_SMS"><br>
+			주소 : <input type="text" id="address"><br>
+			닉네임 : <input type="text" id="nickName"><br>
+			폰번호 : <input type="text" id="phone"><br>
+			매장 이름 : <input type="text" id="market_name"><br>
+			매장 소개 : <input type="text" id="market_introduce"><br>
+			카테고리 : <input type="text" id="category"><br>
+			longitude : <input type="text" id="longitude"><br>
+			latitude : <input type="text" id="latitude"><br>
+			working_day : <input type="text" id="working_day"><br>
+			영업시간 : <input type="text" id="working_time"><br>
+			push alarm T,F : <input type="text" id="alarm_push"><br>
+			mail alarm T,F : <input type="text" id="alarm_mail"><br>
+			SMS alarm T,F : <input type="text" id="alarm_SMS"><br>
+			RESULT : <span id="result"></span><br>
 			<input id ="submit" type=button name="submit" value="회원가입">
 		</form>
+
 
 
 	</body>

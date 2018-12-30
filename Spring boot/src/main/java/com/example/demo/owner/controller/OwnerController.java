@@ -239,18 +239,21 @@ public class OwnerController {
     //TODO 이미지 파일 넣기!!
     @RequestMapping(value = "/signUp",method=RequestMethod.POST)
     @ApiOperation(value = "점주 회원가입")
-    public ResponseEntity ownerSignUp(@RequestBody OwnerVO ownerVO){
+    public ResponseEntity<String> ownerSignUp(@RequestBody OwnerVO ownerVO){
         ownerDao = new OwnerDao();
         System.out.println("/signUp 호출");
+        System.out.println(ownerVO.getId());
 
         int owner_key;
         try{
             owner_key = ownerMapper.getOwnerKey()+1;
+            System.out.println("ownerKey : "+owner_key);
         }
         catch (BindingException e){
             owner_key=1;
         }
         ownerVO.setOwner_key(owner_key);
+        ownerVO.setLogo_img("/drawable/owner/logo"+owner_key+".png");
 
         return ownerDao.signUpOwner(ownerVO);
     }

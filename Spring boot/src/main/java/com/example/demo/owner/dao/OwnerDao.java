@@ -36,14 +36,14 @@ public class OwnerDao {
             }
         }
     }
-    public ResponseEntity signUpOwner(OwnerVO ownerVO){
+    public ResponseEntity<String> signUpOwner(OwnerVO ownerVO){
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
             System.out.println("owner_key : "+ownerVO.getOwner_key());
             sqlSession.insert("dao.mybatisMapper.insertSignUpOwner",ownerVO);
             sqlSession.commit();
 
-            return  new ResponseEntity(HttpStatus.OK);
+            return  new ResponseEntity("sdfadsfa",HttpStatus.OK);
         }
         catch (Exception e){
             e.printStackTrace();
