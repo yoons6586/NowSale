@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95bb5cfa-e20d-4fbd-9f23-7faaece68ab7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/logo7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/logo7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -172,11 +171,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="255" column="69" selection-start-line="255" selection-start-column="69" selection-end-line="255" selection-end-column="69" />
+            <state relative-caret-position="4256">
+              <caret line="226" column="28" selection-start-line="226" selection-start-column="28" selection-end-line="226" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,8 +219,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+            <state relative-caret-position="3577">
+              <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
               <folding>
                 <element signature="e#992#993#0" expanded="true" />
                 <element signature="e#1024#1025#0" expanded="true" />
@@ -249,11 +248,11 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="515">
+              <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -369,12 +368,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ownerSignUp.html" />
         <option value="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ownerLogoImg.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html" />
       </list>
     </option>
   </component>
@@ -645,7 +644,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546330031347" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546330667983" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -848,16 +847,15 @@
       <workItem from="1545890642181" duration="516000" />
       <workItem from="1546003930283" duration="118000" />
       <workItem from="1546158250429" duration="4132000" />
-      <workItem from="1546316007679" duration="11613000" />
+      <workItem from="1546316007679" duration="12256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303471000" />
+    <option name="totallyTimeSpent" value="304114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2014652" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1186,13 +1184,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/market/8_123.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -1220,17 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding>
-            <element signature="e#992#993#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/controller/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
@@ -1243,11 +1223,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="255" column="69" selection-start-line="255" selection-start-column="69" selection-end-line="255" selection-end-column="69" />
+        <state relative-caret-position="4256">
+          <caret line="226" column="28" selection-start-line="226" selection-start-column="28" selection-end-line="226" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3577">
+          <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
+          <folding>
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
         </state>
       </provider>
     </entry>
