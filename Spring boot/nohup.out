@@ -17135,3 +17135,1046 @@ Using generated security password: 83983f7d-b43f-4edd-a57b-7d30871bb05f
 2019-01-01 07:16:09.295  INFO 16683 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2019-01-01 07:16:09.300  INFO 16683 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2019-01-01 07:16:09.342  INFO 16683 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 42 ms
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.5.RELEASE)
+
+2019-01-01 08:14:53.327  INFO 17650 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT on ip-172-31-21-236 with PID 17650 (/home/ubuntu/git/NowSale/Spring boot/target/demo-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu/git/NowSale/Spring boot)
+2019-01-01 08:14:53.341  INFO 17650 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-01-01 08:14:53.545  INFO 17650 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b1d2887: startup date [Tue Jan 01 08:14:53 UTC 2019]; root of context hierarchy
+2019-01-01 08:14:57.638  INFO 17650 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4bb89f73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-01 08:14:58.951  INFO 17650 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-01 08:14:59.049  INFO 17650 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-01 08:14:59.050  INFO 17650 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-01-01 08:14:59.074  INFO 17650 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2019-01-01 08:14:59.264  INFO 17650 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-01 08:14:59.265  INFO 17650 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5722 ms
+2019-01-01 08:14:59.517  INFO 17650 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-01 08:14:59.517  INFO 17650 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-01 08:14:59.517  INFO 17650 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-01 08:14:59.517  INFO 17650 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-01 08:14:59.518  INFO 17650 --- [ost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-01-01 08:14:59.518  INFO 17650 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-01 08:15:01.752  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/all],methods=[GET]}" onto public java.util.List<com.example.demo.client.model.ClientVO> com.example.demo.client.controller.ClientController.findAllClient()
+2019-01-01 08:15:01.754  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientVO>> com.example.demo.client.controller.ClientController.loginClient(com.example.demo.client.model.ClientLoginVO)
+2019-01-01 08:15:01.754  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientCouponVO>> com.example.demo.client.controller.ClientController.clientCouponGet(java.lang.Integer)
+2019-01-01 08:15:01.755  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientSaleVO>> com.example.demo.client.controller.ClientController.clientSaleGet(java.lang.Integer)
+2019-01-01 08:15:01.756  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/favorite/market/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientFavoriteMarketVO>> com.example.demo.client.controller.ClientController.clientFavoriteMarket(java.lang.Integer)
+2019-01-01 08:15:01.756  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/update/{client_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoUpdate(java.lang.Integer,com.example.demo.client.model.ClientVO)
+2019-01-01 08:15:01.757  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/delete/{client_key}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoDelete(java.lang.Integer)
+2019-01-01 08:15:01.757  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/signup],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientSignup(com.example.demo.client.model.ClientVO)
+2019-01-01 08:15:01.757  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/use],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientUseCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 08:15:01.765  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientDeleteCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 08:15:01.765  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientInsertCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 08:15:01.766  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientUseSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 08:15:01.766  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInsertSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 08:15:01.782  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/find/password],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.example.demo.all.controller.AllController.clientFindPassword(com.example.demo.all.model.AllEmailVO) throws javax.mail.MessagingException
+2019-01-01 08:15:01.783  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthLogin(com.example.demo.all.model.OAuthLoginVO)
+2019-01-01 08:15:01.783  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/signup/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthSignUp(com.example.demo.client.model.ClientVO)
+2019-01-01 08:15:01.783  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/naver/test],methods=[GET]}" onto public void com.example.demo.all.controller.AllController.naverLoginTest()
+2019-01-01 08:15:01.784  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/sale/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.all.controller.AllController.categorySaleShow(java.lang.String)
+2019-01-01 08:15:01.785  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.insertFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 08:15:01.786  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/coupon/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.all.controller.AllController.categoryShow(java.lang.String)
+2019-01-01 08:15:01.786  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/overlap/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.clientOverlapId(java.lang.String)
+2019-01-01 08:15:01.788  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/adv/img],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.mapper.AdvImgVO>> com.example.demo.all.controller.AllController.advImgCount()
+2019-01-01 08:15:01.789  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/market/list/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MarketVO>> com.example.demo.all.controller.AllController.categoryMarketShow(java.lang.String)
+2019-01-01 08:15:01.789  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.deleteFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 08:15:01.790  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/is/get/count/{owner_key}/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.example.demo.all.model.DangolWithMarketMenuImg> com.example.demo.all.controller.AllController.isFavoriteGetCount(int,int)
+2019-01-01 08:15:01.791  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/{owner_key}/menu],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MenuVO>> com.example.demo.all.controller.AllController.ownerMenuList(int)
+2019-01-01 08:15:01.800  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/signUp],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerSignUp()
+2019-01-01 08:15:01.800  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/menu],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[],java.lang.String,java.lang.String)
+2019-01-01 08:15:01.801  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/market],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 08:15:01.801  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/menu/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMenuImg()
+2019-01-01 08:15:01.801  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/market/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMarketImg()
+2019-01-01 08:15:01.801  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/logo/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputLogoImg()
+2019-01-01 08:15:01.809  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/logo],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadLogoMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 08:15:01.812  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponDelete(com.example.demo.owner.model.OwnerHaveCouponVO)
+2019-01-01 08:15:01.812  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleDelete(com.example.demo.owner.model.OwnerHaveSaleVO)
+2019-01-01 08:15:01.812  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.couponCount(int)
+2019-01-01 08:15:01.813  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.saleCount(int)
+2019-01-01 08:15:01.813  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/info/update/{owner_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity com.example.demo.owner.controller.OwnerController.ownerInfoUpdate(int,com.example.demo.owner.model.OwnerVO)
+2019-01-01 08:15:01.814  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/insert/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleInsert(int,com.example.demo.owner.model.OwnerRegisterSaleVO) throws java.text.ParseException
+2019-01-01 08:15:01.815  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.owner.controller.OwnerController.getSaleOwnerRegistered(int)
+2019-01-01 08:15:01.820  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.ownerSignUp(com.example.demo.owner.model.OwnerVO)
+2019-01-01 08:15:01.820  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.owner.controller.OwnerController.getCouponOwnerRegistered(int)
+2019-01-01 08:15:01.821  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/update/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponUpdate(int,com.example.demo.owner.model.OwnerRegisterCouponVO) throws java.text.ParseException
+2019-01-01 08:15:01.821  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.owner.model.OwnerVO>> com.example.demo.owner.controller.OwnerController.loginOwner(com.example.demo.owner.model.OwnerLoginVO)
+2019-01-01 08:15:01.835  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-01-01 08:15:01.836  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-01-01 08:15:01.838  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-01-01 08:15:01.856  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-01 08:15:01.857  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-01 08:15:02.395  INFO 17650 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 17ac5517-fb2c-46b2-970d-6e76559666ba
+
+2019-01-01 08:15:02.796  INFO 17650 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48075da3, org.springframework.security.web.context.SecurityContextPersistenceFilter@548d708a, org.springframework.security.web.header.HeaderWriterFilter@53045c6c, org.springframework.security.web.authentication.logout.LogoutFilter@350aac89, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53fb3dab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@712625fd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68c9133c, org.springframework.security.web.session.SessionManagementFilter@6bbe85a8, org.springframework.security.web.access.ExceptionTranslationFilter@74e28667, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5afa3c9]
+2019-01-01 08:15:02.942  INFO 17650 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-01-01 08:15:03.191  INFO 17650 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 08:15:03.618  INFO 17650 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b1d2887: startup date [Tue Jan 01 08:14:53 UTC 2019]; root of context hierarchy
+2019-01-01 08:15:03.778  INFO 17650 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 08:15:03.778  INFO 17650 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 08:15:05.145  INFO 17650 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-01 08:15:05.149  INFO 17650 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-01 08:15:05.156  INFO 17650 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-01 08:15:05.167  INFO 17650 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-01-01 08:15:05.168  INFO 17650 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-01-01 08:15:05.218  INFO 17650 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-01-01 08:15:05.410  INFO 17650 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-01-01 08:15:06.625  INFO 17650 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: uploadFileMultiUsingPOST_1
+2019-01-01 08:15:06.732  INFO 17650 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-01 08:15:06.740  INFO 17650 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 14.778 seconds (JVM running for 15.864)
+2019-01-01 08:16:04.666  INFO 17650 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-01 08:16:04.666  INFO 17650 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-01 08:16:04.718  INFO 17650 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 52 ms
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.5.RELEASE)
+
+2019-01-01 08:21:47.113  INFO 17785 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT on ip-172-31-21-236 with PID 17785 (/home/ubuntu/git/NowSale/Spring boot/target/demo-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu/git/NowSale/Spring boot)
+2019-01-01 08:21:47.125  INFO 17785 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-01-01 08:21:47.327  INFO 17785 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4fccd51b: startup date [Tue Jan 01 08:21:47 UTC 2019]; root of context hierarchy
+2019-01-01 08:21:51.235  INFO 17785 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27f15f3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-01 08:21:52.600  INFO 17785 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-01 08:21:52.710  INFO 17785 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-01 08:21:52.710  INFO 17785 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-01-01 08:21:52.744  INFO 17785 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2019-01-01 08:21:52.944  INFO 17785 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-01 08:21:52.944  INFO 17785 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5630 ms
+2019-01-01 08:21:53.190  INFO 17785 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-01 08:21:53.190  INFO 17785 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-01 08:21:53.190  INFO 17785 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-01 08:21:53.190  INFO 17785 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-01 08:21:53.191  INFO 17785 --- [ost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-01-01 08:21:53.191  INFO 17785 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-01 08:21:55.416  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/all],methods=[GET]}" onto public java.util.List<com.example.demo.client.model.ClientVO> com.example.demo.client.controller.ClientController.findAllClient()
+2019-01-01 08:21:55.417  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientCouponVO>> com.example.demo.client.controller.ClientController.clientCouponGet(java.lang.Integer)
+2019-01-01 08:21:55.418  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientSaleVO>> com.example.demo.client.controller.ClientController.clientSaleGet(java.lang.Integer)
+2019-01-01 08:21:55.422  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/favorite/market/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientFavoriteMarketVO>> com.example.demo.client.controller.ClientController.clientFavoriteMarket(java.lang.Integer)
+2019-01-01 08:21:55.422  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/update/{client_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoUpdate(java.lang.Integer,com.example.demo.client.model.ClientVO)
+2019-01-01 08:21:55.422  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/delete/{client_key}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoDelete(java.lang.Integer)
+2019-01-01 08:21:55.423  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/signup],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientSignup(com.example.demo.client.model.ClientVO)
+2019-01-01 08:21:55.423  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/use],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientUseCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 08:21:55.424  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientDeleteCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 08:21:55.428  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientInsertCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 08:21:55.429  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientUseSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 08:21:55.429  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInsertSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 08:21:55.430  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientVO>> com.example.demo.client.controller.ClientController.loginClient(com.example.demo.client.model.ClientLoginVO)
+2019-01-01 08:21:55.447  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/overlap/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.clientOverlapId(java.lang.String)
+2019-01-01 08:21:55.447  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/coupon/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.all.controller.AllController.categoryShow(java.lang.String)
+2019-01-01 08:21:55.447  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/market/list/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MarketVO>> com.example.demo.all.controller.AllController.categoryMarketShow(java.lang.String)
+2019-01-01 08:21:55.447  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.deleteFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 08:21:55.448  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/is/get/count/{owner_key}/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.example.demo.all.model.DangolWithMarketMenuImg> com.example.demo.all.controller.AllController.isFavoriteGetCount(int,int)
+2019-01-01 08:21:55.448  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/{owner_key}/menu],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MenuVO>> com.example.demo.all.controller.AllController.ownerMenuList(int)
+2019-01-01 08:21:55.448  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/find/password],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.example.demo.all.controller.AllController.clientFindPassword(com.example.demo.all.model.AllEmailVO) throws javax.mail.MessagingException
+2019-01-01 08:21:55.449  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthLogin(com.example.demo.all.model.OAuthLoginVO)
+2019-01-01 08:21:55.451  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/signup/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthSignUp(com.example.demo.client.model.ClientVO)
+2019-01-01 08:21:55.452  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/naver/test],methods=[GET]}" onto public void com.example.demo.all.controller.AllController.naverLoginTest()
+2019-01-01 08:21:55.452  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/sale/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.all.controller.AllController.categorySaleShow(java.lang.String)
+2019-01-01 08:21:55.453  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.insertFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 08:21:55.453  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/adv/img],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.mapper.AdvImgVO>> com.example.demo.all.controller.AllController.advImgCount()
+2019-01-01 08:21:55.464  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/signUp],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerSignUp()
+2019-01-01 08:21:55.465  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/market],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 08:21:55.465  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/menu],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[],java.lang.String,java.lang.String)
+2019-01-01 08:21:55.465  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/menu/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMenuImg()
+2019-01-01 08:21:55.466  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/market/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMarketImg()
+2019-01-01 08:21:55.466  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/logo/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputLogoImg()
+2019-01-01 08:21:55.466  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/logo],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadLogoMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 08:21:55.468  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.ownerSignUp(com.example.demo.owner.model.OwnerVO)
+2019-01-01 08:21:55.471  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.owner.model.OwnerVO>> com.example.demo.owner.controller.OwnerController.loginOwner(com.example.demo.owner.model.OwnerLoginVO)
+2019-01-01 08:21:55.472  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.owner.controller.OwnerController.getCouponOwnerRegistered(int)
+2019-01-01 08:21:55.472  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.owner.controller.OwnerController.getSaleOwnerRegistered(int)
+2019-01-01 08:21:55.473  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/update/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponUpdate(int,com.example.demo.owner.model.OwnerRegisterCouponVO) throws java.text.ParseException
+2019-01-01 08:21:55.473  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/insert/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleInsert(int,com.example.demo.owner.model.OwnerRegisterSaleVO) throws java.text.ParseException
+2019-01-01 08:21:55.474  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponDelete(com.example.demo.owner.model.OwnerHaveCouponVO)
+2019-01-01 08:21:55.474  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleDelete(com.example.demo.owner.model.OwnerHaveSaleVO)
+2019-01-01 08:21:55.475  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.couponCount(int)
+2019-01-01 08:21:55.480  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.saleCount(int)
+2019-01-01 08:21:55.484  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/info/update/{owner_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity com.example.demo.owner.controller.OwnerController.ownerInfoUpdate(int,com.example.demo.owner.model.OwnerVO)
+2019-01-01 08:21:55.488  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-01-01 08:21:55.491  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-01-01 08:21:55.492  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-01-01 08:21:55.508  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-01 08:21:55.508  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-01 08:21:56.036  INFO 17785 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: eddeca1b-4555-4eac-9371-30b29e620cfb
+
+2019-01-01 08:21:56.433  INFO 17785 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28261e8e, org.springframework.security.web.context.SecurityContextPersistenceFilter@58cbafc2, org.springframework.security.web.header.HeaderWriterFilter@7ef82753, org.springframework.security.web.authentication.logout.LogoutFilter@795509d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75d3a5e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74e28667, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d737b89, org.springframework.security.web.session.SessionManagementFilter@202b0582, org.springframework.security.web.access.ExceptionTranslationFilter@563f38c4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4c60d6e9]
+2019-01-01 08:21:56.589  INFO 17785 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-01-01 08:21:56.848  INFO 17785 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 08:21:57.274  INFO 17785 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4fccd51b: startup date [Tue Jan 01 08:21:47 UTC 2019]; root of context hierarchy
+2019-01-01 08:21:57.433  INFO 17785 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 08:21:57.433  INFO 17785 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 08:21:58.767  INFO 17785 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-01 08:21:58.775  INFO 17785 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-01 08:21:58.786  INFO 17785 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-01 08:21:58.799  INFO 17785 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-01-01 08:21:58.799  INFO 17785 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-01-01 08:21:58.847  INFO 17785 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-01-01 08:21:59.035  INFO 17785 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-01-01 08:22:00.263  INFO 17785 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: uploadFileMultiUsingPOST_1
+2019-01-01 08:22:00.378  INFO 17785 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-01 08:22:00.397  INFO 17785 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 14.713 seconds (JVM running for 15.814)
+2019-01-01 08:23:10.891  INFO 17785 --- [nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-01 08:23:10.892  INFO 17785 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-01 08:23:10.944  INFO 17785 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 52 ms
+2019-01-01 08:23:12.077  INFO 17785 --- [nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-01 08:23:12.446  INFO 17785 --- [nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+size : 0
+clientPW : {bcrypt}$2a$10$4IM1mSDMsihsWxW9cPyjsex.Ae1Es4cx0fkVjC0Rla4r/SkCTuFhu
+우와 신기
+size : 0
+123 : {bcrypt}$2a$10$9AiHU9rfk.Erq19ehUcI1OzsF/oxtYD5JMxLlp7AudGbAwWUYyfLG
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+size : 0
+clientPW : {bcrypt}$2a$10$Two02ifIUgSNpWzv6kz8ouDCuy/8esFfyhhS8BWsNCFP33LACfUcK
+우와 신기
+size : 0
+123 : {bcrypt}$2a$10$as1YzHAU2uXUBa24uzVYg.TtYCbYjm2wAEOZcVTuLhJ6MWNgjFiF.
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/signUp 호출
+otaqu@nowsale.com
+owner_key : 1
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+size : 0
+clientPW : {bcrypt}$2a$10$ZpL4b2Fp7reKww2apfX9re0.lYCy6Z/P2mrvP225Y3tJOiUL5pXG.
+우와 신기
+size : 0
+123 : {bcrypt}$2a$10$RRPqvEDgBeKEj21IHDwOyuSQdGCh931vJPZ7JKB9oQRyvBLbCdjxi
+size : 0
+clientPW : {bcrypt}$2a$10$ZgPxZNkQYxg5ataSytZ54ulX1jyVBrmj9xaNMkmOHq0nUz0u.Zt1q
+우와 신기
+size : 1
+123 : {bcrypt}$2a$10$.SeQn/NZvfDoA1PMxaFjae442qszfX39XEuf4CSwZwLSn60uXe4rO
+pw : otaku2017
+pw : {bcrypt}$2a$10$SedFpNDG6tfHL51o6blQau6LHBHXxknXFUUdg0QBogKewV8zR.pJe
+size : 1
+123 : {bcrypt}$2a$10$CoDBqlQsycKB5r2wum20nujYqh6u4xHhx7D67Qw8hejkGqcfWWc/y
+pw : otaku2017
+pw : {bcrypt}$2a$10$SedFpNDG6tfHL51o6blQau6LHBHXxknXFUUdg0QBogKewV8zR.pJe
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+size : 0
+clientPW : {bcrypt}$2a$10$yMz3jtgsIc6UYdi.PO3nH.8MpXq6iS4teHkBZdqcwHfD501ORuckG
+우와 신기
+size : 0
+123 : {bcrypt}$2a$10$6.wZ.c3IYW1HBXbv7w91key4ihwXUi6yFjaHhYOOZzEhNGmc7ywmO
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.5.RELEASE)
+
+2019-01-01 08:57:09.166  INFO 18232 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT on ip-172-31-21-236 with PID 18232 (/home/ubuntu/git/NowSale/Spring boot/target/demo-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu/git/NowSale/Spring boot)
+2019-01-01 08:57:09.187  INFO 18232 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-01-01 08:57:09.395  INFO 18232 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@449b2d27: startup date [Tue Jan 01 08:57:09 UTC 2019]; root of context hierarchy
+2019-01-01 08:57:13.317  INFO 18232 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1aa2deca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-01 08:57:14.687  INFO 18232 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-01 08:57:14.788  INFO 18232 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-01 08:57:14.788  INFO 18232 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-01-01 08:57:14.816  INFO 18232 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2019-01-01 08:57:15.054  INFO 18232 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-01 08:57:15.054  INFO 18232 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5663 ms
+2019-01-01 08:57:15.372  INFO 18232 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-01 08:57:15.373  INFO 18232 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-01 08:57:15.373  INFO 18232 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-01 08:57:15.373  INFO 18232 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-01 08:57:15.373  INFO 18232 --- [ost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-01-01 08:57:15.373  INFO 18232 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-01 08:57:17.640  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientCouponVO>> com.example.demo.client.controller.ClientController.clientCouponGet(java.lang.Integer)
+2019-01-01 08:57:17.641  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientSaleVO>> com.example.demo.client.controller.ClientController.clientSaleGet(java.lang.Integer)
+2019-01-01 08:57:17.642  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/favorite/market/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientFavoriteMarketVO>> com.example.demo.client.controller.ClientController.clientFavoriteMarket(java.lang.Integer)
+2019-01-01 08:57:17.649  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/update/{client_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoUpdate(java.lang.Integer,com.example.demo.client.model.ClientVO)
+2019-01-01 08:57:17.650  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/delete/{client_key}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoDelete(java.lang.Integer)
+2019-01-01 08:57:17.650  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/signup],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientSignup(com.example.demo.client.model.ClientVO)
+2019-01-01 08:57:17.651  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/use],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientUseCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 08:57:17.651  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientDeleteCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 08:57:17.652  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientInsertCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 08:57:17.652  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientUseSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 08:57:17.653  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInsertSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 08:57:17.653  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/all],methods=[GET]}" onto public java.util.List<com.example.demo.client.model.ClientVO> com.example.demo.client.controller.ClientController.findAllClient()
+2019-01-01 08:57:17.654  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientVO>> com.example.demo.client.controller.ClientController.loginClient(com.example.demo.client.model.ClientLoginVO)
+2019-01-01 08:57:17.662  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.deleteFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 08:57:17.663  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/is/get/count/{owner_key}/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.example.demo.all.model.DangolWithMarketMenuImg> com.example.demo.all.controller.AllController.isFavoriteGetCount(int,int)
+2019-01-01 08:57:17.663  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/{owner_key}/menu],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MenuVO>> com.example.demo.all.controller.AllController.ownerMenuList(int)
+2019-01-01 08:57:17.663  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/find/password],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.example.demo.all.controller.AllController.clientFindPassword(com.example.demo.all.model.AllEmailVO) throws javax.mail.MessagingException
+2019-01-01 08:57:17.664  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthLogin(com.example.demo.all.model.OAuthLoginVO)
+2019-01-01 08:57:17.664  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/sale/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.all.controller.AllController.categorySaleShow(java.lang.String)
+2019-01-01 08:57:17.671  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.insertFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 08:57:17.672  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/adv/img],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.mapper.AdvImgVO>> com.example.demo.all.controller.AllController.advImgCount()
+2019-01-01 08:57:17.677  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/coupon/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.all.controller.AllController.categoryShow(java.lang.String)
+2019-01-01 08:57:17.678  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/overlap/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.clientOverlapId(java.lang.String)
+2019-01-01 08:57:17.678  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/market/list/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MarketVO>> com.example.demo.all.controller.AllController.categoryMarketShow(java.lang.String)
+2019-01-01 08:57:17.679  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/signup/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthSignUp(com.example.demo.client.model.ClientVO)
+2019-01-01 08:57:17.680  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/naver/test],methods=[GET]}" onto public void com.example.demo.all.controller.AllController.naverLoginTest()
+2019-01-01 08:57:17.691  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/signUp],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerSignUp()
+2019-01-01 08:57:17.691  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/market],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 08:57:17.692  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/menu],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[],java.lang.String,java.lang.String)
+2019-01-01 08:57:17.692  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/menu/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMenuImg()
+2019-01-01 08:57:17.693  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/market/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMarketImg()
+2019-01-01 08:57:17.693  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/logo/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputLogoImg()
+2019-01-01 08:57:17.694  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/logo],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadLogoMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 08:57:17.696  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.owner.model.OwnerVO>> com.example.demo.owner.controller.OwnerController.loginOwner(com.example.demo.owner.model.OwnerLoginVO)
+2019-01-01 08:57:17.700  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.owner.controller.OwnerController.getCouponOwnerRegistered(int)
+2019-01-01 08:57:17.701  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/update/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponUpdate(int,com.example.demo.owner.model.OwnerRegisterCouponVO) throws java.text.ParseException
+2019-01-01 08:57:17.704  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.owner.controller.OwnerController.getSaleOwnerRegistered(int)
+2019-01-01 08:57:17.705  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/insert/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleInsert(int,com.example.demo.owner.model.OwnerRegisterSaleVO) throws java.text.ParseException
+2019-01-01 08:57:17.705  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponDelete(com.example.demo.owner.model.OwnerHaveCouponVO)
+2019-01-01 08:57:17.705  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleDelete(com.example.demo.owner.model.OwnerHaveSaleVO)
+2019-01-01 08:57:17.705  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.couponCount(int)
+2019-01-01 08:57:17.706  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.saleCount(int)
+2019-01-01 08:57:17.706  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/info/update/{owner_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity com.example.demo.owner.controller.OwnerController.ownerInfoUpdate(int,com.example.demo.owner.model.OwnerVO)
+2019-01-01 08:57:17.706  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.ownerSignUp(com.example.demo.owner.model.OwnerVO)
+2019-01-01 08:57:17.718  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-01-01 08:57:17.728  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-01-01 08:57:17.729  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-01-01 08:57:17.737  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-01 08:57:17.738  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-01 08:57:18.304  INFO 18232 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f6ad74c8-3225-48ac-8352-13b1afdc0c07
+
+2019-01-01 08:57:18.715  INFO 18232 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72035809, org.springframework.security.web.context.SecurityContextPersistenceFilter@53045c6c, org.springframework.security.web.header.HeaderWriterFilter@74e28667, org.springframework.security.web.authentication.logout.LogoutFilter@33065d67, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bbe85a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@548d708a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@909217e, org.springframework.security.web.session.SessionManagementFilter@663c9e7a, org.springframework.security.web.access.ExceptionTranslationFilter@58cbafc2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d901eb0]
+2019-01-01 08:57:18.869  INFO 18232 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-01-01 08:57:19.109  INFO 18232 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 08:57:19.519  INFO 18232 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@449b2d27: startup date [Tue Jan 01 08:57:09 UTC 2019]; root of context hierarchy
+2019-01-01 08:57:19.682  INFO 18232 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 08:57:19.682  INFO 18232 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 08:57:20.889  INFO 18232 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-01 08:57:20.898  INFO 18232 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-01 08:57:20.917  INFO 18232 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-01 08:57:20.931  INFO 18232 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-01-01 08:57:20.934  INFO 18232 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-01-01 08:57:20.977  INFO 18232 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-01-01 08:57:21.162  INFO 18232 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-01-01 08:57:22.372  INFO 18232 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: uploadFileMultiUsingPOST_1
+2019-01-01 08:57:22.486  INFO 18232 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-01 08:57:22.506  INFO 18232 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 14.736 seconds (JVM running for 15.833)
+2019-01-01 08:57:22.652  INFO 18232 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-01 08:57:22.653  INFO 18232 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-01 08:57:22.701  INFO 18232 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+2019-01-01 08:57:33.333  INFO 18232 --- [nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-01 08:57:33.379  INFO 18232 --- [nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+owner_key : 1
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+owner_key : 1
+owner_key : 1
+2019-01-01 09:01:53.861 ERROR 18232 --- [nio-8080-exec-5] o.apache.coyote.http11.Http11Processor   : Error processing request
+
+java.lang.IllegalStateException: java.io.FileNotFoundException: /home/ubuntu/git/NowSale/Spring boot/target/demo-0.0.1-SNAPSHOT.jar (No such file or directory)
+	at org.apache.catalina.webresources.JarWarResourceSet.getArchiveEntries(JarWarResourceSet.java:148) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:254) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:281) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.webresources.CachedResource.validateResource(CachedResource.java:110) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.webresources.Cache.getResource(Cache.java:69) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:216) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:206) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.mapper.Mapper.internalMapWrapper(Mapper.java:1027) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.mapper.Mapper.internalMap(Mapper.java:842) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.mapper.Mapper.map(Mapper.java:698) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.postParseRequest(CoyoteAdapter.java:679) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:336) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
+Caused by: java.io.FileNotFoundException: /home/ubuntu/git/NowSale/Spring boot/target/demo-0.0.1-SNAPSHOT.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method) ~[na:1.8.0_191]
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225) ~[na:1.8.0_191]
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155) ~[na:1.8.0_191]
+	at java.util.jar.JarFile.<init>(JarFile.java:166) ~[na:1.8.0_191]
+	at java.util.jar.JarFile.<init>(JarFile.java:130) ~[na:1.8.0_191]
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:196) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:181) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.webresources.AbstractArchiveResourceSet.openJarFile(AbstractArchiveResourceSet.java:308) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	at org.apache.catalina.webresources.JarWarResourceSet.getArchiveEntries(JarWarResourceSet.java:109) ~[tomcat-embed-core-8.5.34.jar!/:8.5.34]
+	... 20 common frames omitted
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.5.RELEASE)
+
+2019-01-01 09:02:18.723  INFO 18385 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT on ip-172-31-21-236 with PID 18385 (/home/ubuntu/git/NowSale/Spring boot/target/demo-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu/git/NowSale/Spring boot)
+2019-01-01 09:02:18.733  INFO 18385 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-01-01 09:02:18.951  INFO 18385 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42f30e0a: startup date [Tue Jan 01 09:02:18 UTC 2019]; root of context hierarchy
+2019-01-01 09:02:22.923  INFO 18385 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b064bc3a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-01 09:02:24.236  INFO 18385 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-01 09:02:24.348  INFO 18385 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-01 09:02:24.348  INFO 18385 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-01-01 09:02:24.380  INFO 18385 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2019-01-01 09:02:24.591  INFO 18385 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-01 09:02:24.592  INFO 18385 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5645 ms
+2019-01-01 09:02:24.840  INFO 18385 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-01 09:02:24.841  INFO 18385 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-01 09:02:24.841  INFO 18385 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-01 09:02:24.841  INFO 18385 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-01 09:02:24.841  INFO 18385 --- [ost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-01-01 09:02:24.841  INFO 18385 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-01 09:02:26.988  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/all],methods=[GET]}" onto public java.util.List<com.example.demo.client.model.ClientVO> com.example.demo.client.controller.ClientController.findAllClient()
+2019-01-01 09:02:26.989  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientVO>> com.example.demo.client.controller.ClientController.loginClient(com.example.demo.client.model.ClientLoginVO)
+2019-01-01 09:02:26.990  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientCouponVO>> com.example.demo.client.controller.ClientController.clientCouponGet(java.lang.Integer)
+2019-01-01 09:02:26.997  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientSaleVO>> com.example.demo.client.controller.ClientController.clientSaleGet(java.lang.Integer)
+2019-01-01 09:02:26.997  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/favorite/market/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientFavoriteMarketVO>> com.example.demo.client.controller.ClientController.clientFavoriteMarket(java.lang.Integer)
+2019-01-01 09:02:26.997  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/update/{client_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoUpdate(java.lang.Integer,com.example.demo.client.model.ClientVO)
+2019-01-01 09:02:26.998  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/delete/{client_key}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoDelete(java.lang.Integer)
+2019-01-01 09:02:26.998  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/signup],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientSignup(com.example.demo.client.model.ClientVO)
+2019-01-01 09:02:26.998  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/use],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientUseCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:02:26.999  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientDeleteCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:02:26.999  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientInsertCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:02:27.000  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientUseSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 09:02:27.000  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInsertSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 09:02:27.015  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/sale/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.all.controller.AllController.categorySaleShow(java.lang.String)
+2019-01-01 09:02:27.016  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.insertFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 09:02:27.017  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/adv/img],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.mapper.AdvImgVO>> com.example.demo.all.controller.AllController.advImgCount()
+2019-01-01 09:02:27.017  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/coupon/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.all.controller.AllController.categoryShow(java.lang.String)
+2019-01-01 09:02:27.017  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/market/list/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MarketVO>> com.example.demo.all.controller.AllController.categoryMarketShow(java.lang.String)
+2019-01-01 09:02:27.017  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/is/get/count/{owner_key}/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.example.demo.all.model.DangolWithMarketMenuImg> com.example.demo.all.controller.AllController.isFavoriteGetCount(int,int)
+2019-01-01 09:02:27.018  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/{owner_key}/menu],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MenuVO>> com.example.demo.all.controller.AllController.ownerMenuList(int)
+2019-01-01 09:02:27.018  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.deleteFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 09:02:27.020  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/find/password],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.example.demo.all.controller.AllController.clientFindPassword(com.example.demo.all.model.AllEmailVO) throws javax.mail.MessagingException
+2019-01-01 09:02:27.022  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthLogin(com.example.demo.all.model.OAuthLoginVO)
+2019-01-01 09:02:27.022  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/signup/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthSignUp(com.example.demo.client.model.ClientVO)
+2019-01-01 09:02:27.022  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/naver/test],methods=[GET]}" onto public void com.example.demo.all.controller.AllController.naverLoginTest()
+2019-01-01 09:02:27.022  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/overlap/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.clientOverlapId(java.lang.String)
+2019-01-01 09:02:27.031  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/signUp],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerSignUp()
+2019-01-01 09:02:27.031  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/menu],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[],java.lang.String,java.lang.String)
+2019-01-01 09:02:27.031  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/market],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 09:02:27.032  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/menu/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMenuImg()
+2019-01-01 09:02:27.032  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/market/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMarketImg()
+2019-01-01 09:02:27.032  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/logo/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputLogoImg()
+2019-01-01 09:02:27.036  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/logo],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadLogoMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 09:02:27.039  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.owner.model.OwnerVO>> com.example.demo.owner.controller.OwnerController.loginOwner(com.example.demo.owner.model.OwnerLoginVO)
+2019-01-01 09:02:27.041  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.ownerSignUp(com.example.demo.owner.model.OwnerVO)
+2019-01-01 09:02:27.041  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.owner.controller.OwnerController.getCouponOwnerRegistered(int)
+2019-01-01 09:02:27.041  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.owner.controller.OwnerController.getSaleOwnerRegistered(int)
+2019-01-01 09:02:27.049  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/update/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponUpdate(int,com.example.demo.owner.model.OwnerRegisterCouponVO) throws java.text.ParseException
+2019-01-01 09:02:27.049  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/insert/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleInsert(int,com.example.demo.owner.model.OwnerRegisterSaleVO) throws java.text.ParseException
+2019-01-01 09:02:27.050  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponDelete(com.example.demo.owner.model.OwnerHaveCouponVO)
+2019-01-01 09:02:27.051  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleDelete(com.example.demo.owner.model.OwnerHaveSaleVO)
+2019-01-01 09:02:27.051  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.couponCount(int)
+2019-01-01 09:02:27.051  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.saleCount(int)
+2019-01-01 09:02:27.051  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/info/update/{owner_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity com.example.demo.owner.controller.OwnerController.ownerInfoUpdate(int,com.example.demo.owner.model.OwnerVO)
+2019-01-01 09:02:27.056  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-01-01 09:02:27.057  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-01-01 09:02:27.057  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-01-01 09:02:27.071  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-01 09:02:27.076  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-01 09:02:27.605  INFO 18385 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4abcd50c-730c-4714-828b-5be036b7672d
+
+2019-01-01 09:02:28.001  INFO 18385 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@606e4010, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a7442c7, org.springframework.security.web.header.HeaderWriterFilter@19e4653c, org.springframework.security.web.authentication.logout.LogoutFilter@742ff096, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@548d708a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cb0755b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8458f04, org.springframework.security.web.session.SessionManagementFilter@53045c6c, org.springframework.security.web.access.ExceptionTranslationFilter@74d1dc36, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5f049ea1]
+2019-01-01 09:02:28.153  INFO 18385 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-01-01 09:02:28.401  INFO 18385 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:02:28.823  INFO 18385 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42f30e0a: startup date [Tue Jan 01 09:02:18 UTC 2019]; root of context hierarchy
+2019-01-01 09:02:28.981  INFO 18385 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:02:28.981  INFO 18385 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:02:30.230  INFO 18385 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-01 09:02:30.239  INFO 18385 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-01 09:02:30.251  INFO 18385 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-01 09:02:30.263  INFO 18385 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-01-01 09:02:30.263  INFO 18385 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-01-01 09:02:30.309  INFO 18385 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-01-01 09:02:30.498  INFO 18385 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-01-01 09:02:31.677  INFO 18385 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: uploadFileMultiUsingPOST_1
+2019-01-01 09:02:31.792  INFO 18385 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-01 09:02:31.801  INFO 18385 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 14.486 seconds (JVM running for 15.599)
+2019-01-01 09:02:32.265  INFO 18385 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-01 09:02:32.265  INFO 18385 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-01 09:02:32.317  INFO 18385 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 52 ms
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+2019-01-01 09:02:39.589  INFO 18385 --- [nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-01 09:02:39.639  INFO 18385 --- [nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+owner_key : 1
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.5.RELEASE)
+
+2019-01-01 09:06:52.249  INFO 18523 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT on ip-172-31-21-236 with PID 18523 (/home/ubuntu/git/NowSale/Spring boot/target/demo-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu/git/NowSale/Spring boot)
+2019-01-01 09:06:52.262  INFO 18523 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-01-01 09:06:52.454  INFO 18523 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27082746: startup date [Tue Jan 01 09:06:52 UTC 2019]; root of context hierarchy
+2019-01-01 09:06:56.429  INFO 18523 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5d4a6959] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-01 09:06:57.743  INFO 18523 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-01 09:06:57.833  INFO 18523 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-01 09:06:57.833  INFO 18523 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-01-01 09:06:57.872  INFO 18523 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2019-01-01 09:06:58.297  INFO 18523 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-01 09:06:58.298  INFO 18523 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5846 ms
+2019-01-01 09:06:58.586  INFO 18523 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-01 09:06:58.587  INFO 18523 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-01 09:06:58.587  INFO 18523 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-01 09:06:58.587  INFO 18523 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-01 09:06:58.587  INFO 18523 --- [ost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-01-01 09:06:58.588  INFO 18523 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-01 09:07:00.777  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/all],methods=[GET]}" onto public java.util.List<com.example.demo.client.model.ClientVO> com.example.demo.client.controller.ClientController.findAllClient()
+2019-01-01 09:07:00.778  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientVO>> com.example.demo.client.controller.ClientController.loginClient(com.example.demo.client.model.ClientLoginVO)
+2019-01-01 09:07:00.778  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientCouponVO>> com.example.demo.client.controller.ClientController.clientCouponGet(java.lang.Integer)
+2019-01-01 09:07:00.780  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientSaleVO>> com.example.demo.client.controller.ClientController.clientSaleGet(java.lang.Integer)
+2019-01-01 09:07:00.780  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/favorite/market/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientFavoriteMarketVO>> com.example.demo.client.controller.ClientController.clientFavoriteMarket(java.lang.Integer)
+2019-01-01 09:07:00.785  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/update/{client_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoUpdate(java.lang.Integer,com.example.demo.client.model.ClientVO)
+2019-01-01 09:07:00.786  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/delete/{client_key}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoDelete(java.lang.Integer)
+2019-01-01 09:07:00.786  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/signup],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientSignup(com.example.demo.client.model.ClientVO)
+2019-01-01 09:07:00.786  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/use],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientUseCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:07:00.787  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientDeleteCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:07:00.787  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientInsertCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:07:00.788  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientUseSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 09:07:00.788  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInsertSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 09:07:00.805  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthLogin(com.example.demo.all.model.OAuthLoginVO)
+2019-01-01 09:07:00.805  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/signup/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthSignUp(com.example.demo.client.model.ClientVO)
+2019-01-01 09:07:00.805  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/naver/test],methods=[GET]}" onto public void com.example.demo.all.controller.AllController.naverLoginTest()
+2019-01-01 09:07:00.806  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.deleteFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 09:07:00.806  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/is/get/count/{owner_key}/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.example.demo.all.model.DangolWithMarketMenuImg> com.example.demo.all.controller.AllController.isFavoriteGetCount(int,int)
+2019-01-01 09:07:00.806  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/{owner_key}/menu],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MenuVO>> com.example.demo.all.controller.AllController.ownerMenuList(int)
+2019-01-01 09:07:00.806  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/find/password],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.example.demo.all.controller.AllController.clientFindPassword(com.example.demo.all.model.AllEmailVO) throws javax.mail.MessagingException
+2019-01-01 09:07:00.807  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/overlap/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.clientOverlapId(java.lang.String)
+2019-01-01 09:07:00.813  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/market/list/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MarketVO>> com.example.demo.all.controller.AllController.categoryMarketShow(java.lang.String)
+2019-01-01 09:07:00.813  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/sale/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.all.controller.AllController.categorySaleShow(java.lang.String)
+2019-01-01 09:07:00.813  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.insertFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 09:07:00.814  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/adv/img],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.mapper.AdvImgVO>> com.example.demo.all.controller.AllController.advImgCount()
+2019-01-01 09:07:00.815  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/coupon/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.all.controller.AllController.categoryShow(java.lang.String)
+2019-01-01 09:07:00.826  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/signUp],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerSignUp()
+2019-01-01 09:07:00.826  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/market],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 09:07:00.827  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/menu],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[],java.lang.String,java.lang.String)
+2019-01-01 09:07:00.827  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/menu/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMenuImg()
+2019-01-01 09:07:00.827  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/market/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMarketImg()
+2019-01-01 09:07:00.827  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/logo/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputLogoImg()
+2019-01-01 09:07:00.828  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/logo],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadLogoMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 09:07:00.830  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.owner.controller.OwnerController.getCouponOwnerRegistered(int)
+2019-01-01 09:07:00.831  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.owner.controller.OwnerController.getSaleOwnerRegistered(int)
+2019-01-01 09:07:00.836  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/update/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponUpdate(int,com.example.demo.owner.model.OwnerRegisterCouponVO) throws java.text.ParseException
+2019-01-01 09:07:00.837  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/insert/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleInsert(int,com.example.demo.owner.model.OwnerRegisterSaleVO) throws java.text.ParseException
+2019-01-01 09:07:00.837  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponDelete(com.example.demo.owner.model.OwnerHaveCouponVO)
+2019-01-01 09:07:00.837  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleDelete(com.example.demo.owner.model.OwnerHaveSaleVO)
+2019-01-01 09:07:00.838  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.couponCount(int)
+2019-01-01 09:07:00.839  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.saleCount(int)
+2019-01-01 09:07:00.839  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/info/update/{owner_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity com.example.demo.owner.controller.OwnerController.ownerInfoUpdate(int,com.example.demo.owner.model.OwnerVO)
+2019-01-01 09:07:00.839  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.ownerSignUp(com.example.demo.owner.model.OwnerVO)
+2019-01-01 09:07:00.840  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.owner.model.OwnerVO>> com.example.demo.owner.controller.OwnerController.loginOwner(com.example.demo.owner.model.OwnerLoginVO)
+2019-01-01 09:07:00.848  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-01-01 09:07:00.856  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-01-01 09:07:00.857  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-01-01 09:07:00.865  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-01 09:07:00.865  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-01 09:07:01.416  INFO 18523 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 64a1d19e-8caa-4d81-929e-e9378ee18e4e
+
+2019-01-01 09:07:01.820  INFO 18523 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72035809, org.springframework.security.web.context.SecurityContextPersistenceFilter@53045c6c, org.springframework.security.web.header.HeaderWriterFilter@74e28667, org.springframework.security.web.authentication.logout.LogoutFilter@33065d67, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bbe85a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@548d708a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@909217e, org.springframework.security.web.session.SessionManagementFilter@663c9e7a, org.springframework.security.web.access.ExceptionTranslationFilter@58cbafc2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d901eb0]
+2019-01-01 09:07:01.970  INFO 18523 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-01-01 09:07:02.215  INFO 18523 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:07:02.653  INFO 18523 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27082746: startup date [Tue Jan 01 09:06:52 UTC 2019]; root of context hierarchy
+2019-01-01 09:07:02.813  INFO 18523 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:07:02.813  INFO 18523 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:07:04.197  INFO 18523 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-01 09:07:04.203  INFO 18523 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-01 09:07:04.216  INFO 18523 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-01 09:07:04.231  INFO 18523 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-01-01 09:07:04.231  INFO 18523 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-01-01 09:07:04.277  INFO 18523 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-01-01 09:07:04.473  INFO 18523 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-01-01 09:07:05.670  INFO 18523 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: uploadFileMultiUsingPOST_1
+2019-01-01 09:07:05.776  INFO 18523 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-01 09:07:05.784  INFO 18523 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 14.895 seconds (JVM running for 15.999)
+2019-01-01 09:07:05.953  INFO 18523 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-01 09:07:05.953  INFO 18523 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-01 09:07:05.998  INFO 18523 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 45 ms
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+2019-01-01 09:07:23.502  INFO 18523 --- [nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-01 09:07:23.545  INFO 18523 --- [nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+owner_key : 1
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.5.RELEASE)
+
+2019-01-01 09:09:43.603  INFO 18656 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT on ip-172-31-21-236 with PID 18656 (/home/ubuntu/git/NowSale/Spring boot/target/demo-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu/git/NowSale/Spring boot)
+2019-01-01 09:09:43.614  INFO 18656 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-01-01 09:09:43.821  INFO 18656 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1517365b: startup date [Tue Jan 01 09:09:43 UTC 2019]; root of context hierarchy
+2019-01-01 09:09:47.702  INFO 18656 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b334c632] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-01 09:09:49.044  INFO 18656 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-01 09:09:49.138  INFO 18656 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-01 09:09:49.138  INFO 18656 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-01-01 09:09:49.166  INFO 18656 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2019-01-01 09:09:49.368  INFO 18656 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-01 09:09:49.369  INFO 18656 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5582 ms
+2019-01-01 09:09:49.616  INFO 18656 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-01 09:09:49.616  INFO 18656 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-01 09:09:49.617  INFO 18656 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-01 09:09:49.617  INFO 18656 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-01 09:09:49.617  INFO 18656 --- [ost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-01-01 09:09:49.617  INFO 18656 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-01 09:09:51.796  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientSaleVO>> com.example.demo.client.controller.ClientController.clientSaleGet(java.lang.Integer)
+2019-01-01 09:09:51.797  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/favorite/market/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientFavoriteMarketVO>> com.example.demo.client.controller.ClientController.clientFavoriteMarket(java.lang.Integer)
+2019-01-01 09:09:51.798  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/update/{client_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoUpdate(java.lang.Integer,com.example.demo.client.model.ClientVO)
+2019-01-01 09:09:51.806  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/delete/{client_key}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoDelete(java.lang.Integer)
+2019-01-01 09:09:51.806  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/signup],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientSignup(com.example.demo.client.model.ClientVO)
+2019-01-01 09:09:51.806  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/use],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientUseCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:09:51.807  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientDeleteCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:09:51.807  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientInsertCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:09:51.807  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientUseSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 09:09:51.808  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInsertSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 09:09:51.808  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/all],methods=[GET]}" onto public java.util.List<com.example.demo.client.model.ClientVO> com.example.demo.client.controller.ClientController.findAllClient()
+2019-01-01 09:09:51.809  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientVO>> com.example.demo.client.controller.ClientController.loginClient(com.example.demo.client.model.ClientLoginVO)
+2019-01-01 09:09:51.809  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientCouponVO>> com.example.demo.client.controller.ClientController.clientCouponGet(java.lang.Integer)
+2019-01-01 09:09:51.823  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/market/list/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MarketVO>> com.example.demo.all.controller.AllController.categoryMarketShow(java.lang.String)
+2019-01-01 09:09:51.823  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.deleteFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 09:09:51.823  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/is/get/count/{owner_key}/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.example.demo.all.model.DangolWithMarketMenuImg> com.example.demo.all.controller.AllController.isFavoriteGetCount(int,int)
+2019-01-01 09:09:51.823  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/{owner_key}/menu],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MenuVO>> com.example.demo.all.controller.AllController.ownerMenuList(int)
+2019-01-01 09:09:51.824  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/find/password],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.example.demo.all.controller.AllController.clientFindPassword(com.example.demo.all.model.AllEmailVO) throws javax.mail.MessagingException
+2019-01-01 09:09:51.824  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthLogin(com.example.demo.all.model.OAuthLoginVO)
+2019-01-01 09:09:51.824  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/signup/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthSignUp(com.example.demo.client.model.ClientVO)
+2019-01-01 09:09:51.825  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/naver/test],methods=[GET]}" onto public void com.example.demo.all.controller.AllController.naverLoginTest()
+2019-01-01 09:09:51.831  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.insertFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 09:09:51.831  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/adv/img],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.mapper.AdvImgVO>> com.example.demo.all.controller.AllController.advImgCount()
+2019-01-01 09:09:51.832  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/coupon/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.all.controller.AllController.categoryShow(java.lang.String)
+2019-01-01 09:09:51.832  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/sale/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.all.controller.AllController.categorySaleShow(java.lang.String)
+2019-01-01 09:09:51.833  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/overlap/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.clientOverlapId(java.lang.String)
+2019-01-01 09:09:51.838  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/signUp],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerSignUp()
+2019-01-01 09:09:51.838  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/market],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 09:09:51.838  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/menu],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[],java.lang.String,java.lang.String)
+2019-01-01 09:09:51.839  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/menu/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMenuImg()
+2019-01-01 09:09:51.839  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/market/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMarketImg()
+2019-01-01 09:09:51.839  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/logo/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputLogoImg()
+2019-01-01 09:09:51.844  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/logo],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadLogoMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 09:09:51.847  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.owner.model.OwnerVO>> com.example.demo.owner.controller.OwnerController.loginOwner(com.example.demo.owner.model.OwnerLoginVO)
+2019-01-01 09:09:51.847  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.ownerSignUp(com.example.demo.owner.model.OwnerVO)
+2019-01-01 09:09:51.848  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.owner.controller.OwnerController.getCouponOwnerRegistered(int)
+2019-01-01 09:09:51.848  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.owner.controller.OwnerController.getSaleOwnerRegistered(int)
+2019-01-01 09:09:51.849  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/update/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponUpdate(int,com.example.demo.owner.model.OwnerRegisterCouponVO) throws java.text.ParseException
+2019-01-01 09:09:51.849  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/insert/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleInsert(int,com.example.demo.owner.model.OwnerRegisterSaleVO) throws java.text.ParseException
+2019-01-01 09:09:51.850  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponDelete(com.example.demo.owner.model.OwnerHaveCouponVO)
+2019-01-01 09:09:51.851  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleDelete(com.example.demo.owner.model.OwnerHaveSaleVO)
+2019-01-01 09:09:51.851  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.couponCount(int)
+2019-01-01 09:09:51.856  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.saleCount(int)
+2019-01-01 09:09:51.857  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/info/update/{owner_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity com.example.demo.owner.controller.OwnerController.ownerInfoUpdate(int,com.example.demo.owner.model.OwnerVO)
+2019-01-01 09:09:51.861  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-01-01 09:09:51.865  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-01-01 09:09:51.865  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-01-01 09:09:51.877  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-01 09:09:51.878  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-01 09:09:52.431  INFO 18656 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a8548925-7c7a-45a4-8f5f-f412163d0607
+
+2019-01-01 09:09:52.861  INFO 18656 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a83a74a, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b0fe47a, org.springframework.security.web.header.HeaderWriterFilter@543295b0, org.springframework.security.web.authentication.logout.LogoutFilter@74e28667, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@235ecd9f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2034b64c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1349883, org.springframework.security.web.session.SessionManagementFilter@117159c0, org.springframework.security.web.access.ExceptionTranslationFilter@248e319b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c5920df]
+2019-01-01 09:09:53.019  INFO 18656 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-01-01 09:09:53.284  INFO 18656 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:09:53.737  INFO 18656 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1517365b: startup date [Tue Jan 01 09:09:43 UTC 2019]; root of context hierarchy
+2019-01-01 09:09:53.901  INFO 18656 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:09:53.901  INFO 18656 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:09:55.210  INFO 18656 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-01 09:09:55.219  INFO 18656 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-01 09:09:55.227  INFO 18656 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-01 09:09:55.243  INFO 18656 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-01-01 09:09:55.243  INFO 18656 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-01-01 09:09:55.291  INFO 18656 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-01-01 09:09:55.487  INFO 18656 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-01-01 09:09:56.717  INFO 18656 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: uploadFileMultiUsingPOST_1
+2019-01-01 09:09:56.841  INFO 18656 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-01 09:09:56.852  INFO 18656 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 14.65 seconds (JVM running for 15.764)
+2019-01-01 09:09:57.061  INFO 18656 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-01 09:09:57.062  INFO 18656 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-01 09:09:57.099  INFO 18656 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+2019-01-01 09:10:03.429  INFO 18656 --- [nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-01 09:10:03.477  INFO 18656 --- [nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+owner_key : 1
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.5.RELEASE)
+
+2019-01-01 09:14:21.701  INFO 18786 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication v0.0.1-SNAPSHOT on ip-172-31-21-236 with PID 18786 (/home/ubuntu/git/NowSale/Spring boot/target/demo-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu/git/NowSale/Spring boot)
+2019-01-01 09:14:21.711  INFO 18786 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-01-01 09:14:21.914  INFO 18786 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4fccd51b: startup date [Tue Jan 01 09:14:21 UTC 2019]; root of context hierarchy
+2019-01-01 09:14:25.811  INFO 18786 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27f15f3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-01 09:14:27.123  INFO 18786 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-01 09:14:27.217  INFO 18786 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-01 09:14:27.217  INFO 18786 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-01-01 09:14:27.248  INFO 18786 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2019-01-01 09:14:27.456  INFO 18786 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-01 09:14:27.456  INFO 18786 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5560 ms
+2019-01-01 09:14:27.699  INFO 18786 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-01 09:14:27.700  INFO 18786 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-01 09:14:27.700  INFO 18786 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-01 09:14:27.700  INFO 18786 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-01 09:14:27.700  INFO 18786 --- [ost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-01-01 09:14:27.701  INFO 18786 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-01 09:14:29.824  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientVO>> com.example.demo.client.controller.ClientController.loginClient(com.example.demo.client.model.ClientLoginVO)
+2019-01-01 09:14:29.825  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientCouponVO>> com.example.demo.client.controller.ClientController.clientCouponGet(java.lang.Integer)
+2019-01-01 09:14:29.826  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/have/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientSaleVO>> com.example.demo.client.controller.ClientController.clientSaleGet(java.lang.Integer)
+2019-01-01 09:14:29.828  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/favorite/market/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.client.model.ClientFavoriteMarketVO>> com.example.demo.client.controller.ClientController.clientFavoriteMarket(java.lang.Integer)
+2019-01-01 09:14:29.828  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/update/{client_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoUpdate(java.lang.Integer,com.example.demo.client.model.ClientVO)
+2019-01-01 09:14:29.828  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/info/delete/{client_key}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInfoDelete(java.lang.Integer)
+2019-01-01 09:14:29.833  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/signup],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientSignup(com.example.demo.client.model.ClientVO)
+2019-01-01 09:14:29.833  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/use],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientUseCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:14:29.833  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/all],methods=[GET]}" onto public java.util.List<com.example.demo.client.model.ClientVO> com.example.demo.client.controller.ClientController.findAllClient()
+2019-01-01 09:14:29.834  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientDeleteCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:14:29.834  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/coupon/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientHaveCouponVO> com.example.demo.client.controller.ClientController.clientInsertCoupon(com.example.demo.client.model.ClientHaveCouponVO)
+2019-01-01 09:14:29.834  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientUseSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 09:14:29.835  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/client/sale/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.client.controller.ClientController.clientInsertSale(com.example.demo.client.model.ClientHaveSaleVO)
+2019-01-01 09:14:29.844  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/market/list/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MarketVO>> com.example.demo.all.controller.AllController.categoryMarketShow(java.lang.String)
+2019-01-01 09:14:29.852  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/overlap/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.clientOverlapId(java.lang.String)
+2019-01-01 09:14:29.853  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/is/get/count/{owner_key}/{client_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.example.demo.all.model.DangolWithMarketMenuImg> com.example.demo.all.controller.AllController.isFavoriteGetCount(int,int)
+2019-01-01 09:14:29.853  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.deleteFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 09:14:29.853  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/{owner_key}/menu],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.MenuVO>> com.example.demo.all.controller.AllController.ownerMenuList(int)
+2019-01-01 09:14:29.853  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/find/password],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.example.demo.all.controller.AllController.clientFindPassword(com.example.demo.all.model.AllEmailVO) throws javax.mail.MessagingException
+2019-01-01 09:14:29.854  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthLogin(com.example.demo.all.model.OAuthLoginVO)
+2019-01-01 09:14:29.854  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/signup/oauth],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.example.demo.client.model.ClientVO> com.example.demo.all.controller.AllController.oauthSignUp(com.example.demo.client.model.ClientVO)
+2019-01-01 09:14:29.856  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/login/naver/test],methods=[GET]}" onto public void com.example.demo.all.controller.AllController.naverLoginTest()
+2019-01-01 09:14:29.857  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/sale/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.all.controller.AllController.categorySaleShow(java.lang.String)
+2019-01-01 09:14:29.857  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/favorite/insert],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.all.controller.AllController.insertFavorite(com.example.demo.all.model.AllOwnerClientKeyVO)
+2019-01-01 09:14:29.858  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/adv/img],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.mapper.AdvImgVO>> com.example.demo.all.controller.AllController.advImgCount()
+2019-01-01 09:14:29.858  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/category/coupon/get/{category}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.all.controller.AllController.categoryShow(java.lang.String)
+2019-01-01 09:14:29.867  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/signUp],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerSignUp()
+2019-01-01 09:14:29.868  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/market],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 09:14:29.868  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/menu],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadFileMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[],java.lang.String,java.lang.String)
+2019-01-01 09:14:29.869  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/menu/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMenuImg()
+2019-01-01 09:14:29.869  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/market/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputMarketImg()
+2019-01-01 09:14:29.869  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/owner/input/logo/img],methods=[GET]}" onto public java.lang.String com.example.demo.all.controller.OwnerInputImage.ownerInputLogoImg()
+2019-01-01 09:14:29.870  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all/api/upload/logo],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.example.demo.all.controller.OwnerInputImage.uploadLogoMulti(java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2019-01-01 09:14:29.878  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.owner.model.OwnerVO>> com.example.demo.owner.controller.OwnerController.loginOwner(com.example.demo.owner.model.OwnerLoginVO)
+2019-01-01 09:14:29.879  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerCouponShowVO>> com.example.demo.owner.controller.OwnerController.getCouponOwnerRegistered(int)
+2019-01-01 09:14:29.880  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/get/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.example.demo.all.model.OwnerSaleShowVO>> com.example.demo.owner.controller.OwnerController.getSaleOwnerRegistered(int)
+2019-01-01 09:14:29.880  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/update/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponUpdate(int,com.example.demo.owner.model.OwnerRegisterCouponVO) throws java.text.ParseException
+2019-01-01 09:14:29.880  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/insert/{owner_key}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleInsert(int,com.example.demo.owner.model.OwnerRegisterSaleVO) throws java.text.ParseException
+2019-01-01 09:14:29.880  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.couponDelete(com.example.demo.owner.model.OwnerHaveCouponVO)
+2019-01-01 09:14:29.881  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.saleDelete(com.example.demo.owner.model.OwnerHaveSaleVO)
+2019-01-01 09:14:29.882  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/coupon/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.couponCount(int)
+2019-01-01 09:14:29.882  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/sale/count/{owner_key}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Integer> com.example.demo.owner.controller.OwnerController.saleCount(int)
+2019-01-01 09:14:29.882  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/info/update/{owner_key}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity com.example.demo.owner.controller.OwnerController.ownerInfoUpdate(int,com.example.demo.owner.model.OwnerVO)
+2019-01-01 09:14:29.882  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/owner/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.example.demo.owner.controller.OwnerController.ownerSignUp(com.example.demo.owner.model.OwnerVO)
+2019-01-01 09:14:29.893  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-01-01 09:14:29.898  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-01-01 09:14:29.899  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-01-01 09:14:29.904  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-01 09:14:29.904  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-01 09:14:30.421  INFO 18786 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 802c5751-752f-4cc3-bb67-4268a2866e76
+
+2019-01-01 09:14:30.802  INFO 18786 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28261e8e, org.springframework.security.web.context.SecurityContextPersistenceFilter@58cbafc2, org.springframework.security.web.header.HeaderWriterFilter@7ef82753, org.springframework.security.web.authentication.logout.LogoutFilter@795509d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75d3a5e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74e28667, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d737b89, org.springframework.security.web.session.SessionManagementFilter@202b0582, org.springframework.security.web.access.ExceptionTranslationFilter@563f38c4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4c60d6e9]
+2019-01-01 09:14:30.956  INFO 18786 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-01-01 09:14:31.186  INFO 18786 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:14:31.616  INFO 18786 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4fccd51b: startup date [Tue Jan 01 09:14:21 UTC 2019]; root of context hierarchy
+2019-01-01 09:14:31.765  INFO 18786 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:14:31.766  INFO 18786 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-01 09:14:33.052  INFO 18786 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-01 09:14:33.055  INFO 18786 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-01 09:14:33.067  INFO 18786 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-01 09:14:33.079  INFO 18786 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-01-01 09:14:33.079  INFO 18786 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-01-01 09:14:33.127  INFO 18786 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-01-01 09:14:33.308  INFO 18786 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-01-01 09:14:34.493  INFO 18786 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: uploadFileMultiUsingPOST_1
+2019-01-01 09:14:34.608  INFO 18786 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-01 09:14:34.620  INFO 18786 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 14.286 seconds (JVM running for 15.388)
+2019-01-01 09:14:34.817  INFO 18786 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-01 09:14:34.817  INFO 18786 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-01 09:14:34.857  INFO 18786 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 40 ms
+2019-01-01 09:14:49.843  INFO 18786 --- [nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-01 09:14:50.254  INFO 18786 --- [nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/coupon/get/{owner_key} 호출
+/sale/get/{owner_key} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
+/category/coupon/get/{category} 호출
