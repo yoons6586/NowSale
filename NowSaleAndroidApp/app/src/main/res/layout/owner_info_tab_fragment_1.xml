@@ -156,7 +156,7 @@
                 android:id="@+id/recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
+            <!--
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -202,8 +202,9 @@
                 android:text="폰 번호"
                 android:id="@+id/marketPhone"/>
 
-
+            -->
         </LinearLayout>
+
     </ScrollView>
 
 

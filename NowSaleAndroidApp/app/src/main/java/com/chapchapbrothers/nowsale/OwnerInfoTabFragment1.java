@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -19,15 +20,16 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.chapchapbrothers.nowsale.VO.AllOwnerClientKeyVO;
 import com.chapchapbrothers.nowsale.VO.CouponVO;
 import com.chapchapbrothers.nowsale.VO.DangolWithMarketMenuImg;
 import com.chapchapbrothers.nowsale.VO.MenuVO;
 import com.chapchapbrothers.nowsale.http.AllService;
-import com.nhn.android.maps.NMapContext;
+import com.nhn.android.maps.NMapView;
 import com.nhn.android.maps.maplib.NGeoPoint;
-import com.nhn.android.mapviewer.overlay.NMapOverlayManager;
-import com.nhn.android.mapviewer.overlay.NMapResourceProvider;
+import com.nhn.android.maps.nmapmodel.NMapError;
 
 import java.util.List;
 
@@ -38,6 +40,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.support.constraint.Constraints.TAG;
+
 /**
  * Created by Junyoung on 2016-06-23.
  */
@@ -46,7 +50,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
     private Intent get_intent;
     private LinearLayout backBtn;
     private TextView nameText;
-    private TextView phoneText,workingTime,workingDay;
+    private TextView workingTime,workingDay;
     private TextView countText;
     private ImageView heart;
     private Boolean favBool;
@@ -64,12 +68,13 @@ public class OwnerInfoTabFragment1 extends Fragment {
     private OnFavSetListener onFavSetListener;
 
     //네이버 지도 설정
+    /*
     private NMapContext mMapContext;
     private static final String CLIENT_ID = Config.naverMapClientID;// 애플리케이션 클라이언트 아이디 값
     private NGeoPoint nGeoPoint;
     private NMapResourceProvider nMapResourceProvider;
     private NMapOverlayManager mapOverlayManager;
-
+    */
     //화면 크기 설
     private DisplayMetrics metrics;
 
@@ -88,7 +93,6 @@ public class OwnerInfoTabFragment1 extends Fragment {
         loginNeedPopupIntent = new Intent(getActivity(),LoginCancelPopupActivity.class);
 
         nameText=(TextView)view.findViewById(R.id.marketName);
-        phoneText=(TextView)view.findViewById(R.id.marketPhone);
         workingDay = view.findViewById(R.id.workingDay);
         workingTime = view.findViewById(R.id.workingTime);
         dangolLayout = view.findViewById(R.id.dangol_layout);
@@ -188,15 +192,16 @@ public class OwnerInfoTabFragment1 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mMapContext =  new NMapContext(super.getActivity());
+        /*mMapContext =  new NMapContext(super.getActivity());
         mMapContext.onCreate();
+        */
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        /*
-        NMapView mMapView = (NMapView)getView().findViewById(R.id.mapView);
+
+        /*NMapView mMapView = (NMapView)getView().findViewById(R.id.mapView);
         mMapView.setClientId(CLIENT_ID);// 클라이언트 아이디 설정
         mMapContext.setupMapView(mMapView); // fragment에서 사용할 거면 Context에 등록한 뒤 mapview 사용해야
 
@@ -213,9 +218,9 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
         mMapView.setOnMapStateChangeListener(changeListener);
         mMapView.setOnMapViewTouchEventListener(mapListener);
-*/
 
-/*
+
+
         nMapResourceProvider = new NMapViewerResourceProvider(getActivity());
         mapOverlayManager = new NMapOverlayManager(getActivity(), mMapView, nMapResourceProvider);
 
@@ -235,11 +240,10 @@ public class OwnerInfoTabFragment1 extends Fragment {
         // POI data 표시, 해당 오버레이 객체레 포함된 전체 아이템이 화면에 표시되게 하려면 showAllPOIdata(0)
         // 메소드를 호출해야 합니다.
         poiDataOverlay.showFocusedItemOnly();
-        */
-
+*/
     }
 
-    /*private NMapView.OnMapStateChangeListener changeListener = new NMapView.OnMapStateChangeListener() {
+    private NMapView.OnMapStateChangeListener changeListener = new NMapView.OnMapStateChangeListener() {
         @Override
         public void onMapInitHandler(NMapView nMapView, NMapError nMapError) {
             Log.e(TAG, "OnMapStateChangeListener onMapInitHandler : ");
@@ -300,7 +304,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
             Log.e(TAG, "OnMapViewTouchEventListener onSingleTapUp : ");
         }
     };
-    */
+
 
 
     /*@Override
@@ -330,7 +334,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mMapContext.onDestroy();
+//        mMapContext.onDestroy();
         allOwnerClientKeyVO = new AllOwnerClientKeyVO(couponVO.getOwner_key(), Config.clientVO.getClient_key());
 
         AllService service = Config.retrofit.create(AllService.class);
@@ -415,7 +419,12 @@ public class OwnerInfoTabFragment1 extends Fragment {
             itemHolder.menuMoney.setText(money);
 
             Log.e("menu_img",menu_img);
-            Glide.with(getActivity()).load(Config.url+menu_img).into(itemHolder.menuImg);
+            Glide.with(getActivity())
+                    .load(Config.url+menu_img)
+                    .apply(new RequestOptions()
+                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                            .skipMemoryCache(true))
+                    .into(itemHolder.menuImg);
         }
 
         @Override

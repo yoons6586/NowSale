@@ -19,6 +19,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.chapchapbrothers.nowsale.VO.ClientCouponVO;
 import com.chapchapbrothers.nowsale.VO.ClientSaleVO;
 import com.chapchapbrothers.nowsale.VO.CouponVO;
@@ -498,7 +500,12 @@ public class FActivity extends Fragment implements SwipeRefreshLayout.OnRefreshL
 //            itemHolder.imgLogo.setImageResource(name.hashCode() % 2 == 0 ? R.drawable.logo1 : R.drawable.logo2);
             try{
                 Log.e("logo_img",list.get(position).getLogo_img());
-                Glide.with(getActivity()).load(Config.url + list.get(position).getLogo_img()).into(itemHolder.imgLogo);
+                Glide.with(getActivity())
+                        .load(Config.url + list.get(position).getLogo_img())
+                        .apply(new RequestOptions()
+                                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                .skipMemoryCache(true))
+                        .into(itemHolder.imgLogo);
             } catch (NullPointerException e){
 
             }
