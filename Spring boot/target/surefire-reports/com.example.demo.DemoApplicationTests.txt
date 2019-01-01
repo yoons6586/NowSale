@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.example.demo.DemoApplicationTests
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.655 s - in com.example.demo.DemoApplicationTests
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.045 s - in com.example.demo.DemoApplicationTests
+>>>>>>> 547ece578b68c03fae5d5700c57f4c73e25eae9b
