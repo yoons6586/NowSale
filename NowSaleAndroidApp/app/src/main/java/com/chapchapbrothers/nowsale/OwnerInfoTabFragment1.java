@@ -10,7 +10,6 @@ import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -25,16 +24,9 @@ import com.chapchapbrothers.nowsale.VO.CouponVO;
 import com.chapchapbrothers.nowsale.VO.DangolWithMarketMenuImg;
 import com.chapchapbrothers.nowsale.VO.MenuVO;
 import com.chapchapbrothers.nowsale.http.AllService;
-import com.chapchapbrothers.nowsale.naverMap.NMapPOIflagType;
-import com.chapchapbrothers.nowsale.naverMap.NMapViewerResourceProvider;
 import com.nhn.android.maps.NMapContext;
-import com.nhn.android.maps.NMapController;
-import com.nhn.android.maps.NMapView;
 import com.nhn.android.maps.maplib.NGeoPoint;
-import com.nhn.android.maps.nmapmodel.NMapError;
-import com.nhn.android.maps.overlay.NMapPOIdata;
 import com.nhn.android.mapviewer.overlay.NMapOverlayManager;
-import com.nhn.android.mapviewer.overlay.NMapPOIdataOverlay;
 import com.nhn.android.mapviewer.overlay.NMapResourceProvider;
 
 import java.util.List;
@@ -45,8 +37,6 @@ import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by Junyoung on 2016-06-23.
@@ -201,9 +191,11 @@ public class OwnerInfoTabFragment1 extends Fragment {
         mMapContext =  new NMapContext(super.getActivity());
         mMapContext.onCreate();
     }
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        /*
         NMapView mMapView = (NMapView)getView().findViewById(R.id.mapView);
         mMapView.setClientId(CLIENT_ID);// 클라이언트 아이디 설정
         mMapContext.setupMapView(mMapView); // fragment에서 사용할 거면 Context에 등록한 뒤 mapview 사용해야
@@ -213,7 +205,6 @@ public class OwnerInfoTabFragment1 extends Fragment {
         mMapView.setClickable(true);
         mMapView.setEnabled(true);
         mMapView.setFocusable(true);
-//        mMapView.setFocusableInTouchMode(true);
         mMapView.setScalingFactor(2.0F);
         Log.e("Map","longitude : "+couponVO.getLongitude()+", latitude : "+couponVO.getLatitude());
         nGeoPoint = new NGeoPoint(couponVO.getLongitude(), couponVO.getLatitude());
@@ -222,17 +213,9 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
         mMapView.setOnMapStateChangeListener(changeListener);
         mMapView.setOnMapViewTouchEventListener(mapListener);
+*/
 
-//        setMarker();
-        /*new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                setMarker();
-            }
-        }, 5000);*/
-
-
-
+/*
         nMapResourceProvider = new NMapViewerResourceProvider(getActivity());
         mapOverlayManager = new NMapOverlayManager(getActivity(), mMapView, nMapResourceProvider);
 
@@ -252,10 +235,11 @@ public class OwnerInfoTabFragment1 extends Fragment {
         // POI data 표시, 해당 오버레이 객체레 포함된 전체 아이템이 화면에 표시되게 하려면 showAllPOIdata(0)
         // 메소드를 호출해야 합니다.
         poiDataOverlay.showFocusedItemOnly();
+        */
 
     }
 
-    private NMapView.OnMapStateChangeListener changeListener = new NMapView.OnMapStateChangeListener() {
+    /*private NMapView.OnMapStateChangeListener changeListener = new NMapView.OnMapStateChangeListener() {
         @Override
         public void onMapInitHandler(NMapView nMapView, NMapError nMapError) {
             Log.e(TAG, "OnMapStateChangeListener onMapInitHandler : ");
@@ -316,10 +300,10 @@ public class OwnerInfoTabFragment1 extends Fragment {
             Log.e(TAG, "OnMapViewTouchEventListener onSingleTapUp : ");
         }
     };
+    */
 
 
-
-    @Override
+    /*@Override
     public void onStart(){
         super.onStart();
         mMapContext.onStart();
@@ -338,7 +322,7 @@ public class OwnerInfoTabFragment1 extends Fragment {
     public void onStop() {
         mMapContext.onStop();
         super.onStop();
-    }
+    }*/
     @Override
     public void onDestroyView() {
         super.onDestroyView();
@@ -429,24 +413,6 @@ public class OwnerInfoTabFragment1 extends Fragment {
 
             itemHolder.menuName.setText(name);
             itemHolder.menuMoney.setText(money);
-
-            /*GridLayoutManager.LayoutParams view_params = (GridLayoutManager.LayoutParams) itemHolder.rootView.getLayoutParams();
-            FrameLayout.LayoutParams menuImgParams = (FrameLayout.LayoutParams) itemHolder.menuImg.getLayoutParams();
-
-            int view_w = (int) (metrics.widthPixels/2);
-            int view_h = (int)(view_w*0.92);
-            int menuImg_w = (int) (view_w);
-            int menuImg_h = (int) (view_h*0.73);
-            Log.e("rootView","w : "+view_w+", h : "+view_h);
-            Log.e("rootView","menuImg_w : "+menuImg_w+", menuImg_h : "+menuImg_h);
-
-            view_params.width = view_w;
-            view_params.height = view_h;
-            menuImgParams.width = menuImg_w;
-            menuImgParams.height = menuImg_h;
-
-            itemHolder.rootView.setLayoutParams(view_params);
-            itemHolder.menuImg.setLayoutParams(menuImgParams);*/
 
             Log.e("menu_img",menu_img);
             Glide.with(getActivity()).load(Config.url+menu_img).into(itemHolder.menuImg);
