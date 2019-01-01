@@ -4,12 +4,51 @@
     <list default="true" id="95bb5cfa-e20d-4fbd-9f23-7faaece68ab7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OAuthLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/6_intern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/7_123.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/7_Screen Shot 2018-12-23 at 2.24.16 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/OAuthLoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/AllController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/AllController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/AllController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/AllController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllCategoryCouponShowDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllCategoryCouponShowDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllCategoryMarketShowDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllCategoryMarketShowDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllCategorySaleShowDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllCategorySaleShowDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllFavoriteDeleteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllFavoriteDeleteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllFavoriteInsertDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllFavoriteInsertDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllLostPasswordDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/AllLostPasswordDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/OAuthLoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/dao/OAuthLoginDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/mapper/AllMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/all/mapper/AllMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponDeleteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponDeleteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponInsertDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponInsertDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponUseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientCouponUseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientHaveCouponDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientHaveCouponDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientHaveSaleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientHaveSaleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientInfoDeleteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientInfoDeleteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientInfoUpdateDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientInfoUpdateDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientLoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientLoginDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientLostPasswordDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientLostPasswordDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientSaleDeleteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientSaleDeleteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientSaleInsertDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientSaleInsertDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientSignupDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/client/dao/ClientSignupDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerCouponDeleteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerCouponDeleteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerCouponUpdateDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerCouponUpdateDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerInfoUpdateDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerInfoUpdateDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerLoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerLoginDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerSaleDeleteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerSaleDeleteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerSaleInsertDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/dao/OwnerSaleInsertDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/drawable/owner/menu/1/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/drawable/owner/menu/1/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/drawable/owner/menu/1/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/drawable/owner/menu/1/4.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -129,36 +168,36 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="17" />
-          <entry key="html" value="7" />
+          <entry key="html" value="8" />
           <entry key="iml" value="1" />
           <entry key="java" value="151" />
           <entry key="jpg" value="2" />
           <entry key="mvnw" value="1" />
-          <entry key="png" value="8" />
+          <entry key="png" value="9" />
           <entry key="pom" value="1" />
           <entry key="properties" value="5" />
           <entry key="templates" value="1" />
-          <entry key="xml" value="36" />
+          <entry key="xml" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="17" />
-          <entry key="HTML" value="7" />
+          <entry key="HTML" value="8" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="Image" value="10" />
+          <entry key="Image" value="11" />
           <entry key="JAVA" value="151" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="5" />
           <entry key="ThymeleafExpressions" value="1" />
-          <entry key="XML" value="37" />
+          <entry key="XML" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="1" />
-          <entry key="html" value="1416" />
-          <entry key="java" value="11257" />
+          <entry key="html" value="1446" />
+          <entry key="java" value="11599" />
           <entry key="properties" value="100" />
           <entry key="xml" value="1290" />
         </counts>
@@ -166,8 +205,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="HTML" value="1416" />
-          <entry key="JAVA" value="11257" />
+          <entry key="HTML" value="1446" />
+          <entry key="JAVA" value="11599" />
           <entry key="Properties" value="100" />
           <entry key="SQL" value="5" />
           <entry key="XML" value="1285" />
@@ -189,11 +228,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="124" column="13" lean-forward="true" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
+            <state relative-caret-position="-5310">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -202,10 +241,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/myBatisConfiguration.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="92" column="15" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
+            <state relative-caret-position="1140">
+              <caret line="80" column="36" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
               <folding>
                 <element signature="e#992#993#0" expanded="true" />
                 <element signature="e#1024#1025#0" expanded="true" />
@@ -214,24 +262,24 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/market/8_123.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+            <state relative-caret-position="228">
+              <caret line="17" column="97" selection-start-line="17" selection-start-column="97" selection-end-line="17" selection-end-column="97" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
+            <state relative-caret-position="189">
               <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
             </state>
           </provider>
@@ -240,8 +288,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+            <state relative-caret-position="228">
+              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -349,9 +406,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ownerSignUp.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html" />
         <option value="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java" />
       </list>
@@ -577,17 +634,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="drawable" type="462c0819:PsiDirectoryNode" />
               <item name="owner" type="462c0819:PsiDirectoryNode" />
-              <item name="1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="drawable" type="462c0819:PsiDirectoryNode" />
-              <item name="owner" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
+              <item name="market" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -624,7 +671,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546326350467" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546328679382" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -655,8 +702,8 @@
       <recent name="$PROJECT_DIR$/src/main/resources/drawable" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/demo" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/demo/all/dao" />
       <recent name="$PROJECT_DIR$/src/main/resources/org" />
@@ -827,15 +874,16 @@
       <workItem from="1545890642181" duration="516000" />
       <workItem from="1546003930283" duration="118000" />
       <workItem from="1546158250429" duration="4132000" />
-      <workItem from="1546316007679" duration="8309000" />
+      <workItem from="1546316007679" duration="10297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300167000" />
+    <option name="totallyTimeSpent" value="302155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2014652" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -848,13 +896,13 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32834226" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3144385" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3144385" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32941177" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
@@ -879,9 +927,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/logo1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/market/1/3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1062,13 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/myBatisConfiguration.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/config/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1131,13 +1169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/nio/file/Paths.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -1170,31 +1201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="92" column="15" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
-          <folding>
-            <element signature="e#992#993#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4643">
@@ -1205,25 +1211,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="17" column="97" selection-start-line="17" selection-start-column="97" selection-end-line="17" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="124" column="13" lean-forward="true" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
+        <state relative-caret-position="-5310">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/myBatisConfiguration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="80" column="36" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
+          <folding>
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/market/8_123.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">

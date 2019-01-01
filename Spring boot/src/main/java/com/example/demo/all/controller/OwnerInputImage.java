@@ -38,6 +38,9 @@ public class OwnerInputImage {
 	@GetMapping("/owner/input/menu/img")
 	public String ownerInputMenuImg(){ return "ownerMenuImg"; }
 
+	@GetMapping("/owner/input/market/img")
+	public String ownerInputMarketImg(){ return "ownerMarketImg"; }
+
 	@PostMapping("/api/upload/menu")
 	public ResponseEntity<?> uploadFileMulti(
 			@RequestParam("id") String id,
@@ -63,7 +66,7 @@ public class OwnerInputImage {
 		}
 
 		try {
-			saveUploadedFiles(Arrays.asList(uploadfiles),owner_key,name,price);
+			saveUploadedMenuFiles(Arrays.asList(uploadfiles),owner_key,name,price);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -75,7 +78,42 @@ public class OwnerInputImage {
 
 	}
 
-	private void saveUploadedFiles(List<MultipartFile> files,int owner_key,String name,String price) throws IOException {
+	@PostMapping("/api/upload/market")
+	public ResponseEntity<?> uploadFileMulti(
+			@RequestParam("id") String id,
+			@RequestParam("files") MultipartFile[] uploadfiles
+	) {
+		Integer owner_key;
+		try {
+			owner_key= allMapper.getOwnerKey(id);
+			System.out.println("owner_key : "+owner_key);
+		} catch(Exception e){
+			e.printStackTrace();
+			return new ResponseEntity<>("No ID",HttpStatus.UNAUTHORIZED);
+		}
+
+		// Get file name
+		String uploadedFileName = Arrays.stream(uploadfiles).map(x -> x.getOriginalFilename())
+				.filter(x -> !StringUtils.isEmpty(x)).collect(Collectors.joining(" , "));
+
+		if (StringUtils.isEmpty(uploadedFileName)) {
+			return new ResponseEntity("please select a file!", HttpStatus.OK);
+		}
+
+		try {
+			saveUploadedMarketFiles(Arrays.asList(uploadfiles),owner_key);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
+
+		return new ResponseEntity("Successfully uploaded - "
+				+ uploadedFileName, HttpStatus.OK);
+
+	}
+
+	private void saveUploadedMenuFiles(List<MultipartFile> files,int owner_key,String name,String price) throws IOException {
 
 		for (MultipartFile file : files) {
 			if (file.isEmpty()) {
@@ -93,14 +131,28 @@ public class OwnerInputImage {
 			allMapper.insertMenuImg(owner_key,"/drawable/owner/menu/"+filename,name,price);
 
 			stream.close();
+		}
 
+	}
 
+	private void saveUploadedMarketFiles(List<MultipartFile> files,int owner_key) throws IOException {
 
+		for (MultipartFile file : files) {
+			if (file.isEmpty()) {
+				continue; //next pls
+			}
 
-			/*byte[] bytes = file.getBytes();
-			Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
-			Files.write(path, bytes);
-			*/
+			String filename = owner_key+"_"+file.getOriginalFilename();
+			String directory = "src/main/resources/static/drawable/owner/market";
+			String filepath = Paths.get(directory, filename).toString();
+
+			BufferedOutputStream stream =
+					new BufferedOutputStream(new FileOutputStream(new File(filepath)));
+			stream.write(file.getBytes());
+
+			allMapper.insertMarketImg(owner_key,"/drawable/owner/market/"+filename);
+
+			stream.close();
 		}
 
 	}

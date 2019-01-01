@@ -14,6 +14,9 @@ public interface AllMapper {
     @Insert("INSERT INTO owner_menu_list VALUES(#{owner_key},#{menu_img_name},#{menu_name},#{menu_money})")
     void insertMenuImg(@Param("owner_key")int owner_key,@Param("menu_img_name")String menu_img_name,@Param("menu_name")String menu_name,@Param("menu_money")String menu_money);
 
+    @Insert("INSERT INTO market_img VALUES(#{owner_key},#{market_img})")
+    void insertMarketImg(@Param("owner_key")int owner_key,@Param("market_img")String market_img);
+
     @Select("SELECT * FROM adv_img_uri")
     List<AdvImgVO> getAdvImgCnt();
 
