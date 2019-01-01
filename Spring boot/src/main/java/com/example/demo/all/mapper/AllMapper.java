@@ -11,11 +11,17 @@ import java.util.List;
 @Mapper
 public interface AllMapper {
     //광고판 이미지 갯수
+    @Insert("INSERT INTO owner_menu_list VALUES(#{owner_key},#{menu_img_name},#{menu_name},#{menu_money})")
+    void insertMenuImg(@Param("owner_key")int owner_key,@Param("menu_img_name")String menu_img_name,@Param("menu_name")String menu_name,@Param("menu_money")String menu_money);
+
     @Select("SELECT * FROM adv_img_uri")
     List<AdvImgVO> getAdvImgCnt();
 
     @Select("SELECT * FROM client_list ORDER BY client_key DESC limit 1")
     int getUserKey();
+
+    @Select("select owner_key from owner_list where id = #{id}")
+    Integer getOwnerKey(String id);
 
     //단골 숫자 세는 것
     @Select("SELECT count(*) FROM favorite_market_list WHERE owner_key=#{owner_key}")

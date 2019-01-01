@@ -1,10 +1,10 @@
 com/example/demo/all/controller/AllController$1.class
 com/example/demo/all/model/MenuVO.class
+com/example/demo/all/controller/OwnerInputImage.class
 com/example/demo/owner/mapper/OwnerMapper.class
 com/example/demo/all/model/OAuthLoginVO.class
 com/example/demo/owner/controller/OwnerController.class
 com/example/demo/all/dao/AllFavoriteInsertDao.class
-com/example/demo/all/controller/OAuthLoginController.class
 com/example/demo/client/dao/ClientSaleDeleteDao.class
 com/example/demo/owner/dao/OwnerSaleDeleteDao.class
 com/example/demo/client/dao/ClientCouponDeleteDao.class

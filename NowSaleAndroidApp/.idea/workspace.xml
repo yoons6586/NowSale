@@ -43,8 +43,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+            <state relative-caret-position="252">
+              <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -60,20 +60,20 @@
       </file>
       <file leaf-file-name="activity_client_coupon_category.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_client_coupon_category.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4194">
               <caret line="233" column="9" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="OwnerRegisterCoupon2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapchapbrothers/nowsale/OwnerRegisterCoupon2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
+            <state relative-caret-position="720">
               <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
             </state>
           </provider>
@@ -82,7 +82,7 @@
       <file leaf-file-name="FActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapchapbrothers/nowsale/FActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
+            <state relative-caret-position="8262">
               <caret line="501" column="43" selection-start-line="501" selection-start-column="43" selection-end-line="501" selection-end-column="43" />
             </state>
           </provider>
@@ -90,25 +90,25 @@
       </file>
       <file leaf-file-name="fragment_ex4.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ex4.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="4860">
               <caret line="270" column="57" selection-start-line="270" selection-start-column="57" selection-end-line="270" selection-end-column="57" />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="list_row_coupon_wallet.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_row_coupon_wallet.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
               <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -7008,6 +7008,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="NowSaleAndroidApp" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -7039,7 +7050,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -7103,17 +7113,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="NowSaleAndroidApp" type="58d84e3e:PackageViewProjectNode" />
-              <item name="app" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -7327,30 +7327,30 @@
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50038195" side_tool="true" weight="0.32855567" />
-      <window_info anchor="right" id="Preview" order="4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32962137" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32962137" />
-      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.49961802" visible="true" weight="0.33184856" />
+      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.49961802" weight="0.33184856" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.15578231" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49961802" weight="0.27282852" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49961802" visible="true" weight="0.27282852" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.500821" side_tool="true" weight="0.1749427" />
       <window_info anchor="right" id="Assistant" order="5" visible="true" weight="0.32925898" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Preview" order="4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -7422,31 +7422,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_owner_register_coupon3.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1315">
           <caret line="87" column="65" selection-start-line="87" selection-start-column="65" selection-end-line="87" selection-end-column="65" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_owner_info.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_owner_info.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-480" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/slider_market_img.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/slider_market_img.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapchapbrothers/nowsale/VO/MarketImgVO.java">
@@ -7499,64 +7499,64 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
-      <provider editor-type-id="android-designer2">
+      <provider selected="true" editor-type-id="text-editor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml">
-      <provider editor-type-id="android-designer2">
+      <provider selected="true" editor-type-id="text-editor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_home.xml">
-      <provider editor-type-id="android-designer2">
+      <provider selected="true" editor-type-id="text-editor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/drawer_header.xml">
-      <provider editor-type-id="android-designer2">
+      <provider selected="true" editor-type-id="text-editor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/service_rule.html" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5184">
           <caret line="288" column="30" selection-start-line="288" selection-start-column="30" selection-end-line="288" selection-end-column="39" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/assets/raw/privacy_rule.html" />
@@ -7569,13 +7569,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_owner_signup.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3798">
           <caret line="211" column="11" selection-start-line="211" selection-start-column="11" selection-end-line="211" selection-end-column="11" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapchapbrothers/nowsale/SignUpActivity1.java">
@@ -7586,13 +7586,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up1.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3006">
           <caret line="167" column="61" selection-start-line="167" selection-start-column="61" selection-end-line="167" selection-end-column="61" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/assets/www/privacy_rule.html">
@@ -7603,21 +7603,21 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_owner_register_coupon4.xml">
-      <provider editor-type-id="android-designer2">
+      <provider selected="true" editor-type-id="text-editor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_owner_register_coupon2.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2556">
           <caret line="142" column="13" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/frame_loading.xml">
@@ -7628,13 +7628,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
         </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapchapbrothers/nowsale/FMainActivity.java">
@@ -7659,18 +7659,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_client_coupon_category.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4194">
           <caret line="233" column="9" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapchapbrothers/nowsale/OwnerRegisterCoupon2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
+        <state relative-caret-position="720">
           <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
         </state>
       </provider>
@@ -7687,29 +7687,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapchapbrothers/nowsale/FActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
+        <state relative-caret-position="8262">
           <caret line="501" column="43" selection-start-line="501" selection-start-column="43" selection-end-line="501" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_row_coupon_wallet.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ex4.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ex4.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="4860">
           <caret line="270" column="57" selection-start-line="270" selection-start-column="57" selection-end-line="270" selection-end-column="57" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -7721,8 +7721,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        <state relative-caret-position="252">
+          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
     </entry>

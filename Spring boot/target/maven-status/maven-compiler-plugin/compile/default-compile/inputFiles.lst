@@ -17,7 +17,6 @@
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/client/mapper/ClientMapper.java
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/client/model/ClientSaleVO.java
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/owner/dao/OwnerCouponUpdateDao.java
-/Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/all/controller/OAuthLoginController.java
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/client/dao/ClientInfoUpdateDao.java
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/owner/model/OwnerHaveSaleVO.java
@@ -48,6 +47,7 @@
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/all/model/OwnerInfoMarketGetVO.java
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/all/dao/AllCategorySaleShowDao.java
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/all/dao/AllCategoryMarketShowDao.java
+/Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/all/controller/OwnerInputImage.java
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/all/model/AllOwnerClientKeyVO.java
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/client/dao/ClientCouponDeleteDao.java
 /Users/yoonsung/Documents/NowSale/NowSale/Spring boot/src/main/java/com/example/demo/owner/model/OwnerHaveCouponVO.java

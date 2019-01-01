@@ -2,7 +2,7 @@
 <html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8">
-		<title>점주 회원가입</title>
+		<title>점주 메뉴 이미지 삽입</title>
 
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -12,57 +12,33 @@
 		$(document).ready(function () {
 			$("#submit").on('click', function(){
 				// send ajax
-				var ownerData = {
-					id : $("#id").val(),
-					pw : $("#pw").val(),
-					address : $("#address").val(),
-					nickName : $("#nickName").val(),
-					phone : $("#phone").val(),
-					market_name : $("#market_name").val(),
-					market_introduce : $("#market_introduce").val(),
-					category : $("#category").val(),
-					longitude : $("#longitude").val(),
-					latitude : $("#latitude").val(),
-					working_day : $("#working_day").val(),
-					working_time : $("#working_time").val(),
-					alarm_push : $("#alarm_push").val(),
-					alarm_mail : $("#alarm_mail").val(),
-					alarm_SMS : $("#alarm_SMS").val()
-				}
+				var form = $('#fileUploadForm')[0];
+				var data = new FormData(form);
 				$.ajax({
-					url: '/owner/signUp', // url where to submit the request
-					contentType : "application/json",
+					url: '/all/api/upload/menu', // url where to submit the request
+					processData: false,
+					contentType : false,
+					cache : false,
+					enctype: 'multipart/form-data',
 					type : "POST", // type of action POST || GET
-					dataType : 'json', // data type
-					data : JSON.stringify(ownerData),
-					success : function(result) {
-						$('#result').text("sdfsdfsdf");
+					data : data,
+					timeout: 10000,
+
+					success : function(data) {
+						$('#pw').text(data);
 					}
 				})
-				alert("회원가입 완료");
-
 			});
 		});
 		</script>
 	</head>
 	<body>
-		<form id="form" action="" method = post>
+		<form id="fileUploadForm" enctype="multipart/form-data" action="" method = post>
 			아이디: <input type="text" name="id" id="id"><br>
-			비밀번호: <input type="text" name="pw" id="pw"><br>
-			주소 : <input type="text" id="address"><br>
-			닉네임 : <input type="text" id="nickName"><br>
-			폰번호 : <input type="text" id="phone"><br>
-			매장 이름 : <input type="text" id="market_name"><br>
-			매장 소개 : <input type="text" id="market_introduce"><br>
-			카테고리 : <input type="text" id="category"><br>
-			longitude : <input type="text" id="longitude"><br>
-			latitude : <input type="text" id="latitude"><br>
-			working_day : <input type="text" id="working_day"><br>
-			영업시간 : <input type="text" id="working_time"><br>
-			push alarm T,F : <input type="text" id="alarm_push"><br>
-			mail alarm T,F : <input type="text" id="alarm_mail"><br>
-			SMS alarm T,F : <input type="text" id="alarm_SMS"><br>
-			RESULT : <span id="result"></span><br>
+			메뉴 이름: <input type="text" name="name" id="name"><br>
+			메뉴 가격: <input type="text" name="price" id="price"><br>
+			<input type="file" name="files"/><br/><br/>
+			<input type="file" name="files"/><br/><br/>
 			<input id ="submit" type=button name="submit" value="회원가입">
 		</form>
 

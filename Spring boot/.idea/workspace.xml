@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95bb5cfa-e20d-4fbd-9f23-7faaece68ab7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NowSaleAndroidApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ownerSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ownerSignUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/mapper/OwnerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/mapper/OwnerMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/ownerSignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ownerSignUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OAuthLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/all/controller/OAuthLoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/owner/controller/OwnerController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -112,7 +106,7 @@
     <session id="-2043320164">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="49" />
+          <entry key="project.closed" value="50" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="6" />
@@ -122,61 +116,61 @@
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="2" />
-          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.2" value="5" />
           <entry key="project.open.time.20" value="2" />
           <entry key="project.open.time.21" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="5" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="50" />
+          <entry key="project.opened" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="16" />
-          <entry key="html" value="6" />
+          <entry key="class" value="17" />
+          <entry key="html" value="7" />
           <entry key="iml" value="1" />
-          <entry key="java" value="143" />
+          <entry key="java" value="151" />
           <entry key="jpg" value="2" />
           <entry key="mvnw" value="1" />
-          <entry key="png" value="7" />
+          <entry key="png" value="8" />
           <entry key="pom" value="1" />
           <entry key="properties" value="5" />
           <entry key="templates" value="1" />
-          <entry key="xml" value="34" />
+          <entry key="xml" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="16" />
-          <entry key="HTML" value="6" />
+          <entry key="CLASS" value="17" />
+          <entry key="HTML" value="7" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="Image" value="9" />
-          <entry key="JAVA" value="143" />
+          <entry key="Image" value="10" />
+          <entry key="JAVA" value="151" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="5" />
           <entry key="ThymeleafExpressions" value="1" />
-          <entry key="XML" value="35" />
+          <entry key="XML" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="1" />
-          <entry key="html" value="1221" />
-          <entry key="java" value="9853" />
+          <entry key="html" value="1416" />
+          <entry key="java" value="11257" />
           <entry key="properties" value="100" />
-          <entry key="xml" value="1234" />
+          <entry key="xml" value="1290" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="HTML" value="1221" />
-          <entry key="JAVA" value="9853" />
+          <entry key="HTML" value="1416" />
+          <entry key="JAVA" value="11257" />
           <entry key="Properties" value="100" />
           <entry key="SQL" value="5" />
-          <entry key="XML" value="1229" />
+          <entry key="XML" value="1285" />
         </counts>
       </usages-collector>
     </session>
@@ -186,8 +180,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="255" column="69" lean-forward="true" selection-start-line="255" selection-start-column="69" selection-end-line="255" selection-end-column="69" />
+            <state relative-caret-position="4643">
+              <caret line="255" column="69" selection-start-line="255" selection-start-column="69" selection-end-line="255" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="124" column="13" lean-forward="true" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -196,60 +202,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="92" column="15" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
+              <folding>
+                <element signature="e#992#993#0" expanded="true" />
+                <element signature="e#1024#1025#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerSignUp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="21" column="68" lean-forward="true" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OAuthLoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllCategoryCouponShowDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="50" column="78" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="78" />
+            <state relative-caret-position="722">
+              <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -268,7 +260,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>clientlogin</find>
       <find>exception</find>
       <find>insertClientCoupon</find>
       <find>coupon</find>
@@ -298,6 +289,7 @@
       <find>selectCategoryShow</find>
       <find>category/</find>
       <find>category/coupon</find>
+      <find>allMapper.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -311,9 +303,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/config/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientLoginVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientLoginDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/security/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientCouponCountVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/dao/ClientCouponInsertDao.java" />
@@ -345,12 +334,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/naverLoginApi.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/model/OAuthLoginVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/client/model/ClientVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/service/OAuthLoginService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/OAuthLoginDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/model/OwnerVO.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/demo/owner/controller/OwnerControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/chapchapbrothers/nowsale/client/controller/ClientController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chapchapbrothers/nowsale/owner/controller/OwnerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chapchapbrothers/nowsale/all/controller/AllController.java" />
@@ -362,6 +349,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ownerSignUp.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java" />
       </list>
     </option>
   </component>
@@ -396,7 +388,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+    <option name="y" value="53" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
@@ -408,6 +400,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -424,6 +417,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -483,6 +477,35 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="owner" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -494,6 +517,16 @@
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="owner" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spring boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="owner" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -554,7 +587,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="drawable" type="462c0819:PsiDirectoryNode" />
               <item name="owner" type="462c0819:PsiDirectoryNode" />
-              <item name="1" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -581,8 +614,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -593,7 +624,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545379654987" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546326350467" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -606,13 +637,6 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.demo.all.mapper" />
-      <recent name="com.example.demo.client.googleEmailSender" />
-      <recent name="com.example.demo.owner.dao" />
-      <recent name="com.example.demo.all.model" />
-      <recent name="com.example.demo.board.controller" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.example.demo.owner.controller" />
     </key>
@@ -623,12 +647,19 @@
       <recent name="com.example.demo.all.controller" />
       <recent name="com.example.demo.all" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/market" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/drawable/owner" />
+      <recent name="$PROJECT_DIR$/src/main/resources/drawable" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/demo" />
       <recent name="$PROJECT_DIR$/src/main/java/com/example/demo/all/dao" />
       <recent name="$PROJECT_DIR$/src/main/resources/org" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.demo.owner.dao" />
@@ -637,12 +668,12 @@
       <recent name="com.example.demo.client.dao" />
       <recent name="com.example.demo.client.model" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/drawable/owner/market" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/src/main/resources/drawable/owner" />
-      <recent name="$PROJECT_DIR$/src/main/resources/drawable" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.demo.all.mapper" />
+      <recent name="com.example.demo.client.googleEmailSender" />
+      <recent name="com.example.demo.owner.dao" />
+      <recent name="com.example.demo.all.model" />
+      <recent name="com.example.demo.board.controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -795,18 +826,18 @@
       <workItem from="1545796774749" duration="241000" />
       <workItem from="1545890642181" duration="516000" />
       <workItem from="1546003930283" duration="118000" />
-      <workItem from="1546158250429" duration="2965000" />
+      <workItem from="1546158250429" duration="4132000" />
+      <workItem from="1546316007679" duration="8309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290691000" />
+    <option name="totallyTimeSpent" value="300167000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1990232" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2014652" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -817,13 +848,13 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32834226" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3144385" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3144385" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
@@ -848,15 +879,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/normal_img.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/logo4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1/1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/logo1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -953,20 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/ClientMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="21" column="21" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1085,13 +1093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1102,78 +1103,125 @@
     <entry file="file://$PROJECT_DIR$/Spring boot.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllCategoryCouponShowDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="50" column="78" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#311#312#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerSignUp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="21" column="68" lean-forward="true" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OAuthLoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/dao/OwnerDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        <state relative-caret-position="608">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerSignUp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/dao/AllCategoryCouponShowDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="50" column="78" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/nio/file/Paths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+          <folding>
+            <element signature="e#2673#2674#0" expanded="true" />
+            <element signature="e#2741#2742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/http/HttpStatus.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/mapper/OwnerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/client/mapper/ClientMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dao/mybatisMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/OwnerInputImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="92" column="15" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
+          <folding>
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/owner/controller/OwnerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="255" column="69" lean-forward="true" selection-start-line="255" selection-start-column="69" selection-end-line="255" selection-end-column="69" />
+        <state relative-caret-position="4643">
+          <caret line="255" column="69" selection-start-line="255" selection-start-column="69" selection-end-line="255" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMarketImg.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ownerMenuImg.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/mapper/AllMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="282">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/drawable/owner/menu/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/all/controller/AllController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="124" column="13" lean-forward="true" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
