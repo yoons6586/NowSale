@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.example.demo.owner.controller.OwnerControllerTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.113 s - in com.example.demo.owner.controller.OwnerControllerTest
+=======
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in com.example.demo.owner.controller.OwnerControllerTest
+>>>>>>> 14055a7b27e916c2dd9e8ed9ee9715176fb82dbb
