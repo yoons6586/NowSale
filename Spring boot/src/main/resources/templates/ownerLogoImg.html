@@ -2,7 +2,7 @@
 <html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8">
-		<title>점주 매장 이미지 삽입</title>
+		<title>점주 로고 이미지 삽입</title>
 
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,7 +15,7 @@
 				var form = $('#fileUploadForm')[0];
 				var data = new FormData(form);
 				$.ajax({
-					url: '/all/api/upload/market', // url where to submit the request
+					url: '/all/api/upload/logo', // url where to submit the request
 					processData: false,
 					contentType : false,
 					cache : false,
@@ -35,7 +35,6 @@
 	<body>
 		<form id="fileUploadForm" enctype="multipart/form-data" action="" method = post>
 			아이디: <input type="text" name="id" id="id"><br>
-			<input type="file" name="files"/><br/><br/>
 			<input type="file" name="files"/><br/><br/>
 			<input id ="submit" type=button name="submit" value="insert">
 		</form>

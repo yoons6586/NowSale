@@ -41,6 +41,9 @@ public class OwnerInputImage {
 	@GetMapping("/owner/input/market/img")
 	public String ownerInputMarketImg(){ return "ownerMarketImg"; }
 
+	@GetMapping("/owner/input/logo/img")
+	public String ownerInputLogoImg(){ return "ownerLogoImg"; }
+
 	@PostMapping("/api/upload/menu")
 	public ResponseEntity<?> uploadFileMulti(
 			@RequestParam("id") String id,
@@ -113,6 +116,41 @@ public class OwnerInputImage {
 
 	}
 
+	@PostMapping("/api/upload/logo")
+	public ResponseEntity<?> uploadLogoMulti(
+			@RequestParam("id") String id,
+			@RequestParam("files") MultipartFile[] uploadfiles
+	) {
+		Integer owner_key;
+		try {
+			owner_key= allMapper.getOwnerKey(id);
+			System.out.println("owner_key : "+owner_key);
+		} catch(Exception e){
+			e.printStackTrace();
+			return new ResponseEntity<>("No ID",HttpStatus.UNAUTHORIZED);
+		}
+
+		// Get file name
+		String uploadedFileName = Arrays.stream(uploadfiles).map(x -> x.getOriginalFilename())
+				.filter(x -> !StringUtils.isEmpty(x)).collect(Collectors.joining(" , "));
+
+		if (StringUtils.isEmpty(uploadedFileName)) {
+			return new ResponseEntity("please select a file!", HttpStatus.OK);
+		}
+
+		try {
+			saveUploadedLogoFiles(Arrays.asList(uploadfiles),owner_key);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
+
+		return new ResponseEntity("Successfully uploaded - "
+				+ uploadedFileName, HttpStatus.OK);
+
+	}
+
 	private void saveUploadedMenuFiles(List<MultipartFile> files,int owner_key,String name,String price) throws IOException {
 
 		for (MultipartFile file : files) {
@@ -151,6 +189,26 @@ public class OwnerInputImage {
 			stream.write(file.getBytes());
 
 			allMapper.insertMarketImg(owner_key,"/drawable/owner/market/"+filename);
+
+			stream.close();
+		}
+
+	}
+
+	private void saveUploadedLogoFiles(List<MultipartFile> files,int owner_key) throws IOException {
+
+		for (MultipartFile file : files) {
+			if (file.isEmpty()) {
+				continue; //next pls
+			}
+
+			String filename = "logo"+owner_key+".png";
+			String directory = "src/main/resources/static/drawable/owner";
+			String filepath = Paths.get(directory, filename).toString();
+
+			BufferedOutputStream stream =
+					new BufferedOutputStream(new FileOutputStream(new File(filepath)));
+			stream.write(file.getBytes());
 
 			stream.close();
 		}
