@@ -17,6 +17,9 @@ public interface AllMapper {
     @Insert("INSERT INTO market_img VALUES(#{owner_key},#{market_img})")
     void insertMarketImg(@Param("owner_key")int owner_key,@Param("market_img")String market_img);
 
+    @Update("UPDATE owner_list SET logo_img = #{logo_img} WHERE owner_key = #{owner_key}")
+    void updateLogoImg(@Param("owner_key")int owner_key,@Param("logo_img")String logo_img);
+
     @Select("SELECT * FROM adv_img_uri")
     List<AdvImgVO> getAdvImgCnt();
 

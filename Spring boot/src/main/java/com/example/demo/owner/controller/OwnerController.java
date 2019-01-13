@@ -253,7 +253,6 @@ public class OwnerController {
             owner_key=1;
         }
         ownerVO.setOwner_key(owner_key);
-        ownerVO.setLogo_img("/drawable/owner/logo"+owner_key+".png");
         ownerVO.setPw(passwordEncoder.encode(ownerVO.getPw()));
 
         return ownerDao.signUpOwner(ownerVO);

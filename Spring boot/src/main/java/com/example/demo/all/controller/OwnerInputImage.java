@@ -148,7 +148,6 @@ public class OwnerInputImage {
 
 		return new ResponseEntity("Successfully uploaded - "
 				+ uploadedFileName, HttpStatus.OK);
-
 	}
 
 	private void saveUploadedMenuFiles(List<MultipartFile> files,int owner_key,String name,String price) throws IOException {
@@ -202,13 +201,15 @@ public class OwnerInputImage {
 				continue; //next pls
 			}
 
-			String filename = "logo"+owner_key+".png";
+			String filename = "logo"+owner_key+"_"+file.getOriginalFilename();
 			String directory = "src/main/resources/static/drawable/owner";
 			String filepath = Paths.get(directory, filename).toString();
 
 			BufferedOutputStream stream =
 					new BufferedOutputStream(new FileOutputStream(new File(filepath)));
 			stream.write(file.getBytes());
+
+			allMapper.updateLogoImg(owner_key,"/drawable/owner/"+filename);
 
 			stream.close();
 		}
